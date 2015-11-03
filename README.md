@@ -31,4 +31,4 @@ Google is available in the following languages
  - [x] **Xhosa** (IsiXhosa)
  - [x] **Zulu** (isiZulu)
  
-Bold languages also appear in the W3Techs list of [most used languages online](http://w3techs.com/technologies/overview/content_language/all).
+Bold languages also appear in the W3Techs' list of [most used languages online](http://w3techs.com/technologies/overview/content_language/all).
