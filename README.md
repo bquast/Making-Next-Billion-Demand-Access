@@ -19,7 +19,7 @@ Can access to local content increase internet adoption in South Africa
 
 [Google South Africa](http://www.google.co.za) is available in the following languages
 
- - [x] [Afrikaans](http://w3techs.com/technologies/details/cl-af-/all/all) ([Search added 2009-09-03](http://google-africa.blogspot.com/2009/09/google-translate-now-available-for.html))
+ - [x] [Afrikaans](http://w3techs.com/technologies/details/cl-af-/all/all) ([added 2009-09-03](http://google-africa.blogspot.com/2009/09/google-translate-now-available-for.html))
  - [x] [English](http://w3techs.com/technologies/details/cl-en-/all/all)
  - [ ] [Ndebele](http://w3techs.com/technologies/details/cl-nd-/all/all) (listed as Northern Ndebele, primarily spoken in Zimbabwe)
  - [x] Northern Sotho
@@ -35,8 +35,8 @@ Hyperlinked languages appear in the W3Techs' list of [most used languages online
 
 ## Other Locatlisation
 
- - Afrikaans: [Drive added 2013-06-19](http://google-africa.blogspot.com/2013/06/drive-docs-sheets-and-slides-now-in.html), 
- - Zulu: [Translate added 2013-12-11](http://google-africa.blogspot.com/2013/12/google-translate-now-in-80-languages.html), [Drive added 2013-06-19](http://google-africa.blogspot.com/2013/06/drive-docs-sheets-and-slides-now-in.html)
+ - Afrikaans: [Drive added 2013-06-19](http://google-africa.blogspot.com/2013/06/drive-docs-sheets-and-slides-now-in.html), [Gmail added 2014-07-08](http://google-africa.blogspot.com/2014/07/thirteen-new-languages-for-gmail.html)
+ - Zulu: [Drive added 2013-06-19](http://google-africa.blogspot.com/2013/06/drive-docs-sheets-and-slides-now-in.html), [Gmail added 2014-07-08](http://google-africa.blogspot.com/2014/07/thirteen-new-languages-for-gmail.html), [Translate added 2013-12-11](http://google-africa.blogspot.com/2013/12/google-translate-now-in-80-languages.html)
 
 
 # CodeBook.md
