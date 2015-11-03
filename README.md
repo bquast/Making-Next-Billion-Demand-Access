@@ -33,10 +33,10 @@ Can access to local content increase internet adoption in South Africa
  
 Hyperlinked languages appear in the W3Techs' list of [most used languages online](http://w3techs.com/technologies/overview/content_language/all).
 
-## Other Locatlisation
+## Other Localisation
 
- - Afrikaans: [Drive added 2013-06-19](http://google-africa.blogspot.com/2013/06/drive-docs-sheets-and-slides-now-in.html), [Gmail added 2014-07-08](http://google-africa.blogspot.com/2014/07/thirteen-new-languages-for-gmail.html)
- - Zulu: [Drive added 2013-06-19](http://google-africa.blogspot.com/2013/06/drive-docs-sheets-and-slides-now-in.html), [Gmail added 2014-07-08](http://google-africa.blogspot.com/2014/07/thirteen-new-languages-for-gmail.html), [Translate added 2013-12-11](http://google-africa.blogspot.com/2013/12/google-translate-now-in-80-languages.html)
+ - Afrikaans: [Drive added 2013-06-19](http://google-africa.blogspot.com/2013/06/drive-docs-sheets-and-slides-now-in.html), [Gmail added 2014-07-08](http://google-africa.blogspot.com/2014/07/thirteen-new-languages-for-gmail.html), [YouTube added 2011-11-03](http://google-africa.blogspot.com/2011/11/youtube-now-speaks-isizulu-and.html)
+ - Zulu: [Drive added 2013-06-19](http://google-africa.blogspot.com/2013/06/drive-docs-sheets-and-slides-now-in.html), [Gmail added 2014-07-08](http://google-africa.blogspot.com/2014/07/thirteen-new-languages-for-gmail.html), [Translate added 2013-12-11](http://google-africa.blogspot.com/2013/12/google-translate-now-in-80-languages.html), [YouTube added 2011-11-03](http://google-africa.blogspot.com/2011/11/youtube-now-speaks-isizulu-and.html)
 
 
 # CodeBook.md
