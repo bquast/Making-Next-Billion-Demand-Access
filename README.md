@@ -35,8 +35,12 @@ Hyperlinked languages appear in the W3Techs' list of [most used languages online
 
 ## Other Localisation
 
+Automatic translation was added to Google Chrome stable version 4.1.249 launched on [2010-03-17](https://googleblog.blogspot.com/2010/03/brabhsalai-greasain-ilteangach-or.html)
+
  - Afrikaans: [Drive added 2013-06-19](http://google-africa.blogspot.com/2013/06/drive-docs-sheets-and-slides-now-in.html), [Gmail added 2014-07-08](http://google-africa.blogspot.com/2014/07/thirteen-new-languages-for-gmail.html), [YouTube added 2011-11-03](http://google-africa.blogspot.com/2011/11/youtube-now-speaks-isizulu-and.html)
  - Zulu: [Drive added 2013-06-19](http://google-africa.blogspot.com/2013/06/drive-docs-sheets-and-slides-now-in.html), [Gmail added 2014-07-08](http://google-africa.blogspot.com/2014/07/thirteen-new-languages-for-gmail.html), [Translate added 2013-12-11](http://google-africa.blogspot.com/2013/12/google-translate-now-in-80-languages.html), [YouTube added 2011-11-03](http://google-africa.blogspot.com/2011/11/youtube-now-speaks-isizulu-and.html)
+
+
 
 
 # CodeBook.md
