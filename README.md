@@ -19,16 +19,16 @@ Can access to local content increase internet adoption in South Africa
 
 Google is available in the following languages
 
- - [x] **Afrikaans**
- - [x] **English**
- - [ ] **Ndebele**
+ - [x] [Afrikaans](http://w3techs.com/technologies/details/cl-af-/all/all)
+ - [x] [English](http://w3techs.com/technologies/details/cl-en-/all/all)
+ - [ ] [Ndebele](http://w3techs.com/technologies/details/cl-nd-/all/all)
  - [x] Northern Sotho
- - [x] **Sotho** (Sesotho)
+ - [x] [Sotho](http://w3techs.com/technologies/details/cl-st-/all/all) (Sesotho)
  - [ ] Swazi
  - [ ] Tsonga
  - [x] Tswana (Setswana)
- - [ ] **Venda**
- - [x] **Xhosa** (IsiXhosa)
- - [x] **Zulu** (isiZulu)
+ - [ ] [Venda](http://w3techs.com/technologies/details/cl-ve-/all/all)
+ - [x] [Xhosa](http://w3techs.com/technologies/details/cl-xh-/all/all) (IsiXhosa)
+ - [x] [Zulu](http://w3techs.com/technologies/details/cl-zu-/all/all) (isiZulu)
  
-Bold languages also appear in the W3Techs' list of [most used languages online](http://w3techs.com/technologies/overview/content_language/all).
+Hyperlinked languages appear in the W3Techs' list of [most used languages online](http://w3techs.com/technologies/overview/content_language/all).
