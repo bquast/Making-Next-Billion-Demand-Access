@@ -32,3 +32,8 @@ Can access to local content increase internet adoption in South Africa
  - [x] [Zulu](http://w3techs.com/technologies/details/cl-zu-/all/all) (isiZulu)
  
 Hyperlinked languages appear in the W3Techs' list of [most used languages online](http://w3techs.com/technologies/overview/content_language/all).
+
+
+# CodeBook.md
+
+This code used for this project is described in the [CodeBook.md](/CodeBook.md) file.
