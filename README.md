@@ -21,7 +21,7 @@ Can access to local content increase internet adoption in South Africa
 
  - [x] [Afrikaans](http://w3techs.com/technologies/details/cl-af-/all/all)
  - [x] [English](http://w3techs.com/technologies/details/cl-en-/all/all)
- - [ ] [Ndebele](http://w3techs.com/technologies/details/cl-nd-/all/all) (listed as Northern ndebele, primarily spoken in Zimbabwe)
+ - [ ] [Ndebele](http://w3techs.com/technologies/details/cl-nd-/all/all) (listed as Northern Ndebele, primarily spoken in Zimbabwe)
  - [x] Northern Sotho
  - [x] [Sotho](http://w3techs.com/technologies/details/cl-st-/all/all) (Sesotho)
  - [ ] Swazi
