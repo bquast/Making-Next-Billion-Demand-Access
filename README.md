@@ -17,7 +17,7 @@ Can access to local content increase internet adoption in South Africa
 
 # Google Localisation
 
-Google is available in the following languages
+[Google South Africa](http://www.google.co.za) is available in the following languages
 
  - [x] [Afrikaans](http://w3techs.com/technologies/details/cl-af-/all/all)
  - [x] [English](http://w3techs.com/technologies/details/cl-en-/all/all)
