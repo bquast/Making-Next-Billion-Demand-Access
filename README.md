@@ -1,4 +1,4 @@
-# Local-Content-South-Africa
+# Local Content South Africa
 Can access to local content increase internet adoption in South Africa
 
 # South Africa's Languages
@@ -33,6 +33,11 @@ Can access to local content increase internet adoption in South Africa
  
 Hyperlinked languages appear in the W3Techs' list of [most used languages online](http://w3techs.com/technologies/overview/content_language/all).
 
+# Google Chrome Automatic Translation
+
+[Google Chrome Stable version 4.1.249](http://googlechromereleases.blogspot.com/2010/03/stable-channel-update.html) launched on 2010-03-17 included [automatic translation](https://googleblog.blogspot.com/2010/03/brabhsalai-greasain-ilteangach-or.html).
+
+
 # Other Localisation 
 
 ## Afrikaans
@@ -53,6 +58,8 @@ Hyperlinked languages appear in the W3Techs' list of [most used languages online
  - [Gmail added 2014-07-08](http://google-africa.blogspot.com/2014/07/thirteen-new-languages-for-gmail.html)
  - [Translate added 2013-12-11](http://google-africa.blogspot.com/2013/12/google-translate-now-in-80-languages.html)
  - [YouTube added 2011-11-03](http://google-africa.blogspot.com/2011/11/youtube-now-speaks-isizulu-and.html)
+
+
 
 
 # CodeBook.md
