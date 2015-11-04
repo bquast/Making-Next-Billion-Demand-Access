@@ -44,7 +44,7 @@ Hyperlinked languages appear in the W3Techs' list of [most used languages online
  
  - [Drive added 2013-06-19](http://google-africa.blogspot.com/2013/06/drive-docs-sheets-and-slides-now-in.html)
  - [Facebook](https://www.facebook.com/translations/FacebookLocales.xml) ([added 2009-03-16](http://mg.co.za/article/2009-03-16-facebook-goes-vleisboek))
- -[Gmail added 2014-07-08](http://google-africa.blogspot.com/2014/07/thirteen-new-languages-for-gmail.html)
+ - [Gmail added 2014-07-08](http://google-africa.blogspot.com/2014/07/thirteen-new-languages-for-gmail.html)
  - Translate [added 2009-08-29](https://en.wikipedia.org/wiki/Google_Translate#Supported_languages)
  - [YouTube added 2011-11-03](http://google-africa.blogspot.com/2011/11/youtube-now-speaks-isizulu-and.html)
  
