@@ -2,6 +2,9 @@
 # Bastiaan Quast
 # bquast@gmail.com
 
+# load libraries
+library(haven)
+
 # load the data
 load(file = "data/rhs.RData")
 
