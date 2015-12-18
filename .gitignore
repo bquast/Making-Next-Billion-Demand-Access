@@ -10,5 +10,4 @@ vignettes/*.html
 vignettes/*.pdf
 .Rproj.user
 data
-rhsbaus-2011-2012-v1.zip
 .DS_Store
