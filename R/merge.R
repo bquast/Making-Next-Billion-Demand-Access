@@ -7,9 +7,9 @@
 
 
 # load libraries
+library(plm)
 library(magrittr)
 library(dplyr)
-library(plm)
 
 
 # load data
