@@ -65,6 +65,27 @@ Hyperlinked languages appear in the W3Techs' list of [most used languages online
  - [YouTube added 2011-11-03](http://google-africa.blogspot.com/2011/11/youtube-now-speaks-isizulu-and.html)
 
 
+# African Content Localisation
+
+
+| Product   | Google Search | Facebook | Google Translate | 
+| ------------------------------------------------------- |
+| Afrikaans |               |          |                  |
+| Cebuano   |               |          |                  |
+| Chichewa  |               |          | 2014-12-12       |
+| Hausa     |               |          | 2013-12-11       |
+| Igbo      |               |          | 2013-12-11       |
+| Malagasy  |               |          |                  |
+| Sesotho   |               |          | 2014-12-12       |
+| Somali    |               |          | 2013-12-11       |
+| Sundanese |               |          |                  |
+| Swahili   |               |          |                  |
+| Yoruba    |               |          | 2013-12-11       |
+| Wolof     |               |          |                  |
+| Zulu      |               |          | 2013-12-11       |
+
+
+http://google-africa.blogspot.co.at/2013/12/google-translate-now-in-80-languages.html
 
 
 # CodeBook.md
