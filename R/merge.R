@@ -27,13 +27,8 @@ names(adult3)[373] <- 'a_incppen_v'# instead of a_incret_v
 ## create a list of variables for each type of data.frame
 vars_adult <- c('hhid',         # household ID
                 'pid',          # person ID
-                'a_gen',        # gender
-                'a_aspen',      # state persion
-                'a_incgovpen',  # income government persion
-                'a_incgovpen_v',
-                'a_incppen',    # income personal pension
-                'a_incppen_v')   
-
+                'a_gen')        # gender
+                
 vars_child <- c('hhid',       # household ID
                 'pid',        # person ID
                 'c_intrv_y',  # interview year
@@ -77,11 +72,7 @@ vars_inder <- c('hhid',       # household ID
                 'ppen',       # month income private / foreign pension
                 'ppen_flg',   # data monthly income private / foreign pension
                 'uif',        # montly income UIF payments (unemployment)
-                'remt',       # monthly income remittances
-                'zhfa',       # z-score height-for-age 
-                'zwfa',       # z-score weight-for-age
-                'zbmi',       # z-score BMI
-                'zwfh')       # z-score weight-for-height
+                'remt')       # monthly income remittances
 
 ## remove wave indicator from variable names
 names(adult1) %<>% 
@@ -174,7 +165,6 @@ adult$a_incgovpen_v <- ifelse(is.na(adult$a_incgovpen_v), 0, adult$a_incgovpen_v
 child$post_treatment <- ifelse(child$wave == 1, FALSE, TRUE)
 
 
-
 # save data
 save(file = 'data/adult.RData', adult)
 save(file = 'data/child.RData', child)
@@ -182,37 +172,11 @@ save(file = 'data/hhder.RData', hhder)
 save(file = 'data/inder.RData', inder)
 
 
-# create pension variables in child 
-inder %>%
-  filter(woman==TRUE) %>%
-  group_by(hhid, wave) %>%
-  summarise(spen_woman = sum(spen)) -> spen_woman
-inder %>%
-  filter(woman==FALSE) %>%
-  group_by(hhid, wave) %>%
-  summarise(spen_man = sum(spen)) -> spen_man
-inder %>%
-  filter(woman==TRUE) %>%
-  group_by(hhid, wave) %>%
-  summarise(ppen_woman = sum(ppen)) -> ppen_woman
-inder %>%
-  filter(woman==FALSE) %>%
-  group_by(hhid, wave) %>%
-  summarise(ppen_man = sum(ppen)) -> ppen_man
-
-
 # put into panel data.frame (pdata.frame)
 # adult %<>% pdata.frame(index = c('pid', 'wave')) # somehow there in no PID here
 child %<>% pdata.frame(index = c('pid', 'wave'))
 hhder %<>% pdata.frame(index = c('hhid', 'wave'))
 inder %<>% pdata.frame(index = c('pid', 'wave'))
-spen_woman %<>% pdata.frame(index = c('hhid', 'wave'))
-spen_man   %<>% pdata.frame(index = c('hhid', 'wave'))
-
-
-# merge pension variables into child data.frame
-child <- merge(child, spen_woman, by = c('hhid', 'wave'), all.x = TRUE)
-child <- merge(child, spen_man,   by = c('hhid', 'wave'), all.x = TRUE)
 
 
 # merge across data.frame types
