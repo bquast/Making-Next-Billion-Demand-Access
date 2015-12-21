@@ -1,147 +1,72 @@
 # explore.R
+#
+# instructions for exploring data sets
+# -------------------------------------
 # Bastiaan Quast
 # bquast@gmail.com
 
-# load libraries
-library(haven)
 
-# load the data
-load(file = "data/rhs.RData")
+# import data
+load(file = 'data/imported.RData')
 
-# basic info
-str(rhs)
-names(rhs)
 
-# create explore function
-explore <- function(data) {
-  chr <- sapply(data,  attr, "label")
-  ids <- names(chr)
-  names(chr) <- NULL
-  data.frame(description = chr, id = ids)
-}
+# use explore function (own package)
+library(explore)
 
-# write variable names to data.frame
-vars <- explore(rhs)
 
-# view output
-View(vars)
+# scan (possible new name for function) adult
+explore(adult1)
 
-# country
-table(as_factor(rhs$A_5))
 
-# computer?
-table(as_factor(rhs$H_9))
+# list of relevant variables
 
-# internet?
-table(as_factor(rhs$HI_1))
+## computer / phone
+w1_a_owncom   # g8 - Ownership of a Computer
+w1_a_owncom_v # g8a - Current resale value of Computer
+w1_a_owncel   # g10 - Ownership of Cellphone
+w1_a_owncel_v # g10a - Current resale value of Cellphone
 
-# how many people use internet
-table(rhs$HI_10)
 
-# why no internet?
-table(as_factor(rhs$HI_12))
+## reading / writing home language and English
+w1_a_edlitrdhm  # h36  - Respondent's reading level in home language
+w1_a_edlitwrthm # h37 - Respondent's writing level in home language
+w1_a_edlitrden  # h38 - Respondent's reading level in English
+w1_a_edlitwrten # h39 - Respondent's writing level in English
+w1_a_numlv      # p3 - Numeracy test level
 
-# read a letter / newspaper
-table(as_factor(rhs$N_4))
+## decisions expenses
+w1_a_decd       # l1_1 - Main decision-maker about day-to-day household expenditure
+w1_a_decdpid    # l1_1 - Main decision-maker about day-to-day household expenditure
+w1_a_decd2      # l2_1 - Joint decision-maker about day-to-day household expenditure
+w1_a_decdpid2   # l2_1 - Joint decision-maker about day-to-day household expenditure
+w1_a_declrg     # l1_2 - Main decision-maker about large unusual purchases
+w1_a_declrgpid  # l1_2 - Main decision-maker about large unusual purchases
+w1_a_declrg2    # l2_2 - Joint decision-maker about large unusual large purchases
+w1_a_declrgpid2 # l2_2 - Joint decision-maker about large unusual large purchases
 
-# main household language
-table(as_factor(rhs$N_7))
 
-# read/write english?
-table(as_factor(rhs$N_8))
+## languages during interview
+w1_a_intlng1 # s1_1 - Languages used during interview
+w1_a_intlng2 # s1_2 - Languages used during interview
+w1_a_intlng3 # s1_3 - Languages used during interview
+w1_a_intlng4 # s1_4 - Languages used during interview
+w1_a_intlng5 # s1_5 - Languages used during interview
+w1_a_intlng6 # s1_6 - Languages used during interview
 
-# other languages?
-table(as_factor(rhs$N_9))
 
-# own mobile phone
-table(as_factor(rhs$M_1))
+# scan hh derived
+explore(hhder1)
 
-# mobile phone capable browsing internet
-table(as_factor(rhs$M_8))
 
-# mobile phone use Facebook,Twitter, Mixit or other social networking
-table(as_factor(rhs$M_29))
+# list of relevant variables
 
-# mobile phone use browsing internet
-table(as_factor(rhs$M_30))
+## Geo type
+w1_hhgeo2011 # GeoType (2011 Census)      
+w1_hhgeo2001 # GeoType (2001 Census)
 
-# use Internet (Gmail, Google, Facebook, MXit, email)
-table(as_factor(rhs$B_1))
-
-# how often on average used internet past 3 months
-table(as_factor(rhs$B_5))
-
-# have email address
-table(as_factor(rhs$B_6))
-
-# main language emailing
-table(as_factor(rhs$B_7))
-
-# other language emailing
-table(as_factor(rhs$B_8))
-
-# browsing internet what language
-table(as_factor(rhs$B_9))
-
-# what language like to see more content?
-table(as_factor(rhs$B_10))
-
-# limits use; no interesting content for me
-table(as_factor(rhs$B_20))
-
-# limits use; lack local language content
-table(as_factor(rhs$B_21))
-
-# limits use; very slow
-table(as_factor(rhs$B_22))
-
-# limits use; very expensive
-table(as_factor(rhs$B_23))
-
-# limits use; few people communicate with
-table(as_factor(rhs$B_24))
-
-# limits use; other
-table(as_factor(rhs$B_25))
-
-# social network?
-table(as_factor(rhs$B_26))
-
-# which social network?
-table(as_factor(rhs$B_27))
-
-# how access social network?
-table(as_factor(rhs$B_28))
-
-# dont know what internet is; reason not use
-table(as_factor(rhs$B_56))
-
-# no interest / not useful; reason not use
-table(as_factor(rhs$B_57))
-
-# dont know how use; reason not use
-table(as_factor(rhs$B_58))
-
-# no computer / internet; reason not use
-table(as_factor(rhs$B_59))
-
-# too expensive; reason not use
-table(as_factor(rhs$B_60))
-
-# no time / busy; reason not use
-table(as_factor(rhs$B_61))
-
-# no friends use it; reason not use
-table(as_factor(rhs$B_62))
-
-# too slow; reason not use
-table(as_factor(rhs$B_63))
-
-# other; reason not use
-table(as_factor(rhs$B_64))
-
-# interested if close?
-table(as_factor(rhs$B_65))
-
-# willing to spend how much?
-table(as_factor(rhs$B_66))
+## household income
+w1_hhquint  # Per capita household income quintiles
+w1_hhq_inc  # Household income as per household questionnaire
+w1_hhq_incb # Household income as per household questionnaire incl brackets and imputations
+w1_hhincome # Household monthly income - full imputations
+w1_hhremitt # Household monthly income from remittances
