@@ -130,24 +130,24 @@ w1_empl_stat # Employment status - Adult only
 
 # list of relevant variables
 w1_h_rntpot # d12 - Amount of rent willing to pay
-# d22 - Household has electricity     w1_h_enrgelec
-# Household has a cellphone available for regular use       w1_h_telcel
-# d31 - Household expenditiure in last 30 days        w1_h_expnd
-# e2_1_3 - Household spent on entertainment  in the last 30 days        w1_h_nfent
-# e2_2_3 - Amount spent on entertainment  in last 30 days     w1_h_nfentspn
-# e2_1_9 - Household spent on  telephone expenses in the last 30 days        w1_h_nftel
-# e2_2_9 - Amount spent on telephone expenses in last 30 days     w1_h_nftelspn
-# e2_1_11 - Household spent on internet in the last 30 days        w1_h_nfnet
-# e2_2_11 - Amount spent on internet in last 30 days     w1_h_nfnetspn
-# e2_1_24 - Household spent on educational policies in the last 30 days     w1_h_nfinsedu
-# e2_2_24 - Amount spent on educational policies in last 30 days  w1_h_nfinseduspn
-# e2_2_41 - Amount spent on school fees and tuition in last 30 days  w1_h_nfschfeespn
-# e2_1_42 - Household spent on school books and stationary in the last 30 days    w1_h_nfschstat
-# e2_2_42 - Amount spent on school books and stationary in last 30 days w1_h_nfschstatspn
-# f1_6 - The household owns a computer       w1_h_owncom
-# f1_8 - The household owns a cellphone       w1_h_owncel
-# j1_1 - Languages used during interview      w1_h_intlng1
-# j1_2 - Languages used during interview      w1_h_intlng2
-# j1_3 - Languages used during interview      w1_h_intlng3
-# j1_4 - Languages used during interview      w1_h_intlng4
-# j1_o - Other languages used during interview     w1_h_intlng_o
+w1_h_enrgelec # d22 - Household has electricity
+w1_h_telcel # Household has a cellphone available for regular use
+w1_h_expnd # d31 - Household expenditiure in last 30 days
+w1_h_nfent # e2_1_3 - Household spent on entertainment  in the last 30 days
+w1_h_nfentspn # e2_2_3 - Amount spent on entertainment  in last 30 days
+w1_h_nftel # e2_1_9 - Household spent on  telephone expenses in the last 30 days
+w1_h_nftelspn # e2_2_9 - Amount spent on telephone expenses in last 30 days
+w1_h_nfnet # e2_1_11 - Household spent on internet in the last 30 days
+w1_h_nfnetspn # e2_2_11 - Amount spent on internet in last 30 days
+w1_h_nfinsedu # e2_1_24 - Household spent on educational policies in the last 30 days
+w1_h_nfinseduspn # e2_2_24 - Amount spent on educational policies in last 30 days
+w1_h_nfschfeespn # e2_2_41 - Amount spent on school fees and tuition in last 30 days
+w1_h_nfschstat # e2_1_42 - Household spent on school books and stationary in the last 30 days
+w1_h_nfschstatspn # e2_2_42 - Amount spent on school books and stationary in last 30 days
+w1_h_owncom # f1_6 - The household owns a computer
+w1_h_owncel # f1_8 - The household owns a cellphone
+w1_h_intlng1 # j1_1 - Languages used during interview
+w1_h_intlng2 # j1_2 - Languages used during interview
+w1_h_intlng3 # j1_3 - Languages used during interview
+w1_h_intlng4 # j1_4 - Languages used during interview
+w1_h_intlng_o # j1_o - Other languages used during interview
