@@ -29,22 +29,23 @@ vars_adult <- c('hhid',         # household ID
                 'pid',          # person ID
                 'a_gen',        # gender
                 'a_owncom',     # g8 - Ownership of a Computer
-                'a_owncom_v',   # g8a - Current resale value of Computer
+                #'a_owncom_v',   # g8a - Current resale value of Computer
                 'a_owncel',     # g10 - Ownership of Cellphone
-                'a_owncel_v',   # g10a - Current resale value of Cellphone
+                #'a_owncel_v',   # g10a - Current resale value of Cellphone
                 'a_edlitrdhm',  # h36 - Respondent's reading level in home language
                 'a_edlitwrthm', # h37 - Respondent's writing level in home language
                 'a_edlitrden',  # h38 - Respondent's reading level in English
                 'a_edlitwrten', # h39 - Respondent's writing level in English
-                'a_numlv',      # p3 - Numeracy test level
-                'a_decd',       # l1_1 - Main decision-maker about day-to-day household expenditure
-                'a_decdpid',    # l1_1 - Main decision-maker about day-to-day household expenditure
-                'a_decd2',      # l2_1 - Joint decision-maker about day-to-day household expenditure
-                'a_decdpid2',   # l2_1 - Joint decision-maker about day-to-day household expenditure
-                'a_declrg',     # l1_2 - Main decision-maker about large unusual purchases
-                'a_declrgpid',  # l1_2 - Main decision-maker about large unusual purchases
-                'a_declrg2',    # l2_2 - Joint decision-maker about large unusual large purchases
-                'a_declrgpid2', # l2_2 - Joint decision-maker about large unusual large purchases
+                #'a_numlv',      # p3 - Numeracy test level
+                #'a_decd',       # l1_1 - Main decision-maker about day-to-day household expenditure
+                #'a_decdpid',    # l1_1 - Main decision-maker about day-to-day household expenditure
+                #'a_decd2',      # l2_1 - Joint decision-maker about day-to-day household expenditure
+                #'a_decdpid2',   # l2_1 - Joint decision-maker about day-to-day household expenditure
+                #'a_declrg',     # l1_2 - Main decision-maker about large unusual purchases
+                #'a_declrgpid',  # l1_2 - Main decision-maker about large unusual purchases
+                #'a_declrg2',    # l2_2 - Joint decision-maker about large unusual large purchases
+                #'a_declrg2',    # l2_2 - Joint decision-maker about large unusual large purchases
+                #'a_declrgpid2', # l2_2 - Joint decision-maker about large unusual large purchases
                 'a_intlng1',    # s1_1 - Languages used during interview
                 'a_intlng2',    # s1_2 - Languages used during interview
                 'a_intlng3',    # s1_3 - Languages used during interview
@@ -180,13 +181,11 @@ inder$woman   <- ifelse(inder$best_gen == 2, TRUE, FALSE)
 inder$spen    <- ifelse(is.na(inder$spen), 0, inder$spen)
 inder$ppen    <- ifelse(is.na(inder$ppen), 0, inder$ppen)
 ## state pension numeric to logical
-adult$a_incgovpen   <- ifelse(adult$a_incgovpen <  0, NA, adult$a_incgovpen)
-adult$a_incgovpen_l <- ifelse(adult$a_incgovpen == 2, TRUE, FALSE)
+# adult$a_incgovpen   <- ifelse(adult$a_incgovpen <  0, NA, adult$a_incgovpen)
+# adult$a_incgovpen_l <- ifelse(adult$a_incgovpen == 2, TRUE, FALSE)
 ## state pension value NA to zero
-adult$a_incgovpen_v <- ifelse(adult$a_incgovpen_v < 0, NA, adult$a_incgovpen_v)
-adult$a_incgovpen_v <- ifelse(is.na(adult$a_incgovpen_v), 0, adult$a_incgovpen_v)
-## post treatment dummy
-child$post_treatment <- ifelse(child$wave == 1, FALSE, TRUE)
+# adult$a_incgovpen_v <- ifelse(adult$a_incgovpen_v < 0, NA, adult$a_incgovpen_v)
+# adult$a_incgovpen_v <- ifelse(is.na(adult$a_incgovpen_v), 0, adult$a_incgovpen_v)
 
 
 # save data
