@@ -28,7 +28,7 @@ w1_a_owncel_v # g10a - Current resale value of Cellphone
 
 
 ## reading / writing home language and English
-w1_a_edlitrdhm  # h36  - Respondent's reading level in home language
+w1_a_edlitrdhm  # h36 - Respondent's reading level in home language
 w1_a_edlitwrthm # h37 - Respondent's writing level in home language
 w1_a_edlitrden  # h38 - Respondent's reading level in English
 w1_a_edlitwrten # h39 - Respondent's writing level in English
