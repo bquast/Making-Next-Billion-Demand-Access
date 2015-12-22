@@ -19,9 +19,9 @@ load('data/imported.RData')
 # now subset all to the important variables and merge
 
 ## homogenise some variable names across waves
-names(hhder1)[9] <- 'hhimprent' # instead of hhimprent_exp
-names(adult3)[372] <- 'a_incppen' # instead of a_incret
-names(adult3)[373] <- 'a_incppen_v'# instead of a_incret_v
+# names(hhder1)[9] <- 'hhimprent' # instead of hhimprent_exp
+# names(adult3)[372] <- 'a_incppen' # instead of a_incret
+# names(adult3)[373] <- 'a_incppen_v'# instead of a_incret_v
 
 
 ## create a list of variables for each type of data.frame
