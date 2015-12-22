@@ -27,7 +27,31 @@ names(adult3)[373] <- 'a_incppen_v'# instead of a_incret_v
 ## create a list of variables for each type of data.frame
 vars_adult <- c('hhid',         # household ID
                 'pid',          # person ID
-                'a_gen')        # gender
+                'a_gen',        # gender
+                'a_owncom',     # g8 - Ownership of a Computer
+                'a_owncom_v',   # g8a - Current resale value of Computer
+                'a_owncel',     # g10 - Ownership of Cellphone
+                'a_owncel_v',   # g10a - Current resale value of Cellphone
+                'a_edlitrdhm',  # h36 - Respondent's reading level in home language
+                'a_edlitwrthm', # h37 - Respondent's writing level in home language
+                'a_edlitrden',  # h38 - Respondent's reading level in English
+                'a_edlitwrten', # h39 - Respondent's writing level in English
+                'a_numlv',      # p3 - Numeracy test level
+                'a_decd',       # l1_1 - Main decision-maker about day-to-day household expenditure
+                'a_decdpid',    # l1_1 - Main decision-maker about day-to-day household expenditure
+                'a_decd2',      # l2_1 - Joint decision-maker about day-to-day household expenditure
+                'a_decdpid2',   # l2_1 - Joint decision-maker about day-to-day household expenditure
+                'a_declrg',     # l1_2 - Main decision-maker about large unusual purchases
+                'a_declrgpid',  # l1_2 - Main decision-maker about large unusual purchases
+                'a_declrg2',    # l2_2 - Joint decision-maker about large unusual large purchases
+                'a_declrgpid2', # l2_2 - Joint decision-maker about large unusual large purchases
+                'a_intlng1',    # s1_1 - Languages used during interview
+                'a_intlng2',    # s1_2 - Languages used during interview
+                'a_intlng3',    # s1_3 - Languages used during interview
+                'a_intlng4',    # s1_4 - Languages used during interview
+                'a_intlng5',    # s1_5 - Languages used during interview
+                'a_intlng6')    # s1_6 - Languages used during interview
+                
                 
 vars_child <- c('hhid',       # household ID
                 'pid',        # person ID
