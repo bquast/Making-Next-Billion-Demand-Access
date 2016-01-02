@@ -180,12 +180,6 @@ child$c_woman <- ifelse(child$c_gen == 2, TRUE, FALSE)
 inder$woman   <- ifelse(inder$best_gen == 2, TRUE, FALSE)
 inder$spen    <- ifelse(is.na(inder$spen), 0, inder$spen)
 inder$ppen    <- ifelse(is.na(inder$ppen), 0, inder$ppen)
-## state pension numeric to logical
-# adult$a_incgovpen   <- ifelse(adult$a_incgovpen <  0, NA, adult$a_incgovpen)
-# adult$a_incgovpen_l <- ifelse(adult$a_incgovpen == 2, TRUE, FALSE)
-## state pension value NA to zero
-# adult$a_incgovpen_v <- ifelse(adult$a_incgovpen_v < 0, NA, adult$a_incgovpen_v)
-# adult$a_incgovpen_v <- ifelse(is.na(adult$a_incgovpen_v), 0, adult$a_incgovpen_v)
 
 
 # save data
@@ -196,7 +190,6 @@ save(file = 'data/inder.RData', inder)
 
 
 # put into panel data.frame (pdata.frame)
-# adult %<>% pdata.frame(index = c('pid', 'wave')) # somehow there in no PID here
 child %<>% pdata.frame(index = c('pid', 'wave'))
 hhder %<>% pdata.frame(index = c('hhid', 'wave'))
 inder %<>% pdata.frame(index = c('pid', 'wave'))
