@@ -67,21 +67,22 @@ Hyperlinked languages appear in the W3Techs' list of [most used languages online
 
 # African Content Localisation
 
-| Language  | Google Search | Facebook | Google Translate |
-|-----------|---------------|----------|------------------|
-| Afrikaans |               |          |                  |
-| Cebuano   |               |          |                  |
-| Chichewa  |               |          | 2014-12-12       |
-| Hausa     |               |          | 2013-12-11       |
-| Igbo      |               |          | 2013-12-11       |
-| Malagasy  |               |          |                  |
-| Sesotho   |               |          | 2014-12-12       |
-| Somali    |               |          | 2013-12-11       |
-| Sundanese |               |          |                  |
-| Swahili   |               |          |                  |
-| Yoruba    |               |          | 2013-12-11       |
-| Wolof     |               |          |                  |
-| Zulu      |               |          | 2013-12-11       |
+| Product           | Google Search | Facebook   | Google Translate | Gmail      |
+|-------------------|---------------|------------|------------------|------------|
+| Afrikaans         | 2009-09-03    | 2009-03-16 |                  | 2014-07-08 |
+| Cebuano           |               |            |                  |            |
+| Chichewa          |               |            | 2014-12-12       |            |
+| Hausa             |               |            | 2013-12-11       |            |
+| Igbo              |               |            | 2013-12-11       |            |
+| Malagasy          |               |            |                  |            |
+| Sesotho           |               |            | 2014-12-12       |            |
+| Somali            |               |            | 2013-12-11       |            |
+| Sundanese         |               |            |                  |            |
+| Swahili           |               |            |                  |            |
+| Tswana (Setswana) | 2010-08-13    |            |                  |            |
+| Yoruba            |               |            | 2013-12-11       |            |
+| Wolof             |               |            |                  |            |
+| Zulu              |               |            | 2013-12-11       | 2014-07-08 |
 
 http://google-africa.blogspot.co.at/2013/12/google-translate-now-in-80-languages.html
 
