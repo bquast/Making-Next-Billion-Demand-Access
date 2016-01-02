@@ -182,7 +182,7 @@ inder$spen    <- ifelse(is.na(inder$spen), 0, inder$spen)
 inder$ppen    <- ifelse(is.na(inder$ppen), 0, inder$ppen)
 
 ## language introduction dummies
-adult$search_afrikaans <- ifelse(adult$wave == 1, FALSE, TRUE)
+adult$voice_search_afrikaans <- ifelse(adult$wave == 1, FALSE, TRUE)
 
 
 # save data
