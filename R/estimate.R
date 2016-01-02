@@ -14,8 +14,19 @@ library(dplyr)
 load(file = "data/adult.RData")
 
 
-# basic model
-m1 <- formula(a_owncel ~ a_edlitrden)
-m2 <- formula(a_owncom ~ a_edlitrden)
+# list variables
+ls(adult)
 
-lm(m1, data = adult)
+# basic model
+
+## define models
+m1  <- formula(a_owncel ~ a_edlitrden + a_edlitwrten + a_edlitwrthm)
+m2  <- formula(a_owncom ~ a_edlitrden + a_edlitwrten + a_edlitwrthm)
+
+## estimate models
+lm1 <- lm(m1, data = adult)
+lm2 <- lm(m2, data = adult)
+
+## view results
+summary(lm1)
+summary(lm2)
