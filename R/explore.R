@@ -126,6 +126,7 @@ w1_empl_stat    # Employment status - Adult only
 
 
 # scan household questionaire
+explore(hhque1)
 
 
 # list of relevant variables
