@@ -19,6 +19,8 @@ Can access to local content increase internet adoption in South Africa
 
 [Google South Africa](http://www.google.co.za) is available in the following languages
 
+http://mybroadband.co.za/news/internet/9395-google-now-speaks-afrikaans.html
+
  - [x] [Afrikaans](http://w3techs.com/technologies/details/cl-af-/all/all) ([added 2009-09-03](http://google-africa.blogspot.com/2009/09/google-translate-now-available-for.html))
  - [x] [English](http://w3techs.com/technologies/details/cl-en-/all/all)
  - [ ] [Ndebele](http://w3techs.com/technologies/details/cl-nd-/all/all) (listed as Northern Ndebele, primarily spoken in Zimbabwe)
@@ -39,6 +41,8 @@ Hyperlinked languages appear in the W3Techs' list of [most used languages online
 
 
 # Other Localisation 
+
+http://googlepress.blogspot.com/2000/05/google-goes-global-with-addition-of-10.html
 
 ## Afrikaans
  
@@ -85,6 +89,14 @@ Hyperlinked languages appear in the W3Techs' list of [most used languages online
 | Zulu              |               |            | 2013-12-11       | 2014-07-08 |
 
 http://google-africa.blogspot.co.at/2013/12/google-translate-now-in-80-languages.html
+
+Voice search in Afrikaans and Zulu:
+
+https://googleblog.blogspot.in/2010/11/voice-search-in-underrepresented.html 
+
+Older translations:
+
+http://tectonic.co.za/?p=121
 
 
 # CodeBook.md
