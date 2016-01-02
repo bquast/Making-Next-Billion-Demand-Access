@@ -181,6 +181,9 @@ inder$woman   <- ifelse(inder$best_gen == 2, TRUE, FALSE)
 inder$spen    <- ifelse(is.na(inder$spen), 0, inder$spen)
 inder$ppen    <- ifelse(is.na(inder$ppen), 0, inder$ppen)
 
+## language introduction dummies
+adult$search_afrikaans <- ifelse(adult$wave == 1, FALSE, TRUE)
+
 
 # save data
 save(file = 'data/adult.RData', adult)
