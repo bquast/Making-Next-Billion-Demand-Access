@@ -136,6 +136,10 @@ w1_h_telcel       # Household has a cellphone available for regular use
 w1_h_expnd        # d31 - Household expenditiure in last 30 days
 w1_h_nfent        # e2_1_3 - Household spent on entertainment  in the last 30 days
 w1_h_nfentspn     # e2_2_3 - Amount spent on entertainment  in last 30 days
+w1_h_nfpap        # e2_1_7 - Household spent on literary materials in the last 30 days
+w1_h_nfpapspn     # e2_2_7 - Amount spent on literary materials in last 30 day
+w1_h_nfcel        # e2_1_8 - Household spent on cellphone experiences in the last 30 days
+w1_h_nfcelspn     # e2_2_8 - Amount spent on cellphone expenses in last 30 days
 w1_h_nftel        # e2_1_9 - Household spent on  telephone expenses in the last 30 days
 w1_h_nftelspn     # e2_2_9 - Amount spent on telephone expenses in last 30 days
 w1_h_nfnet        # e2_1_11 - Household spent on internet in the last 30 days
