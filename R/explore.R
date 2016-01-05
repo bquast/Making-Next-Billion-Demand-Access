@@ -20,19 +20,26 @@ explore(adult1)
 
 # list of relevant variables
 
-## computer / phone
-w1_a_owncom   # g8 - Ownership of a Computer
-w1_a_owncom_v # g8a - Current resale value of Computer
-w1_a_owncel   # g10 - Ownership of Cellphone
-w1_a_owncel_v # g10a - Current resale value of Cellphone
+## date
+w1_a_intrv_d    # a14_1 -  Interview _day
+w1_a_intrv_m    # a14_m -  Interview month
+w1_a_intrv_y    # a14_y - Interview year
 
-
-## reading / writing home language and English
+## language and ethnicity
+w1_a_popgrp     # b3 - Population group
+w1_a_lng        # b4 - Home Language
+w1_a_lng_o      # b4_o -  Other home Language
 w1_a_edlitrdhm  # h36 - Respondent's reading level in home language
 w1_a_edlitwrthm # h37 - Respondent's writing level in home language
 w1_a_edlitrden  # h38 - Respondent's reading level in English
 w1_a_edlitwrten # h39 - Respondent's writing level in English
 w1_a_numlv      # p3 - Numeracy test level
+
+## computer / phone
+w1_a_owncom   # g8 - Ownership of a Computer
+w1_a_owncom_v # g8a - Current resale value of Computer
+w1_a_owncel   # g10 - Ownership of Cellphone
+w1_a_owncel_v # g10a - Current resale value of Cellphone
 
 ## decisions expenses
 w1_a_decd       # l1_1 - Main decision-maker about day-to-day household expenditure
