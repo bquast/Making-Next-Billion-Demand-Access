@@ -41,6 +41,17 @@ w1_a_owncom_v # g8a - Current resale value of Computer
 w1_a_owncel   # g10 - Ownership of Cellphone
 w1_a_owncel_v # g10a - Current resale value of Cellphone
 
+## education
+w1_a_asfin      # g24 - Has Unit trusts, stocks and shares
+w1_a_edschgrd   # h1  - Highest school grade completed
+w1_a_edschyr    # h2_1  - Year in which respondent completed highest grade
+w1_a_edschage   # h2_2  - Age at which respondent completed highest grade
+w1_a_edschstrt  # h5  - Year in which respondent first attended Grade 1/Sub A
+w1_a_edschmth   # h6  - Highest school grade in mathematics completed
+w1_a_edter      # h7  - Respondent has successfully completed some from of tertiary studies
+w1_a_edterlev   # h8 - Highest level of tertiary education completed
+w1_a_edterlev_o # h8_o -  Other highest level of tertiary education completed
+
 ## decisions expenses
 w1_a_decd       # l1_1 - Main decision-maker about day-to-day household expenditure
 w1_a_decdpid    # l1_1 - Main decision-maker about day-to-day household expenditure
@@ -50,14 +61,6 @@ w1_a_declrg     # l1_2 - Main decision-maker about large unusual purchases
 w1_a_declrgpid  # l1_2 - Main decision-maker about large unusual purchases
 w1_a_declrg2    # l2_2 - Joint decision-maker about large unusual large purchases
 w1_a_declrgpid2 # l2_2 - Joint decision-maker about large unusual large purchases
-
-## languages during interview
-w1_a_intlng1    # s1_1 - Languages used during interview
-w1_a_intlng2    # s1_2 - Languages used during interview
-w1_a_intlng3    # s1_3 - Languages used during interview
-w1_a_intlng4    # s1_4 - Languages used during interview
-w1_a_intlng5    # s1_5 - Languages used during interview
-w1_a_intlng6    # s1_6 - Languages used during interview
 
 
 # scan child
