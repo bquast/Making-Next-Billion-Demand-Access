@@ -18,6 +18,14 @@ load(file = "data/adult.RData")
 ls(adult)
 
 
+# exploratory
+
+## compute and phone ownership by group and year
+sumtable <- adult %>%
+  group_by(a_lng, wave) %>%
+  summarise(mean(a_owncel), mean(a_owncom))
+
+
 # basic model
 
 ## define models
