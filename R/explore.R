@@ -21,8 +21,8 @@ explore(adult1)
 # list of relevant variables
 
 ## date
-w1_a_intrv_d    # a14_1 -  Interview _day
-w1_a_intrv_m    # a14_m -  Interview month
+w1_a_intrv_d    # a14_1 - Interview _day
+w1_a_intrv_m    # a14_m - Interview month
 w1_a_intrv_y    # a14_y - Interview year
 
 ## language and ethnicity
