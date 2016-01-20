@@ -25,6 +25,17 @@ sumtable <- adult %>%
   group_by(a_lng, wave) %>%
   summarise(mean(a_owncel), mean(a_owncom))
 
+adulthh <- adulthh[!is.na(adulthh$h_nfcelspn),]
+
+sumtable2 <- adulthh %>%
+  group_by(a_lng, wave) %>%
+  summarise(mean(h_nfcelspn), mean(h_nfnetspn))
+
+adulthh2 <- adulthh[adulthh$h_nfcelspn != 0,]
+
+sumtable3 <- adulthh2 %>%
+  group_by(a_lng, wave) %>%
+  summarise(mean(h_nfcelspn), mean(h_nfnetspn))
 
 # basic model
 
