@@ -18,12 +18,6 @@ load('data/imported.RData')
 
 # now subset all to the important variables and merge
 
-## homogenise some variable names across waves
-# names(hhder1)[9] <- 'hhimprent' # instead of hhimprent_exp
-# names(adult3)[372] <- 'a_incppen' # instead of a_incret
-# names(adult3)[373] <- 'a_incppen_v'# instead of a_incret_v
-
-
 ## create a list of variables for each type of data.frame
 vars_adult <- c('hhid',         # household ID
                 'pid',          # person ID
@@ -101,6 +95,21 @@ vars_inder <- c('hhid',       # household ID
                 'uif',        # montly income UIF payments (unemployment)
                 'remt')       # monthly income remittances
 
+vars_hhque <- c('h_enrgelec',     # d22 - Household has electricity
+                'h_telcel',       # Household has a cellphone available for regular use
+                'h_expnd',        # d31 - Household expenditiure in last 30 days
+                # 'h_nfent',        # e2_1_3 - Household spent on entertainment  in the last 30 days
+                'h_nfentspn',     # e2_2_3 - Amount spent on entertainment  in last 30 days
+                # 'h_nfpap',        # e2_1_7 - Household spent on literary materials in the last 30 days
+                'h_nfpapspn',     # e2_2_7 - Amount spent on literary materials in last 30 day
+                # 'h_nfcel',        # e2_1_8 - Household spent on cellphone experiences in the last 30 days
+                'h_nfcelspn',     # e2_2_8 - Amount spent on cellphone expenses in last 30 days
+                # 'h_nftel',        # e2_1_9 - Household spent on  telephone expenses in the last 30 days
+                'h_nftelspn',     # e2_2_9 - Amount spent on telephone expenses in last 30 days
+                # 'h_nfnet',        # e2_1_11 - Household spent on internet in the last 30 days
+                'h_nfnetspn')     # e2_2_11 - Amount spent on internet in last 30 days
+
+
 ## remove wave indicator from variable names
 names(adult1) %<>% 
   as.character() %>%
@@ -138,6 +147,27 @@ names(inder2) %<>%
 names(inder3) %<>% 
   as.character() %>%
   gsub(x = ., '^w[1-3].', "" )
+names(hhque1) %<>% 
+  as.character() %>%
+  gsub(x = ., '^w[1-3].', "" )
+names(hhque2) %<>% 
+  as.character() %>%
+  gsub(x = ., '^w[1-3].', "" )
+names(hhque3) %<>% 
+  as.character() %>%
+  gsub(x = ., '^w[1-3].', "" )
+
+
+## homogenise some variables across waves
+hhque2$h_nftelspn <- hhque2$h_nftel
+hhque1$h_nftelspn <- ifelse(hhque1$h_nftel == 2, 0, hhque1$h_nftelspn)
+hhque3$h_nftelspn <- ifelse(hhque3$h_nftel == 2, 0, hhque3$h_nftelspn)
+hhque2$h_nfcelspn <- hhque2$h_nfcel
+hhque1$h_nfcelspn <- ifelse(hhque1$h_nfcel == 2, 0, hhque1$h_nfcelspn)
+hhque3$h_nfcelspn <- ifelse(hhque3$h_nfcel == 2, 0, hhque3$h_nfcelspn)
+hhque2$h_nfnetspn <- hhque2$h_nfnet
+hhque1$h_nfnetspn <- ifelse(hhque1$h_nfnet == 2, 0, hhque1$h_nfnetspn)
+hhque3$h_nfnetspn <- ifelse(hhque3$h_nfnet == 2, 0, hhque3$h_nfnetspn)
 
 ## subset to relevant variables
 adult1 %<>% subset(select=vars_adult)
@@ -152,6 +182,9 @@ hhder3 %<>% subset(select=vars_hhder)
 inder1 %<>% subset(select=vars_inder)
 inder2 %<>% subset(select=vars_inder)
 inder3 %<>% subset(select=vars_inder)
+hhque1 %<>% subset(select=vars_hhque)
+hhque2 %<>% subset(select=vars_hhque)
+hhque3 %<>% subset(select=vars_hhque)
 
 ## add wave indicator
 adult1 %<>% cbind(wave = 1)
@@ -166,12 +199,16 @@ hhder3 %<>% cbind(wave = 3)
 inder1 %<>% cbind(wave = 1)
 inder2 %<>% cbind(wave = 2)
 inder3 %<>% cbind(wave = 3)
+hhque1 %<>% cbind(wave = 1)
+hhque2 %<>% cbind(wave = 2)
+hhque3 %<>% cbind(wave = 3)
 
 ## merge inter-temporal
 adult <- rbind(adult1, adult2, adult3)
 child <- rbind(child1, child2, child3)
 hhder <- rbind(hhder1, hhder2, hhder3)
 inder <- rbind(inder1, inder2, inder3)
+hhque <- rbind(hhque1, hhque2, hhque3)
 
 
 # recode certain variables
@@ -192,6 +229,7 @@ save(file = 'data/adult.RData', adult)
 save(file = 'data/child.RData', child)
 save(file = 'data/hhder.RData', hhder)
 save(file = 'data/inder.RData', inder)
+save(file = 'data/hhque.RData', hhque)
 
 
 # # put into panel data.frame (pdata.frame)
@@ -202,6 +240,7 @@ save(file = 'data/inder.RData', inder)
 
 # merge across data.frame types
 adulthh <- merge(adult, hhder, by = c('hhid', 'wave'), all.x = TRUE)
+adulthh <- merge(adulthh, hhque, by = c('hhid', 'wave'), all.x = TRUE)
 
 
 # save to file
