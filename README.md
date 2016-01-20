@@ -98,6 +98,8 @@ Older translations:
 
 http://tectonic.co.za/?p=121
 
+http://www.southafrica.info/services/googleza.htm
+
 
 # CodeBook.md
 
