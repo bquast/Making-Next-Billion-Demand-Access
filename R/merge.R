@@ -28,6 +28,8 @@ load('data/imported.RData')
 vars_adult <- c('hhid',         # household ID
                 'pid',          # person ID
                 'a_gen',        # gender
+                'w1_a_popgrp',  # b3 - Population group
+                'a_lng',        # b4 - Home Language
                 'a_owncom',     # g8 - Ownership of a Computer
                 #'a_owncom_v',   # g8a - Current resale value of Computer
                 'a_owncel',     # g10 - Ownership of Cellphone
@@ -192,16 +194,15 @@ save(file = 'data/hhder.RData', hhder)
 save(file = 'data/inder.RData', inder)
 
 
-# put into panel data.frame (pdata.frame)
-child %<>% pdata.frame(index = c('pid', 'wave'))
-hhder %<>% pdata.frame(index = c('hhid', 'wave'))
-inder %<>% pdata.frame(index = c('pid', 'wave'))
+# # put into panel data.frame (pdata.frame)
+# child %<>% pdata.frame(index = c('pid', 'wave'))
+# hhder %<>% pdata.frame(index = c('hhid', 'wave'))
+# inder %<>% pdata.frame(index = c('pid', 'wave'))
 
 
 # merge across data.frame types
-child <- merge(child, hhder, by = c('hhid', 'wave'), all.x = TRUE)
-child <- merge(child, inder, by = c('pid', 'wave'),  all.x = TRUE)
+adulthh <- merge(adult, hhder, by = c('hhid', 'wave'), all.x = TRUE)
 
 
 # save to file
-save(child, file = 'data/merged.RData')
+save(adulthh, file = 'data/merged.RData')
