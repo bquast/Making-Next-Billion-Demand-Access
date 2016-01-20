@@ -95,7 +95,8 @@ vars_inder <- c('hhid',       # household ID
                 'uif',        # montly income UIF payments (unemployment)
                 'remt')       # monthly income remittances
 
-vars_hhque <- c('h_enrgelec',     # d22 - Household has electricity
+vars_hhque <- c('hhid',           # household identification
+                'h_enrgelec',     # d22 - Household has electricity
                 'h_telcel',       # Household has a cellphone available for regular use
                 'h_expnd',        # d31 - Household expenditiure in last 30 days
                 # 'h_nfent',        # e2_1_3 - Household spent on entertainment  in the last 30 days
