@@ -11,11 +11,11 @@ library(dplyr)
 
 
 # load data
-load(file = "data/adult.RData")
+load(file = "data/merged.RData")
 
 
 # list variables
-ls(adult)
+ls(adulthh)
 
 
 # remove missing value codes
