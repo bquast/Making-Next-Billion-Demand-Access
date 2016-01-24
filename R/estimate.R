@@ -18,11 +18,15 @@ load(file = "data/merged.RData")
 ls(adulthh)
 
 
+# 
+summary(adulthh$h_nfcelspn)
+
+
 # remove missing value codes
 adulthh$a_lng <- ifelse(adulthh$a_lng < 0, NA, adulthh$a_lng)
 adulthh$h_nfcelspn <- ifelse(adulthh$h_nfcelspn < 0, NA, adulthh$h_nfcelspn)
-adulthh <- adulthh[!is.na(adulthh$h_nfcelspn),]
-adulthh2 <- adulthh[adulthh$h_nfcelspn != 0,]
+adulthh2 <- adulthh[!is.na(adulthh$h_nfcelspn),]
+adulthh3 <- adulthh2[adulthh2$h_nfcelspn != 0,]
 
 
 # exploratory
@@ -32,11 +36,11 @@ sumtable <- adulthh %>%
   group_by(a_lng, wave) %>%
   summarise(mean(a_owncel), mean(a_owncom))
 
-sumtable2 <- adulthh %>%
+sumtable2 <- adulthh2 %>%
   group_by(a_lng, wave) %>%
   summarise(mean(h_nfcelspn), mean(h_nfnetspn))
 
-sumtable3 <- adulthh2 %>%
+sumtable3 <- adulthh3 %>%
   group_by(a_lng, wave) %>%
   summarise(mean(h_nfcelspn), mean(h_nfnetspn))
 
