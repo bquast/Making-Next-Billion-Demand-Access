@@ -158,7 +158,6 @@ names(hhque3) %<>%
   as.character() %>%
   gsub(x = ., '^w[1-3].', "" )
 
-
 ## homogenise some variables across waves
 hhque2$h_nftelspn <- hhque2$h_nftel
 hhque1$h_nftelspn <- ifelse(hhque1$h_nftel == 2, 0, hhque1$h_nftelspn)
