@@ -18,6 +18,11 @@ load(file = "data/merged.RData")
 ls(adulthh)
 
 
+# some versions without missing value codes
+adulthh2 <- adulthh[!is.na(adulthh$h_nfcelspn),]
+adulthh3 <- adulthh2[adulthh2$h_nfcelspn != 0,]
+
+
 # inspect data
 summary(adulthh$a_lng)
 summary(adulthh$h_nftelspn)
@@ -30,7 +35,7 @@ summary(adulthh$h_nfnetspn)
 ## compute and phone ownership by group and year
 sumtable <- adulthh %>%
   group_by(a_lng, wave) %>%
-  summarise(mean(a_owncel), mean(a_owncom))
+  summarise(mean(a_owncel, na.rm=TRUE), mean(a_owncom, na.rm=TRUE))
 
 sumtable2 <- adulthh2 %>%
   group_by(a_lng, wave) %>%
