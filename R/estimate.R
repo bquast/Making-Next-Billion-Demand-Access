@@ -25,15 +25,6 @@ summary(adulthh$h_nfcelspn)
 summary(adulthh$h_nfnetspn)
 
 
-# remove missing value codes
-adulthh$a_lng <- ifelse(adulthh$a_lng < 0, NA, adulthh$a_lng)
-adulthh$h_nftelspn <- ifelse(adulthh$h_nftelspn < 0, NA, adulthh$h_nftelspn)
-adulthh$h_nfcelspn <- ifelse(adulthh$h_nfcelspn < 0, NA, adulthh$h_nfcelspn)
-adulthh$h_nfnetspn <- ifelse(adulthh$h_nfnetspn < 0, NA, adulthh$h_nfnetspn)
-adulthh2 <- adulthh[!is.na(adulthh$h_nfcelspn),]
-adulthh3 <- adulthh2[adulthh2$h_nfcelspn != 0,]
-
-
 # exploratory
 
 ## compute and phone ownership by group and year
