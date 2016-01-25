@@ -103,12 +103,15 @@ vars_hhque <- c('hhid',           # household identification
                 'h_nfentspn',     # e2_2_3 - Amount spent on entertainment  in last 30 days
                 # 'h_nfpap',        # e2_1_7 - Household spent on literary materials in the last 30 days
                 'h_nfpapspn',     # e2_2_7 - Amount spent on literary materials in last 30 day
-                # 'h_nfcel',        # e2_1_8 - Household spent on cellphone experiences in the last 30 days
+                'h_nfcel',        # e2_1_8 - Household spent on cellphone experiences in the last 30 days
                 'h_nfcelspn',     # e2_2_8 - Amount spent on cellphone expenses in last 30 days
-                # 'h_nftel',        # e2_1_9 - Household spent on  telephone expenses in the last 30 days
+                'h_nftel',        # e2_1_9 - Household spent on  telephone expenses in the last 30 days
                 'h_nftelspn',     # e2_2_9 - Amount spent on telephone expenses in last 30 days
-                # 'h_nfnet',        # e2_1_11 - Household spent on internet in the last 30 days
-                'h_nfnetspn')     # e2_2_11 - Amount spent on internet in last 30 days
+                'h_nfnet',        # e2_1_11 - Household spent on internet in the last 30 days
+                'h_nfnetspn',     # e2_2_11 - Amount spent on internet in last 30 days
+                'h_owncom',       # f1_6 - The household owns a computer
+                'h_owncel')       # f1_8 - The household owns a cellphone
+
 
 
 ## remove wave indicator from variable names
@@ -159,15 +162,25 @@ names(hhque3) %<>%
   gsub(x = ., '^w[1-3].', "" )
 
 ## homogenise some variables across waves
+hhque2$h_owncom   <- hhque2$h_wncom
 hhque2$h_nftelspn <- hhque2$h_nftel
+hhque2$h_nftel    <- ifelse(hhque2$h_nftel > 0, TRUE, ifelse(hhque2$h_nftel < 0, NA, FALSE))
 hhque1$h_nftelspn <- ifelse(hhque1$h_nftel == 2, 0, hhque1$h_nftelspn)
 hhque3$h_nftelspn <- ifelse(hhque3$h_nftel == 2, 0, hhque3$h_nftelspn)
+hhque1$h_nftel    <- ifelse(hhque1$h_nftel == 1, TRUE, ifelse(hhque1$h_nftel == 2, FALSE, NA))
+hhque3$h_nftel    <- ifelse(hhque3$h_nftel == 1, TRUE, ifelse(hhque3$h_nftel == 2, FALSE, NA))
 hhque2$h_nfcelspn <- hhque2$h_nfcel
+hhque2$h_nfcel    <- ifelse(hhque2$h_nfcel > 0, TRUE, ifelse(hhque2$h_nfcel < 0, NA, FALSE))
 hhque1$h_nfcelspn <- ifelse(hhque1$h_nfcel == 2, 0, hhque1$h_nfcelspn)
 hhque3$h_nfcelspn <- ifelse(hhque3$h_nfcel == 2, 0, hhque3$h_nfcelspn)
+hhque1$h_nfcel    <- ifelse(hhque1$h_nfcel == 1, TRUE, ifelse(hhque1$h_nfcel == 2, FALSE, NA))
+hhque3$h_nfcel    <- ifelse(hhque3$h_nfcel == 1, TRUE, ifelse(hhque3$h_nfcel == 2, FALSE, NA))
 hhque2$h_nfnetspn <- hhque2$h_nfnet
+hhque2$h_nfnet    <- ifelse(hhque2$h_nfnet > 0, TRUE, ifelse(hhque2$h_nfnet < 0, NA, FALSE))
 hhque1$h_nfnetspn <- ifelse(hhque1$h_nfnet == 2, 0, hhque1$h_nfnetspn)
 hhque3$h_nfnetspn <- ifelse(hhque3$h_nfnet == 2, 0, hhque3$h_nfnetspn)
+hhque1$h_nfnet    <- ifelse(hhque1$h_nfnet == 1, TRUE, ifelse(hhque1$h_nfnet == 2, FALSE, NA))
+hhque3$h_nfnet    <- ifelse(hhque3$h_nfnet == 1, TRUE, ifelse(hhque3$h_nfnet == 2, FALSE, NA))
 
 ## subset to relevant variables
 adult1 %<>% subset(select=vars_adult)
