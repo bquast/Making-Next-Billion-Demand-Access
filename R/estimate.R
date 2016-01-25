@@ -43,19 +43,26 @@ sumtable <- adulthh %>%
             netspn = mean(h_nfnetspn, na.rm = TRUE))
 
 
+# create event dummy
+adulthh$post_event <- ifelse(adulthh$wave == 3, TRUE, FALSE)
+
+
 # basic model
 
 ## define models
-m1  <- formula(a_owncel ~ a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
-m2  <- formula(a_owncom ~ a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
-m3  <- formula(h_nfnetspn ~ a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
+m1  <- formula(a_owncel ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
+m2  <- formula(a_owncom ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
+m3  <- formula(h_nfcel  ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
+m4  <- formula(h_nfnet  ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
 
 ## estimate models
 lm1 <- lm(m1, data = adulthh)
 lm2 <- lm(m2, data = adulthh)
 lm3 <- lm(m3, data = adulthh)
+lm4 <- lm(m4, data = adulthh)
 
 ## view results
 summary(lm1)
 summary(lm2)
 summary(lm3)
+summary(lm4)
