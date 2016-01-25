@@ -28,7 +28,6 @@ w1_a_intrv_y    # a14_y - Interview year
 ## language and ethnicity
 w1_a_popgrp     # b3 - Population group
 w1_a_lng        # b4 - Home Language
-w1_a_lng_o      # b4_o -  Other home Language
 w1_a_edlitrdhm  # h36 - Respondent's reading level in home language
 w1_a_edlitwrthm # h37 - Respondent's writing level in home language
 w1_a_edlitrden  # h38 - Respondent's reading level in English
