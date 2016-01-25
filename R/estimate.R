@@ -35,15 +35,13 @@ summary(adulthh$h_nfnetspn)
 ## compute and phone ownership by group and year
 sumtable <- adulthh %>%
   group_by(a_lng, wave) %>%
-  summarise(mean(a_owncel, na.rm=TRUE), mean(a_owncom, na.rm=TRUE))
+  summarise(owncel = mean(a_owncel,   na.rm = TRUE),
+            owncom = mean(a_owncom,   na.rm = TRUE),
+            cel    = mean(h_nfcel,    na.rm = TRUE),
+            net    = mean(h_nfnet,    na.rm = TRUE),
+            celspn = mean(h_nfcelspn, na.rm = TRUE),
+            netspn = mean(h_nfnetspn, na.rm = TRUE))
 
-sumtable2 <- adulthh2 %>%
-  group_by(a_lng, wave) %>%
-  summarise(mean(h_nfcelspn), mean(h_nfnetspn))
-
-sumtable3 <- adulthh3 %>%
-  group_by(a_lng, wave) %>%
-  summarise(mean(h_nfcelspn), mean(h_nfnetspn))
 
 # basic model
 
