@@ -56,7 +56,7 @@ m3 <- formula(h_nfcel  ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten +
 m4 <- formula(h_nfnet  ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
 m5 <- formula(h_nfnet  ~ post_event*tsonga + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
 m6 <- formula(h_nfnet  ~ post_event*tsonga + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman + hhincome)
-
+m7 <- formula(h_nfnet  ~ post_event*tsonga + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome)
 
 
 ## estimate models
@@ -66,6 +66,7 @@ lm3 <- lm(m3, data = adulthh)
 lm4 <- lm(m4, data = adulthh)
 lm5 <- lm(m5, data = adulthh)
 lm6 <- lm(m6, data = adulthh)
+lm7 <- lm(m7, data = adulthh)
 
 
 ## view results
@@ -75,6 +76,7 @@ summary(lm3)
 summary(lm4)
 summary(lm5)
 summary(lm6)
+summary(lm7)
 
-m_test <- formula(h_nfnet  ~ post_event*tsonga + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman + hhincome)
+m_test <- formula(h_nfnet  ~ post_event*tsonga + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome)
 summary(lm(m_test, adulthh))
