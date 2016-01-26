@@ -17,7 +17,7 @@ load(file = "data/merged.RData")
 # exploratory
 
 ## compute and phone ownership by group and year
-sumtable <- adulthh %>%
+means <- adulthh %>%
   group_by(a_lng, wave) %>%
   summarise(owncel = mean(a_owncel,   na.rm = TRUE),
             owncom = mean(a_owncom,   na.rm = TRUE),
