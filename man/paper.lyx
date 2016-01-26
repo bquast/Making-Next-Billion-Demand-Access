@@ -73,15 +73,7 @@ knitr
 \begin_body
 
 \begin_layout Title
-Soliciting the 
-\begin_inset Quotes eld
-\end_inset
-
-Next Billion
-\begin_inset Quotes erd
-\end_inset
-
- Demands by way of Local Content:
+Making the 'Next Billion' Demand:
 \begin_inset ERT
 status open
 
@@ -96,7 +88,7 @@ status open
 
 \end_inset
 
- Google.co.za in Setswana
+the Effect of Local Content through Google.co.za in Setswana
 \end_layout
 
 \begin_layout Author
@@ -116,7 +108,7 @@ January 2016
 
 \begin_layout Abstract
 Internet connectivity provides enormous improvements in quality of life
- as well as opportunities, for the newly connected.
+ as well as opportunities for the newly connected.
  Attempts to connect the 
 \begin_inset Quotes eld
 \end_inset
@@ -125,7 +117,8 @@ next billion
 \begin_inset Quotes erd
 \end_inset
 
- in Africa to do meet expectations, even though infrastructure is in place.
+ in Africa have not met expectations, even in places where infrastructure
+ is in place.
  This paper shows that an exogenous increase in local content creates an
  enormous incease in demand among native speakers, even when demand as a
  whole is falling as a result of the economic malaise.
@@ -135,9 +128,9 @@ next billion
 The introduction of the Setswana language in the South African Google Search
  website was a side of effect of this translation work being done for the
  Botswanan Google Search website (where Setswana is the official language,
- together with English) provides and exogenous event which started a huge
- increase in the number of internet-connected native speakers, as well as
- actual usage of the Setswana language online.
+ together with English) and provides and exogenous event which catalysed
+ a huge increase in the number of internet-connected native speakers, as
+ well as actual usage of the Setswana language online.
 \end_layout
 
 \begin_layout Standard
@@ -153,7 +146,7 @@ Introduction
 
 \begin_layout Standard
 Tswana language translation was done for Botswana (www.google.co.bw), so result
- are not endogeneity.
+ are free of endogeneity.
 \end_layout
 
 \begin_layout Section
@@ -176,6 +169,30 @@ should try Imbens etc.
 Data
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<prep, echo=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+load(file = '../data/results.RData')
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Itemize
 NIDS
 \end_layout
@@ -194,34 +211,6 @@ Venda not significant for computer
 
 \begin_layout Itemize
 include hhincome woman best_edu
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<prep>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-load(file = '../data/results.RData')
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
