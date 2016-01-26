@@ -269,7 +269,7 @@ adulthh$post_event <- ifelse(adulthh$wave == 3, TRUE, FALSE)
 
 
 # create tsonga dummy
-adulthh$tsonga <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
+adulthh$sestwana <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
 
 
 # save to file
