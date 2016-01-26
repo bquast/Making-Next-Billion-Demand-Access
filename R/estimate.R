@@ -37,14 +37,14 @@ m3_1 <- formula(h_nfcel  ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten
 
 m2_0 <- formula(a_owncom ~ post_event*factor(a_lng))
 m2_1 <- formula(a_owncom ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
-m2_2 <- formula(a_owncom ~ post_event*tsonga + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome)
-m2_5 <- formula(a_owncom ~ post_event*tsonga + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome + best_edu)
+m2_2 <- formula(a_owncom ~ post_event*setswana + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome)
+m2_5 <- formula(a_owncom ~ post_event*setswana + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome + best_edu)
 m4_0 <- formula(h_nfnet  ~ post_event*factor(a_lng))
 m4_1 <- formula(h_nfnet  ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
-m4_2 <- formula(h_nfnet  ~ post_event*tsonga + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
-m4_3 <- formula(h_nfnet  ~ post_event*tsonga + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman + hhincome)
-m4_4 <- formula(h_nfnet  ~ post_event*tsonga + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome)
-m4_5 <- formula(h_nfnet  ~ post_event*tsonga + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome + best_edu)
+m4_2 <- formula(h_nfnet  ~ post_event*setswana + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
+m4_3 <- formula(h_nfnet  ~ post_event*setswana + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman + hhincome)
+m4_4 <- formula(h_nfnet  ~ post_event*setswana + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome)
+m4_5 <- formula(h_nfnet  ~ post_event*setswana + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome + best_edu)
 
 ## estimate models
 lm1_0 <- lm(m1_0, data = adulthh)
