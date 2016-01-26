@@ -1,0 +1,235 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\begin_modules
+knitr
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Soliciting the 
+\begin_inset Quotes eld
+\end_inset
+
+Next Billion
+\begin_inset Quotes erd
+\end_inset
+
+ Demands by way of Local Content:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+ Google.co.za in Setswana
+\end_layout
+
+\begin_layout Author
+Bastiaan Quast
+\end_layout
+
+\begin_layout Date
+January 2016
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Internet connectivity provides enormous improvements in quality of life
+ as well as opportunities, for the newly connected.
+ Attempts to connect the 
+\begin_inset Quotes eld
+\end_inset
+
+next billion
+\begin_inset Quotes erd
+\end_inset
+
+ in Africa to do meet expectations, even though infrastructure is in place.
+ This paper shows that an exogenous increase in local content creates an
+ enormous incease in demand among native speakers, even when demand as a
+ whole is falling as a result of the economic malaise.
+\end_layout
+
+\begin_layout Abstract
+The introduction of the Setswana language in the South African Google Search
+ website was a side of effect of this translation work being done for the
+ Botswanan Google Search website (where Setswana is the official language,
+ together with English) provides and exogenous event which started a huge
+ increase in the number of internet-connected native speakers, as well as
+ actual usage of the Setswana language online.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Tswana language translation was done for Botswana (www.google.co.bw), so result
+ are not endogeneity.
+\end_layout
+
+\begin_layout Section
+Methods
+\end_layout
+
+\begin_layout Itemize
+Difference in Differences
+\end_layout
+
+\begin_layout Itemize
+no logit because DiD
+\end_layout
+
+\begin_layout Itemize
+should try Imbens etc.
+\end_layout
+
+\begin_layout Section
+Data
+\end_layout
+
+\begin_layout Itemize
+NIDS
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<show-off>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Itemize
+Significant only for Setswana and Venda
+\end_layout
+
+\begin_layout Itemize
+Venda not significant for computer
+\end_layout
+
+\begin_layout Itemize
+include hhincome woman best_edu
+\end_layout
+
+\begin_layout Section
+Conclusions and Limitations
+\end_layout
+
+\begin_layout Itemize
+need more local content
+\end_layout
+
+\begin_layout Itemize
+need more research
+\end_layout
+
+\end_body
+\end_document
