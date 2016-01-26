@@ -74,6 +74,18 @@ summary(lm4_1)
 summary(lm4_2)
 summary(lm4_3)
 summary(lm4_4)
+summary(lm4_5)
 
 m_test <- formula(h_nfnet  ~ post_event*factor(a_lng))
 summary(lm(m_test, adulthh))
+
+
+# save results
+save(means,
+     lm4_0,
+     lm4_1,
+     lm4_2,
+     lm4_3,
+     lm4_4,
+     lm4_5,
+     file = 'data/results.RData')
