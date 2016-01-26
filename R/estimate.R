@@ -26,14 +26,6 @@ adulthh$post_event <- ifelse(adulthh$wave == 3, TRUE, FALSE)
 adulthh$tsonga <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
 
 
-
-# remove some missing value codes
-adulthh$a_edlitrdhm  <- ifelse(adulthh$a_edlitrdhm < 0, NA, adulthh$a_edlitrdhm)
-adulthh$a_edlitwrthm <- ifelse(adulthh$a_edlitwrthm < 0, NA, adulthh$a_edlitwrthm)
-adulthh$a_edlitrden  <- ifelse(adulthh$a_edlitrden < 0, NA, adulthh$a_edlitrden)
-adulthh$a_edlitwrten  <- ifelse(adulthh$a_edlitwrten < 0, NA, adulthh$a_edlitwrten)
-
-
 # exploratory
 
 ## compute and phone ownership by group and year

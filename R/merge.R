@@ -263,6 +263,10 @@ adulthh$h_nfcelspn <- ifelse(adulthh$h_nfcelspn < 0, NA, adulthh$h_nfcelspn)
 adulthh$h_nfnetspn <- ifelse(adulthh$h_nfnetspn < 0, NA, adulthh$h_nfnetspn)
 adulthh$a_owncom <- ifelse(adulthh$a_owncom == 1, TRUE, ifelse(adulthh$a_owncom == 2, FALSE, NA))
 adulthh$a_owncel <- ifelse(adulthh$a_owncel == 1, TRUE, ifelse(adulthh$a_owncel == 2, FALSE, NA))
+adulthh$a_edlitrdhm  <- ifelse(adulthh$a_edlitrdhm < 0, NA, adulthh$a_edlitrdhm)
+adulthh$a_edlitwrthm <- ifelse(adulthh$a_edlitwrthm < 0, NA, adulthh$a_edlitwrthm)
+adulthh$a_edlitrden  <- ifelse(adulthh$a_edlitrden < 0, NA, adulthh$a_edlitrden)
+adulthh$a_edlitwrten  <- ifelse(adulthh$a_edlitwrten < 0, NA, adulthh$a_edlitwrten)
 
 
 # save to file
