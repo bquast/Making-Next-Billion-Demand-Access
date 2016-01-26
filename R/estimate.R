@@ -82,6 +82,7 @@ summary(lm(m_test, adulthh))
 
 # save results
 save(means,
+     lm2_5,
      lm4_0,
      lm4_1,
      lm4_2,
