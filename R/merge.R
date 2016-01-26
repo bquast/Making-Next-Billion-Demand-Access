@@ -22,7 +22,7 @@ load('data/imported.RData')
 vars_adult <- c('hhid',         # household ID
                 'pid',          # person ID
                 'a_gen',        # gender
-                'w1_a_popgrp',  # b3 - Population group
+                'a_popgrp',  # b3 - Population group
                 'a_lng',        # b4 - Home Language
                 'a_owncom',     # g8 - Ownership of a Computer
                 #'a_owncom_v',   # g8a - Current resale value of Computer
@@ -233,9 +233,6 @@ inder$woman   <- ifelse(inder$best_gen == 2, TRUE, FALSE)
 inder$spen    <- ifelse(is.na(inder$spen), 0, inder$spen)
 inder$ppen    <- ifelse(is.na(inder$ppen), 0, inder$ppen)
 
-## language introduction dummies
-adult$voice_search_afrikaans <- ifelse(adult$wave == 1, FALSE, TRUE)
-
 
 # save data
 save(file = 'data/adult.RData', adult)
@@ -245,28 +242,34 @@ save(file = 'data/inder.RData', inder)
 save(file = 'data/hhque.RData', hhque)
 
 
-# # put into panel data.frame (pdata.frame)
-# child %<>% pdata.frame(index = c('pid', 'wave'))
-# hhder %<>% pdata.frame(index = c('hhid', 'wave'))
-# inder %<>% pdata.frame(index = c('pid', 'wave'))
-
-
 # merge across data.frame types
-adulthh <- merge(adult, hhder, by = c('hhid', 'wave'), all.x = TRUE)
+adult   <- merge(adult,   inder, by = c('pid', 'hhid', 'wave'), all.x = TRUE)
+adult$hhid <- adult$hhid.x
+adult$hhid.x <- NULL
+adult$hhid.y <- NULL
+adulthh <- merge(adult,   hhder, by = c('hhid', 'wave'), all.x = TRUE)
 adulthh <- merge(adulthh, hhque, by = c('hhid', 'wave'), all.x = TRUE)
 
 
 # remove missing value codes
-adulthh$a_lng      <- ifelse(adulthh$a_lng < 0, NA, adulthh$a_lng)
-adulthh$h_nftelspn <- ifelse(adulthh$h_nftelspn < 0, NA, adulthh$h_nftelspn)
-adulthh$h_nfcelspn <- ifelse(adulthh$h_nfcelspn < 0, NA, adulthh$h_nfcelspn)
-adulthh$h_nfnetspn <- ifelse(adulthh$h_nfnetspn < 0, NA, adulthh$h_nfnetspn)
-adulthh$a_owncom <- ifelse(adulthh$a_owncom == 1, TRUE, ifelse(adulthh$a_owncom == 2, FALSE, NA))
-adulthh$a_owncel <- ifelse(adulthh$a_owncel == 1, TRUE, ifelse(adulthh$a_owncel == 2, FALSE, NA))
+adulthh$a_lng        <- ifelse(adulthh$a_lng < 0, NA, adulthh$a_lng)
+adulthh$h_nftelspn   <- ifelse(adulthh$h_nftelspn < 0, NA, adulthh$h_nftelspn)
+adulthh$h_nfcelspn   <- ifelse(adulthh$h_nfcelspn < 0, NA, adulthh$h_nfcelspn)
+adulthh$h_nfnetspn   <- ifelse(adulthh$h_nfnetspn < 0, NA, adulthh$h_nfnetspn)
+adulthh$a_owncom     <- ifelse(adulthh$a_owncom == 1, TRUE, ifelse(adulthh$a_owncom == 2, FALSE, NA))
+adulthh$a_owncel     <- ifelse(adulthh$a_owncel == 1, TRUE, ifelse(adulthh$a_owncel == 2, FALSE, NA))
 adulthh$a_edlitrdhm  <- ifelse(adulthh$a_edlitrdhm < 0, NA, adulthh$a_edlitrdhm)
 adulthh$a_edlitwrthm <- ifelse(adulthh$a_edlitwrthm < 0, NA, adulthh$a_edlitwrthm)
 adulthh$a_edlitrden  <- ifelse(adulthh$a_edlitrden < 0, NA, adulthh$a_edlitrden)
-adulthh$a_edlitwrten  <- ifelse(adulthh$a_edlitwrten < 0, NA, adulthh$a_edlitwrten)
+adulthh$a_edlitwrten <- ifelse(adulthh$a_edlitwrten < 0, NA, adulthh$a_edlitwrten)
+
+
+# create event dummy
+adulthh$post_event <- ifelse(adulthh$wave == 3, TRUE, FALSE)
+
+
+# create tsonga dummy
+adulthh$tsonga <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
 
 
 # save to file

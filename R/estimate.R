@@ -14,18 +14,6 @@ library(dplyr)
 load(file = "data/merged.RData")
 
 
-# list variables
-ls(adulthh)
-
-
-# create event dummy
-adulthh$post_event <- ifelse(adulthh$wave == 3, TRUE, FALSE)
-
-
-# create tsonga dummy
-adulthh$tsonga <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
-
-
 # exploratory
 
 ## compute and phone ownership by group and year
@@ -42,14 +30,14 @@ sumtable <- adulthh %>%
 # estimate models
 
 ## define models
-m1 <- formula(a_owncel ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman + hhincome)
-m2 <- formula(a_owncom ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman + hhincome)
-m3 <- formula(h_nfcel  ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman + hhincome)
-m4 <- formula(h_nfnet  ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
-m5 <- formula(h_nfnet  ~ post_event*tsonga + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
-m6 <- formula(h_nfnet  ~ post_event*tsonga + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman + hhincome)
-m7 <- formula(h_nfnet  ~ post_event*tsonga + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome)
-m8 <- formula(a_owncom ~ post_event*tsonga + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome)
+m1   <- formula(a_owncel ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
+m2   <- formula(a_owncom ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
+m3   <- formula(h_nfcel  ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
+m4   <- formula(h_nfnet  ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
+m2_1 <- formula(a_owncom ~ post_event*tsonga + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome)
+m4_1 <- formula(h_nfnet  ~ post_event*tsonga + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
+m4_2 <- formula(h_nfnet  ~ post_event*tsonga + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman + hhincome)
+m4_3 <- formula(h_nfnet  ~ post_event*tsonga + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome)
 
 ## estimate models
 lm1 <- lm(m1, data = adulthh)
