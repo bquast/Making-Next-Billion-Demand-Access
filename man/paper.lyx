@@ -29,7 +29,17 @@ knitr
 \index_command default
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_author "Bastiaan Quast"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize default
 \use_geometry false
 \use_package amsmath 1
@@ -73,30 +83,15 @@ knitr
 \begin_body
 
 \begin_layout Title
-Making the 'Next Billion' Demand:
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\backslash
-
-\end_layout
-
-\end_inset
-
-the Effect of Local Content through Google.co.za in Setswana
+Making the `Next Billion' Demand Access
 \end_layout
 
 \begin_layout Author
-Bastiaan Quast
+The Effect of Local Content: Google.co.za in Setswana
 \end_layout
 
 \begin_layout Date
-January 2016
+Bastiaan Quast
 \end_layout
 
 \begin_layout Standard
@@ -118,19 +113,19 @@ next billion
 \end_inset
 
  in Africa have not met expectations, even in places where infrastructure
- is in place.
+ has come into place.
  This paper shows that an exogenous increase in local content creates an
- enormous incease in demand among native speakers, even when demand as a
- whole is falling as a result of the economic malaise.
+ enormous increase in demand among native speakers, even when demand as
+ a whole is falling as a result of the economic malaise.
 \end_layout
 
 \begin_layout Abstract
-The introduction of the Setswana language in the South African Google Search
- website was a side of effect of this translation work being done for the
- Botswanan Google Search website (where Setswana is the official language,
- together with English) and provides and exogenous event which catalysed
- a huge increase in the number of internet-connected native speakers, as
- well as actual usage of the Setswana language online.
+The introduction of the Setswana (Tswana) language in the South-African
+ Google Search website (google.co.za) was a side of effect of this translation
+ work being done for the Botswanan Google Search website (google.co.bw), where
+ Setswana is the official language, together with English.
+ This exogenous event catalysed a huge increase in the number of internet-connec
+ted native speakers, as well as actual usage of the Setswana language online.
 \end_layout
 
 \begin_layout Standard
@@ -144,9 +139,30 @@ The introduction of the Setswana language in the South African Google Search
 Introduction
 \end_layout
 
-\begin_layout Standard
-Tswana language translation was done for Botswana (www.google.co.bw), so result
- are free of endogeneity.
+\begin_layout Itemize
+Effect of introduction of Setswana language on Google.co.za on number of native
+ speakers who report paying some non-zero amount on internet in the last
+ 30 days.
+\end_layout
+
+\begin_layout Itemize
+Setswana language translation was done for Botswana (google.co.bw), so result
+ are free of endogeneity issues.
+\end_layout
+
+\begin_layout Itemize
+Setswana is also an official language of South Africa, but only a relatively
+ small percentage of people speak it, there are also Setswana speakers in
+ Zimbabwe and Namibia.
+\end_layout
+
+\begin_layout Itemize
+Data from South Africa on 2008, 2010-2011, and 2012.
+\end_layout
+
+\begin_layout Itemize
+Introduction in Botswana in late 2010, presumably some lag of information
+ on non-internet users.
 \end_layout
 
 \begin_layout Section
@@ -158,11 +174,12 @@ Difference in Differences
 \end_layout
 
 \begin_layout Itemize
-no logit because DiD
+No logit because DiD [http://stats.stackexchange.com/questions/89513/difference-in
+-differences-estimator-for-logistic-regressions].
 \end_layout
 
 \begin_layout Itemize
-should try Imbens etc.
+Try Imbens etc.
 \end_layout
 
 \begin_layout Section
@@ -194,7 +211,7 @@ load(file = '../data/results.RData')
 \end_layout
 
 \begin_layout Itemize
-NIDS
+NIDS in 2008, 2010-2011, and 2012
 \end_layout
 
 \begin_layout Section
@@ -202,15 +219,18 @@ Results
 \end_layout
 
 \begin_layout Itemize
-Significant only for Setswana and Venda
+Base model's variable of interest (interaction of event dummy and Setswana
+ dummy) finds strong significant result of interaction effect.
 \end_layout
 
 \begin_layout Itemize
-Venda not significant for computer
+Alternative formulation's variable of interest (interaction of event dummy
+ and factor of categorical language variable) only significant growth only
+ for Setswana and Venda.
 \end_layout
 
 \begin_layout Itemize
-include hhincome woman best_edu
+Venda not significant for computer.
 \end_layout
 
 \begin_layout Standard
@@ -314,6 +334,61 @@ summary(lm2_5)
 \begin_layout Plain Layout
 
 @
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Other results
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Usage of Setswana Words on Google.co.za
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/quast/Local-Content-South-Africa/misc/Graph.png
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/quast/Local-Content-South-Africa/misc/Legend.png
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
