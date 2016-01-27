@@ -3,6 +3,10 @@
 \begin_document
 \begin_header
 \textclass article
+\begin_preamble
+\usepackage[style=philosophy-modern,backend=biber]{biblatex}
+\addbibresource{/Users/quast/Local-Content-South-Africa/man/bibliography.bib}
+\end_preamble
 \use_default_options true
 \begin_modules
 knitr
@@ -25,7 +29,7 @@ knitr
 \graphics default
 \default_output_format default
 \output_sync 0
-\bibtex_command default
+\bibtex_command biber
 \index_command default
 \paperfontsize default
 \spacing single
@@ -202,6 +206,11 @@ load(file = '../data/results.RData')
 
 \begin_layout Plain Layout
 
+library(printr)
+\end_layout
+
+\begin_layout Plain Layout
+
 @
 \end_layout
 
@@ -211,7 +220,14 @@ load(file = '../data/results.RData')
 \end_layout
 
 \begin_layout Itemize
-NIDS in 2008, 2010-2011, and 2012
+South African National Income Dynamics Survey (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "saldru2008nids,saldru2012nids,saldru2013nids"
+
+\end_inset
+
+)
 \end_layout
 
 \begin_layout Section
@@ -234,6 +250,26 @@ Venda not significant for computer.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Base model
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -244,12 +280,21 @@ status open
 
 \begin_layout Plain Layout
 
-summary(lm4_0)
+summary(lm4_0)$coef
 \end_layout
 
 \begin_layout Plain Layout
 
 @
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -272,7 +317,7 @@ status open
 
 \begin_layout Plain Layout
 
-summary(lm4_1)
+summary(m4_1)$coef
 \end_layout
 
 \begin_layout Plain Layout
@@ -300,7 +345,7 @@ status open
 
 \begin_layout Plain Layout
 
-summary(lm4_5)
+summary(lm4_5)$coef
 \end_layout
 
 \begin_layout Plain Layout
@@ -328,7 +373,7 @@ status open
 
 \begin_layout Plain Layout
 
-summary(lm2_5)
+summary(lm2_5)$coef
 \end_layout
 
 \begin_layout Plain Layout
@@ -347,13 +392,10 @@ Other results
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -368,9 +410,10 @@ Usage of Setswana Words on Google.co.za
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename /Users/quast/Local-Content-South-Africa/misc/Graph.png
-	rotateOrigin center
+	scale 70
 
 \end_inset
 
@@ -378,9 +421,10 @@ Usage of Setswana Words on Google.co.za
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename /Users/quast/Local-Content-South-Africa/misc/Legend.png
-	rotateOrigin center
+	scale 50
 
 \end_inset
 
@@ -406,6 +450,42 @@ need more local content
 
 \begin_layout Itemize
 need more research
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "bibliography"
+options "bibtotoc,plain"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+printbibliography
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body
