@@ -169,6 +169,33 @@ Introduction in Botswana in late 2010, presumably some lag of information
  on non-internet users.
 \end_layout
 
+\begin_layout Itemize
+Great encouragement for sporadic users if first website is in familiar language.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Incentivises users to use native language and find more native language
+ websites (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "GoogleTrendsZA"
+
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Also shows increased computer ownership.
+\end_layout
+
+\begin_layout Itemize
+Not observed effect on for cellphones since not available in Android and
+ iOS so google.co.za defaults to English
+\end_layout
+
 \begin_layout Section
 Methods
 \end_layout
@@ -180,10 +207,6 @@ Difference in Differences
 \begin_layout Itemize
 No logit because DiD [http://stats.stackexchange.com/questions/89513/difference-in
 -differences-estimator-for-logistic-regressions].
-\end_layout
-
-\begin_layout Itemize
-Try Imbens etc.
 \end_layout
 
 \begin_layout Section
@@ -403,6 +426,17 @@ status open
 \begin_layout Plain Layout
 Usage of Setswana Words on Google.co.za
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset label
+LatexCommand label
+name "GoogleTrendsZA"
 
 \end_inset
 
