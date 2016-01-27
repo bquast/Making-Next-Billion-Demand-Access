@@ -317,7 +317,7 @@ status open
 
 \begin_layout Plain Layout
 
-summary(m4_1)$coef
+summary(lm4_1)$coef
 \end_layout
 
 \begin_layout Plain Layout
