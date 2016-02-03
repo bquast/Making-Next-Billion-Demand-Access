@@ -5,7 +5,7 @@
 \textclass article
 \begin_preamble
 \usepackage[style=philosophy-modern,backend=biber]{biblatex}
-\addbibresource{/Users/quast/Local-Content-South-Africa/man/bibliography.bib}
+\addbibresource{/Users/quast/Making-Next-Billion-Demand-Access/man/bibliography.bib}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -105,31 +105,24 @@ Bastiaan Quast
 
 \end_layout
 
-\begin_layout Abstract
-Internet connectivity provides enormous improvements in quality of life
- as well as opportunities for the newly connected.
- Attempts to connect the 
-\begin_inset Quotes eld
-\end_inset
-
-next billion
-\begin_inset Quotes erd
-\end_inset
-
- in Africa have not met expectations, even in places where infrastructure
- has come into place.
- This paper shows that an exogenous increase in local content creates an
- enormous increase in demand among native speakers, even when demand as
- a whole is falling as a result of the economic malaise.
+\begin_layout Section*
+Abstract
 \end_layout
 
-\begin_layout Abstract
-The introduction of the Setswana (Tswana) language in the South-African
- Google Search website (google.co.za) was a side of effect of this translation
- work being done for the Botswanan Google Search website (google.co.bw), where
- Setswana is the official language, together with English.
- This exogenous event catalysed a huge increase in the number of internet-connec
-ted native speakers, as well as actual usage of the Setswana language online.
+\begin_layout Standard
+This paper shows that an exogenous increase in available local content leads
+ to a large increase in demand for internet connectivity among native speakers,
+ even as demand as a whole is falling.
+ Internet connectivity provides enormous improvements in quality of life
+ as well as opportunities for the newly connected.
+ Attempts to connect the `next billion' in Africa have not met expectations,
+ even in places where infrastructure has come online and prices have gone
+ down.
+ The introduction of the Setswana (Tswana) language in the South-African
+ Google Search website was a spillover effect of this translation work being
+ done for the Botswanan Google Search website.
+ This exogenous event created a large increase in the number of internet-connect
+ed native speakers, as well as usage of the Setswana language online.
 \end_layout
 
 \begin_layout Standard
@@ -144,24 +137,20 @@ Introduction
 \end_layout
 
 \begin_layout Itemize
-Effect of introduction of Setswana language on Google.co.za on number of native
- speakers who report paying some non-zero amount on internet in the last
- 30 days.
-\end_layout
-
-\begin_layout Itemize
-Setswana language translation was done for Botswana (google.co.bw), so result
- are free of endogeneity issues.
-\end_layout
-
-\begin_layout Itemize
 Setswana is also an official language of South Africa, but only a relatively
  small percentage of people speak it, there are also Setswana speakers in
  Zimbabwe and Namibia.
 \end_layout
 
 \begin_layout Itemize
-Data from South Africa on 2008, 2010-2011, and 2012.
+Data from South Africa on 2008, 2010-2011, and 2012 (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "saldru2008nids,saldru2012nids,saldru2013nids"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Itemize
@@ -170,47 +159,461 @@ Introduction in Botswana in late 2010, presumably some lag of information
 \end_layout
 
 \begin_layout Itemize
-Great encouragement for sporadic users if first website is in familiar language.
+Also shows increased computer ownership.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Local content is a vital means to connect new internet users.
+ Since the term `Connecting the Next Billion' was introduced in The Economists
+ 2006 `End of Year Report' 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "standage2006connecting"
+
+\end_inset
+
+, XXX many people have been estimated to have connected to the internet.
+ Yet despite increased range and improved affordability, many key growth
+ market such as sub-Saharan Africa are showing stagnation in internet connection
+s.
+ This paper shows that exogenous increase in accessability of local content
+ gave rise to a vast increase in the number of internet users among native
+ speakers.
+ In 2010 Google collaborated with a Botswanan team of linguists
+\begin_inset CommandInset citation
+LatexCommand cite
+key "otlogetswe2010setswana"
+
+\end_inset
+
+ to make its Botswanan website (google.co.bw) available in the local language:
+ `Setswana'.
+ In addition to being spoken in Botswana, there is also a sizable population
+ of Setswana directly across the border in South Africa, where it is also
+ one of the official state languages.
+ This led to the introduction of the Setswana language on the South African
+ Google website (google.co.za) as spillover of the translation work for Google's
+ Botswanan website.
+ This exogenous led to a vast increase in the number of native Setswana
+ speakers reporting to have spent some amount of money in the past 30 days
+ on internet access.
+\end_layout
+
+\begin_layout Standard
+It is not required to use a certain interface language in order to search
+ in this language.
+ However, the search page is in many instances the first website viewed
+ by users and the asides from being able to understand the interface, having
+ the interface be in a certain language also encourages usage of this language,
+ which in turn reveales more content in this language.
+ 
+\end_layout
+
+\begin_layout Standard
+In short we can identify several major channels which promote further engagement.
+\end_layout
+
+\begin_layout Enumerate
+Being able to read and understand the words.
+\end_layout
+
+\begin_layout Enumerate
+Encouragement from the familiarity with the language on what is often the
+ first website visited.
+\end_layout
+
+\begin_layout Enumerate
+Increased likelihood to using local language (see figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GoogleTrendsZA"
+
+\end_inset
+
+) and thus finding more content in the native language.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Usage of Setswana Words on Google.co.za
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GoogleTrendsZA"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Graph.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Legend.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The vast majority of internet access is developing countries is through
+ handheld devices such as smartphones.
+ However, due to the limited `real estate' on a mobile website, the link
+ to changing the interface language is replace with a dropdown menu that
+ reveales the additional language options.
+ Generally, the website will default the the operating system (Android /
+ iOS) language, however, since many local African languages are not available
+ as a system language, this is not possible there.
+ The fact that the introduction seems to benefit deskop usage but not mobile
+ usage is further substantiated by our results that isolate an increase
+ in computer ownership, but no increase in cell phone ownership.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Changing Interface Language on Mobile
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Google.co.za-default.png
+	scale 8
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Google.co.za-open.png
+	scale 8
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Google.co.za-scroll-down.png
+	scale 8
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The data used for this study comes from the South African National Income
+ Dynamics Survey, provided by 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "saldru2008nids,saldru2012nids,saldru2013nids"
+
+\end_inset
+
+, the data is futher discussed in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:data"
+
+\end_inset
+
+.
+ Section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:methods"
+
+\end_inset
+
+ discusses the methods employed in this study, specifically, the discussion
+ of the identification strategy can be found is 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:identification"
+
+\end_inset
+
+ and the use of the Difference-in-Difference estimator in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:estimation"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Data
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:data"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+South African National Income Dynamics Survey (
+\begin_inset CommandInset citation
+LatexCommand cite
+key "saldru2008nids,saldru2012nids,saldru2013nids"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+descriptive stats:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Incentivises users to use native language and find more native language
- websites (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "GoogleTrendsZA"
+number of adults
+\end_layout
 
-\end_inset
+\begin_layout Itemize
+Setswana speakers
+\end_layout
 
-).
+\begin_layout Itemize
+people using internet / cell phone etc.
+\end_layout
+
+\begin_layout Itemize
+male / female
+\end_layout
+
+\begin_layout Itemize
+income distribution
 \end_layout
 
 \end_deeper
-\begin_layout Itemize
-Also shows increased computer ownership.
-\end_layout
-
-\begin_layout Itemize
-Not observed effect on for cellphones since not available in Android and
- iOS so google.co.za defaults to English
+\begin_layout Standard
+South Africa's National Income Dynamics Survey collect data on a representative
+ set of around 10,000 households over time.
+ The first survey took place in 2008, the second one in late 2010 and early
+ 2011, and third one took place in 2012.
 \end_layout
 
 \begin_layout Section
 Methods
 \end_layout
 
-\begin_layout Itemize
-Difference in Differences
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:methods"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Identification Strategy
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:identification"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-No logit because DiD [http://stats.stackexchange.com/questions/89513/difference-in
--differences-estimator-for-logistic-regressions].
+Spillover from development in Botswana
+\end_layout
+
+\begin_layout Standard
+This paper exploits the introduction of the Setswana interface language
+ to Google Search in South Africa as a spillover of the development of that
+ interface for the Botswanan Google Search website.
+ By comparing the number of native Setswana speakers in South Africa being
+ internet users, with the number of South Africans with a different native
+ language around the same time, we isolate the effect of this introduction.
+\end_layout
+
+\begin_layout Standard
+The Setswana language was first developed for the Botswanan Google Search
+ website (google.co.bw).
+ As such, the introduction of Setswana to the South African Google Search
+ (google.co.za) was a spillover effect of that development.
+ This allow us the rule out any possible endogeity issues that might otherwise
+ arise in context such as these.
+ For instance, the Afrikaans language is almost solely spoken in South Africa.
+ When we observe that the introduction of the Afrikaans Google Search interface
+ occurs around the same time as a growth in the number of native Afrikaans
+ internet users, it will be hard to isolate the effect from the introduction
+ from its cause (since an increase in native Afrikaans internet users would
+ be a good reason to introduce it as an interface language).
+\end_layout
+
+\begin_layout Standard
+Substantial numbers of Setswana speakers exist in Botswana, South Africa,
+ Zimbabwe, and to some extend Namibia.
+ However the language is most important in Botswana, where it is spoken
+ by approximately 80% of all people, and where it is the only official language
+ other than English.
+ As such, it is also the place where most linguistic work on the Setswana
+ language takes place.
+ The Setswana Google Search interface was also developed at the university
+ of XXX by prof.
+ OtseXXX.
+\end_layout
+
+\begin_layout Standard
+It is worth noting that it is very common not to personally own a computer
+ and `paying for internet access' therefore also includes a lot of people
+ who use the internet in other locations such as internet cafe's.
+\end_layout
+
+\begin_layout Standard
+In addition to using the propensity to spend on internet (in the last thirty
+ days), we also use the propensity to own a computer as a dependent variable.
+ 
+\end_layout
+
+\begin_layout Subsection
+Estimation
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:estimation"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As mentioned in the above section, we compare the change in the level of
+ internet users among native Setswana speakers in South Africa, with that
+ of native speakers of other language in South Africa around the introduction
+ of the Setswana interface to the South-African Google Search.
+ For this we use a Difference in Difference estimator using a native-Setswana
+ speaker dummy variable, interacted with a event dummy variable on the introduct
+ion of the Setswana interface on google.co.za.
+\end_layout
+
+\begin_layout Standard
+In addition to this estimation, use an alternative specification whereby
+ a factor variable of native language is interacted with the event dummy
+ variable.
+ In a linear regression context, factor variables are estimated as dummy
+ variables for all levels (here: all languages) except for once `base' level,
+ which is where all language dummies are false (0) and the level (native
+ language) thus has to be the nth one (here English).
+\end_layout
+
+\begin_layout Standard
+The dependent variable here is also a dummy variable, which would normally
+ allow for the usage of a estimator such as logit.
+ However, since we are employing the Difference in Difference methodology
+ ....
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+http://stats.stackexchange.com/questions/89513/difference-in-differences-estimator
+-for-logistic-regressions
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Data
+Results
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:results"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -243,21 +646,6 @@ library(printr)
 \end_layout
 
 \begin_layout Itemize
-South African National Income Dynamics Survey (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "saldru2008nids,saldru2012nids,saldru2013nids"
-
-\end_inset
-
-)
-\end_layout
-
-\begin_layout Section
-Results
-\end_layout
-
-\begin_layout Itemize
 Base model's variable of interest (interaction of event dummy and Setswana
  dummy) finds strong significant result of interaction effect.
 \end_layout
@@ -269,7 +657,8 @@ Alternative formulation's variable of interest (interaction of event dummy
 \end_layout
 
 \begin_layout Itemize
-Venda not significant for computer.
+Propensity to own or spend on cellphone are not affected, presumably less
+ obvious language change.
 \end_layout
 
 \begin_layout Standard
@@ -313,10 +702,6 @@ summary(lm4_0)$coef
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -413,69 +798,18 @@ summary(lm2_5)$coef
 Other results
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Usage of Setswana Words on Google.co.za
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset CommandInset label
-LatexCommand label
-name "GoogleTrendsZA"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/quast/Local-Content-South-Africa/misc/Graph.png
-	scale 70
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/quast/Local-Content-South-Africa/misc/Legend.png
-	scale 50
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Conclusions and Limitations
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:conclusions"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
