@@ -669,7 +669,17 @@ load(file = '../data/results.RData') # load results data
 
 \begin_layout Plain Layout
 
+load(file = '../data/merged.RData')  # load source  data
+\end_layout
+
+\begin_layout Plain Layout
+
 library(printr) # load (customised) printr package for clean output of lm()
+\end_layout
+
+\begin_layout Plain Layout
+
+attach(adulthh)
 \end_layout
 
 \begin_layout Plain Layout
@@ -706,7 +716,19 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -729,7 +751,7 @@ status open
 
 \begin_layout Plain Layout
 
-summary(lm4_0)$coef
+lm(h_nfnet ~  post_event*factor(a_lng))
 \end_layout
 
 \begin_layout Plain Layout
@@ -757,12 +779,37 @@ status open
 
 \begin_layout Plain Layout
 
-<<lm4_1>>=
+<<lm4_1, cache=TRUE>>=
 \end_layout
 
 \begin_layout Plain Layout
 
-summary(lm4_1)$coef
+lm(h_nfnet ~  post_event*factor(a_lng) +
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_edlitrden              +
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_edlitwrten             +
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_edlitrdhm              +
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_edlitwrthm             +
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_woman)
 \end_layout
 
 \begin_layout Plain Layout
@@ -785,12 +832,47 @@ status open
 
 \begin_layout Plain Layout
 
-<<lm4_5>>=
+<<lm4_5, cache=TRUE>>=
 \end_layout
 
 \begin_layout Plain Layout
 
-summary(lm4_5)$coef
+lm(h_nfnet ~  post_event*setswana  +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitrden)  +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitwrten) +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitrdhm)  +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitwrthm) +
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_woman              +
+\end_layout
+
+\begin_layout Plain Layout
+
+              hhincome             +
+\end_layout
+
+\begin_layout Plain Layout
+
+              best_edu)
 \end_layout
 
 \begin_layout Plain Layout
@@ -805,35 +887,6 @@ summary(lm4_5)$coef
 
 \begin_layout Subsection
 LM2_5
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<load_merged, echo=FALSE>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-# load data
-\end_layout
-
-\begin_layout Plain Layout
-
-load(file = '../data/merged.RData')
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -882,12 +935,7 @@ lm(a_owncom ~ post_event*setswana  +
 
 \begin_layout Plain Layout
 
-              best_edu,
-\end_layout
-
-\begin_layout Plain Layout
-
-              data=adulthh)
+              best_edu)
 \end_layout
 
 \begin_layout Plain Layout
