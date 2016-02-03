@@ -7,7 +7,10 @@
 
 # load libraries
 library(gtrendsR)
+library(lubridate)
 library(ggplot2)
+library(dplyr)
+library(magrittr)
 
 
 # connect to the API
@@ -26,10 +29,19 @@ thuso <- gtrends('thuso', geo='ZA')
 thuso <- thuso$trend
 
 
-# plot
-ggplot(data = thuso) + geom_line(aes(x = start, y = thuso))
+# add starting date of month
+thuso$date <- floor_date(thuso$start, unit = 'month')
+
+# group by month
+thuso %<>%
+  group_by(date) %>%
+  summarise(thuso = sum(South.Africa))
+
+
+# plot data
+ggplot(thuso) + geom_line(aes(x = date, y = thuso))
 
 
 # save results
-save(thuso, list = 'data/googletrends.RData')
+save(thuso, file = 'data/googletrends.RData')
 
