@@ -774,6 +774,25 @@ LM4_1
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+with read / write in eng / native and woman
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -822,64 +841,6 @@ lm(h_nfnet ~  post_event*factor(a_lng) +
 
 \end_layout
 
-\begin_layout Subsection
-LM4_5
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<lm4_5, cache=TRUE>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-lm(h_nfnet ~  post_event*setswana  +
-\end_layout
-
-\begin_layout Plain Layout
-
-              factor(a_edlitrden)  +
-\end_layout
-
-\begin_layout Plain Layout
-
-              factor(a_edlitwrten) +
-\end_layout
-
-\begin_layout Plain Layout
-
-              factor(a_edlitrdhm)  +
-\end_layout
-
-\begin_layout Plain Layout
-
-              factor(a_edlitwrthm) +
-\end_layout
-
-\begin_layout Plain Layout
-
-              a_woman              +
-\end_layout
-
-\begin_layout Plain Layout
-
-              hhincome             +
-\end_layout
-
-\begin_layout Plain Layout
-
-              best_edu)
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
 \end_inset
 
 
@@ -890,6 +851,26 @@ LM2_5
 \end_layout
 
 \begin_layout Standard
+
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+with income and edu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -948,6 +929,11 @@ lm(a_owncom ~ post_event*setswana  +
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Conclusions and Limitations
 \end_layout
@@ -999,6 +985,85 @@ status open
 
 \backslash
 printbibliography
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+appendix
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+LM4_5
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<lm4_5, cache=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+lm(h_nfnet ~  post_event*setswana  +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitrden)  +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitwrten) +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitrdhm)  +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitwrthm) +
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_woman              +
+\end_layout
+
+\begin_layout Plain Layout
+
+              hhincome             +
+\end_layout
+
+\begin_layout Plain Layout
+
+              best_edu)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
 \end_layout
 
 \end_inset
