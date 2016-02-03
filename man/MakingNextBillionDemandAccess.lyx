@@ -250,7 +250,7 @@ reference "fig:GoogleTrendsZA"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -277,9 +277,33 @@ name "fig:GoogleTrendsZA"
 
 \begin_layout Plain Layout
 \align center
-\begin_inset Graphics
-	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Graph.png
-	scale 70
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<load_plot_data, echo=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+opts_chunk$set(fig.path='../misc/latex-', cache.path='../data/cache/latex-')
+\end_layout
+
+\begin_layout Plain Layout
+
+load(file = '../data/googletrends.RData')
+\end_layout
+
+\begin_layout Plain Layout
+
+library(ggplot2)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
 
 \end_inset
 
@@ -287,10 +311,23 @@ name "fig:GoogleTrendsZA"
 \end_layout
 
 \begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Legend.png
-	scale 50
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<plot_data, cache=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+ggplot(thuso) + geom_line(aes(x = date, y = thuso))
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
 
 \end_inset
 
@@ -622,22 +659,17 @@ status open
 
 \begin_layout Plain Layout
 
-<<prep, echo=FALSE>>=
+<<prep, include=FALSE>>=
 \end_layout
 
 \begin_layout Plain Layout
 
-# load results data
+load(file = '../data/results.RData') # load results data
 \end_layout
 
 \begin_layout Plain Layout
 
-load(file = '../data/results.RData')
-\end_layout
-
-\begin_layout Plain Layout
-
-library(printr)
+library(printr) # load (customised) printr package for clean output of lm()
 \end_layout
 
 \begin_layout Plain Layout
@@ -810,7 +842,7 @@ status open
 
 \begin_layout Plain Layout
 
-<<lm2_5>>=
+<<lm2_5, cache=TRUE>>=
 \end_layout
 
 \begin_layout Plain Layout
@@ -866,10 +898,6 @@ lm(a_owncom ~ post_event*setswana  +
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection
-Other results
 \end_layout
 
 \begin_layout Section
