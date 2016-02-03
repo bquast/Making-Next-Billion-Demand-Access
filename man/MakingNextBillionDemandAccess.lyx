@@ -627,6 +627,11 @@ status open
 
 \begin_layout Plain Layout
 
+# load results data
+\end_layout
+
+\begin_layout Plain Layout
+
 load(file = '../data/results.RData')
 \end_layout
 
@@ -776,12 +781,81 @@ status open
 
 \begin_layout Plain Layout
 
+<<load_merged, echo=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+# load data
+\end_layout
+
+\begin_layout Plain Layout
+
+load(file = '../data/merged.RData')
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
 <<lm2_5>>=
 \end_layout
 
 \begin_layout Plain Layout
 
-summary(lm2_5)$coef
+lm(a_owncom ~ post_event*setswana  + 
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitrden)  +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitwrten) + 
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitrdhm)  + 
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitwrthm) + 
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_woman              + 
+\end_layout
+
+\begin_layout Plain Layout
+
+              hhincome             + 
+\end_layout
+
+\begin_layout Plain Layout
+
+              best_edu,
+\end_layout
+
+\begin_layout Plain Layout
+
+              data=adulthh)
 \end_layout
 
 \begin_layout Plain Layout
