@@ -136,44 +136,6 @@ ed native speakers, as well as usage of the Setswana language online.
 Introduction
 \end_layout
 
-\begin_layout Itemize
-Setswana is also an official language of South Africa, but only a relatively
- small percentage of people speak it, there are also Setswana speakers in
- Zimbabwe and Namibia.
-\end_layout
-
-\begin_layout Itemize
-Data from South Africa on 2008, 2010-2011, and 2012 (
-\begin_inset CommandInset citation
-LatexCommand cite
-key "saldru2008nids,saldru2012nids,saldru2013nids"
-
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Itemize
-Introduction in Botswana in late 2010, presumably some lag of information
- on non-internet users.
-\end_layout
-
-\begin_layout Itemize
-Also shows increased computer ownership.
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset line
-LatexCommand rule
-offset "0.5ex"
-width "100col%"
-height "1pt"
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Standard
 Local content is a vital means to connect new internet users.
  Since the term `Connecting the Next Billion' was introduced in The Economists
@@ -186,8 +148,8 @@ key "standage2006connecting"
 
 , XXX many people have been estimated to have connected to the internet.
  Yet despite increased range and improved affordability, many key growth
- market such as sub-Saharan Africa are showing stagnation in internet connection
-s.
+ market such as sub-Saharan Africa are showing stagnation in the growth
+ of internet connections.
  This paper shows that exogenous increase in accessability of local content
  gave rise to a vast increase in the number of internet users among native
  speakers.
@@ -222,7 +184,8 @@ It is not required to use a certain interface language in order to search
 \end_layout
 
 \begin_layout Standard
-In short we can identify several major channels which promote further engagement.
+In short we can identify several major channels which promote further engagement
+, which together constitute the theory of change.
 \end_layout
 
 \begin_layout Enumerate
@@ -302,6 +265,11 @@ library(ggplot2)
 
 \begin_layout Plain Layout
 
+library(dplyr)
+\end_layout
+
+\begin_layout Plain Layout
+
 @
 \end_layout
 
@@ -351,6 +319,12 @@ The vast majority of internet access is developing countries is through
  The fact that the introduction seems to benefit deskop usage but not mobile
  usage is further substantiated by our results that isolate an increase
  in computer ownership, but no increase in cell phone ownership.
+\end_layout
+
+\begin_layout Standard
+In addition to the increase in the number of individuals spending on an
+ internet connection, we also find a positive effect on the number of individual
+s living in households with a computer.
 \end_layout
 
 \begin_layout Standard
@@ -495,6 +469,10 @@ male / female
 \end_layout
 
 \begin_layout Itemize
+linguistic skills
+\end_layout
+
+\begin_layout Itemize
 income distribution
 \end_layout
 
@@ -619,6 +597,16 @@ In addition to this estimation, use an alternative specification whereby
  variables for all levels (here: all languages) except for once `base' level,
  which is where all language dummies are false (0) and the level (native
  language) thus has to be the nth one (here English).
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+#1 in not English
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -709,49 +697,52 @@ Propensity to own or spend on cellphone are not affected, presumably less
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Base model
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<lm4_0>>=
+<<lm4_5, cache=TRUE>>=
 \end_layout
 
 \begin_layout Plain Layout
 
-lm(h_nfnet ~  post_event*factor(a_lng))
+lm(h_nfnet ~  post_event*setswana  +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitrden)  +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitwrten) +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitrdhm)  +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitwrthm) +
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_woman              +
+\end_layout
+
+\begin_layout Plain Layout
+
+              hhincome             +
+\end_layout
+
+\begin_layout Plain Layout
+
+              best_edu)
 \end_layout
 
 \begin_layout Plain Layout
@@ -764,94 +755,11 @@ lm(h_nfnet ~  post_event*factor(a_lng))
 
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
-LM4_1
+Computer in the House
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-with read / write in eng / native and woman
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<lm4_1, cache=TRUE>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-lm(h_nfnet ~  post_event*factor(a_lng) +
-\end_layout
-
-\begin_layout Plain Layout
-
-              a_edlitrden              +
-\end_layout
-
-\begin_layout Plain Layout
-
-              a_edlitwrten             +
-\end_layout
-
-\begin_layout Plain Layout
-
-              a_edlitrdhm              +
-\end_layout
-
-\begin_layout Plain Layout
-
-              a_edlitwrthm             +
-\end_layout
-
-\begin_layout Plain Layout
-
-              a_woman)
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-LM2_5
-\end_layout
-
-\begin_layout Standard
-
 \begin_inset Float table
 placement H
 wide false
@@ -1009,61 +917,235 @@ appendix
 \end_layout
 
 \begin_layout Section
-LM4_5
+Ownership and Expenditure by Native Language
 \end_layout
 
 \begin_layout Standard
+The below table breaks down computer and cellphone ownership as well as
+ internet and cellphone expenditure by linguistic group.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Descriptive statistics on Ownership and Expenditure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-<<lm4_5, cache=TRUE>>=
+<<lang_means>>=
 \end_layout
 
 \begin_layout Plain Layout
 
-lm(h_nfnet ~  post_event*setswana  +
+adulthh %>%
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitrden)  +
+  group_by(a_lng, wave) %>%
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitwrten) +
+  summarise(owncel = mean(a_owncel,   na.rm = TRUE),
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitrdhm)  +
+			owncom = mean(a_owncom,   na.rm = TRUE),
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitwrthm) +
+			cel    = mean(h_nfcel,    na.rm = TRUE),
 \end_layout
 
 \begin_layout Plain Layout
 
-              a_woman              +
+			net    = mean(h_nfnet,    na.rm = TRUE),
 \end_layout
 
 \begin_layout Plain Layout
 
-              hhincome             +
+			celspn = mean(h_nfcelspn, na.rm = TRUE),
 \end_layout
 
 \begin_layout Plain Layout
 
-              best_edu)
+			netspn = mean(h_nfnetspn, na.rm = TRUE))
 \end_layout
 
 \begin_layout Plain Layout
 
 @
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Factor vs.
+ Dummy
+\end_layout
+
+\begin_layout Standard
+In addition to estimating our model using a dummy variable for native Setswana
+ speakers, we also estimate the model using a factor variable of the categorical
+ variable describing language.
+ In a linear model this is employed as a dummy variable for each level except
+ for the base level.
+ The results of this estimation are similar to the base model, suggesting
+ that the results are robust to specification idiosyncrasies.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Factor of Language
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<lm4_0>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+lm(h_nfnet ~  post_event*factor(a_lng))
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lastly, we also estimate the factor model with the inclusion of the linguistic
+ skill variables.
+ These results are again similar to the ones from using simply a dummy variable
+ for native Setswana speakers, suggesting robustness to specification idiosyncra
+sies.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+LM4_1: with read / write in eng / native and woman
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<lm4_1, cache=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+lm(h_nfnet ~  post_event*factor(a_lng) +
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_edlitrden              +
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_edlitwrten             +
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_edlitrdhm              +
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_edlitwrthm             +
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_woman)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
