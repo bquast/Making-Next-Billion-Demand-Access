@@ -6,6 +6,12 @@
 \begin_preamble
 \usepackage[style=philosophy-modern,natbib=true,backend=biber]{biblatex}
 \addbibresource{/Users/quast/Making-Next-Billion-Demand-Access/man/bibliography.bib}
+
+
+\AtBeginDocument{%
+\let\ref\autoref
+\renewcommand\equationautorefname{\@gobble}
+}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -210,7 +216,7 @@ Encouragement from the familiarity with the language on what is often the
 \end_layout
 
 \begin_layout Enumerate
-Increased likelihood to using local language (see figure 
+Increased likelihood to using local language (see 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:GoogleTrendsZA"
@@ -343,7 +349,7 @@ s living in households with a computer.
 The data used for this study comes from the South African National Income
  Dynamics Survey, provided by 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "saldru2008nids,saldru2012nids,saldru2013nids"
 
 \end_inset
@@ -356,7 +362,7 @@ reference "sec:data"
 \end_inset
 
 .
- Section 
+ The
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:methods"
@@ -396,14 +402,14 @@ name "sec:data"
 \end_layout
 
 \begin_layout Itemize
-South African National Income Dynamics Survey (
+South African National Income Dynamics Survey 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citealt
 key "saldru2008nids,saldru2012nids,saldru2013nids"
 
 \end_inset
 
-)
+
 \end_layout
 
 \begin_layout Itemize
@@ -515,9 +521,9 @@ Substantial numbers of Setswana speakers exist in Botswana, South Africa,
  other than English.
  As such, it is also the place where most linguistic work on the Setswana
  language takes place.
- The Setswana Google Search interface was also developed at the university
- of XXX by prof.
- OtseXXX.
+ The Setswana Google Search interface was also developed at the University
+ of Botswana by prof.
+ Otlogetswe.
 \end_layout
 
 \begin_layout Standard
