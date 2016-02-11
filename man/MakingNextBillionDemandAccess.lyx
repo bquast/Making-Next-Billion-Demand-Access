@@ -4,14 +4,18 @@
 \begin_header
 \textclass article
 \begin_preamble
-\usepackage[style=philosophy-modern,backend=biber]{biblatex}
+\usepackage[style=philosophy-modern,natbib=true,backend=biber]{biblatex}
 \addbibresource{/Users/quast/Making-Next-Billion-Demand-Access/man/bibliography.bib}
 \end_preamble
 \use_default_options true
 \begin_modules
 knitr
+logicalmkup
 \end_modules
 \maintain_unincluded_children false
+\begin_local_layout
+Provides natbib 1
+\end_local_layout
 \language english
 \language_package default
 \inputencoding auto
@@ -56,8 +60,8 @@ knitr
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine basic
-\cite_engine_type default
+\cite_engine natbib
+\cite_engine_type authoryear
 \biblio_style plain
 \use_bibtopic false
 \use_indices false
@@ -141,12 +145,20 @@ Local content is a vital means to connect new internet users.
  Since the term `Connecting the Next Billion' was introduced in The Economists
  2006 `End of Year Report' 
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "standage2006connecting"
 
 \end_inset
 
-, XXX many people have been estimated to have connected to the internet.
+, close to 2 billion people have been estimated to have connected to the
+ internet, up from the just over one billion people back then 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "sanou2015world"
+
+\end_inset
+
+.
  Yet despite increased range and improved affordability, many key growth
  market such as sub-Saharan Africa are showing stagnation in the growth
  of internet connections.
@@ -155,7 +167,7 @@ key "standage2006connecting"
  speakers.
  In 2010 Google collaborated with a Botswanan team of linguists
 \begin_inset CommandInset citation
-LatexCommand cite
+LatexCommand citep
 key "otlogetswe2010setswana"
 
 \end_inset
@@ -328,59 +340,6 @@ s living in households with a computer.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Changing Interface Language on Mobile
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Google.co.za-default.png
-	scale 8
-
-\end_inset
-
- 
-\begin_inset Graphics
-	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Google.co.za-open.png
-	scale 8
-
-\end_inset
-
- 
-\begin_inset Graphics
-	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Google.co.za-scroll-down.png
-	scale 8
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 The data used for this study comes from the South African National Income
  Dynamics Survey, provided by 
 \begin_inset CommandInset citation
@@ -478,6 +437,18 @@ income distribution
 
 \end_deeper
 \begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 South Africa's National Income Dynamics Survey collect data on a representative
  set of around 10,000 households over time.
  The first survey took place in 2008, the second one in late 2010 and early
@@ -510,10 +481,6 @@ name "sub:identification"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-Spillover from development in Botswana
 \end_layout
 
 \begin_layout Standard
@@ -641,6 +608,34 @@ name "sec:results"
 
 \end_layout
 
+\begin_layout Itemize
+Base model's variable of interest (interaction of event dummy and Setswana
+ dummy) finds strong significant result of interaction effect.
+\end_layout
+
+\begin_layout Itemize
+Alternative formulation's variable of interest (interaction of event dummy
+ and factor of categorical language variable) only significant growth only
+ for Setswana and Venda.
+\end_layout
+
+\begin_layout Itemize
+Propensity to own or spend on cellphone are not affected, presumably less
+ obvious language change.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -678,22 +673,6 @@ attach(adulthh)
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-Base model's variable of interest (interaction of event dummy and Setswana
- dummy) finds strong significant result of interaction effect.
-\end_layout
-
-\begin_layout Itemize
-Alternative formulation's variable of interest (interaction of event dummy
- and factor of categorical language variable) only significant growth only
- for Setswana and Venda.
-\end_layout
-
-\begin_layout Itemize
-Propensity to own or spend on cellphone are not affected, presumably less
- obvious language change.
 \end_layout
 
 \begin_layout Standard
@@ -862,6 +841,18 @@ need more local content
 
 \begin_layout Itemize
 need more research
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1141,6 +1132,59 @@ lm(h_nfnet ~  post_event*factor(a_lng) +
 
 @
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Language Switching on Mobile
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Changing Interface Language on Mobile
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Google.co.za-default.png
+	scale 8
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Google.co.za-open.png
+	scale 8
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Google.co.za-scroll-down.png
+	scale 8
 
 \end_inset
 
