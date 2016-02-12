@@ -120,9 +120,9 @@ Abstract
 \end_layout
 
 \begin_layout Standard
-This paper shows that an exogenous increase in available local content leads
- to a large increase in demand for internet connectivity among native speakers,
- even as demand as a whole is falling.
+This paper shows that an exogenous increase in accessability of local language
+ content leads to a very large increase in demand for internet connectivity
+ among native speakers, even as demand as a whole is falling.
  Internet connectivity provides enormous improvements in quality of life
  as well as opportunities for the newly connected.
  Attempts to connect the `next billion' in Africa have not met expectations,
@@ -133,6 +133,8 @@ This paper shows that an exogenous increase in available local content leads
  done for the Botswanan Google Search website.
  This exogenous event created a large increase in the number of internet-connect
 ed native speakers, as well as usage of the Setswana language online.
+ Suggesting that connecting the fourth billion will require a greater focus
+ on demand by mean of local content.
 \end_layout
 
 \begin_layout Standard
@@ -147,8 +149,17 @@ Introduction
 \end_layout
 
 \begin_layout Standard
-Local content is a vital means to connect new internet users.
- Since the term `Connecting the Next Billion' was introduced in The Economists
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:intro"
+
+\end_inset
+
+Local content is a vital means to connecting new internet users.
+\end_layout
+
+\begin_layout Standard
+Since the term `Connecting the Next Billion' was introduced in The Economists
  2006 `End of Year Report' 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -156,8 +167,8 @@ key "standage2006connecting"
 
 \end_inset
 
-, close to 2 billion people have been estimated to have connected to the
- internet, up from the just over one billion people back then 
+, close to 2 billion people have been estimated to have been connected to
+ the internet, up from the just over one billion people back then 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "sanou2015world"
@@ -166,9 +177,12 @@ key "sanou2015world"
 
 .
  Yet despite increased range and improved affordability, many key growth
- market such as sub-Saharan Africa are showing stagnation in the growth
+ markets such as sub-Saharan Africa are showing stagnation in the growth
  of internet connections.
- This paper shows that exogenous increase in accessability of local content
+\end_layout
+
+\begin_layout Standard
+This paper shows that exogenous increase in accessability of local content
  gave rise to a vast increase in the number of internet users among native
  speakers.
  In 2010 Google collaborated with a Botswanan team of linguists
@@ -178,14 +192,32 @@ key "otlogetswe2010setswana"
 
 \end_inset
 
- to make its Botswanan website (google.co.bw) available in the local language:
- `Setswana'.
+ to make its Botswanan website (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+google.co.bw
+\end_layout
+
+\end_inset
+
+) available in the local language: `Setswana'.
  In addition to being spoken in Botswana, there is also a sizable population
  of Setswana directly across the border in South Africa, where it is also
  one of the official state languages.
  This led to the introduction of the Setswana language on the South African
- Google website (google.co.za) as spillover of the translation work for Google's
- Botswanan website.
+ Google website (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+google.co.za
+\end_layout
+
+\end_inset
+
+) as spillover of the translation work for Google's Botswanan website.
  This exogenous led to a vast increase in the number of native Setswana
  speakers reporting to have spent some amount of money in the past 30 days
  on internet access.
@@ -193,7 +225,7 @@ key "otlogetswe2010setswana"
 
 \begin_layout Standard
 It is not required to use a certain interface language in order to search
- in this language.
+ for content in this language.
  However, the search page is in many instances the first website viewed
  by users and the asides from being able to understand the interface, having
  the interface be in a certain language also encourages usage of this language,
@@ -263,7 +295,7 @@ status open
 
 \begin_layout Plain Layout
 
-<<load_plot_data, echo=FALSE>>=
+<<load_plot_data, echo=FALSE, warning=FALSE, message=FALSE>>=
 \end_layout
 
 \begin_layout Plain Layout
@@ -362,7 +394,7 @@ reference "sec:data"
 \end_inset
 
 .
- The
+ AFter which
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:methods"
@@ -486,10 +518,6 @@ name "sub:identification"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 This paper exploits the introduction of the Setswana interface language
  to Google Search in South Africa as a spillover of the development of that
  interface for the Botswanan Google Search website.
@@ -500,9 +528,29 @@ This paper exploits the introduction of the Setswana interface language
 
 \begin_layout Standard
 The Setswana language was first developed for the Botswanan Google Search
- website (google.co.bw).
+ website (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+google.co.bw
+\end_layout
+
+\end_inset
+
+).
  As such, the introduction of Setswana to the South African Google Search
- (google.co.za) was a spillover effect of that development.
+ (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+google.co.za
+\end_layout
+
+\end_inset
+
+) was a spillover effect of that development.
  This allow us the rule out any possible endogeity issues that might otherwise
  arise in context such as these.
  For instance, the Afrikaans language is almost solely spoken in South Africa.
@@ -549,43 +597,68 @@ name "sub:estimation"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 As mentioned in the above section, we compare the change in the level of
  internet users among native Setswana speakers in South Africa, with that
  of native speakers of other language in South Africa around the introduction
  of the Setswana interface to the South-African Google Search.
- For this we use a Difference in Difference estimator using a native-Setswana
+ For this we use a Difference-in-Difference estimator using a native-Setswana
  speaker dummy variable, interacted with a event dummy variable on the introduct
-ion of the Setswana interface on google.co.za.
-\end_layout
-
-\begin_layout Standard
-In addition to this estimation, use an alternative specification whereby
- a factor variable of native language is interacted with the event dummy
- variable.
- In a linear regression context, factor variables are estimated as dummy
- variables for all levels (here: all languages) except for once `base' level,
- which is where all language dummies are false (0) and the level (native
- language) thus has to be the nth one (here English).
-\begin_inset Note Note
+ion of the Setswana interface on 
+\begin_inset Flex Code
 status open
 
 \begin_layout Plain Layout
-#1 in not English
+google.co.za
 \end_layout
 
 \end_inset
 
+.
+\end_layout
 
+\begin_layout Standard
+In addition to this estimation, we use an alternative specification whereby
+ a factor variable of native language is interacted with the event dummy
+ variable.
+ In a linear regression context, factor variables are estimated as dummy
+ variables for all levels (here: all languages) except for once `base' level,
+ which is where all language dummies are 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+FALSE
+\end_layout
+
+\end_inset
+
+ (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+
+) and the level (native language) thus has to be the nth one (here 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+IsiNdebele
+\end_layout
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
 The dependent variable here is also a dummy variable, which would normally
  allow for the usage of a estimator such as logit.
- However, since we are employing the Difference in Difference methodology
+ However, since we are employing the Difference-in-Difference methodology
  ....
 \begin_inset Note Note
 status open
@@ -598,6 +671,43 @@ http://stats.stackexchange.com/questions/89513/difference-in-differences-estimat
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Software
+\end_layout
+
+\begin_layout Standard
+In order to make the result as easily reproducible as possible, this research
+ and writing in the article has been done exclusively using open-source
+ software such as R 
+\begin_inset CommandInset citation
+LatexCommand citep*
+key "R"
+
+\end_inset
+
+, and LyX 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+CITE
+\end_layout
+
+\end_inset
+
+ and logged using the version control system Git 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+CITE
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -615,7 +725,26 @@ name "sec:results"
 \end_layout
 
 \begin_layout Itemize
-Base model's variable of interest (interaction of event dummy and Setswana
+Base model's variable of interest (interaction of the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+post_event
+\end_layout
+
+\end_inset
+
+ dummy and 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+setswana
+\end_layout
+
+\end_inset
+
  dummy) finds strong significant result of interaction effect.
 \end_layout
 
@@ -740,10 +869,6 @@ lm(h_nfnet ~  post_event*setswana  +
 
 \end_layout
 
-\begin_layout Subsection
-Computer in the House
-\end_layout
-
 \begin_layout Standard
 \begin_inset Float table
 placement H
@@ -755,7 +880,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-with income and edu
+Computer in Household
 \end_layout
 
 \end_inset
