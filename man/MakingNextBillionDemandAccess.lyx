@@ -391,7 +391,7 @@ s living in households with a computer.
 The data used for this study comes from the South African National Income
  Dynamics Survey, provided by 
 \begin_inset CommandInset citation
-LatexCommand citep
+LatexCommand citet
 key "saldru2008nids,saldru2012nids,saldru2013nids"
 
 \end_inset
@@ -758,6 +758,13 @@ key "git"
 
 \end_inset
 
+ and publicly available on GitHub at 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://github.com/bquast/Making-Next-Billion-Demand-Access/"
+
+\end_inset
+
 .
  
 \end_layout
@@ -867,10 +874,19 @@ a_owncom
 \end_inset
 
 ) to own a computer as an explanandum, whereby we find similar results.
- This is of significance, because the explanandum is different from the
- base model's in two ways.
+ This is of significance, because the explanandum here (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+a_owncom
+\end_layout
+
+\end_inset
+
+) is different from the base model's in two ways.
  Firstly, it does not include expenditure on internet in ways such as internet
- cafe.
+ cafes.
  Secondly, the 
 \begin_inset Flex Code
 status open
@@ -1294,8 +1310,18 @@ name "sec:factor"
 In addition to estimating our model using a dummy variable for native Setswana
  speakers, we also estimate the model using a factor variable of the categorical
  variable describing language.
- In a linear model this is employed as a dummy variable for each level except
- for the base level.
+ In a linear model this is operationalised as a dummy variable for each
+ level except for the base level (here 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+IsiNdebele
+\end_layout
+
+\end_inset
+
+).
  The results of this estimation are similar to the base model, suggesting
  that the results are robust to specification idiosyncrasies.
 \end_layout
@@ -1440,7 +1466,38 @@ name "sec:langmob"
 
 \end_inset
 
+The graphics in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:langmob"
 
+\end_inset
+
+ illustrate the process of switching the mobile 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+google.co.za
+\end_layout
+
+\end_inset
+
+ interface language to Setswana, from the default English.
+ The mobile interface language can automatically be changed based on the
+ system language of the operation system (in most cases Android), however,
+ as Setswana and many African languages are not available as system languages
+ in Android, the website interface on 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+google.co.za
+\end_layout
+
+\end_inset
+
+ will default to English.
 \end_layout
 
 \begin_layout Standard
