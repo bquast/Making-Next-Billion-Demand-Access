@@ -499,6 +499,19 @@ key "saldru2008nids,saldru2012nids,saldru2013nids"
 .
 \end_layout
 
+\begin_layout Standard
+It contains an extensive household questionaire, which break expenditure
+ down into many forms of food and non-food expenditure.
+ In addition to this, the household income is calculated and imputed with
+ other income such as home ownership.
+\end_layout
+
+\begin_layout Standard
+The individual (adult) questionnaires also contain information on linquistic
+ skill and Englis and in the native language, as well as a series of variables
+ relating to communication technology ownership and utilisation.
+\end_layout
+
 \begin_layout Section
 Methods
 \end_layout
@@ -640,7 +653,8 @@ FALSE
 
 \end_inset
 
- (
+ (i.e.
+ 
 \begin_inset Flex Code
 status open
 
@@ -726,7 +740,7 @@ key "xie2015dynamic"
 
 \end_inset
 
- of the sweave framework 
+ of the Sweave framework 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "leisch2002sweave"
@@ -1172,6 +1186,12 @@ Ownership and Expenditure by Native Language
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:descriptive"
+
+\end_inset
+
 The below table breaks down computer and cellphone ownership as well as
  internet and cellphone expenditure by linguistic group.
 \end_layout
@@ -1265,6 +1285,12 @@ Factor vs.
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:factor"
+
+\end_inset
+
 In addition to estimating our model using a dummy variable for native Setswana
  speakers, we also estimate the model using a factor variable of the categorical
  variable describing language.
@@ -1405,6 +1431,16 @@ lm(h_nfnet ~  post_event*factor(a_lng) +
 
 \begin_layout Section
 Language Switching on Mobile
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:langmob"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
