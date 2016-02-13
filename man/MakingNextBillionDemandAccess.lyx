@@ -101,7 +101,17 @@ Making the `Next Billion' Demand Access
 \end_layout
 
 \begin_layout Author
-The Effect of Local Content: Google.co.za in Setswana
+The Effect of Local Content 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+google.co.za
+\end_layout
+
+\end_inset
+
+ in Setswana
 \end_layout
 
 \begin_layout Date
@@ -434,17 +444,6 @@ name "sec:data"
 \end_layout
 
 \begin_layout Itemize
-South African National Income Dynamics Survey 
-\begin_inset CommandInset citation
-LatexCommand citealt
-key "saldru2008nids,saldru2012nids,saldru2013nids"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
 descriptive stats:
 \end_layout
 
@@ -490,7 +489,14 @@ height "1pt"
 South Africa's National Income Dynamics Survey collect data on a representative
  set of around 10,000 households over time.
  The first survey took place in 2008, the second one in late 2010 and early
- 2011, and third one took place in 2012.
+ 2011, and third one took place in 2012 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "saldru2008nids,saldru2012nids,saldru2013nids"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -504,7 +510,9 @@ name "sec:methods"
 
 \end_inset
 
-
+This section beings with a discussion of the identification strategy employed,
+ followed by a explanation of the estimator used to operationalise this,
+ and concludes with a description of the software used for this estimation.
 \end_layout
 
 \begin_layout Subsection
@@ -687,27 +695,57 @@ key "R"
 
 \end_inset
 
-, and LyX 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-CITE
-\end_layout
+.
+ This document is written and LyX 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lyx"
 
 \end_inset
 
- and logged using the version control system Git 
-\begin_inset Note Note
-status open
+ in the LaTeX
+\begin_inset CommandInset citation
+LatexCommand citep
+key "lamport1985i1"
 
-\begin_layout Plain Layout
-CITE
-\end_layout
+\end_inset
+
+ language and compiled using the LuaTeX implementation
+\begin_inset CommandInset citation
+LatexCommand citep
+key "luatex"
 
 \end_inset
 
 .
+ The integration of R code in the document is performed using the knitr
+ implemenation 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "xie2015dynamic"
+
+\end_inset
+
+ of the sweave framework 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "leisch2002sweave"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+All changes are logged using the version control system Git 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "git"
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Section
@@ -721,11 +759,7 @@ name "sec:results"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Itemize
-Base model's variable of interest (interaction of the 
+In the base model, we use an interaction of the 
 \begin_inset Flex Code
 status open
 
@@ -745,30 +779,132 @@ setswana
 
 \end_inset
 
- dummy) finds strong significant result of interaction effect.
-\end_layout
+ dummy in order to isolate the effect on the explanandum, a dummy variable
+ describing household expenditure on internet in the last thirty days or
+ not (
+\begin_inset Flex Code
+status open
 
-\begin_layout Itemize
-Alternative formulation's variable of interest (interaction of event dummy
- and factor of categorical language variable) only significant growth only
- for Setswana and Venda.
+\begin_layout Plain Layout
+h_nfnet
 \end_layout
-
-\begin_layout Itemize
-Propensity to own or spend on cellphone are not affected, presumably less
- obvious language change.
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset line
-LatexCommand rule
-offset "0.5ex"
-width "100col%"
-height "1pt"
 
 \end_inset
 
+, household non-food internet).
+\end_layout
 
+\begin_layout Standard
+In an alternative formulation, we include the native language variable as
+ a categorical variable, interacted with the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+post_event
+\end_layout
+
+\end_inset
+
+ dummy.
+ In this estimation we only find significantly positive results for 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+setswana
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+venda
+\end_layout
+
+\end_inset
+
+ (as small language from the north-eastern region), and a significantly
+ negative effect for the language 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+afrikaans
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Futhermore, we also use the base model with the propensity of adults (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+a_owncom
+\end_layout
+
+\end_inset
+
+) to own a computer as an explanandum, whereby we find similar results.
+ This is of significance, because the explanandum is different from the
+ base model's in two ways.
+ Firstly, it does not include expenditure on internet in ways such as internet
+ cafe.
+ Secondly, the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+h_nfnet
+\end_layout
+
+\end_inset
+
+ variable is at a household level, whereas the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+a_owncom
+\end_layout
+
+\end_inset
+
+ variable is at an individual adult's level.
+\end_layout
+
+\begin_layout Standard
+We find no significant effect on the expenditure on cell phones or the propensit
+y to own one.
+ As discussed in the introduction, we suspect this to be a consequence of
+ the fact that language switching on mobile cannot be automatic, since the
+ Android operating system does not support the Setswana language, combined
+ with the fact that the Setswana interface button is not visible directly
+ on the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+google.co.za
+\end_layout
+
+\end_inset
+
+ homepage, but rather in a dropdown menu 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:langmob"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -963,27 +1099,20 @@ name "sec:conclusions"
 
 \end_inset
 
+The vast increase of internet usage among the Setswana speaking population
+ as a result of the newly introduced interface language on 
+\begin_inset Flex Code
+status open
 
+\begin_layout Plain Layout
+goog.co.za
 \end_layout
-
-\begin_layout Itemize
-need more local content
-\end_layout
-
-\begin_layout Itemize
-need more research
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset line
-LatexCommand rule
-offset "0.5ex"
-width "100col%"
-height "1pt"
 
 \end_inset
 
-
+, suggest that there is a serious lack in the availability of local content
+ in many African languages, which serves as an impediment to further internet
+ adoption here.
 \end_layout
 
 \begin_layout Standard
@@ -1291,6 +1420,16 @@ status collapsed
 \begin_layout Plain Layout
 Changing Interface Language on Mobile
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:langmob"
 
 \end_inset
 
