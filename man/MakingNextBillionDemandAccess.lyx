@@ -132,12 +132,11 @@ Abstract
 \begin_layout Standard
 This paper shows that an exogenous increase in accessability of local language
  content leads to a very large increase in demand for internet connectivity
- among native speakers, even as demand as a whole is falling.
+ among native speakers.
  Internet connectivity provides enormous improvements in quality of life
- as well as opportunities for the newly connected.
- Attempts to connect the `next billion' in Africa have not met expectations,
- even in places where infrastructure has come online and prices have gone
- down.
+ as well as opportunities for the newly connected, yet recent attempts to
+ connect the `next billion' in Africa have not met expectations, even in
+ places where infrastructure has come online and prices have gone down.
  The introduction of the Setswana (Tswana) language in the South-African
  Google Search website was a spillover of the translation from English to
  Setswana being done for the Botswanan Google Search website.
@@ -165,10 +164,7 @@ name "sec:intro"
 
 \end_inset
 
-Local content is a vital means to connecting new internet users.
- 
-\emph on
-will be vital in bringing new internet users online.
+Local content will be vital in bringing new internet users online.
 \end_layout
 
 \begin_layout Standard
@@ -260,26 +256,21 @@ Although it is not required to use a certain interface language in order
 \begin_layout Standard
 In short we can identify several major channels which promote further engagement
 , which together constitute the theory of change.
-\end_layout
-
-\begin_layout Enumerate
-Being able to read and understand the words.
-\end_layout
-
-\begin_layout Enumerate
-Encouragement from the familiarity with the language on what is often the
- first website visited.
-\end_layout
-
-\begin_layout Enumerate
-Increased likelihood to using local language (see 
+ Firstly, the ability to read and understand the words of the interface
+ increases the chance that user continue using it.
+ Secondly, the visibility of local language content increases the likelihood
+ of the user entering search queries in the local language and thereby finding
+ more content in the local language.
+ This last effect is also visible from 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:GoogleTrendsZA"
 
 \end_inset
 
-) and thus finding more content in the native language.
+, which illustrates how usage of the Setswana word `thuso', meaning `help'
+ was zero prior to the introduction of the Setswana search interface and
+ became widespread thereafter.
 \end_layout
 
 \begin_layout Standard
@@ -418,7 +409,7 @@ reference "sec:data"
 \end_inset
 
 .
- AFter which
+ After which
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:methods"
@@ -514,7 +505,7 @@ key "saldru2008nids,saldru2012nids,saldru2013nids"
 \end_layout
 
 \begin_layout Standard
-It contains an extensive household questionaire, which break expenditure
+It contains an extensive household questionaire, which breaks expenditure
  down into many forms of food and non-food expenditure.
  In addition to this, the household income is calculated and imputed with
  other income such as home ownership.
@@ -827,7 +818,7 @@ name "sec:results"
 
 \end_inset
 
-In the base model , we use an interaction of the 
+In the base model, we use an interaction of the 
 \begin_inset Flex Code
 status open
 
@@ -1508,6 +1499,19 @@ goog.co.za
 , suggest that there is a serious lack in the availability of local content
  in many African languages, which serves as an impediment to further internet
  adoption here.
+ Additionally, there was also an observedly positive effect on computer
+ ownership amongst adults.
+ This suggest that the effect is unlikely to be emphemeral in nature, since
+ computer ownership constitutes a more long-term investment in internet
+ access.
+\end_layout
+
+\begin_layout Standard
+Finally, the fact that this effect is not observed in cellphone ownership
+ and expenditure, which is possibly a consequence of the fact that the interface
+ cannot automatically switch and that the link `Setswana' is not directly
+ visible from the landing page, suggests that it is important either make
+ the link directly visible on the landing page.
 \end_layout
 
 \begin_layout Standard
