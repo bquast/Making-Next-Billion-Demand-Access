@@ -637,8 +637,17 @@ As mentioned in the above section, we compare the change in the level of
  of native speakers of other language in South Africa around the introduction
  of the Setswana interface to the South-African Google Search.
  For this we use a Difference-in-Difference estimator using a native-Setswana
- speaker dummy variable, interacted with a event dummy variable on the introduct
-ion of the Setswana interface on 
+ speaker dummy variable, interacted with a event dummy variable
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+describe this event dummy
+\end_layout
+
+\end_inset
+
+ on the introduction of the Setswana interface on 
 \begin_inset Flex Code
 status open
 
@@ -818,7 +827,7 @@ name "sec:results"
 
 \end_inset
 
-In the base model, we use an interaction of the 
+In the base model , we use an interaction of the 
 \begin_inset Flex Code
 status open
 
@@ -851,11 +860,156 @@ h_nfnet
 \end_inset
 
 , household non-food internet).
+ The results of this estimation are presented in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:nfnet"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+We find that the the interaction term of the event dummy (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+post_event
+\end_layout
+
+\end_inset
+
+) and the native Setswana speaker dummy (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+setswana
+\end_layout
+
+\end_inset
+
+) is positive and highly significant, with a p-value around 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+0.0018
+\end_layout
+
+\end_inset
+
+.
+ Both the individual dummy variables (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+post_eventTRUE
+\end_layout
+
+\end_inset
+
+ and setswanaTRUE) yield significant but negative parameter estimates.
+ In addition to this, the covariates included in the estimation are also
+ highly significant.
+ The highest education level of the individual (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+best_edu
+\end_layout
+
+\end_inset
+
+) and the household income (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+hhincome
+\end_layout
+
+\end_inset
+
+) are both positive and significant.
+ The parameter estimate of 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+a_womanTRUE
+\end_layout
+
+\end_inset
+
+ here is negative but not at all significant, this is unsurprising as we
+ use internet expenditure at a household level.
+ Most women live in a household which includes men and visa versa, suggesting
+ that this effect cannot be isolated in this estimation.
+ We further investigate this issue in a seperate estimation discussed below.
+ The variables describing linguistic skills in reading and writing in both
+ English and the native language do yield many significant results, though
+ lower levels of English writing skill seems to be correlated with a lower
+ propensity to use the internet (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+a_edlitwrten
+\end_layout
+
+\end_inset
+
+ for levels 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+, but not the very lowest: 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
 In an alternative formulation, we include the native language variable as
- a categorical variable, interacted with the 
+ a categorical variable (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+factor(a_lng)
+\end_layout
+
+\end_inset
+
+), interacted with the 
 \begin_inset Flex Code
 status open
 
@@ -951,7 +1105,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Propensity to Spend on Internet in Last 30 Days
+Propensity to live in Household that Spent on Internet in Last 30 Days
 \end_layout
 
 \end_inset
@@ -1031,7 +1185,7 @@ lm(h_nfnet ~  post_event*setswana  +
 \end_layout
 
 \begin_layout Standard
-Futhermore, we also use a variant of the base model, in which the propensity
+Furthermore, we also use a variant of the base model, in which the propensity
  of adults (
 \begin_inset Flex Code
 status open
@@ -1055,7 +1209,8 @@ a_owncom
 
 ) differs from the base model's explanandum in two ways.
  Firstly, it does not include expenditure on internet in ways such as internet
- cafes.
+ cafes, focusses on actual ownership, signaling a more long-term investment
+ and interest.
  Secondly, the 
 \begin_inset Flex Code
 status open
@@ -1087,7 +1242,121 @@ reference "tab:owncom"
 .
  This form of the estimation yields similar results to those estimated in
  the base model.
- 
+ Firstly we find that the variable of interest, the interaction term between
+ the event and the setswana dummy (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+post_eventTRUE:setswanaTRUE
+\end_layout
+
+\end_inset
+
+) is positive and highly significant, with a p-value smaller than 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+0.001
+\end_layout
+
+\end_inset
+
+.
+ The invidivual dummie variables (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+post_eventTRUE
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+setswanaTRUE
+\end_layout
+
+\end_inset
+
+) again are significant and negative with for the former's p-value smaller
+ than 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+0.01
+\end_layout
+
+\end_inset
+
+ and the later's small than 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+0.001
+\end_layout
+
+\end_inset
+
+.
+ In terms of the linguistic skill, we find that the lower levels of English
+ reading as well as English writing are correlated with lower propensities
+ of computer ownership.
+ Similar to internet expenditure model, household income (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+hhincome
+\end_layout
+
+\end_inset
+
+) and highest level of education (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+best_edu
+\end_layout
+
+\end_inset
+
+) are both positive and highly significant (p-value: 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+~0
+\end_layout
+
+\end_inset
+
+).
+ However unlike in the household internet expenditure model, the sex of
+ the individual here is highly significant, specifically, parameter estimate
+ of a_womanTRUE is negative and highly significant (p-value: 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+~0
+\end_layout
+
+\end_inset
+
+).
+ As mentioned above, this variable is difficult to interpret when using
+ a household-level variable as an explanandum, however, here, the computer
+ ownership variable is at an individual level, makes the coefficient more
+ interpretable.
 \end_layout
 
 \begin_layout Standard
