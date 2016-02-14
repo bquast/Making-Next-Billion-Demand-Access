@@ -785,7 +785,11 @@ status open
 
 \begin_layout Plain Layout
 The repository can by cloned to a local computer by entering in following
- command in a terminal with Git: 
+ command in a terminal with Git:
+\begin_inset Newline newline
+\end_inset
+
+
 \begin_inset Flex Code
 status open
 
@@ -936,6 +940,33 @@ attach(adulthh)
 \end_layout
 
 \begin_layout Standard
+
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Propensity to Spend on Internet in Last 30 Days
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:nfnet"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -987,6 +1018,11 @@ lm(h_nfnet ~  post_event*setswana  +
 \begin_layout Plain Layout
 
 @
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
