@@ -138,13 +138,47 @@ This paper shows that an exogenous increase in accessability of local language
  Attempts to connect the `next billion' in Africa have not met expectations,
  even in places where infrastructure has come online and prices have gone
  down.
- The introduction of the Setswana (Tswana) language in the South-African
+ 
+\emph on
+The introduction of the Setswana (Tswana) language in the South-African
  Google Search website was a spillover effect of this translation work being
  done for the Botswanan Google Search website.
- This exogenous event created a large increase in the number of internet-connect
-ed native speakers, as well as usage of the Setswana language online.
- Suggesting that connecting the fourth billion will require a greater focus
- on demand by mean of local content.
+
+\emph default
+ 
+\emph on
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+dont nderstand what 'this' translation work is refering to, this is the
+ first mention of it.
+ Also doesnt connect to last sentence
+\end_layout
+
+\end_inset
+
+
+\emph default
+This exogenous event 
+\emph on
+has resulted in a significant increase in the number of native Setswana
+ speakers online 
+\emph default
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+created a large increase in the number of internet-connected native speakers,
+\end_layout
+
+\end_inset
+
+ as well as usage of the Setswana language online, suggesting that connecting
+ the fourth billion will require a greater focus on demand by mean of local
+ content.
 \end_layout
 
 \begin_layout Standard
@@ -166,6 +200,9 @@ name "sec:intro"
 \end_inset
 
 Local content is a vital means to connecting new internet users.
+ 
+\emph on
+will be vital in bringing new internet users online.
 \end_layout
 
 \begin_layout Standard
@@ -177,8 +214,45 @@ key "standage2006connecting"
 
 \end_inset
 
-, close to 2 billion people have been estimated to have been connected to
- the internet, up from the just over one billion people back then 
+, close to 2 billion people have been 
+\emph on
+are 
+\emph default
+estimated to have 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+been
+\end_layout
+
+\end_inset
+
+ connected to the internet, up from the 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+just over
+\end_layout
+
+\end_inset
+
+ one billion 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+people back then
+\end_layout
+
+\end_inset
+
+
+\emph on
+at the time of the article's publication
+\emph default
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "sanou2015world"
@@ -186,15 +260,106 @@ key "sanou2015world"
 \end_inset
 
 .
- Yet despite increased range and improved affordability, many key growth
- markets such as sub-Saharan Africa are showing stagnation in the growth
- of internet connections.
+ Yet, despite increased range 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+explain range please
+\emph default
+ 
+\end_layout
+
+\end_inset
+
+and improved affordability, 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+many key growth markets
+\end_layout
+
+\end_inset
+
+ 
+\emph on
+key markets
+\emph default
+, 
+\emph on
+particularly
+\emph default
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+such as
+\end_layout
+
+\end_inset
+
+ sub-Saharan Africa are showing stagnation in the growth of internet connections.
 \end_layout
 
 \begin_layout Standard
-This paper shows that exogenous increase in accessability of local content
- gave rise to a vast increase in the number of internet users among native
- speakers.
+This paper shows 
+\emph on
+demostrates how an
+\emph default
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+exogenous increase
+\end_layout
+
+\end_inset
+
+ in 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+accessability of local content
+\end_layout
+
+\end_inset
+
+ 
+\emph on
+local language content
+\emph default
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+gave riseh to a vast increase
+\end_layout
+
+\end_inset
+
+ 
+\emph on
+has had the positive spillover of brining a siginifcant number of local
+ language speakers online as first-time internet users.
+ 
+\emph default
+i
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+n the number of internet users among native speakers.
+\end_layout
+
+\end_inset
+
  In 2010 Google collaborated with a Botswanan team of linguists
 \begin_inset CommandInset citation
 LatexCommand citep
