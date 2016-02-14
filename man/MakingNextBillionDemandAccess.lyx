@@ -138,47 +138,13 @@ This paper shows that an exogenous increase in accessability of local language
  Attempts to connect the `next billion' in Africa have not met expectations,
  even in places where infrastructure has come online and prices have gone
  down.
- 
-\emph on
-The introduction of the Setswana (Tswana) language in the South-African
- Google Search website was a spillover effect of this translation work being
- done for the Botswanan Google Search website.
-
-\emph default
- 
-\emph on
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-dont nderstand what 'this' translation work is refering to, this is the
- first mention of it.
- Also doesnt connect to last sentence
-\end_layout
-
-\end_inset
-
-
-\emph default
-This exogenous event 
-\emph on
-has resulted in a significant increase in the number of native Setswana
- speakers online 
-\emph default
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-created a large increase in the number of internet-connected native speakers,
-\end_layout
-
-\end_inset
-
- as well as usage of the Setswana language online, suggesting that connecting
- the fourth billion will require a greater focus on demand by mean of local
- content.
+ The introduction of the Setswana (Tswana) language in the South-African
+ Google Search website was a spillover of the translation from English to
+ Setswana being done for the Botswanan Google Search website.
+ This exogenous event has resulted in a substantial increase in the number
+ of native Setswana speakers online as well as usage of the Setswana language
+ online, suggesting that connecting the fourth billion will require a greater
+ focus on demand by mean of local content.
 \end_layout
 
 \begin_layout Standard
@@ -214,45 +180,12 @@ key "standage2006connecting"
 
 \end_inset
 
-, close to 2 billion people have been 
+, close to 2 billion people are
 \emph on
-are 
-\emph default
-estimated to have 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-been
-\end_layout
-
-\end_inset
-
- connected to the internet, up from the 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-just over
-\end_layout
-
-\end_inset
-
- one billion 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-people back then
-\end_layout
-
-\end_inset
-
-
-\emph on
-at the time of the article's publication
-\emph default
  
+\emph default
+estimated to have been connected to the internet, up from the just over
+ one billion at the time of the article's publication 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "sanou2015world"
@@ -260,107 +193,22 @@ key "sanou2015world"
 \end_inset
 
 .
- Yet, despite increased range 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\emph on
-explain range please
-\emph default
- 
-\end_layout
-
-\end_inset
-
-and improved affordability, 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-many key growth markets
-\end_layout
-
-\end_inset
-
- 
-\emph on
-key markets
-\emph default
-, 
-\emph on
-particularly
-\emph default
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-such as
-\end_layout
-
-\end_inset
-
- sub-Saharan Africa are showing stagnation in the growth of internet connections.
+ Yet, despite increased range and improved affordability, key markets, particula
+rly sub-Saharan Africa are showing stagnation in the growth of internet
+ connections.
 \end_layout
 
 \begin_layout Standard
-This paper shows 
+This paper shows demostrates how an exogenous increase in accessability
+ of local language content gave rise to a vast increase in the number of
+ local language speakers online as first-time internet users
 \emph on
-demostrates how an
-\emph default
+.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-exogenous increase
 \end_layout
 
-\end_inset
-
- in 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-accessability of local content
-\end_layout
-
-\end_inset
-
- 
-\emph on
-local language content
-\emph default
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-gave riseh to a vast increase
-\end_layout
-
-\end_inset
-
- 
-\emph on
-has had the positive spillover of brining a siginifcant number of local
- language speakers online as first-time internet users.
- 
-\emph default
-i
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-n the number of internet users among native speakers.
-\end_layout
-
-\end_inset
-
- In 2010 Google collaborated with a Botswanan team of linguists
+\begin_layout Standard
+In 2010 Google collaborated with a Botswanan team of linguists
 \begin_inset CommandInset citation
 LatexCommand citep
 key "otlogetswe2010setswana"
@@ -392,19 +240,20 @@ google.co.za
 
 \end_inset
 
-) as spillover of the translation work for Google's Botswanan website.
- This exogenous led to a vast increase in the number of native Setswana
+) as spillover of the translation work performed for Google's Botswanan
+ website.
+ This exogenous led to a large increase in the number of native Setswana
  speakers reporting to have spent some amount of money in the past 30 days
  on internet access.
 \end_layout
 
 \begin_layout Standard
-It is not required to use a certain interface language in order to search
- for content in this language.
- However, the search page is in many instances the first website viewed
- by users and the asides from being able to understand the interface, having
- the interface be in a certain language also encourages usage of this language,
- which in turn reveales more content in this language.
+Although it is not required to use a certain interface language in order
+ to search for content in this language, the search page is in many instances
+ the first website viewed by users.
+ Asides from being able to understand the interface, having the interface
+ be in a certain language also encourages usage of this language, which
+ in turn reveales more content in this language.
  
 \end_layout
 
@@ -535,9 +384,9 @@ ggplot(thuso) + geom_line(aes(x = date, y = thuso))
 \begin_layout Standard
 The vast majority of internet access is developing countries is through
  handheld devices such as smartphones.
- However, due to the limited `real estate' on a mobile website, the link
- to changing the interface language is replace with a dropdown menu that
- reveales the additional language options.
+ However, due to the limited `real estate' (surface area of the screen)
+ on a mobile website, the link to changing the interface language is replace
+ with a dropdown menu that reveales the additional language options.
  Generally, the website will default the the operating system (Android /
  iOS) language, however, since many local African languages are not available
  as a system language, this is not possible there.
@@ -1048,81 +897,6 @@ afrikaans
 \end_layout
 
 \begin_layout Standard
-Futhermore, we also use the base model with the propensity of adults (
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-a_owncom
-\end_layout
-
-\end_inset
-
-) to own a computer as an explanandum, whereby we find similar results.
- This is of significance, because the explanandum here (
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-a_owncom
-\end_layout
-
-\end_inset
-
-) is different from the base model's in two ways.
- Firstly, it does not include expenditure on internet in ways such as internet
- cafes.
- Secondly, the 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-h_nfnet
-\end_layout
-
-\end_inset
-
- variable is at a household level, whereas the 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-a_owncom
-\end_layout
-
-\end_inset
-
- variable is at an individual adult's level.
-\end_layout
-
-\begin_layout Standard
-We find no significant effect on the expenditure on cell phones or the propensit
-y to own one.
- As discussed in the introduction, we suspect this to be a consequence of
- the fact that language switching on mobile cannot be automatic, since the
- Android operating system does not support the Setswana language, combined
- with the fact that the Setswana interface button is not visible directly
- on the 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-google.co.za
-\end_layout
-
-\end_inset
-
- homepage, but rather in a dropdown menu 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "fig:langmob"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -1221,6 +995,66 @@ lm(h_nfnet ~  post_event*setswana  +
 \end_layout
 
 \begin_layout Standard
+Futhermore, we also use a variant of the base model, in which the propensity
+ of adults (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+a_owncom
+\end_layout
+
+\end_inset
+
+) to own a computer is used as an explanandum.
+ This is of particular relevance, as the explanandum here (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+a_owncom
+\end_layout
+
+\end_inset
+
+) differs from the base model's explanandum in two ways.
+ Firstly, it does not include expenditure on internet in ways such as internet
+ cafes.
+ Secondly, the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+h_nfnet
+\end_layout
+
+\end_inset
+
+ variable is at a household level, whereas the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+a_owncom
+\end_layout
+
+\end_inset
+
+ variable is at the level of an individual adult.
+ The results from this estimation are included in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:owncom"
+
+\end_inset
+
+.
+ This form of the estimation yields similar results to those estimated in
+ the base model.
+ 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float table
 placement H
 wide false
@@ -1233,6 +1067,13 @@ status open
 \begin_layout Plain Layout
 Computer in Household
 \end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:owncom"
 
 \end_inset
 
@@ -1301,6 +1142,40 @@ lm(a_owncom ~ post_event*setswana  +
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Asides from the effect on the proportion of households with internet expenditure
+, and the proportion of adults who own a computer, we also estimate any
+ possible effects on the propensity of the household to own spend on a cellphone
+, and on adults propensity to own a cellphone.
+\end_layout
+
+\begin_layout Standard
+We find no significant effects on the propensity of expenditure on cell
+ phones or the propensity to own one.
+ As discussed in the introduction, we suspect this to be a consequence of
+ the fact that language switching on mobile cannot be automatic, since the
+ Android operating system does not support the Setswana language, combined
+ with the fact that the Setswana interface button is not visible directly
+ on the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+google.co.za
+\end_layout
+
+\end_inset
+
+ homepage, but rather in a dropdown menu 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:langmob"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
