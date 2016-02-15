@@ -101,7 +101,7 @@ Making the `Next Billion' Demand Access
 \end_layout
 
 \begin_layout Author
-The Effect of Local Content 
+The Local-Content Effect of 
 \begin_inset Flex Code
 status open
 
@@ -1829,7 +1829,7 @@ Descriptive Statistics
 \end_layout
 
 \begin_layout Standard
-The in 
+In 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:langsex"
@@ -1897,8 +1897,15 @@ ggplot(adulthh, aes(x = a_lng, fill = a_woman)) + geom_bar()
 \end_layout
 
 \begin_layout Standard
-The following figure describes the skill of individuals in reading the English
- language, where 1 the best and 4 is the worst, grey values are 
+The 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:rden"
+
+\end_inset
+
+ describes the skill of individuals in reading the English language, where
+ 1 the best and 4 is the worst, grey values are 
 \begin_inset Flex Code
 status open
 
@@ -1928,6 +1935,13 @@ status open
 \begin_layout Plain Layout
 English Language Reading Skills
 \end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:rden"
 
 \end_inset
 
@@ -1969,7 +1983,14 @@ ggplot(adulthh, aes(x = a_lng, fill = factor(a_edlitrden)) ) +
 \end_layout
 
 \begin_layout Standard
-The following figure does the same but with regards to the native language.
+The 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:rdhm"
+
+\end_inset
+
+ does the same but with regards to the native language.
 \end_layout
 
 \begin_layout Standard
@@ -1985,6 +2006,13 @@ status open
 \begin_layout Plain Layout
 Native Language Reading Skills
 \end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:rdhm"
 
 \end_inset
 
