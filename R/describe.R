@@ -28,5 +28,4 @@ dep_vars <- adulthh %>%
 
 
 # plot age distribution by group
-# factor should be moved out and labelled
-ggplot(adulthh, aes(x=best_age_yrs, colour=factor(a_lng) )) + geom_freqpoly()
+ggplot(adulthh, aes(x=best_age_yrs, colour=a_lng )) + geom_freqpoly()
