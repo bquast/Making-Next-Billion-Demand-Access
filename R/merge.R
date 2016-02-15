@@ -272,6 +272,11 @@ adulthh$interface_intro <- ifelse(adulthh$wave == 3, TRUE, FALSE)
 adulthh$setswana_logical <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
 
 
+
+# remove observations without languages
+adulthh <- subset(adulthh, adulthh$a_lng != 12)
+adulthh <- subset(adulthh, !is.na(adulthh$a_lng))
+
 # make language labelled factor
 adulthh$a_lng <- factor(adulthh$a_lng, labels = c('IsiNdebele',
                                                   'IsiXhosa',
@@ -283,13 +288,8 @@ adulthh$a_lng <- factor(adulthh$a_lng, labels = c('IsiNdebele',
                                                   'Tshivenda',
                                                   'IsiTsonga',
                                                   'Afrikaans',
-                                                  'English',
-                                                  'Other'))
+                                                  'English'))
 
-
-# remove observations without languages
-adulthh <- subset(adulthh, adulthh$a_lng != 'Other')
-adulthh <- subset(adulthh, !is.na(adulthh$a_lng))
 
 
 # save to file
