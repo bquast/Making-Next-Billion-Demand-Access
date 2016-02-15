@@ -1963,6 +1963,63 @@ ggplot(adulthh, aes(x = a_lng, fill = factor(a_edlitrden)) ) +
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following figure does the same but with regards to the native language.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Native Language Reading Skills
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<read_native, cache=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+ggplot(adulthh, aes(x = a_lng, fill = factor(a_edlitrdhm)) ) + 
+\end_layout
+
+\begin_layout Plain Layout
+
+	geom_bar(position = 'fill')
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Plain Layout
 
 \end_layout
