@@ -19,8 +19,8 @@ load(file = 'data/merged.RData')
 # computer and phone ownership by group and year
 means <- adulthh %>%
   group_by(a_lng, wave) %>%
-  summarise(a_owncel = mean(a_owncel,   na.rm = TRUE),
-            a_owncom = mean(a_owncom,   na.rm = TRUE),
+  summarise(a_owncel   = mean(a_owncel,   na.rm = TRUE),
+            a_owncom   = mean(a_owncom,   na.rm = TRUE),
             h_nfcel    = mean(h_nfcel,    na.rm = TRUE),
             h_nfnet    = mean(h_nfnet,    na.rm = TRUE),
             h_nfcelspn = mean(h_nfcelspn, na.rm = TRUE),
