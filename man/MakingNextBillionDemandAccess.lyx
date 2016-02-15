@@ -315,7 +315,8 @@ status open
 
 \begin_layout Plain Layout
 
-opts_chunk$set(fig.path='../misc/latex-', cache.path='../data/cache/latex-')
+opts_chunk$set(fig.path='../misc/latex-', cache.path='../data/cache/latex-', fig.width=
+9, fig.height=5)
 \end_layout
 
 \begin_layout Plain Layout
@@ -1566,104 +1567,6 @@ appendix
 \end_layout
 
 \begin_layout Section
-Ownership and Expenditure by Native Language
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:descriptive"
-
-\end_inset
-
-The below table breaks down computer and cellphone ownership as well as
- internet and cellphone expenditure by linguistic group.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Descriptive statistics on Ownership and Expenditure
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<lang_means>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-adulthh %>%
-\end_layout
-
-\begin_layout Plain Layout
-
-  group_by(a_lng, wave) %>%
-\end_layout
-
-\begin_layout Plain Layout
-
-  summarise(a_owncel   = mean(a_owncel,   na.rm = TRUE),
-\end_layout
-
-\begin_layout Plain Layout
-
-            a_owncom   = mean(a_owncom,   na.rm = TRUE),
-\end_layout
-
-\begin_layout Plain Layout
-
-            h_nfcel    = mean(h_nfcel,    na.rm = TRUE),
-\end_layout
-
-\begin_layout Plain Layout
-
-            h_nfnet    = mean(h_nfnet,    na.rm = TRUE),
-\end_layout
-
-\begin_layout Plain Layout
-
-            h_nfcelspn = mean(h_nfcelspn, na.rm = TRUE),
-\end_layout
-
-\begin_layout Plain Layout
-
-            h_nfnetspn = mean(h_nfnetspn, na.rm = TRUE))
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
 Factor vs.
  Dummy
 \end_layout
@@ -1816,6 +1719,132 @@ lm(h_nfnet ~  interface_intro*a_lng    +
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ownership and Expenditure by Native Language
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:descriptive"
+
+\end_inset
+
+The below table breaks down computer and cellphone ownership as well as
+ internet and cellphone expenditure by linguistic group.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Descriptive statistics on Ownership and Expenditure
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<lang_means>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+adulthh %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  group_by(a_lng, wave) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  summarise(a_owncel   = mean(a_owncel,   na.rm = TRUE),
+\end_layout
+
+\begin_layout Plain Layout
+
+            a_owncom   = mean(a_owncom,   na.rm = TRUE),
+\end_layout
+
+\begin_layout Plain Layout
+
+            h_nfcel    = mean(h_nfcel,    na.rm = TRUE),
+\end_layout
+
+\begin_layout Plain Layout
+
+            h_nfnet    = mean(h_nfnet,    na.rm = TRUE),
+\end_layout
+
+\begin_layout Plain Layout
+
+            h_nfcelspn = mean(h_nfcelspn, na.rm = TRUE),
+\end_layout
+
+\begin_layout Plain Layout
+
+            h_nfnetspn = mean(h_nfnetspn, na.rm = TRUE))
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Descriptive Statistics
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<lang_woman>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+ggplot(adulthh, aes(x=a_lng, fill=a_woman)) + geom_bar()
+\end_layout
+
+\begin_layout Plain Layout
+
+@
 \end_layout
 
 \end_inset
