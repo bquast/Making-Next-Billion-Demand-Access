@@ -1121,37 +1121,37 @@ status open
 
 \begin_layout Plain Layout
 
-lm(h_nfnet ~  post_event*setswana  +
+lm(h_nfnet ~  interface_intro*setswana_logical + 
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitrden)  +
+              factor(a_edlitrden)  			+
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitwrten) +
+              factor(a_edlitwrten) 			+ 
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitrdhm)  +
+              factor(a_edlitrdhm)  			+ 
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitwrthm) +
+              factor(a_edlitwrthm) 			+ 
 \end_layout
 
 \begin_layout Plain Layout
 
-              a_woman              +
+              a_woman              			+ 
 \end_layout
 
 \begin_layout Plain Layout
 
-              hhincome             +
+              hhincome             			+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -1386,37 +1386,37 @@ status open
 
 \begin_layout Plain Layout
 
-lm(a_owncom ~ post_event*setswana  + 
+lm(a_owncom ~ interface_intro*setswana_logical + 
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitrden)  +
+              factor(a_edlitrden)  			+
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitwrten) + 
+              factor(a_edlitwrten) 			+ 
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitrdhm)  + 
+              factor(a_edlitrdhm)  			+ 
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitwrthm) + 
+              factor(a_edlitwrthm) 			+ 
 \end_layout
 
 \begin_layout Plain Layout
 
-              a_woman              + 
+              a_woman              			+ 
 \end_layout
 
 \begin_layout Plain Layout
 
-              hhincome             + 
+              hhincome             			+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -1724,7 +1724,7 @@ status open
 
 \begin_layout Plain Layout
 
-lm(h_nfnet ~  post_event*factor(a_lng))
+lm(h_nfnet ~  interface_intro*a_lng)
 \end_layout
 
 \begin_layout Plain Layout
@@ -1780,7 +1780,7 @@ status open
 
 \begin_layout Plain Layout
 
-lm(h_nfnet ~  post_event*factor(a_lng) +
+lm(h_nfnet ~  interface_intro*a_lng    +
 \end_layout
 
 \begin_layout Plain Layout
