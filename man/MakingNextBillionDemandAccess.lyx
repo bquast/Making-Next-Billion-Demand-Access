@@ -165,6 +165,50 @@ name "sec:intro"
 \end_inset
 
 Local content will be vital in bringing new internet users online.
+ As figure 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Native Speakers and Web Content
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:natspwebcont"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/NativeSpeakersWebContent.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -195,16 +239,22 @@ rly sub-Saharan Africa are showing stagnation in the growth of internet
 \end_layout
 
 \begin_layout Standard
-This paper shows demostrates how an exogenous increase in accessability
- of local language content gave rise to a vast increase in the number of
- local language speakers online as first-time internet users
+This paper exploits and exogenous increase in the availability of local
+ content in the Setswana language in South African.
+ 
+\end_layout
+
+\begin_layout Standard
+It shows demostrates how an exogenous increase in accessability of local
+ language content gave rise to a vast increase in the number of local language
+ speakers online as first-time internet users
 \emph on
 .
  
 \end_layout
 
 \begin_layout Standard
-In 2010 Google collaborated with a Botswanan team of linguists
+In 2010 Google collaborated with a Botswanan team of linguists 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "otlogetswe2010setswana"
@@ -238,9 +288,9 @@ google.co.za
 
 ) as spillover of the translation work performed for Google's Botswanan
  website.
- This exogenous led to a large increase in the number of native Setswana
- speakers reporting to have spent some amount of money in the past 30 days
- on internet access.
+ This change led to a large increase in the number of native Setswana speakers
+ reporting to have spent some amount of money in the past 30 days on internet
+ access.
 \end_layout
 
 \begin_layout Standard
@@ -269,8 +319,8 @@ reference "fig:GoogleTrendsZA"
 \end_inset
 
 , which illustrates how usage of the Setswana word `thuso', meaning `help'
- was zero prior to the introduction of the Setswana search interface and
- became widespread thereafter.
+ in search queries, was zero prior to the introduction of the Setswana search
+ interface and became widespread thereafter.
 \end_layout
 
 \begin_layout Standard
@@ -446,52 +496,6 @@ name "sec:data"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Itemize
-descriptive stats:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-number of adults
-\end_layout
-
-\begin_layout Itemize
-Setswana speakers
-\end_layout
-
-\begin_layout Itemize
-people using internet / cell phone etc.
-\end_layout
-
-\begin_layout Itemize
-male / female
-\end_layout
-
-\begin_layout Itemize
-linguistic skills
-\end_layout
-
-\begin_layout Itemize
-income distribution
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset CommandInset line
-LatexCommand rule
-offset "0.5ex"
-width "100col%"
-height "1pt"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 South Africa's National Income Dynamics Survey collect data on a representative
  set of around 10,000 households over time.
  The first survey took place in 2008, the second one in late 2010 and early
@@ -503,19 +507,101 @@ key "saldru2008nids,saldru2012nids,saldru2013nids"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-It contains an extensive household questionaire, which breaks expenditure
- down into many forms of food and non-food expenditure.
+ It contains an extensive household questionaire, which breaks household
+ expenditure down into many forms of food and non-food expenditure.
  In addition to this, the household income is calculated and imputed with
  other income such as home ownership.
+ The individual (adult) questionnaires also contain information on linquistic
+ skill in English and in the native language, as well as a series of variables
+ relating to communication technology ownership and utilisation.
+ In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:langsex"
+
+\end_inset
+
+ we can see the number of native speakers of each in the dataset, coloured
+ by the sex of the individual.
+ The dataset contains 51,612 observations (adult individuals), of which
+ 2,806 are female native Setswana speakers and 2,140 are male native Setswana
+ speakers.
 \end_layout
 
 \begin_layout Standard
-The individual (adult) questionnaires also contain information on linquistic
- skill and Englis and in the native language, as well as a series of variables
- relating to communication technology ownership and utilisation.
+A detailed breakdown of the mean number of households that spend on internet
+ access and cellphone usages, as well as cellphone and computer ownership
+ by language and time period (wave) is presented in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:dep_vars"
+
+\end_inset
+
+ of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:descriptive"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Native Language and Sex
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:langsex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<lang_woman, cache=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+ggplot(adulthh, aes(x = a_lng, fill = a_woman)) + geom_bar()
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -679,7 +765,7 @@ status open
 
 \end_inset
 
-) and the level (native language) thus has to be the nth one (here 
+) and the level (native language) thus has to be the first one (here 
 \begin_inset Flex Code
 status open
 
@@ -1758,6 +1844,13 @@ Descriptive statistics on Ownership and Expenditure
 \end_inset
 
 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:dep_vars"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1766,7 +1859,7 @@ status open
 
 \begin_layout Plain Layout
 
-<<lang_means, cache=TRUE>>=
+<<dep_vars, cache=TRUE>>=
 \end_layout
 
 \begin_layout Plain Layout
@@ -1826,74 +1919,6 @@ adulthh %>%
 
 \begin_layout Section
 Descriptive Statistics
-\end_layout
-
-\begin_layout Standard
-In 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:langsex"
-
-\end_inset
-
- we can see the number of native speakers of each in the dataset, coloured
- by the sex of the individual.
-\end_layout
-
-\begin_layout Standard
-
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Native Language and Sex
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:langsex"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<lang_woman, cache=TRUE>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-ggplot(adulthh, aes(x = a_lng, fill = a_woman)) + geom_bar()
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
