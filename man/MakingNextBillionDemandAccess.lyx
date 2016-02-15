@@ -131,18 +131,22 @@ Abstract
 
 \begin_layout Standard
 This paper shows that an exogenous increase in accessability of local language
- content leads to a very large increase in demand for internet connectivity
- among native speakers.
+ content leads to an increase in demand for internet connectivity among
+ native speakers.
  Internet connectivity provides enormous improvements in quality of life
  as well as opportunities for the newly connected, yet recent attempts to
- connect the `next billion' in Africa have not met expectations, even in
- places where infrastructure has come online and prices have gone down.
- The introduction of the Setswana (Tswana) language in the South-African
- Google Search website was a spillover of the translation from English to
- Setswana being done for the Botswanan Google Search website.
- This exogenous event has resulted in a substantial increase in the number
- of native Setswana speakers online as well as usage of the Setswana language
- online, suggesting that connecting the fourth billion will require a greater
+ connect the current `next billion' in places such as sub-Saharan Africa
+ have not met expectations.
+ In places where infrastructure has come online and prices have gone down,
+ the expected consequent increase in usage was not observed.
+ The introduction of the Setswana language in the South-African Google Search
+ website was a spillover of the translation from English to Setswana being
+ done for the Botswanan Google Search website.
+ This exogenous improvement of the availability of Setswana-language content
+ has resulted in a substantial increase in the number of native Setswana
+ speakers coming online and owning personal computers.
+ It has also led to increased usage of the Setswana language online.
+ This suggests that connecting the fourth billion will require a greater
  focus on demand by mean of local content.
 \end_layout
 
@@ -164,8 +168,22 @@ name "sec:intro"
 
 \end_inset
 
-Local content will be vital in bringing new internet users online.
- As figure 
+Local content will be vital in bringing the current `Next Billion' future
+ internet users online.
+ The current offerening of online content, primarily in small number of
+ languages, provides insufficient insentive for many to seek access to the
+ internet.
+ In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:natspwebcont"
+
+\end_inset
+
+, we can see how certain languages, primarily English, represent a relatively
+ small number of native speakers ~10%, but already a much larger number
+ of internet-connected global population, ~25%, but represent more than
+ 50% of all the online content.
 \end_layout
 
 \begin_layout Standard
@@ -199,7 +217,7 @@ name "fig:natspwebcont"
 \align center
 \begin_inset Graphics
 	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/NativeSpeakersWebContent.png
-	scale 40
+	scale 45
 
 \end_inset
 
@@ -212,7 +230,7 @@ name "fig:natspwebcont"
 \end_layout
 
 \begin_layout Standard
-Since the term `Connecting the Next Billion' was introduced in The Economists
+Since the term `Connecting the Next Billion' was introduced in The Economist's
  2006 `End of Year Report' 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -225,7 +243,7 @@ key "standage2006connecting"
  
 \emph default
 estimated to have been connected to the internet, up from the just over
- one billion at the time of the article's publication 
+ one billion at the time of publication 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "sanou2015world"
@@ -240,21 +258,9 @@ rly sub-Saharan Africa are showing stagnation in the growth of internet
 
 \begin_layout Standard
 This paper exploits and exogenous increase in the availability of local
- content in the Setswana language in South African.
- 
-\end_layout
-
-\begin_layout Standard
-It shows demostrates how an exogenous increase in accessability of local
- language content gave rise to a vast increase in the number of local language
- speakers online as first-time internet users
-\emph on
-.
- 
-\end_layout
-
-\begin_layout Standard
-In 2010 Google collaborated with a Botswanan team of linguists 
+ content in the Setswana language in South African, in order to isolate
+ the effect on internet usage among native speakers.
+ In 2010 Google collaborated with a Botswanan team of linguists 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "otlogetswe2010setswana"
@@ -275,8 +281,8 @@ google.co.bw
  In addition to being spoken in Botswana, there is also a sizable population
  of Setswana directly across the border in South Africa, where it is also
  one of the official state languages.
- This led to the introduction of the Setswana language on the South African
- Google website (
+ This therefore also led to the introduction of the Setswana language on
+ the South African Google website (
 \begin_inset Flex Code
 status open
 
@@ -286,7 +292,7 @@ google.co.za
 
 \end_inset
 
-) as spillover of the translation work performed for Google's Botswanan
+), as spillover of the translation work performed for Google's Botswanan
  website.
  This change led to a large increase in the number of native Setswana speakers
  reporting to have spent some amount of money in the past 30 days on internet
@@ -294,24 +300,26 @@ google.co.za
 \end_layout
 
 \begin_layout Standard
-Although it is not required to use a certain interface language in order
- to search for content in this language, the search page is in many instances
- the first website viewed by users.
- Asides from being able to understand the interface, having the interface
- be in a certain language also encourages usage of this language, which
- in turn reveales more content in this language.
+The Google Search interface represent a very small number of words on the
+ internet and it is not required to use a certain interface language in
+ order to search for content in this language.
+ However, the search page is in many cases the first website viewed by users.
+ Asides from being able to understand the interface of the website, having
+ this interface be in a local language also encourages usage of this local
+ language, which in turn reveales more local language content.
  
 \end_layout
 
 \begin_layout Standard
-In short we can identify several major channels which promote further engagement
-, which together constitute the theory of change.
+In short, we can identify several major channels which promote increase
+ online engagement, which together constitute the theory of change.
  Firstly, the ability to read and understand the words of the interface
- increases the chance that user continue using it.
+ increases the chance that user continues using the website and the internet
+ at large.
  Secondly, the visibility of local language content increases the likelihood
  of the user entering search queries in the local language and thereby finding
  more content in the local language.
- This last effect is also visible from 
+ This last effect is also visible in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:GoogleTrendsZA"
@@ -910,7 +918,7 @@ In the base model, we use an interaction of the
 status open
 
 \begin_layout Plain Layout
-post_event
+interface_intro
 \end_layout
 
 \end_inset
@@ -920,7 +928,7 @@ post_event
 status open
 
 \begin_layout Plain Layout
-setswana
+setswana_logical
 \end_layout
 
 \end_inset
@@ -954,7 +962,7 @@ We find that the the interaction term of the event dummy (
 status open
 
 \begin_layout Plain Layout
-post_event
+interface_intro
 \end_layout
 
 \end_inset
@@ -964,7 +972,7 @@ post_event
 status open
 
 \begin_layout Plain Layout
-setswana
+setswana_logical
 \end_layout
 
 \end_inset
@@ -985,12 +993,12 @@ status open
 status open
 
 \begin_layout Plain Layout
-post_eventTRUE
+interface_introTRUE
 \end_layout
 
 \end_inset
 
- and setswanaTRUE) yield significant but negative parameter estimates.
+ and setswana_logicalTRUE) yield significant but negative parameter estimates.
  In addition to this, the covariates included in the estimation are also
  highly significant.
  The highest education level of the individual (
@@ -1082,7 +1090,7 @@ In an alternative formulation, we include the native language variable as
 status open
 
 \begin_layout Plain Layout
-factor(a_lng)
+a_lng
 \end_layout
 
 \end_inset
@@ -1092,7 +1100,7 @@ factor(a_lng)
 status open
 
 \begin_layout Plain Layout
-post_event
+interface_intro
 \end_layout
 
 \end_inset
@@ -1103,7 +1111,7 @@ post_event
 status open
 
 \begin_layout Plain Layout
-setswana
+Setswana
 \end_layout
 
 \end_inset
@@ -1113,7 +1121,7 @@ setswana
 status open
 
 \begin_layout Plain Layout
-venda
+Venda
 \end_layout
 
 \end_inset
@@ -1124,7 +1132,7 @@ venda
 status open
 
 \begin_layout Plain Layout
-afrikaans
+Afrikaans
 \end_layout
 
 \end_inset
@@ -1320,12 +1328,12 @@ reference "tab:owncom"
  This form of the estimation yields similar results to those estimated in
  the base model.
  Firstly we find that the variable of interest, the interaction term between
- the event and the setswana dummy (
+ the event and the language dummy (
 \begin_inset Flex Code
 status open
 
 \begin_layout Plain Layout
-post_eventTRUE:setswanaTRUE
+interface_introTRUE:setswana_logicalTRUE
 \end_layout
 
 \end_inset
@@ -1346,7 +1354,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-post_eventTRUE
+interface_introTRUE
 \end_layout
 
 \end_inset
@@ -1356,7 +1364,7 @@ post_eventTRUE
 status open
 
 \begin_layout Plain Layout
-setswanaTRUE
+setswana_logicalTRUE
 \end_layout
 
 \end_inset
