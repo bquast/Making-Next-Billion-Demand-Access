@@ -14,19 +14,6 @@ library(dplyr)
 load(file = "data/merged.RData")
 
 
-# exploratory
-
-## compute and phone ownership by group and year
-means <- adulthh %>%
-  group_by(a_lng, wave) %>%
-  summarise(owncel = mean(a_owncel,   na.rm = TRUE),
-            owncom = mean(a_owncom,   na.rm = TRUE),
-            cel    = mean(h_nfcel,    na.rm = TRUE),
-            net    = mean(h_nfnet,    na.rm = TRUE),
-            celspn = mean(h_nfcelspn, na.rm = TRUE),
-            netspn = mean(h_nfnetspn, na.rm = TRUE))
-
-
 # estimate models
 
 ## define models
