@@ -265,11 +265,15 @@ adulthh$a_edlitwrten <- ifelse(adulthh$a_edlitwrten < 0, NA, adulthh$a_edlitwrte
 
 
 # create event dummy
-adulthh$post_event <- ifelse(adulthh$wave == 3, TRUE, FALSE)
+adulthh$interface_intro <- ifelse(adulthh$wave == 3, TRUE, FALSE)
 
 
 # create tsonga dummy
-adulthh$setswana <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
+adulthh$setswana_logical <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
+
+
+# remove observations without languages
+adulthh <- subset(adulthh, !is.na(adulthh$a_lng))
 
 
 # save to file
