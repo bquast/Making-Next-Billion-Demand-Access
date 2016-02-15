@@ -28,7 +28,7 @@ dep_vars <- adulthh %>%
 
 
 # plot age distribution by group
-ggplot(adulthh, aes(x=best_age_yrs, colour=a_lng )) + geom_freqpoly()
+ggplot(adulthh, aes(x = best_age_yrs, fill = a_lng) ) + geom_bar(position = 'fill')
 
 
 # speakers of each language by sex
@@ -62,3 +62,9 @@ adulthh %>%
 
 ## plot linguistic
 ggplot(adulthh, aes(x=a_lng, fill=factor(a_edlitrden))) + geom_bar(position='fill')
+
+
+# education
+
+## plot education
+ggplot(adulthh, aes(x=best_edu, fill=a_lng )) + geom_bar(position = 'fill')
