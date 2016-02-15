@@ -130,7 +130,7 @@ Abstract
 \end_layout
 
 \begin_layout Standard
-This paper shows that an exogenous increase in accessability of local language
+This paper shows that an exogenous increase in accessibility of local language
  content leads to an increase in demand for internet connectivity among
  native speakers.
  Internet connectivity provides enormous improvements in quality of life
@@ -168,7 +168,7 @@ name "sec:intro"
 
 \end_inset
 
-ISince the term `Connecting the Next Billion' was introduced in The Economist's
+The term `Connecting the Next Billion' was introduced in The Economist's
  2006 `End of Year Report' 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -176,12 +176,12 @@ key "standage2006connecting"
 
 \end_inset
 
-, close to 2 billion people are
+, since then, close to 2 billion people are
 \emph on
  
 \emph default
 estimated to have been connected to the internet, up from the just over
- one billion at the time of publication 
+ one billion at the time of writing 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "sanou2015world"
@@ -189,12 +189,15 @@ key "sanou2015world"
 \end_inset
 
 .
+ However, it is unlikely that the current `Next Billion' will be connected
+ as easily as the previous ones.
  In the period 2010-2014 the average year-on-year growth of internet bandwidth
  in sub-Saharan was around 52%.
- This increased bandwidth also caused a corresponding drop in the price
- of internet access, the sub-Saharan average of a 500MB prepaid internet
- bundle came down to around $10, putting it within range of emerging middle
- classes in many of these countries.
+ The increased bandwidth also caused a corresponding drop in the price of
+ internet access.
+ The sub-Saharan average of a 500MB prepaid internet bundle came down to
+ around $10, putting it within range of emerging middle classes in many
+ of these countries.
  Yet, despite increased range and improved affordability, sub-Saharan Africa
  is showing stagnation in the growth of internet connections.
  A is shown in 
@@ -206,7 +209,7 @@ reference "fig:mobgrow"
 
 , mobile internet growth, the oft mentioned key driver of internet accessibility
  in sub-Saharan African, is showing stagnation to the point of being near
- level.
+ level or slightly negative.
  Unlike in other regions in the figure, this observed stagnation is not
  a consequence of near saturation, as adoption levels in 2015 are only just
  over 60% on average.
@@ -323,11 +326,10 @@ ggplot(df, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
 \end_layout
 
 \begin_layout Standard
-Local content will be vital in bringing the current `Next Billion' future
- internet users online.
- The current offerening of online content, primarily in small number of
- languages, provides insufficient insentive for many to seek access to the
- internet.
+This paper proposes that local content will be vital in bringing the current
+ `Next Billion' future internet users online.
+ The current offering of online content, primarily in small number of languages,
+ provides insufficient incentive for many to seek access to the internet.
  In 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -434,7 +436,7 @@ The Google Search interface represent a very small number of words on the
  However, the search page is in many cases the first website viewed by users.
  Asides from being able to understand the interface of the website, having
  this interface be in a local language also encourages usage of this local
- language, which in turn reveales more local language content.
+ language, which in turn reveals more local language content.
  
 \end_layout
 
@@ -455,11 +457,11 @@ The vast majority of internet access is developing countries is through
  handheld devices such as smartphones.
  However, due to the limited `real estate' (surface area of the screen)
  on a mobile website, the link to changing the interface language is replace
- with a dropdown menu that reveales the additional language options.
+ with a dropdown menu that reveals the additional language options.
  Generally, the website will default the the operating system (Android /
  iOS) language, however, since many local African languages are not available
  as a system language, this is not possible there.
- The fact that the introduction seems to benefit deskop usage but not mobile
+ The fact that the introduction seems to benefit desktop usage but not mobile
  usage is further substantiated by our results that isolate an increase
  in computer ownership, but no increase in cell phone ownership.
 \end_layout
@@ -479,7 +481,7 @@ key "saldru2008nids,saldru2012nids,saldru2013nids"
 
 \end_inset
 
-, the data is futher discussed in 
+, the data is further discussed in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:data"
@@ -502,7 +504,7 @@ reference "sub:identification"
 
 \end_inset
 
- and the use of the Difference-in-Difference estimator in 
+ and the use of the Difference-in-Differences estimator in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sub:estimation"
@@ -534,11 +536,11 @@ key "saldru2008nids,saldru2012nids,saldru2013nids"
 \end_inset
 
 .
- It contains an extensive household questionaire, which breaks household
+ It contains an extensive household questionnaire, which breaks household
  expenditure down into many forms of food and non-food expenditure.
  In addition to this, the household income is calculated and imputed with
  other income such as home ownership.
- The individual (adult) questionnaires also contain information on linquistic
+ The individual (adult) questionnaires also contain information on linguistic
  skill in English and in the native language, as well as a series of variables
  relating to communication technology ownership and utilisation.
  In 
@@ -691,7 +693,7 @@ google.co.za
 \end_inset
 
 ) was a spillover effect of that development.
- This allow us the rule out any possible endogeity issues that might otherwise
+ This allow us to rule out any possible endogeneity issues that might otherwise
  arise in context such as these.
  For instance, the Afrikaans language is almost solely spoken in South Africa.
  When we observe that the introduction of the Afrikaans Google Search interface
@@ -741,28 +743,102 @@ As mentioned in the above section, we compare the change in the level of
  internet users among native Setswana speakers in South Africa, with that
  of native speakers of other language in South Africa around the introduction
  of the Setswana interface to the South-African Google Search.
- For this we use a Difference-in-Difference estimator using a native-Setswana
- speaker dummy variable, interacted with a event dummy variable
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-describe this event dummy
-\end_layout
-
-\end_inset
-
- on the introduction of the Setswana interface on 
+ For this we use a Difference-in-Differences estimator using a native-Setswana
+ speaker dummy variable (
 \begin_inset Flex Code
 status open
 
 \begin_layout Plain Layout
-google.co.za
+setswana_logical
 \end_layout
 
 \end_inset
 
-.
+), interacted with a event dummy variable (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+interface_intro
+\end_layout
+
+\end_inset
+
+).
+ The former is 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+TRUE
+\end_layout
+
+\end_inset
+
+ when the native language of the individual (
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+a_lng
+\end_layout
+
+\end_inset
+
+) is 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+Setswana
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+FALSE
+\end_layout
+
+\end_inset
+
+ otherwise.
+ The later is 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+FALSE
+\end_layout
+
+\end_inset
+
+ for data collected prior to the introduction of the Setswana interface
+ language (late 2010, here wave 1 and 2) and 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+TRUE
+\end_layout
+
+\end_inset
+
+ after this introduction (here wave 3).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y_{irt}=\gamma_{ir}+\lambda_{it}+\delta D{}_{rt}+\zeta X_{irt}+\epsilon_{irt}
+\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -806,16 +882,28 @@ IsiNdebele
 \end_layout
 
 \begin_layout Standard
-The dependent variable here is also a dummy variable, which would normally
- allow for the usage of a estimator such as logit.
- However, since we are employing the Difference-in-Difference methodology
- ....
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-http://stats.stackexchange.com/questions/89513/difference-in-differences-estimator
--for-logistic-regressions
+The dependent variable here is also a dummy variable, which would normally
+ allow for the usage of a estimator such as logit.
+ However, since we are employing the Difference-in-Difference methodology:
+ http://stats.stackexchange.com/questions/89513/difference-in-differences-estimato
+r-for-logistic-regressions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Add comment on panel corrected standard errors
 \end_layout
 
 \end_inset
@@ -861,7 +949,7 @@ key "luatex"
 
 .
  The integration of R code in the document is performed using the knitr
- implemenation 
+ implementation 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "xie2015dynamic"
@@ -1055,7 +1143,7 @@ a_womanTRUE
  use internet expenditure at a household level.
  Most women live in a household which includes men and visa versa, suggesting
  that this effect cannot be isolated in this estimation.
- We further investigate this issue in a seperate estimation discussed below.
+ We further investigate this issue in a separate estimation discussed below.
  The variables describing linguistic skills in reading and writing in both
  English and the native language do yield many significant results, though
  lower levels of English writing skill seems to be correlated with a lower
@@ -1368,7 +1456,7 @@ status open
 \end_inset
 
 .
- The invidivual dummie variables (
+ The individual dummy variables (
 \begin_inset Flex Code
 status open
 
@@ -1684,9 +1772,9 @@ goog.co.za
 , suggest that there is a serious lack in the availability of local content
  in many African languages, which serves as an impediment to further internet
  adoption here.
- Additionally, there was also an observedly positive effect on computer
+ Additionally, there was also an observably positive effect on computer
  ownership amongst adults.
- This suggest that the effect is unlikely to be emphemeral in nature, since
+ This suggest that the effect is unlikely to be ephemeral in nature, since
  computer ownership constitutes a more long-term investment in internet
  access.
 \end_layout
