@@ -17,7 +17,7 @@ load(file = 'data/merged.RData')
 
 
 # computer and phone ownership by group and year
-means <- adulthh %>%
+dep_vars <- adulthh %>%
   group_by(a_lng, wave) %>%
   summarise(a_owncel   = mean(a_owncel,   na.rm = TRUE),
             a_owncom   = mean(a_owncom,   na.rm = TRUE),
@@ -26,3 +26,7 @@ means <- adulthh %>%
             h_nfcelspn = mean(h_nfcelspn, na.rm = TRUE),
             h_nfnetspn = mean(h_nfnetspn, na.rm = TRUE))
 
+
+# plot age distribution by group
+# factor should be moved out and labelled
+ggplot(adulthh, aes(x=best_age_yrs, colour=factor(a_lng) )) + geom_freqpoly()
