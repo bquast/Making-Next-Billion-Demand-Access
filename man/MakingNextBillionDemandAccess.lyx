@@ -447,75 +447,7 @@ In short, we can identify several major channels which promote increase
  Secondly, the visibility of local language content increases the likelihood
  of the user entering search queries in the local language and thereby finding
  more content in the local language.
- This last effect is also visible in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:GoogleTrendsZA"
-
-\end_inset
-
-, which illustrates how usage of the Setswana word `thuso', meaning `help'
- in search queries, was zero prior to the introduction of the Setswana search
- interface and became widespread thereafter.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Usage of Setswana Words on Google.co.za
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:GoogleTrendsZA"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<plot_data, cache=TRUE>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-ggplot(thuso) + geom_line(aes(x = date, y = thuso))
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1653,6 +1585,78 @@ reference "fig:langmob"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+This last effect is also visible in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GoogleTrendsZA"
+
+\end_inset
+
+, which illustrates how usage of the Setswana word `thuso', meaning `help'
+ in search queries, was zero prior to the introduction of the Setswana search
+ interface and became widespread thereafter.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Usage of Setswana Words on Google.co.za
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GoogleTrendsZA"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<plot_data, cache=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+ggplot(thuso) + geom_line(aes(x = date, y = thuso))
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
