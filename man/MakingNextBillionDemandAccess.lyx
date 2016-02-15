@@ -200,7 +200,10 @@ key "sanou2015world"
  of these countries.
  Yet, despite increased range and improved affordability, sub-Saharan Africa
  is showing stagnation in the growth of internet connections.
- A is shown in 
+\end_layout
+
+\begin_layout Standard
+As is shown in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:mobgrow"
@@ -341,6 +344,9 @@ reference "fig:natspwebcont"
  small number of native speakers ~10%, but already a much larger number
  of internet-connected global population, ~25%, but represent more than
  50% of all the online content.
+ The `other' languages in this figure, represent over half the global population
+, as can be seen in the top bar, yet all of these languages combined only
+ account for around 10% of online content.
 \end_layout
 
 \begin_layout Standard
@@ -389,7 +395,7 @@ name "fig:natspwebcont"
 \begin_layout Standard
 This paper exploits and exogenous increase in the availability of local
  content in the Setswana language in South African, in order to isolate
- the effect on internet usage among native speakers.
+ the increase of internet usage among native speakers.
  In 2010 Google collaborated with a Botswanan team of linguists 
 \begin_inset CommandInset citation
 LatexCommand citep
