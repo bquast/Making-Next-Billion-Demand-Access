@@ -1766,7 +1766,7 @@ status open
 
 \begin_layout Plain Layout
 
-<<lang_means>>=
+<<lang_means, cache=TRUE>>=
 \end_layout
 
 \begin_layout Plain Layout
@@ -1873,7 +1873,7 @@ status open
 
 \begin_layout Plain Layout
 
-<<lang_woman>>=
+<<lang_woman, cache=TRUE>>=
 \end_layout
 
 \begin_layout Plain Layout
@@ -1913,6 +1913,7 @@ NA
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1939,7 +1940,7 @@ status open
 
 \begin_layout Plain Layout
 
-<<read_english>>=
+<<read_english, cache=TRUE>>=
 \end_layout
 
 \begin_layout Plain Layout
@@ -1949,7 +1950,7 @@ ggplot(adulthh, aes(x = a_lng, fill = factor(a_edlitrden)) ) +
 
 \begin_layout Plain Layout
 
-	geom_bar(position='fill')
+	geom_bar(position = 'fill')
 \end_layout
 
 \begin_layout Plain Layout
