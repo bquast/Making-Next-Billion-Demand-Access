@@ -45,7 +45,7 @@ ggplot(adulthh, aes(x=a_lng, fill=a_woman)) + geom_bar()
 # income
 
 ## plot income
-ggplot(adulthh, aes(x=hhincome, colour=a_lng )) + geom_freqpoly()
+ggplot(adulthh, aes(x=hhincome, fill=a_lng )) + stat_bin(bins=50)
 
 ## table income
 adulthh %>%
