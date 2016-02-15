@@ -29,3 +29,36 @@ dep_vars <- adulthh %>%
 
 # plot age distribution by group
 ggplot(adulthh, aes(x=best_age_yrs, colour=a_lng )) + geom_freqpoly()
+
+
+# speakers of each language by sex
+
+## table
+lng <- adulthh %>%
+  group_by(a_lng, a_woman) %>%
+  summarise(n())
+
+## plot
+ggplot(adulthh, aes(x=a_lng, fill=a_woman)) + geom_bar()
+
+
+# income
+
+## plot income
+ggplot(adulthh, aes(x=hhincome, colour=a_lng )) + geom_freqpoly()
+
+## table income
+adulthh %>%
+  group_by(a_lng) %>%
+  summarise(median(hhincome))
+
+
+# linguistic
+
+## table linguistic
+adulthh %>%
+  group_by(a_lng, a_edlitrden) %>%
+  summarise(n())
+
+## plot linguistic
+ggplot(adulthh, aes(x=a_lng, fill=factor(a_edlitrden))) + geom_bar(position='fill')
