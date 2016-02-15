@@ -168,6 +168,161 @@ name "sec:intro"
 
 \end_inset
 
+ISince the term `Connecting the Next Billion' was introduced in The Economist's
+ 2006 `End of Year Report' 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "standage2006connecting"
+
+\end_inset
+
+, close to 2 billion people are
+\emph on
+ 
+\emph default
+estimated to have been connected to the internet, up from the just over
+ one billion at the time of publication 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "sanou2015world"
+
+\end_inset
+
+.
+ In the period 2010-2014 the average year-on-year growth of internet bandwidth
+ in sub-Saharan was around 52%.
+ This increased bandwidth also caused a corresponding drop in the price
+ of internet access, the sub-Saharan average of a 500MB prepaid internet
+ bundle came down to around $10, putting it within range of emerging middle
+ classes in many of these countries.
+ Yet, despite increased range and improved affordability, sub-Saharan Africa
+ is showing stagnation in the growth of internet connections.
+ A is shown in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:mobgrow"
+
+\end_inset
+
+, mobile internet growth, the oft mentioned key driver of internet accessibility
+ in sub-Saharan African, is showing stagnation to the point of being near
+ level.
+ Unlike in other regions in the figure, this observed stagnation is not
+ a consequence of near saturation, as adoption levels in 2015 are only just
+ over 60% on average.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Mobile Internet Growth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:mobgrow"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<load_plot_data, echo=FALSE, warning=FALSE, message=FALSE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+opts_chunk$set(fig.path='../misc/latex-', cache.path='../data/cache/latex-', fig.width=
+9, fig.height=5)
+\end_layout
+
+\begin_layout Plain Layout
+
+load(file = '../data/googletrends.RData')
+\end_layout
+
+\begin_layout Plain Layout
+
+library(ggplot2)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(dplyr)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<mobile_growth, echo=FALSE, cache=TRUE>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+load(file = '../data/mobilegrowth.RData')
+\end_layout
+
+\begin_layout Plain Layout
+
+ggplot(df, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Local content will be vital in bringing the current `Next Billion' future
  internet users online.
  The current offerening of online content, primarily in small number of
@@ -188,7 +343,7 @@ reference "fig:natspwebcont"
 
 \begin_layout Standard
 \begin_inset Float figure
-placement H
+placement h
 wide false
 sideways false
 status collapsed
@@ -227,33 +382,6 @@ name "fig:natspwebcont"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-Since the term `Connecting the Next Billion' was introduced in The Economist's
- 2006 `End of Year Report' 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "standage2006connecting"
-
-\end_inset
-
-, close to 2 billion people are
-\emph on
- 
-\emph default
-estimated to have been connected to the internet, up from the just over
- one billion at the time of publication 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "sanou2015world"
-
-\end_inset
-
-.
- Yet, despite increased range and improved affordability, key markets, particula
-rly sub-Saharan Africa are showing stagnation in the growth of internet
- connections.
 \end_layout
 
 \begin_layout Standard
@@ -355,47 +483,6 @@ Usage of Setswana Words on Google.co.za
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:GoogleTrendsZA"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-<<load_plot_data, echo=FALSE, warning=FALSE, message=FALSE>>=
-\end_layout
-
-\begin_layout Plain Layout
-
-opts_chunk$set(fig.path='../misc/latex-', cache.path='../data/cache/latex-', fig.width=
-9, fig.height=5)
-\end_layout
-
-\begin_layout Plain Layout
-
-load(file = '../data/googletrends.RData')
-\end_layout
-
-\begin_layout Plain Layout
-
-library(ggplot2)
-\end_layout
-
-\begin_layout Plain Layout
-
-library(dplyr)
-\end_layout
-
-\begin_layout Plain Layout
-
-@
-\end_layout
 
 \end_inset
 
