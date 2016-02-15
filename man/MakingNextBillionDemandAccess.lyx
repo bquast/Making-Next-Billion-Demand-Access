@@ -1829,6 +1829,45 @@ Descriptive Statistics
 \end_layout
 
 \begin_layout Standard
+The in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:langsex"
+
+\end_inset
+
+ we can see the number of native speakers of each in the dataset, coloured
+ by the sex of the individual.
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Native Language and Sex
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:langsex"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -1839,12 +1878,92 @@ status open
 
 \begin_layout Plain Layout
 
-ggplot(adulthh, aes(x=a_lng, fill=a_woman)) + geom_bar()
+ggplot(adulthh, aes(x = a_lng, fill = a_woman)) + geom_bar()
 \end_layout
 
 \begin_layout Plain Layout
 
 @
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following figure describes the skill of individuals in reading the English
+ language, where 1 the best and 4 is the worst, grey values are 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+NA
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+English Language Reading Skills
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<<read_english>>=
+\end_layout
+
+\begin_layout Plain Layout
+
+ggplot(adulthh, aes(x = a_lng, fill = factor(a_edlitrden)) ) + 
+\end_layout
+
+\begin_layout Plain Layout
+
+	geom_bar(position='fill')
+\end_layout
+
+\begin_layout Plain Layout
+
+@
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
