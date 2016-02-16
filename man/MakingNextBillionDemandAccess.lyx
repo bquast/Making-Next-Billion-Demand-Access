@@ -139,7 +139,11 @@ This paper shows that an exogenous increase in accessibility of local language
  have not met expectations.
  In places where infrastructure has come online and prices have gone down,
  the expected consequent increase in usage was not observed.
- The introduction of the Setswana language in the South-African Google Search
+ 
+\end_layout
+
+\begin_layout Standard
+The introduction of the Setswana language in the South-African Google Search
  website was a spillover of the translation from English to Setswana being
  done for the Botswanan Google Search website.
  This exogenous improvement in the accessability of Setswana-language content
@@ -148,7 +152,8 @@ This paper shows that an exogenous increase in accessibility of local language
  It has also led to increased usage of the Setswana language online, creating
  a positive-feedback loop.
  This suggests that connecting the fourth billion will require a greater
- focus on the demand-side connectivity, by way of local content creation.
+ focus on the demand-side of connectivity, specifically by means of local
+ content.
 \end_layout
 
 \begin_layout Standard
@@ -192,13 +197,16 @@ key "sanou2015world"
 .
  However, it is unlikely that the current `Next Billion' will be connected
  as easily as the previous ones.
- In the period 2010-2014 the average year-on-year growth of internet bandwidth
- in sub-Saharan was around 52%.
- The increased bandwidth also caused a corresponding drop in the price of
- internet access.
- The sub-Saharan average of a 500MB prepaid internet bundle came down to
- around $10, putting it within range of emerging middle classes in many
- of these countries.
+ 
+\end_layout
+
+\begin_layout Standard
+In the period 2010-2014 the average annual growth of internet bandwidth
+ in sub-Saharan was over 50%.
+ This increased bandwidth also caused a corresponding drop in the price
+ of internet access, bringing the sub-Saharan average of a 500MB prepaid
+ internet bundle down to around $10, thereby putting it within range of
+ the emerging middle classes.
  Yet, despite increased range and improved affordability, sub-Saharan Africa
  is showing stagnation in the growth of internet connections.
 \end_layout
@@ -331,11 +339,12 @@ ggplot(df, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
 
 \begin_layout Standard
 The increased range and afordability, taken together with stagnant growth,
- suggest that connectivity might be lagging as a result of lower-than-expected
- demand.
- Part of the reason this inadequate value proposition is that potential
- internet users have lower than before affinity to the `global languages'
- that are currently dominant on the internet.
+ suggest that connectivity is lagging because of lower-than-expected demand,
+ as a result of insufficient perceived value.
+ Part of the reason this inadequate value proposition is that as internet
+ usage because more widespread, potential internet users have lower than
+ before affinity to the `global languages' that are currently dominant on
+ the internet.
  The amount of internet content in certain languages is very disproportionate
  to the number of native speakers (that are online).
  The current offering of online content, primarily in small number of languages,
@@ -348,13 +357,19 @@ reference "fig:natspwebcont"
 
 \end_inset
 
-, we can see how certain languages, primarily English, represent a relatively
- small number of native speakers (around 10%), it is already a much larger
- number of internet-connected global population (around 25%), but at the
- same time represents more than 50% of all the online content.
+, we can see how on the one hand, English represents a relatively small
+ number of native speakers (around 5%), it is already a much larger number
+ of internet-connected global population (around 25%), but at the same time
+ represents more than 50% of all the online content.
+ On the other hand, Hindi is also the native language for about 5% of the
+ global population.
+ However, it for the online global population is the native language for
+ about 2% and the number of websites in the Hindi language is a under 0.1%
+ of all web content.
  The `other' languages in this figure, represent over half the global population
-, as can be seen in the top bar, yet all of these languages combined only
- account for around 10% of online content.
+, as can be seen in the top bar and around 20% of the internet-connected
+ population, yet all of these languages combined only account for around
+ 10% of online content.
 \end_layout
 
 \begin_layout Standard
@@ -631,7 +646,6 @@ attach(adulthh)
 \end_layout
 
 \begin_layout Standard
-
 \begin_inset Float figure
 placement H
 wide false
@@ -1314,7 +1328,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Likelihood of living in Household that Spent on Internet in Last 30 Days
+Living in Household that Spent on Internet (last 30 days)
 \end_layout
 
 \end_inset
@@ -1579,7 +1593,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Likelihood of Computer Ownership
+Computer Ownership
 \end_layout
 
 \end_inset
@@ -1710,7 +1724,7 @@ reference "fig:GoogleTrendsZA"
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1746,7 +1760,7 @@ status open
 
 \begin_layout Plain Layout
 
-ggplot(thuso) + geom_line(aes(x = date, y = thuso))
+ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
 \end_layout
 
 \begin_layout Plain Layout
@@ -1776,6 +1790,16 @@ name "sec:conclusions"
 \end_inset
 
 The above results 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+finish sentence!!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
