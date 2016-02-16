@@ -139,14 +139,10 @@ This paper shows that an exogenous increase in accessibility of local language
  have not met expectations.
  In places where infrastructure has come online and prices have gone down,
  the expected consequent increase in usage was not observed.
- 
-\end_layout
-
-\begin_layout Standard
-The introduction of the Setswana language in the South-African Google Search
- website was a spillover of the translation from English to Setswana being
- done for the Botswanan Google Search website.
- This exogenous improvement in the accessability of Setswana-language content
+ The introduction of the Setswana language in the South-African Google Search
+ website was a spillover of the Botswana Google search website being translated
+ from English to Setswana.
+ This exogenous improvement in the accessibility of Setswana-language content
  has resulted in a substantial increase in the number of native Setswana
  speakers coming online and owning personal computers.
  It has also led to increased usage of the Setswana language online, creating
@@ -182,7 +178,8 @@ key "standage2006connecting"
 
 \end_inset
 
-, since then, close to 2 billion people are
+.
+ Since then, close to 2 billion people are
 \emph on
  
 \emph default
@@ -220,7 +217,7 @@ reference "fig:mobgrow"
 \end_inset
 
 , mobile internet growth, the oft mentioned key driver of internet accessibility
- in sub-Saharan African, is showing stagnation to the point of being near
+ in sub-Saharan Africa, is showing stagnation to the point of being near
  level or even slightly negative.
  Unlike in other regions in the figure, this observed stagnation is not
  a consequence of market saturation, as adoption levels in 2015 are only
@@ -338,18 +335,17 @@ ggplot(df, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
 \end_layout
 
 \begin_layout Standard
-The increased range and afordability, taken together with stagnant growth,
+The increased range and affordability, taken together with stagnant growth,
  suggest that connectivity is lagging because of lower-than-expected demand,
  as a result of insufficient perceived value.
- Part of the reason this inadequate value proposition is that as internet
- usage because more widespread, potential internet users have lower than
- before affinity to the `global languages' that are currently dominant on
- the internet.
+ Part of this inadequate value proposition is that as internet usage becomes
+ more widespread, potential internet users have lower than before affinity
+ to the `global languages' that are currently dominant on the internet.
  The amount of internet content in certain languages is very disproportionate
- to the number of native speakers (that are online).
- The current offering of online content, primarily in small number of languages,
- therefore provides insufficient incentive for many to seek access to the
- internet.
+ to the number of native speakers that are online.
+ The current offering of online content, primarily in a small number of
+ languages, therefore provides insufficient incentive for many to seek access
+ to the internet.
  In 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -357,17 +353,18 @@ reference "fig:natspwebcont"
 
 \end_inset
 
-, we can see how on the one hand, English represents a relatively small
- number of native speakers (around 5%), it is already a much larger number
- of internet-connected global population (around 25%), but at the same time
- represents more than 50% of all the online content.
+ we can see that while on the one hand, English represents a relatively
+ small percentage of the global population's native speakers (around 5%),
+ it is already a much larger number of internet-connected global population
+ (around 25%), but at the same time represents more than 50% of all the
+ online content.
  On the other hand, Hindi is also the native language for about 5% of the
  global population.
- However, it for the online global population is the native language for
- about 2% and the number of websites in the Hindi language is a under 0.1%
+ However, of the online global population, it is the native language for
+ about 2%, yet the number of websites in the Hindi language is under 0.1%
  of all web content.
- The `other' languages in this figure, represent over half the global population
-, as can be seen in the top bar and around 20% of the internet-connected
+ The `other' languages in this figure represent over half the global population,
+ as can be seen in the top bar and around 20% of the internet-connected
  population, yet all of these languages combined only account for around
  10% of online content.
 \end_layout
@@ -416,9 +413,9 @@ name "fig:natspwebcont"
 \end_layout
 
 \begin_layout Standard
-This paper exploits and exogenous increase in the accessability of local
- content in the Setswana language in South African, in order to isolate
- the increase of internet usage among native speakers.
+This paper exploits an exogenous increase in the accessibility of local
+ content in the Setswana language in South Africa, in order to isolate the
+ increase of internet usage among native speakers.
  In 2010 Google collaborated with a Botswanan team of linguists 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -438,10 +435,10 @@ google.co.bw
 
 ) available in the local language: `Setswana'.
  In addition to being spoken in Botswana, there is also a sizable population
- of Setswana directly across the border in South Africa, where it is also
- one of the official state languages.
- This therefore also led to the introduction of the Setswana language on
- the South African Google website (
+ of Setswana speakers directly across the border in South Africa, where
+ it is also one of the official state languages.
+ This led to the Setswana-language interface also being introduced on the
+ South-African Google website (
 \begin_inset Flex Code
 status open
 
@@ -451,18 +448,20 @@ google.co.za
 
 \end_inset
 
-), as spillover of the translation work performed for Google's Botswanan
- website.
- This change led to a large increase in the number of native Setswana speakers
- reporting to have spent some amount of money in the past 30 days on internet
- access.
+), as a spillover of the translation work originally performed for Google's
+ Botswanan website.
+ This introduction led to a large increase in the number of native Setswana
+ speakers reporting to have spent some amount of money in the past 30 days
+ on internet access.
 \end_layout
 
 \begin_layout Standard
-The Google Search interface represent a very small number of words on the
+The Google Search interface represents a very small number of words on the
  internet and it is not required to use a certain interface language in
  order to search for content in this language.
- However, the search page is in many cases the first website viewed by users.
+ Yet, the search page is in many cases the first website viewed by users
+ and thereby has a substantial impact on the decision to further engage
+ or not.
  Asides from being able to understand the interface of the website, having
  this interface be in a local language also encourages usage of this local
  language, which in turn reveals more local language content.
@@ -470,10 +469,10 @@ The Google Search interface represent a very small number of words on the
 \end_layout
 
 \begin_layout Standard
-In short, we can identify several major channels which promote increase
- online engagement, which together constitute the theory of change.
+In short, we can identify two main channels through which this promotes
+ increased online engagement, which together constitute the theory of change.
  Firstly, the ability to read and understand the words of the interface
- increases the chance that user continues using the website and the internet
+ increases the chance that a user continues using the website and the internet
  at large.
  Secondly, the visibility of local language content increases the likelihood
  of the user entering search queries in the local language and thereby finding
@@ -482,23 +481,25 @@ In short, we can identify several major channels which promote increase
 \end_layout
 
 \begin_layout Standard
-The vast majority of internet access is developing countries is through
+The vast majority of internet access in developing countries is through
  handheld devices such as smartphones.
  However, due to the limited `real estate' (surface area of the screen)
- on a mobile website, the link to changing the interface language is replace
- with a dropdown menu that reveals the additional language options.
- Generally, the website will default the the operating system (Android /
- iOS) language, however, since many local African languages are not available
- as a system language, this is not possible there.
- The fact that the introduction seems to benefit desktop usage but not mobile
- usage is further substantiated by our results that isolate an increase
- in computer ownership, but no increase in cell phone ownership.
-\end_layout
+ on a mobile website, the link to changing the interface language is replaced
+ with a dropdown menu that reveals the additional language options (see
+ screenshots in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:langmob"
 
-\begin_layout Standard
-In addition to the increase in the number of individuals spending on an
- internet connection, we also find a positive effect on the number of individual
-s living in households with a computer.
+\end_inset
+
+).
+ Generally, the website will default to the operating system (Android /
+ iOS) language, however, since many local African languages are not available
+ as a system language, this is not possible there, leaving the website to
+ revert to its default (in South Africa: English).
+ The fact that the introduction also led to increased desktop-computer ownership
+ but not mobile-phone ownership further substantiates this hypothesis.
 \end_layout
 
 \begin_layout Standard
@@ -518,7 +519,7 @@ reference "sec:data"
 \end_inset
 
 .
- After which
+ After which 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:methods"
@@ -541,6 +542,22 @@ reference "sub:estimation"
 \end_inset
 
 .
+ Further, we present the results of the estimation in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:results"
+
+\end_inset
+
+.
+ Finally, we conclude in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:conclusions"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section
@@ -554,10 +571,10 @@ name "sec:data"
 
 \end_inset
 
-South Africa's National Income Dynamics Survey collect data on a representative
- set of around 10,000 households over time.
+South Africa's National Income Dynamics Survey collects data on a representative
+ set of around ten thousand households over time.
  The first survey took place in 2008, the second one in late 2010 and early
- 2011, and third one took place in 2012 
+ 2011, and the third one took place in 2012 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "saldru2008nids,saldru2012nids,saldru2013nids"
@@ -588,7 +605,7 @@ reference "fig:langsex"
 
 \begin_layout Standard
 A detailed breakdown of the mean number of households that spend on internet
- access and cellphone usages, as well as cellphone and computer ownership
+ access and cellphone usage, as well as cellphone and computer ownership
  by language and time period (wave) is presented in 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -714,7 +731,7 @@ name "sec:methods"
 
 \end_inset
 
-This section beings with a discussion of the identification strategy employed,
+This section begins with a discussion of the identification strategy employed,
  followed by a explanation of the estimator used to operationalise this,
  and concludes with a description of the software used for this estimation.
 \end_layout
@@ -763,8 +780,8 @@ google.co.za
 \end_inset
 
 ) was a spillover effect of that development.
- This allow us to rule out any possible endogeneity issues that might otherwise
- arise in context such as these.
+ This allows us to rule out any possible endogeneity issues that might otherwise
+ arise in contexts such as these.
  For instance, the Afrikaans language is almost solely spoken in South Africa.
  When we observe that the introduction of the Afrikaans Google Search interface
  occurs around the same time as a growth in the number of native Afrikaans
@@ -776,7 +793,7 @@ google.co.za
 \begin_layout Standard
 Substantial numbers of Setswana speakers exist in Botswana, South Africa,
  Zimbabwe, and to some extend Namibia.
- However the language is most important in Botswana, where it is spoken
+ However, the language is most important in Botswana, where it is spoken
  by approximately 80% of all people, and where it is the only official language
  other than English.
  As such, it is also the place where most linguistic work on the Setswana
@@ -824,7 +841,7 @@ setswana_logical
 
 \end_inset
 
-), interacted with a event dummy variable (
+), interacted with an event dummy variable (
 \begin_inset Flex Code
 status open
 
@@ -876,7 +893,7 @@ FALSE
 \end_inset
 
  otherwise.
- The later is 
+ The latter is 
 \begin_inset Flex Code
 status open
 
@@ -916,7 +933,7 @@ In addition to this estimation, we use an alternative specification whereby
  a factor variable of native language is interacted with the event dummy
  variable.
  In a linear regression context, factor variables are estimated as dummy
- variables for all levels (here: all languages) except for once `base' level,
+ variables for all levels (here: all languages) except for one `base' level,
  which is where all language dummies are 
 \begin_inset Flex Code
 status open
@@ -1057,7 +1074,7 @@ status open
 
 \begin_layout Plain Layout
 The repository can by cloned to a local computer by entering in following
- command in a terminal with Git:
+ command in a terminal (with Git installed):
 \begin_inset Newline newline
 \end_inset
 
@@ -1134,7 +1151,7 @@ reference "tab:nfnet"
 \end_layout
 
 \begin_layout Standard
-We find that the the interaction term of the event dummy (
+We find that the interaction term of the event dummy (
 \begin_inset Flex Code
 status open
 
@@ -1176,7 +1193,10 @@ interface_introTRUE
 \end_inset
 
  and setswana_logicalTRUE) yield significant but negative parameter estimates.
- In addition to this, the covariates included in the estimation are also
+\end_layout
+
+\begin_layout Standard
+In addition to this, the covariates included in the estimation are also
  highly significant.
  The highest education level of the individual (
 \begin_inset Flex Code
@@ -1211,7 +1231,7 @@ a_womanTRUE
 
  here is negative but not at all significant, this is unsurprising as we
  use internet expenditure at a household level.
- Most women live in a household which includes men and visa versa, suggesting
+ Most women live in a household which includes men and vise versa, suggesting
  that this effect cannot be isolated in this estimation.
  We further investigate this issue in a separate estimation discussed below.
  The variables describing linguistic skills in reading and writing in both
@@ -1303,7 +1323,7 @@ Venda
 
 \end_inset
 
- (as small language from the north-eastern region), and a significantly
+ (as small language from the region bordering Zimbabwe), and a significantly
  negative effect for the language 
 \begin_inset Flex Code
 status open
@@ -1432,7 +1452,7 @@ a_owncom
 
 ) differs from the base model's explanandum in two ways.
  Firstly, it does not include expenditure on internet in ways such as internet
- cafes, focusses on actual ownership, signaling a more long-term investment
+ cafes, but focusses on actual ownership, signaling a more long-term investment
  and interest.
  Secondly, the 
 \begin_inset Flex Code
@@ -1507,8 +1527,8 @@ setswana_logicalTRUE
 
 \end_inset
 
-) again are significant and negative with for the former's p-value smaller
- than 
+) again are significant and negative with the former's p-value smaller than
+ 
 \begin_inset Flex Code
 status open
 
@@ -1518,7 +1538,7 @@ status open
 
 \end_inset
 
- and the later's small than 
+ and the latter's smaller than 
 \begin_inset Flex Code
 status open
 
@@ -1563,7 +1583,7 @@ status open
 \end_inset
 
 ).
- However unlike in the household internet expenditure model, the sex of
+ However, unlike in the household internet expenditure model, the sex of
  the individual here is highly significant, specifically, parameter estimate
  of a_womanTRUE is negative and highly significant (p-value: 
 \begin_inset Flex Code
@@ -1578,8 +1598,8 @@ status open
 ).
  As mentioned above, this variable is difficult to interpret when using
  a household-level variable as an explanandum, however, here, the computer
- ownership variable is at an individual level, makes the coefficient more
- interpretable.
+ ownership variable is at an individual level, which makes the coefficient
+ more interpretable.
 \end_layout
 
 \begin_layout Standard
@@ -1675,8 +1695,8 @@ lm(a_owncom ~ interface_intro*setswana_logical +
 \begin_layout Standard
 Asides from the effect on the proportion of households with internet expenditure
 , and the proportion of adults who own a computer, we also estimate any
- possible effects on the propensity of the household to own spend on a cellphone
-, and on adults propensity to own a cellphone.
+ possible effects on the probability of the household to spend on a cellphone,
+ and on adults likelihood to own a cellphone.
 \end_layout
 
 \begin_layout Standard
@@ -1789,37 +1809,56 @@ name "sec:conclusions"
 
 \end_inset
 
-The above results 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-finish sentence!!
-\end_layout
-
-\end_inset
-
-
+In conclusion, despite recent advances in the reach, speed, and afordability
+ of internet connectivity in sub-Saharan Africa, actual connectivity has
+ been stagnant.
+ 
 \end_layout
 
 \begin_layout Standard
-The vast increase of internet usage among the Setswana speaking population
- as a result of the newly introduced interface language on 
+This paper exploits the introduction of the Setswana-language interface
+ on 
 \begin_inset Flex Code
 status open
 
 \begin_layout Plain Layout
-goog.co.za
+google.co.za
 \end_layout
 
 \end_inset
 
-, suggest that there is a serious lack in the availability of local content
+, as a spillover of the development of this interface for 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+google.co.bw
+\end_layout
+
+\end_inset
+
+ and finds that it leads to a substantial increase in internet usage and
+ computer ownership among native Setswana speakers.
+\end_layout
+
+\begin_layout Standard
+This increase of internet usage among the Setswana speaking population as
+ a result of the newly introduced interface language on 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+google.co.za
+\end_layout
+
+\end_inset
+
+, suggests that there is a serious lack in the availability of local content
  in many African languages, which serves as an impediment to further internet
  adoption here.
  Additionally, there was also an observably positive effect on computer
  ownership amongst adults.
- This suggest that the effect is unlikely to be ephemeral in nature, since
+ This suggests that the effect is unlikely to be ephemeral in nature, since
  computer ownership constitutes a more long-term investment in internet
  access.
 \end_layout
@@ -1828,8 +1867,15 @@ goog.co.za
 Finally, the fact that this effect is not observed in cellphone ownership
  and expenditure, which is possibly a consequence of the fact that the interface
  cannot automatically switch and that the link `Setswana' is not directly
- visible from the landing page, suggests that it is important either make
- the link directly visible on the landing page.
+ visible from the landing page, suggests that it is important to make the
+ link directly visible on the landing page in order to fully reach users.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1863,6 +1909,10 @@ status open
 printbibliography
 \end_layout
 
+\end_inset
+
+
+\begin_inset Newpage newpage
 \end_inset
 
 
@@ -2427,6 +2477,13 @@ ggplot(adulthh, aes(x = a_lng, fill = factor(a_edlitrdhm)) ) +
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
