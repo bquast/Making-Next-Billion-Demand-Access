@@ -255,13 +255,21 @@ name "fig:mobgrow"
 \end_layout
 
 \begin_layout Plain Layout
-\align center
-\begin_inset ERT
+\begin_inset Flex Chunk
 status open
 
 \begin_layout Plain Layout
 
-<<load_plot_data, echo=FALSE, warning=FALSE, message=FALSE>>=
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+load_plot_data, echo=FALSE, warning=FALSE, message=FALSE
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -285,24 +293,27 @@ library(ggplot2)
 library(dplyr)
 \end_layout
 
-\begin_layout Plain Layout
-
-@
-\end_layout
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Plain Layout
-\align center
-\begin_inset ERT
+\begin_inset Flex Chunk
 status open
 
 \begin_layout Plain Layout
 
-<<mobile_growth, echo=FALSE, cache=TRUE>>=
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+mobile_growth, echo=FALSE, cache=TRUE
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -322,10 +333,6 @@ ggplot(df, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -624,12 +631,21 @@ reference "sec:descriptive"
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
+\begin_inset Flex Chunk
 status open
 
 \begin_layout Plain Layout
 
-<<prep, include=FALSE>>=
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+prep, include=FALSE
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -650,11 +666,6 @@ library(printr) # load (customised) printr package for clean output of lm()
 \begin_layout Plain Layout
 
 attach(adulthh)
-\end_layout
-
-\begin_layout Plain Layout
-
-@
 \end_layout
 
 \end_inset
@@ -692,22 +703,26 @@ name "fig:langsex"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset ERT
+\begin_inset Flex Chunk
 status open
 
 \begin_layout Plain Layout
 
-<<lang_woman, echo=FALSE, cache=TRUE>>=
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+lang_woman, echo=FALSE, cache=TRUE
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 
 ggplot(adulthh, aes(x = a_lng, fill = a_woman)) + geom_bar()
-\end_layout
-
-\begin_layout Plain Layout
-
-@
 \end_layout
 
 \end_inset
@@ -1629,12 +1644,21 @@ name "tab:owncom"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset ERT
+\begin_inset Flex Chunk
 status open
 
 \begin_layout Plain Layout
 
-<<lm2_5, cache=TRUE>>=
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+lm2_5, cache=TRUE
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1675,11 +1699,6 @@ lm(a_owncom ~ interface_intro*setswana_logical +
 \begin_layout Plain Layout
 
               best_edu)
-\end_layout
-
-\begin_layout Plain Layout
-
-@
 \end_layout
 
 \end_inset
@@ -1759,7 +1778,6 @@ Usage of Setswana Words on Google.co.za
 \end_layout
 
 \begin_layout Plain Layout
-\align center
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:GoogleTrendsZA"
@@ -1770,22 +1788,26 @@ name "fig:GoogleTrendsZA"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset ERT
+\begin_inset Flex Chunk
 status open
 
 \begin_layout Plain Layout
 
-<<plot_data, cache=TRUE>>=
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+plot_data, cache=TRUE
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 
 ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
-\end_layout
-
-\begin_layout Plain Layout
-
-@
 \end_layout
 
 \end_inset
@@ -1985,22 +2007,36 @@ Factor of Language
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset ERT
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:faclang"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
 status open
 
 \begin_layout Plain Layout
 
-<<lm4_0>>=
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+lm4_0
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
 
 lm(h_nfnet ~  interface_intro*a_lng)
-\end_layout
-
-\begin_layout Plain Layout
-
-@
 \end_layout
 
 \end_inset
@@ -2041,12 +2077,31 @@ LM4_1: with read / write in eng / native and woman
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset ERT
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:faclangrdwr"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
 status open
 
 \begin_layout Plain Layout
 
-<<lm4_1, cache=TRUE>>=
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+lm4_1, cache=TRUE
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2077,11 +2132,6 @@ lm(h_nfnet ~  interface_intro*a_lng    +
 \begin_layout Plain Layout
 
               a_woman)
-\end_layout
-
-\begin_layout Plain Layout
-
-@
 \end_layout
 
 \end_inset
@@ -2136,12 +2186,21 @@ name "tab:dep_vars"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset ERT
+\begin_inset Flex Chunk
 status open
 
 \begin_layout Plain Layout
 
-<<dep_vars, cache=TRUE>>=
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+dep_vars, cache=TRUE
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2184,11 +2243,6 @@ adulthh %>%
             h_nfnetspn = mean(h_nfnetspn, na.rm = TRUE))
 \end_layout
 
-\begin_layout Plain Layout
-
-@
-\end_layout
-
 \end_inset
 
 
@@ -2211,10 +2265,6 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
@@ -2227,22 +2277,26 @@ Household Income
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset ERT
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:hhincome"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
 status open
 
 \begin_layout Plain Layout
 
-<<hhincome, cache=TRUE>>=
-\end_layout
+\begin_inset Argument 1
+status open
 
 \begin_layout Plain Layout
-
-ggplot(adulthh, aes(x=hhincome, fill=a_lng )) + stat_bin(bins=50)
-\end_layout
-
-\begin_layout Plain Layout
-
-@
+hhincome, cache=TRUE
 \end_layout
 
 \end_inset
@@ -2251,6 +2305,12 @@ ggplot(adulthh, aes(x=hhincome, fill=a_lng )) + stat_bin(bins=50)
 \end_layout
 
 \begin_layout Plain Layout
+
+ggplot(adulthh, aes(x=hhincome, fill=a_lng )) + stat_bin(bins=50)
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -2293,22 +2353,16 @@ name "fig:bestedu"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset ERT
+\begin_inset Flex Chunk
 status open
 
 \begin_layout Plain Layout
 
-<<best_edu, cache=TRUE>>=
-\end_layout
+\begin_inset Argument 1
+status open
 
 \begin_layout Plain Layout
-
-ggplot(adulthh, aes(x=best_edu, fill=a_lng )) + geom_bar(position = 'fill')
-\end_layout
-
-\begin_layout Plain Layout
-
-@
+best_edu, cache=TRUE
 \end_layout
 
 \end_inset
@@ -2317,6 +2371,12 @@ ggplot(adulthh, aes(x=best_edu, fill=a_lng )) + geom_bar(position = 'fill')
 \end_layout
 
 \begin_layout Plain Layout
+
+ggplot(adulthh, aes(x=best_edu, fill=a_lng )) + geom_bar(position = 'fill')
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -2374,12 +2434,21 @@ name "fig:rden"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset ERT
+\begin_inset Flex Chunk
 status open
 
 \begin_layout Plain Layout
 
-<<read_english, cache=TRUE>>=
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+read_english, cache=TRUE
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2390,11 +2459,6 @@ ggplot(adulthh, aes(x = a_lng, fill = factor(a_edlitrden)) ) +
 \begin_layout Plain Layout
 
 	geom_bar(position = 'fill')
-\end_layout
-
-\begin_layout Plain Layout
-
-@
 \end_layout
 
 \end_inset
@@ -2445,12 +2509,21 @@ name "fig:rdhm"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset ERT
+\begin_inset Flex Chunk
 status open
 
 \begin_layout Plain Layout
 
-<<read_native, cache=TRUE>>=
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+read_native, cache=TRUE
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -2463,17 +2536,8 @@ ggplot(adulthh, aes(x = a_lng, fill = factor(a_edlitrdhm)) ) +
 	geom_bar(position = 'fill')
 \end_layout
 
-\begin_layout Plain Layout
-
-@
-\end_layout
-
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
