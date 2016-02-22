@@ -1,0 +1,44 @@
+---
+title: 'Making the Next Billion Demand Access<br/> The Local-Content Effect of google.co.za
+  in Setswana'
+author: "Bastiaan Quast"
+date: "24 February 2016"
+output: ioslides_presentation
+---
+
+## Internet Effect
+
+```{r prep, include=FALSE}
+load(file = '../data/results.RData') # load results data
+load(file = '../data/merged.RData')  # load source  data
+library(printr) # load (customised) printr package for clean output of lm()
+attach(adulthh)
+```
+
+```{r lm4_5pres, cache=TRUE}
+lm(h_nfnet ~  interface_intro*setswana_logical + 
+              factor(a_edlitrden)  			+
+              factor(a_edlitwrten) 			+ 
+              factor(a_edlitrdhm)  			+ 
+              factor(a_edlitwrthm) 			+ 
+              a_woman              			+ 
+              hhincome             			+ 
+              best_edu)
+```
+
+## Computer Ownership
+
+```{r lm2_5pres, cache=TRUE}
+lm(a_owncom ~ interface_intro*setswana_logical + 
+              factor(a_edlitrden)  			+
+              factor(a_edlitwrten) 			+ 
+              factor(a_edlitrdhm)  			+ 
+              factor(a_edlitwrthm) 			+ 
+              a_woman              			+ 
+              hhincome             			+ 
+              best_edu)
+```
+
+## Closing Remarks
+
+Available online: http://qua.st/demand
