@@ -9,6 +9,7 @@ output: ioslides_presentation
 ## Internet Effect
 
 ```{r prep, include=FALSE}
+knitr::opts_chunk$set(fig.path='../misc/rmd-', cache.path='../data/cache/rmd-')
 load(file = '../data/results.RData') # load results data
 load(file = '../data/merged.RData')  # load source  data
 library(printr) # load (customised) printr package for clean output of lm()
