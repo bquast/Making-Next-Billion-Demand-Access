@@ -3,7 +3,9 @@ title: 'Making the Next Billion Demand Access<br/> The Local-Content Effect of g
   in Setswana'
 author: "Bastiaan Quast"
 date: "24 February 2016"
-output: ioslides_presentation
+output:
+  ioslides_presentation:
+    smaller: true
 ---
 
 ## Internet Effect
