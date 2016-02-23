@@ -726,7 +726,7 @@ lang_woman, echo=FALSE, cache=TRUE
 
 \begin_layout Plain Layout
 
-ggplot(adulthh, aes(x = a_lng, fill = a_woman)) + geom_bar()
+ggplot(data=NIDS, aes(x=a_lng, fill=a_woman)) + geom_bar()
 \end_layout
 
 \end_inset
