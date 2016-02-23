@@ -8,24 +8,49 @@ output:
     smaller: true
 ---
 
-## Internet Effect
-
 ```{r prep, include=FALSE}
-knitr::opts_chunk$set(fig.path='../misc/rmd-', cache.path='../data/cache/rmd-')
+knitr::opts_chunk$set(fig.path='../misc/rmd-',
+                      cache.path='../data/cache/rmd-',
+                      fig.width=6,
+                      fig.height=3)
 load(file = '../data/results.RData') # load results data
 load(file = '../data/merged.RData')  # load source  data
+load(file = '../data/mobilegrowth.RData')
+library(ggplot2)
+# library(ggvis)
 library(printr) # load (customised) printr package for clean output of lm()
 attach(adulthh)
 ```
 
-```{r lm4_5pres, cache=TRUE}
+## Introduction
+
+```{r plot}
+ggplot(data=ITU2015, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
+```
+
+```{r interactive, eval=FALSE, echo=FALSE}
+ITU2015 %>%
+  ggvis(~year, ~adoption, stroke=~region) %>%
+  group_by(region) %>%
+  layer_smooths(span = input_slider(0.75, 1, value = 1), se=TRUE, fill=~region) %>%
+  bind_shiny("ggvis", "ggvis_ui")
+
+```
+
+## Data
+
+```{r}
+getwd()
+```
+
+## Method
+
+## Internet Effect
+
+```{r lm4_5pres, cache=TRUE, echo=TRUE}
 lm(h_nfnet ~  interface_intro*setswana_logical + 
-              factor(a_edlitrden)  			+
-              factor(a_edlitwrten) 			+ 
-              factor(a_edlitrdhm)  			+ 
-              factor(a_edlitwrthm) 			+ 
-              a_woman              			+ 
-              hhincome             			+ 
+              a_woman              			   + 
+              hhincome             			   + 
               best_edu)
 ```
 
@@ -33,15 +58,19 @@ lm(h_nfnet ~  interface_intro*setswana_logical +
 
 ```{r lm2_5pres, cache=TRUE}
 lm(a_owncom ~ interface_intro*setswana_logical + 
-              factor(a_edlitrden)  			+
-              factor(a_edlitwrten) 			+ 
-              factor(a_edlitrdhm)  			+ 
-              factor(a_edlitwrthm) 			+ 
-              a_woman              			+ 
-              hhincome             			+ 
+              a_woman              			   + 
+              hhincome             			   + 
               best_edu)
 ```
 
 ## Closing Remarks
 
-Available online: http://qua.st/demand
+    If you talk to a man in a language he understands that goes to his head.
+    
+    If you talk to a man in his language that goes to his heart.
+    
+                                                     - Nelson Rolihlahla Mandela
+
+
+
+Available online: http://qua.st/internet-demand
