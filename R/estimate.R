@@ -7,6 +7,7 @@
 
 
 # load libraries
+library(plm)
 library(dplyr)
 
 
@@ -65,6 +66,12 @@ summary(lm4_5)
 
 m_test <- formula(h_nfnet  ~ post_event*factor(a_lng))
 summary(lm(m_test, adulthh))
+
+
+# use clustering
+# see http://stats.stackexchange.com/questions/10017/standard-error-clustering-in-r-either-manually-or-in-plm
+NIDS   <- pdata.frame(NIDS, index=c('pid', 'wave'))
+plm2_5 <- plm(a_owncom ~ post_event*setswana + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome, NIDS)
 
 
 # save results
