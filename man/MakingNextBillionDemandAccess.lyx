@@ -135,13 +135,136 @@ bastiaan.quast@graduateinstitute.ch; Maison de la paix, Geneva, Switzerland
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Dean & Yang: Filipino migrants
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Jensen: TV and Status women in India
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+add SA to mobile Internet adoption plot
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+plot of regions/languages adoption
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Household clustering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+mention cell coverage in SA: 2007-2014: 99.79%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+interact with age
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+price of Internet acccess (ITU)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Almost half of South African households (48,7%) had at least one member
+ who used the Internet either at home, workplace, place of study, or Internet
+ cafés.
+ More than half of households in Western Cape (62,1%) and Gauteng (59,9%)
+ had access to the Internet while only just over a fifth of households in
+ Limpopo (32,6%) had access to the Internet.
+ - General Household Survey 2014
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 Abstract
 \end_layout
 
 \begin_layout Standard
 This paper shows that an exogenous increase in accessibility of local language
- content leads to an increase in demand for internet connectivity among
+ content leads to an increase in demand for Internet connectivity among
  native speakers.
  Internet connectivity provides enormous improvements in quality of life
  as well as opportunities for the newly connected, yet recent attempts to
@@ -193,7 +316,7 @@ key "standage2006connecting"
 \emph on
  
 \emph default
-estimated to have been connected to the internet, up from the just over
+estimated to have been connected to the Internet, up from the just over
  one billion at the time of writing 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -208,14 +331,14 @@ key "sanou2015world"
 \end_layout
 
 \begin_layout Standard
-In the period 2010-2014 the average annual growth of internet bandwidth
+In the period 2010-2014 the average annual growth of Internet bandwidth
  in sub-Saharan was over 50%.
  This increased bandwidth also caused a corresponding drop in the price
- of internet access, bringing the sub-Saharan average of a 500MB prepaid
- internet bundle down to around $10, thereby putting it within range of
+ of Internet access, bringing the sub-Saharan average of a 500MB prepaid
+ Internet bundle down to around $10, thereby putting it within range of
  the emerging middle classes.
  Yet, despite increased range and improved affordability, sub-Saharan Africa
- is showing stagnation in the growth of internet connections.
+ is showing stagnation in the growth of Internet connections.
 \end_layout
 
 \begin_layout Standard
@@ -226,7 +349,7 @@ reference "fig:mobgrow"
 
 \end_inset
 
-, mobile internet growth, the oft mentioned key driver of internet accessibility
+, mobile Internet growth, the oft mentioned key driver of Internet accessibility
  in sub-Saharan Africa, is showing stagnation to the point of being near
  level or even slightly negative.
  Unlike in other regions in the figure, this observed stagnation is not
@@ -355,14 +478,14 @@ ggplot(df, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
 The increased range and affordability, taken together with stagnant growth,
  suggest that connectivity is lagging because of lower-than-expected demand,
  as a result of insufficient perceived value.
- Part of this inadequate value proposition is that as internet usage becomes
- more widespread, potential internet users have lower than before affinity
- to the `global languages' that are currently dominant on the internet.
- The amount of internet content in certain languages is very disproportionate
+ Part of this inadequate value proposition is that as Internet usage becomes
+ more widespread, potential Internet users have lower than before affinity
+ to the `global languages' that are currently dominant on the Internet.
+ The amount of Internet content in certain languages is very disproportionate
  to the number of native speakers that are online.
  The current offering of online content, primarily in a small number of
  languages, therefore provides insufficient incentive for many to seek access
- to the internet.
+ to the Internet.
  In 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -372,7 +495,7 @@ reference "fig:natspwebcont"
 
  we can see that while on the one hand, English represents a relatively
  small percentage of the global population's native speakers (around 5%),
- it is already a much larger number of internet-connected global population
+ it is already a much larger number of Internet-connected global population
  (around 25%), but at the same time represents more than 50% of all the
  online content.
  On the other hand, Hindi is also the native language for about 5% of the
@@ -381,7 +504,7 @@ reference "fig:natspwebcont"
  about 2%, yet the number of websites in the Hindi language is under 0.1%
  of all web content.
  The `other' languages in this figure represent over half the global population,
- as can be seen in the top bar and around 20% of the internet-connected
+ as can be seen in the top bar and around 20% of the Internet-connected
  population, yet all of these languages combined only account for around
  10% of online content.
 \end_layout
@@ -432,7 +555,7 @@ name "fig:natspwebcont"
 \begin_layout Standard
 This paper exploits an exogenous increase in the accessibility of local
  content in the Setswana language in South Africa, in order to isolate the
- increase of internet usage among native speakers.
+ increase of Internet usage among native speakers.
  In 2010 Google collaborated with a Botswanan team of linguists 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -469,12 +592,12 @@ google.co.za
  Botswanan website.
  This introduction led to a large increase in the number of native Setswana
  speakers reporting to have spent some amount of money in the past 30 days
- on internet access.
+ on Internet access.
 \end_layout
 
 \begin_layout Standard
 The Google Search interface represents a very small number of words on the
- internet and it is not required to use a certain interface language in
+ Internet and it is not required to use a certain interface language in
  order to search for content in this language.
  Yet, the search page is in many cases the first website viewed by users
  and thereby has a substantial impact on the decision to further engage
@@ -489,7 +612,7 @@ The Google Search interface represents a very small number of words on the
 In short, we can identify two main channels through which this promotes
  increased online engagement, which together constitute the theory of change.
  Firstly, the ability to read and understand the words of the interface
- increases the chance that a user continues using the website and the internet
+ increases the chance that a user continues using the website and the Internet
  at large.
  Secondly, the visibility of local language content increases the likelihood
  of the user entering search queries in the local language and thereby finding
@@ -498,7 +621,7 @@ In short, we can identify two main channels through which this promotes
 \end_layout
 
 \begin_layout Standard
-The vast majority of internet access in developing countries is through
+The vast majority of Internet access in developing countries is through
  handheld devices such as smartphones.
  However, due to the limited `real estate' (surface area of the screen)
  on a mobile website, the link to changing the interface language is replaced
@@ -621,7 +744,7 @@ reference "fig:langsex"
 \end_layout
 
 \begin_layout Standard
-A detailed breakdown of the mean number of households that spend on internet
+A detailed breakdown of the mean number of households that spend on Internet
  access and cellphone usage, as well as cellphone and computer ownership
  by language and time period (wave) is presented in 
 \begin_inset CommandInset ref
@@ -776,7 +899,7 @@ This paper exploits the introduction of the Setswana interface language
  to Google Search in South Africa as a spillover of the development of that
  interface for the Botswanan Google Search website.
  By comparing the number of native Setswana speakers in South Africa being
- internet users, with the number of South Africans with a different native
+ Internet users, with the number of South Africans with a different native
  language around the same time, we isolate the effect of this introduction.
 \end_layout
 
@@ -810,8 +933,8 @@ google.co.za
  For instance, the Afrikaans language is almost solely spoken in South Africa.
  When we observe that the introduction of the Afrikaans Google Search interface
  occurs around the same time as a growth in the number of native Afrikaans
- internet users, it will be hard to isolate the effect from the introduction
- from its cause (since an increase in native Afrikaans internet users would
+ Internet users, it will be hard to isolate the effect from the introduction
+ from its cause (since an increase in native Afrikaans Internet users would
  be a good reason to introduce it as an interface language).
 \end_layout
 
@@ -830,12 +953,12 @@ Substantial numbers of Setswana speakers exist in Botswana, South Africa,
 
 \begin_layout Standard
 It is worth noting that it is very common not to personally own a computer
- and `paying for internet access' therefore also includes a lot of people
- who use the internet in other locations such as internet cafe's.
+ and `paying for Internet access' therefore also includes a lot of people
+ who use the Internet in other locations such as Internet cafe's.
 \end_layout
 
 \begin_layout Standard
-In addition to using the propensity to spend on internet (in the last thirty
+In addition to using the propensity to spend on Internet (in the last thirty
  days), we also use the propensity to own a computer as a dependent variable.
  
 \end_layout
@@ -852,7 +975,7 @@ name "sub:estimation"
 \end_inset
 
 As mentioned in the above section, we compare the change in the level of
- internet users among native Setswana speakers in South Africa, with that
+ Internet users among native Setswana speakers in South Africa, with that
  of native speakers of other language in South Africa around the introduction
  of the Setswana interface to the South-African Google Search.
  For this we use a Difference-in-Differences estimator using a native-Setswana
@@ -1153,7 +1276,7 @@ setswana_logical
 \end_inset
 
  dummy in order to isolate the effect on the explanandum, a dummy variable
- describing household expenditure on internet in the last thirty days or
+ describing household expenditure on Internet in the last thirty days or
  not (
 \begin_inset Flex Code
 status open
@@ -1164,7 +1287,7 @@ h_nfnet
 
 \end_inset
 
-, household non-food internet).
+, household non-food Internet).
  The results of this estimation are presented in 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -1255,14 +1378,14 @@ a_womanTRUE
 \end_inset
 
  here is negative but not at all significant, this is unsurprising as we
- use internet expenditure at a household level.
+ use Internet expenditure at a household level.
  Most women live in a household which includes men and vise versa, suggesting
  that this effect cannot be isolated in this estimation.
  We further investigate this issue in a separate estimation discussed below.
  The variables describing linguistic skills in reading and writing in both
  English and the native language do yield many significant results, though
  lower levels of English writing skill seems to be correlated with a lower
- propensity to use the internet (
+ propensity to use the Internet (
 \begin_inset Flex Code
 status open
 
@@ -1476,7 +1599,7 @@ a_owncom
 \end_inset
 
 ) differs from the base model's explanandum in two ways.
- Firstly, it does not include expenditure on internet in ways such as internet
+ Firstly, it does not include expenditure on Internet in ways such as Internet
  cafes, but focusses on actual ownership, signaling a more long-term investment
  and interest.
  Secondly, the 
@@ -1577,7 +1700,7 @@ status open
  In terms of the linguistic skill, we find that the lower levels of English
  reading as well as English writing are correlated with lower propensities
  of computer ownership.
- Similar to internet expenditure model, household income (
+ Similar to Internet expenditure model, household income (
 \begin_inset Flex Code
 status open
 
@@ -1608,7 +1731,7 @@ status open
 \end_inset
 
 ).
- However, unlike in the household internet expenditure model, the sex of
+ However, unlike in the household Internet expenditure model, the sex of
  the individual here is highly significant, specifically, parameter estimate
  of a_womanTRUE is negative and highly significant (p-value: 
 \begin_inset Flex Code
@@ -1722,7 +1845,7 @@ lm(a_owncom ~ interface_intro*setswana_logical +
 \end_layout
 
 \begin_layout Standard
-Asides from the effect on the proportion of households with internet expenditure
+Asides from the effect on the proportion of households with Internet expenditure
 , and the proportion of adults who own a computer, we also estimate any
  possible effects on the probability of the household to spend on a cellphone,
  and on adults likelihood to own a cellphone.
@@ -1842,7 +1965,7 @@ name "sec:conclusions"
 \end_inset
 
 In conclusion, despite recent advances in the reach, speed, and afordability
- of internet connectivity in sub-Saharan Africa, actual connectivity has
+ of Internet connectivity in sub-Saharan Africa, actual connectivity has
  been stagnant.
  
 \end_layout
@@ -1869,12 +1992,12 @@ google.co.bw
 
 \end_inset
 
- and finds that it leads to a substantial increase in internet usage and
+ and finds that it leads to a substantial increase in Internet usage and
  computer ownership among native Setswana speakers.
 \end_layout
 
 \begin_layout Standard
-This increase of internet usage among the Setswana speaking population as
+This increase of Internet usage among the Setswana speaking population as
  a result of the newly introduced interface language on 
 \begin_inset Flex Code
 status open
@@ -1886,12 +2009,12 @@ google.co.za
 \end_inset
 
 , suggests that there is a serious lack in the availability of local content
- in many African languages, which serves as an impediment to further internet
+ in many African languages, which serves as an impediment to further Internet
  adoption here.
  Additionally, there was also an observably positive effect on computer
  ownership amongst adults.
  This suggests that the effect is unlikely to be ephemeral in nature, since
- computer ownership constitutes a more long-term investment in internet
+ computer ownership constitutes a more long-term investment in Internet
  access.
 \end_layout
 
@@ -2166,7 +2289,7 @@ name "sec:descriptive"
 \end_inset
 
 The below table breaks down computer and cellphone ownership as well as
- internet and cellphone expenditure by linguistic group.
+ Internet and cellphone expenditure by linguistic group.
 \end_layout
 
 \begin_layout Standard
