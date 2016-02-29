@@ -6,7 +6,12 @@
 # bquast@gmail.com
 
 # load libraries
+library(foreign)
 library(haven)
+
+
+# read STATA source file
+stata_rhs <- read.dta(file = 'data/rhsbaus-2011-2012/rhsbaus-2011-2012.dta')
 
 
 # load data
