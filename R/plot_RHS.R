@@ -39,6 +39,7 @@ ggplot(focuscountries, aes(x=NoInterest, fill=A_5)) + geom_bar()
 
 # now by country?
 ggplot(focuscountries, aes(x=NoInterest, fill=country)) + stat_count(position='dodge')
-ggplot(focuscountries[!is.na(focuscountries$DontKnowWhatIs),], aes(x=country, fill=DontKnowWhatIs)) + stat_count(position='fill')
-ggplot(focuscountries[!is.na(focuscountries$NoInterest),], aes(x=country, fill=NoInterest)) + stat_count(position='fill')
-ggplot(focuscountries[!is.na(focuscountries$TooExpensive),], aes(x=country, fill=TooExpensive)) + stat_count(position='fill')
+ggplot(focuscountries, aes(x=country, fill=DontKnowWhatIs)) + stat_count(position='fill') + theme(legend.position = "bottom")
+ggplot(focuscountries[!is.na(focuscountries$DontKnowWhatIs),], aes(x=country, fill=DontKnowWhatIs)) + stat_count(position='fill') + facet_grid(~A_6) + theme(legend.position = "bottom")
+ggplot(focuscountries[!is.na(focuscountries$NoInterest),], aes(x=country, fill=NoInterest)) + stat_count(position='fill') + facet_grid(~A_6) + theme(legend.position = "bottom")
+ggplot(focuscountries[!is.na(focuscountries$TooExpensive),], aes(x=country, fill=TooExpensive)) + stat_count(position='fill') + facet_grid(~A_6) + theme(legend.position = "bottom")
