@@ -47,8 +47,8 @@ table(rhs$B_61)
 table(rhs$B_62)
 
 # Is too slow, limited bandwidth: What are the reasons why you do not use the Internet?
-table(rhs$B_62)
+table(rhs$B_63)
 
 # Other, please specify:  What are the reasons why you do not use the Internet?
-table(rhs$B_63)
+table(rhs$B_64)
 
