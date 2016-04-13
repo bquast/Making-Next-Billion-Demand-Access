@@ -98,6 +98,16 @@ Provides natbib 1
 
 \begin_layout Title
 Making the `Next Billion' Demand Access
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://qua.st/internet-access
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Author
@@ -117,10 +127,11 @@ google.co.za
 \begin_layout Date
 Bastiaan Quast
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
-bastiaan.quast@graduateinstitute.ch; Maison de la paix, Geneva, Switzerland
+http://qua.st | bquast@gmail.com | bastiaan.quast@graduateinstitute.ch | Maison
+ de la paix, Geneva, Switzerland
 \end_layout
 
 \end_inset
@@ -141,6 +152,32 @@ status open
 
 \begin_layout Plain Layout
 Dean & Yang: Filipino migrants
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+standard error correction
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Household clustering
 \end_layout
 
 \end_inset
@@ -180,19 +217,6 @@ status open
 
 \begin_layout Plain Layout
 plot of regions/languages adoption
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Household clustering
 \end_layout
 
 \end_inset
@@ -1512,12 +1536,21 @@ name "tab:nfnet"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset ERT
+\begin_inset Flex Chunk
 status open
 
 \begin_layout Plain Layout
 
-<<lm4_5, cache=TRUE>>=
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+lm4_5, cache=TRUE
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -1558,11 +1591,6 @@ lm(h_nfnet ~  interface_intro*setswana_logical +
 \begin_layout Plain Layout
 
               best_edu)
-\end_layout
-
-\begin_layout Plain Layout
-
-@
 \end_layout
 
 \end_inset
