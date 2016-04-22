@@ -15,6 +15,12 @@ library(dplyr)
 load(file = "data/merged.RData")
 
 
+# convert to pdata.frame
+pNIDS <- pdata.frame(adulthh, index = c('pid','wave') )
+pNIDS$a_owncom <- as.numeric(pNIDS$a_owncom)
+pNIDS$h_nfnet  <- as.numeric(pNIDS$h_nfnet)
+
+
 # estimate models
 
 ## define models
@@ -70,8 +76,17 @@ summary(lm(m_test, adulthh))
 
 # use clustering
 # see http://stats.stackexchange.com/questions/10017/standard-error-clustering-in-r-either-manually-or-in-plm
-NIDS   <- pdata.frame(NIDS, index=c('pid', 'wave'))
-plm2_5 <- plm(a_owncom ~ post_event*setswana + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome, NIDS)
+plm.model <- formula(a_owncom ~ post_event*setswana + 
+                       factor(a_edlitrden) + 
+                       factor(a_edlitwrten) + 
+                       factor(a_edlitrdhm) + 
+                       factor(a_edlitwrthm) + 
+                       a_woman + 
+                       hhincome)
+summary(plm2_5)
+library(coeftest)
+library(broom)
+tidy( coeftest(plm2_5, vcov=vcovHC(plm2_5,type="HC0",cluster="group")) )
 
 
 # save results
