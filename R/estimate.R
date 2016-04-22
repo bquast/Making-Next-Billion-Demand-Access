@@ -76,17 +76,39 @@ summary(lm(m_test, adulthh))
 
 # use clustering
 # see http://stats.stackexchange.com/questions/10017/standard-error-clustering-in-r-either-manually-or-in-plm
-plm.model <- formula(a_owncom ~ post_event*setswana + 
-                       factor(a_edlitrden) + 
-                       factor(a_edlitwrten) + 
-                       factor(a_edlitrdhm) + 
-                       factor(a_edlitwrthm) + 
-                       a_woman + 
-                       hhincome)
-summary(plm2_5)
-library(coeftest)
+
+# NOTE 2_5 DOES NOT NEED CLUSTERING
+plm2_5 <- formula(a_owncom ~ post_event*setswana + 
+                  factor(a_edlitrden) + 
+                  factor(a_edlitwrten) + 
+                  factor(a_edlitrdhm) + 
+                  factor(a_edlitwrthm) + 
+                  a_woman + 
+                  hhincome)
+plm4_1 <- formula(h_nfnet  ~ post_event*factor(a_lng) + 
+                    a_edlitrden + 
+                    a_edlitwrten + 
+                    a_edlitrdhm + 
+                    a_edlitwrthm + 
+                    a_woman)
+plm2_5e <- plm(plm2_5, data=pNIDS, model='pooling')
+plm4_1e <- plm(h_nfnet  ~ post_event*factor(a_lng) + 
+                 a_edlitrden + 
+                 a_edlitwrten + 
+                 a_edlitrdhm + 
+                 a_edlitwrthm + 
+                 a_woman, data=pNIDS)
+summary(plm2_5e)
+summary(plm4_1e)
+library(lmtest)
 library(broom)
-tidy( coeftest(plm2_5, vcov=vcovHC(plm2_5,type="HC0",cluster="group")) )
+tidy( coeftest(plm2_5e, vcov=vcovHC(plm2_5e,type="HC0",cluster="group")) )
+tidy( coeftest(plm4_1e, vcov=vcovHC(plm4_1e,type="HC0",cluster="group")) )
+
+
+# Hausman test
+fere <- phtest(plm4_1, pNIDS, model=c('within', 'random'))
+fepo <- phtest(plm4_1, pNIDS, model=c('within', 'pooling'))
 
 
 # save results
