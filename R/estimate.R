@@ -8,6 +8,8 @@
 
 # load libraries
 library(plm)
+library(pglm)
+library(glm2)
 library(dplyr)
 
 
@@ -77,34 +79,54 @@ summary(lm(m_test, adulthh))
 # use clustering
 # see http://stats.stackexchange.com/questions/10017/standard-error-clustering-in-r-either-manually-or-in-plm
 
+# write about this
+# http://stats.stackexchange.com/questions/146434/why-pglm-fails-for-within-model
+# http://stats.stackexchange.com/questions/143419/why-are-the-fixed-effects-of-a-panel-probit-regression-inconsistent
+
+# There is a good reason for that. 
+# Within model for probit regression suffers from incidental parameters problem. 
+# Within model for logit regression can be estimated, but requires quite strong assumptions. 
+# This is discussed in J. Wooldridge's "Econometric analysis of cross-section and panel data", chapter 15.
+# 
+# If you look at the code for pglm, 
+# you can see that starting values are calculated with function starting.values. 
+# For family binomial the code calculates starting values only for model random and pooling, 
+# there is no variant for within. Hence the error. 
+# If you supply the starting values, the error is given in the function lnl.binomial. 
+# Looking at the code it is clear that model within is not supported.
+# 
+
 # NOTE 2_5 DOES NOT NEED CLUSTERING
-plm2_5 <- formula(a_owncom ~ post_event*setswana + 
+plm2_5 <- formula(as.numeric(a_owncom) ~ post_event*setswana + 
                   factor(a_edlitrden) + 
                   factor(a_edlitwrten) + 
                   factor(a_edlitrdhm) + 
                   factor(a_edlitwrthm) + 
                   a_woman + 
                   hhincome)
-plm4_1 <- formula(h_nfnet  ~ post_event*factor(a_lng) + 
+plm4_1 <- formula(as.numeric(h_nfnet)  ~ post_event*setswana + 
                     a_edlitrden + 
                     a_edlitwrten + 
                     a_edlitrdhm + 
                     a_edlitwrthm + 
                     a_woman)
-plm2_5e <- plm(plm2_5, data=pNIDS, model='pooling')
-plm4_1e <- plm(h_nfnet  ~ post_event*factor(a_lng) + 
-                 a_edlitrden + 
-                 a_edlitwrten + 
-                 a_edlitrdhm + 
-                 a_edlitwrthm + 
-                 a_woman, data=pNIDS)
+plm2_5e <- plm(plm2_5, data=pNIDS, model='within')
+plm4_3e <- plm(plm4_3, data=pNIDS, model='within')
 summary(plm2_5e)
-summary(plm4_1e)
+summary(plm4_3e)
+
+# cluster stanard errors
 library(lmtest)
 library(broom)
-tidy( coeftest(plm2_5e, vcov=vcovHC(plm2_5e,type="HC0",cluster="group")) )
 tidy( coeftest(plm4_1e, vcov=vcovHC(plm4_1e,type="HC0",cluster="group")) )
 
+# use glm estimation since FE undefined for logit/probit
+# binomial
+glm2_5e  <- glm(m2_5, data=NIDS, family='binomial')
+glm4_1e  <- glm(m4_1, data=NIDS, family='binomial')
+pglm2_5e <- pglm(plm2_5, data=pNIDS, model='within', family='binomial') # this will not work
+summary(glm2_5e)
+summary(glm4_1e)
 
 # Hausman test
 fere <- phtest(plm4_1, pNIDS, model=c('within', 'random'))
