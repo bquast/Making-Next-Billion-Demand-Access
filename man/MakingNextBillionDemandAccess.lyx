@@ -151,19 +151,6 @@ http://qua.st | bquast@gmail.com | bastiaan.quast@graduateinstitute.ch | Maison
 status open
 
 \begin_layout Plain Layout
-internet service is a two-sided market: endogeneity
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 racism
 \end_layout
 
@@ -204,19 +191,6 @@ status open
 
 \begin_layout Plain Layout
 plot of regions/languages adoption
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-mention cell coverage in SA: 2007-2014: 99.79%
 \end_layout
 
 \end_inset
@@ -496,9 +470,9 @@ ggplot(df, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
 \end_layout
 
 \begin_layout Standard
-The increased range and affordability, taken together with stagnant growth,
- suggest that connectivity is lagging because of lower-than-expected demand,
- as a result of insufficient perceived value.
+The increased range (coverage is 99.79%) and affordability, taken together
+ with stagnant growth, suggest that connectivity is lagging because of lower-tha
+n-expected demand, as a result of insufficient perceived value.
  Part of this inadequate value proposition is that as Internet usage becomes
  more widespread, potential Internet users have lower than before affinity
  to the `global languages' that are currently dominant on the Internet.
