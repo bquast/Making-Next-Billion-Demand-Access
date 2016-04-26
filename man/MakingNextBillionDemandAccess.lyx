@@ -164,6 +164,19 @@ internet service is a two-sided market: endogeneity
 status open
 
 \begin_layout Plain Layout
+racism
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Dean & Yang: Filipino migrants
 \end_layout
 
@@ -372,6 +385,16 @@ Mobile Internet Growth
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+fix data!!
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
@@ -548,6 +571,51 @@ name "fig:natspwebcont"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Much of the research on Internet and language focusses on the preservation
+ of smaller languages, in particular indigenous languages 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+CITE
+\end_layout
+
+\end_inset
+
+.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "viard2014effect"
+
+\end_inset
+
+ uses macro level connectivity data and a model whereby countries that share
+ languages are used to isolate the effect of content on demand for connectivity,
+ which is positive and significant.
+ Previously the ITU also highlighted the importance of language availability
+ to improving demand for connectivity 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pena1999challenges"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Internet connectivity is a two-sided market, user demand for connectivity
+ is a function of relevant content availability, conversely, content creation
+ and availability is dependent on the amount of interested users.
+ As such, the formation of both vicious and vituous circles between these
+ two is possible.
+ Furthermore, this feedback makes it difficult to empirically isolate a
+ causal effect of content availability on demand for Internet connectivity.
+ 
 \end_layout
 
 \begin_layout Standard
