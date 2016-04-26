@@ -1188,6 +1188,110 @@ Software
 \end_layout
 
 \begin_layout Standard
+The estimation is primarily performed using R 
+\begin_inset CommandInset citation
+LatexCommand citep*
+key "R"
+
+\end_inset
+
+, specifically using 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+lm()
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+glm()
+\end_layout
+
+\end_inset
+
+ functions included in the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+stats
+\end_layout
+
+\end_inset
+
+ package 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "venables2013Splus"
+
+\end_inset
+
+.
+ Additionally, I make the of the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+plm()
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+pglm()
+\end_layout
+
+\end_inset
+
+ functions which are available in packages by the same names 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "croissant2008plm,croissant2013pglm"
+
+\end_inset
+
+.
+ Standard error corrections are computed using the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+lmtest
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+sandwich
+\end_layout
+
+\end_inset
+
+ packages 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "zeileis2002lmtest,zeileis2004sandwichI,zeileis2006sandwichII"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
 In order to make the result as easily reproducible as possible, this research
  and writing in the article has been done exclusively using open-source
  software such as R 
@@ -1208,7 +1312,7 @@ key "lyx"
  in the LaTeX
 \begin_inset CommandInset citation
 LatexCommand citep
-key "lamport1985i1"
+key "lamport1985latex"
 
 \end_inset
 
@@ -1220,11 +1324,18 @@ key "luatex"
 \end_inset
 
 .
- The integration of R code in the document is performed using the knitr
- implementation 
+ The integration of R code and output in the document is performed using
+ a process call literate programming 
 \begin_inset CommandInset citation
-LatexCommand citep
-key "xie2015dynamic"
+LatexCommand citet
+key "knuth1984literate"
+
+\end_inset
+
+ using the knitr implementation 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "xie2015knitr"
 
 \end_inset
 
@@ -1255,7 +1366,7 @@ target "https://github.com/bquast/Making-Next-Billion-Demand-Access/"
 
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 The repository can by cloned to a local computer by entering in following
@@ -2118,6 +2229,163 @@ printbibliography
 \end_layout
 
 \begin_layout Section
+Clustering
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Clustering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+clustering, messages=FALSE, cache=TRUE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+library(plm)    # panel linear model estimation
+\end_layout
+
+\begin_layout Plain Layout
+
+library(pglm)   # panel generalized linear model estimation
+\end_layout
+
+\begin_layout Plain Layout
+
+library(lmtest) # SE corrections
+\end_layout
+
+\begin_layout Plain Layout
+
+library(broom)  # output formatting using tidy()
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# specify panel model
+\end_layout
+
+\begin_layout Plain Layout
+
+plm4_3 <- formula(as.numeric(h_nfnet)  ~ post_event*setswana +
+\end_layout
+
+\begin_layout Plain Layout
+
+                                         a_edlitrden +
+\end_layout
+
+\begin_layout Plain Layout
+
+                                         a_edlitwrten +
+\end_layout
+
+\begin_layout Plain Layout
+
+                                         a_edlitrdhm +
+\end_layout
+
+\begin_layout Plain Layout
+
+                                         a_edlitwrthm +
+\end_layout
+
+\begin_layout Plain Layout
+
+                                         a_woman)
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# estimate
+\end_layout
+
+\begin_layout Plain Layout
+
+plm4_3e <- plm(plm4_3, data=pNIDS, model='within')
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+# correct errors
+\end_layout
+
+\begin_layout Plain Layout
+
+tidy( coeftest(plm4_3e, vcov=vcovHC(plm4_3e,
+\end_layout
+
+\begin_layout Plain Layout
+
+                                    type="HC0",
+\end_layout
+
+\begin_layout Plain Layout
+
+                                    cluster="group")) )
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
 Factor vs.
  Dummy
 \end_layout
@@ -2187,7 +2455,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-lm4_0
+lm4_0, cache=TRUE
 \end_layout
 
 \end_inset

@@ -104,7 +104,7 @@ plm2_5 <- formula(as.numeric(a_owncom) ~ post_event*setswana +
                   factor(a_edlitwrthm) + 
                   a_woman + 
                   hhincome)
-plm4_1 <- formula(as.numeric(h_nfnet)  ~ post_event*setswana + 
+plm4_3 <- formula(as.numeric(h_nfnet)  ~ post_event*setswana + 
                     a_edlitrden + 
                     a_edlitwrten + 
                     a_edlitrdhm + 
@@ -118,7 +118,7 @@ summary(plm4_3e)
 # cluster stanard errors
 library(lmtest)
 library(broom)
-tidy( coeftest(plm4_1e, vcov=vcovHC(plm4_1e,type="HC0",cluster="group")) )
+tidy( coeftest(plm4_3e, vcov=vcovHC(plm4_3e,type="HC0",cluster="group")) )
 
 # use glm estimation since FE undefined for logit/probit
 # binomial
