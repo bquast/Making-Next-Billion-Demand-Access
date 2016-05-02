@@ -11,6 +11,7 @@ library(plm)
 library(pglm)
 library(glm2)
 library(dplyr)
+library(ggplot2)
 
 
 # load data
@@ -132,6 +133,13 @@ summary(glm4_1e)
 fere <- phtest(plm4_1, pNIDS, model=c('within', 'random'))
 fepo <- phtest(plm4_1, pNIDS, model=c('within', 'pooling'))
 
+# basic plot of a_owncom
+NIDS %>%
+  group_by(Setswana = a_lng == 'Setswana', wave) %>%
+  summarise(a_owncom = mean(a_owncom, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=a_owncom, fill=Setswana)) %+%
+  geom_bar(stat='identity') %+%
+  facet_grid(~Setswana)
 
 # save results
 save(means,
