@@ -2034,7 +2034,7 @@ NIDS %>%
 
 \begin_layout Plain Layout
 
-    filter(a_long != 'Afrikaans')                    %>%
+   	filter(a_lng != 'Afrikaans')                   %>%
 \end_layout
 
 \begin_layout Plain Layout
