@@ -2034,7 +2034,12 @@ NIDS %>%
 
 \begin_layout Plain Layout
 
-	group_by(Setswana = a_lng == 'Setswana', wave) %>%
+    filter(a_long != 'Afrikaans')                    %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+	group_by(Setswana = a_lng == 'Setswana', wave)   %>%
 \end_layout
 
 \begin_layout Plain Layout
@@ -2044,12 +2049,12 @@ NIDS %>%
 
 \begin_layout Plain Layout
 
-	ggplot(aes(x=wave, y=a_owncom, fill=Setswana)) %+%
+	ggplot(aes(x=wave, y=a_owncom, fill=Setswana))   %+%
 \end_layout
 
 \begin_layout Plain Layout
 
-	geom_bar(stat='identity') %+%
+	geom_bar(stat='identity')                        %+%
 \end_layout
 
 \begin_layout Plain Layout
@@ -2375,32 +2380,37 @@ library(broom)  # output formatting using tidy()
 
 \begin_layout Plain Layout
 
-plm4_3 <- formula(as.numeric(h_nfnet)  ~ post_event*setswana +
+plm4_3 <- formula(as.numeric(h_nfnet)  ~ post_event*setswana  +
 \end_layout
 
 \begin_layout Plain Layout
 
-                                         a_edlitrden +
+                                         factor(a_edlitrden)  +
 \end_layout
 
 \begin_layout Plain Layout
 
-                                         a_edlitwrten +
+                                         factor(a_edlitwrten) +
 \end_layout
 
 \begin_layout Plain Layout
 
-                                         a_edlitrdhm +
+                                         factor(a_edlitrdhm)  +
 \end_layout
 
 \begin_layout Plain Layout
 
-                                         a_edlitwrthm +
+                                         factor(a_edlitwrthm) +
 \end_layout
 
 \begin_layout Plain Layout
 
-                                         a_woman)
+                                         a_woman +
+\end_layout
+
+\begin_layout Plain Layout
+
+										 hhincome )
 \end_layout
 
 \begin_layout Plain Layout
@@ -2497,76 +2507,6 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Factor of Language
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:faclang"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Flex Chunk
-status open
-
-\begin_layout Plain Layout
-
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-lm4_0, cache=TRUE
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-lm(h_nfnet ~  interface_intro*a_lng)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Lastly, we also estimate the factor model with the inclusion of the linguistic
- skill variables.
- These results are again similar to the ones from using simply a dummy variable
- for native Setswana speakers, suggesting robustness to specification idiosyncra
-sies.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
 LM4_1: with read / write in eng / native and woman
 \end_layout
 
@@ -2610,27 +2550,37 @@ lm(h_nfnet ~  interface_intro*a_lng    +
 
 \begin_layout Plain Layout
 
-              a_edlitrden              +
+              factor(a_edlitrden)      +
 \end_layout
 
 \begin_layout Plain Layout
 
-              a_edlitwrten             +
+              factor(a_edlitwrten)     +
 \end_layout
 
 \begin_layout Plain Layout
 
-              a_edlitrdhm              +
+              factor(a_edlitrdhm)      +
 \end_layout
 
 \begin_layout Plain Layout
 
-              a_edlitwrthm             +
+              factor(a_edlitwrthm)     +
 \end_layout
 
 \begin_layout Plain Layout
 
-              a_woman)
+              a_woman                  +
+\end_layout
+
+\begin_layout Plain Layout
+
+              hhincome                 +
+\end_layout
+
+\begin_layout Plain Layout
+
+              best_edu)
 \end_layout
 
 \end_inset

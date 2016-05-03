@@ -106,11 +106,13 @@ plm2_5 <- formula(as.numeric(a_owncom) ~ post_event*setswana +
                   a_woman + 
                   hhincome)
 plm4_3 <- formula(as.numeric(h_nfnet)  ~ post_event*setswana + 
-                    a_edlitrden + 
-                    a_edlitwrten + 
-                    a_edlitrdhm + 
-                    a_edlitwrthm + 
-                    a_woman)
+                    factor(a_edlitrden) + 
+                    factor(a_edlitwrten) + 
+                    factor(a_edlitrdhm) + 
+                    factor(a_edlitwrthm) + 
+                    a_woman +
+                    hhincome +
+                    best_edu)
 plm2_5e <- plm(plm2_5, data=pNIDS, model='within')
 plm4_3e <- plm(plm4_3, data=pNIDS, model='within')
 summary(plm2_5e)
@@ -132,6 +134,7 @@ summary(glm4_1e)
 # Hausman test
 fere <- phtest(plm4_1, pNIDS, model=c('within', 'random'))
 fepo <- phtest(plm4_1, pNIDS, model=c('within', 'pooling'))
+
 
 # basic plot of a_owncom
 NIDS %>%
@@ -155,6 +158,15 @@ NIDS %>%
   group_by(a_lng, wave) %>%
   summarise(a_owncel = mean(a_owncel, na.rm=TRUE)) %>%
   ggplot(aes(x=wave, y=a_owncel, fill=a_lng)) %+%
+  geom_bar(stat='identity') %+%
+  facet_grid(~a_lng)
+
+# basic plot of h_nfnet
+NIDS %>%
+  filter(a_lng != 'Tshivenda') %>%
+  group_by(a_lng, wave) %>%
+  summarise(h_nfnet = mean(h_nfnet, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=h_nfnet, fill=a_lng)) %+%
   geom_bar(stat='identity') %+%
   facet_grid(~a_lng)
 
