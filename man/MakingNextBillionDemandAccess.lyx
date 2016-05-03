@@ -1148,15 +1148,32 @@ IsiNdebele
 \end_layout
 
 \begin_layout Standard
+The 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+h_nfnet
+\end_layout
+
+\end_inset
+
+ variable is recorded at a household level, as such a standard error correction
+ needs to be applied, the model with standard error corrections is reported
+ in the appendix.
+\end_layout
+
+\begin_layout Standard
+Lastly, the dependent variables are both logical or binary variables, as
+ such, normally a model such as logit should be used.
+ However, since I am using Difference-in-Differences, this model would be
+ undefined.
+ 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-The dependent variable here is also a dummy variable, which would normally
- allow for the usage of a estimator such as logit.
- However, since we are employing the Difference-in-Difference methodology:
- http://stats.stackexchange.com/questions/89513/difference-in-differences-estimato
-r-for-logistic-regressions
+CITE
 \end_layout
 
 \end_inset
@@ -1169,7 +1186,11 @@ r-for-logistic-regressions
 status open
 
 \begin_layout Plain Layout
-Add comment on panel corrected standard errors
+The dependent variable here is also a dummy variable, which would normally
+ allow for the usage of a estimator such as logit.
+ However, since we are employing the Difference-in-Difference methodology:
+ http://stats.stackexchange.com/questions/89513/difference-in-differences-estimato
+r-for-logistic-regressions
 \end_layout
 
 \end_inset
