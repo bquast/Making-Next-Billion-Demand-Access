@@ -151,19 +151,6 @@ http://qua.st | bquast@gmail.com | bastiaan.quast@graduateinstitute.ch | Maison
 status open
 
 \begin_layout Plain Layout
-racism
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 Dean & Yang: Filipino migrants
 \end_layout
 
@@ -177,65 +164,7 @@ Dean & Yang: Filipino migrants
 status open
 
 \begin_layout Plain Layout
-Jensen: TV and Status women in India
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-plot of regions/languages adoption
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-interact with age
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 price of Internet acccess (ITU)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Almost half of South African households (48,7%) had at least one member
- who used the Internet either at home, workplace, place of study, or Internet
- cafés.
- More than half of households in Western Cape (62,1%) and Gauteng (59,9%)
- had access to the Internet while only just over a fifth of households in
- Limpopo (32,6%) had access to the Internet.
- - General Household Survey 2014
 \end_layout
 
 \end_inset
@@ -550,12 +479,9 @@ name "fig:natspwebcont"
 \begin_layout Standard
 Much of the research on Internet and language focusses on the preservation
  of smaller languages, in particular indigenous languages 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-CITE
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand citep
+key "gandal2006native"
 
 \end_inset
 
@@ -567,7 +493,7 @@ key "viard2014effect"
 
 \end_inset
 
- uses macro level connectivity data and a model whereby countries that share
+ use macro level connectivity data and a model whereby countries that share
  languages are used to isolate the effect of content on demand for connectivity,
  which is positive and significant.
  Previously the ITU also highlighted the importance of language availability
@@ -579,6 +505,31 @@ key "pena1999challenges"
 \end_inset
 
 .
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "sinai2004geography"
+
+\end_inset
+
+ show that expanded Internet usage in cities can lead to less racism, an
+ issue that is particularly relevant to South Africa.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "jensen2009power"
+
+\end_inset
+
+ finds that the introduction of cable television in Indian states has a
+ pronounced positive effect on attitudes towards the oppression of women,
+ violence against women, son preference and as well as decreased fertility,
+ as Internet provides an in some ways similar window on the outside world,
+ we might expect some of these things to also follow widespread Internet
+ adoption.
 \end_layout
 
 \begin_layout Standard
@@ -1004,7 +955,7 @@ In addition to using the propensity to spend on Internet (in the last thirty
 \end_layout
 
 \begin_layout Subsection
-Estimation
+Regression Specification
 \end_layout
 
 \begin_layout Standard
@@ -1018,8 +969,14 @@ As mentioned in the above section, we compare the change in the level of
  Internet users among native Setswana speakers in South Africa, with that
  of native speakers of other language in South Africa around the introduction
  of the Setswana interface to the South-African Google Search.
- For this we use a Difference-in-Differences estimator using a native-Setswana
- speaker dummy variable (
+ For this we use a Difference-in-Differences estimator 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "abadie2005semiparametric,imbens2009econometrics"
+
+\end_inset
+
+ using a native-Setswana speaker dummy variable (
 \begin_inset Flex Code
 status open
 
@@ -1103,17 +1060,51 @@ TRUE
 \end_inset
 
  after this introduction (here wave 3).
+ The model than takes the form as described in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "eq:m1"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-y_{irt}=\gamma_{ir}+\lambda_{it}+\delta D{}_{rt}+\zeta X_{irt}+\epsilon_{irt}
+y_{it}=α_{i}+\lambda_{t}+\delta D{}_{it}+βX_{it}+\epsilon_{it}\label{eq:m1}
 \end{equation}
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $α_{i}$
+\end_inset
+
+ represents the individual fixed effects, 
+\begin_inset Formula $\lambda_{t}$
+\end_inset
+
+ represent the time fixed effects, and 
+\begin_inset Formula $X_{it}$
+\end_inset
+
+ are the time varying covariates.
+ The 
+\begin_inset Formula $\epsilon_{it}$
+\end_inset
+
+ is the error term.
+ Finally the term of interest is 
+\begin_inset Formula $D{}_{it}$
+\end_inset
+
+ which represents the treatment effect.
 \end_layout
 
 \begin_layout Standard
@@ -1987,6 +1978,83 @@ lm(a_owncom ~ interface_intro*setswana_logical +
 \begin_layout Plain Layout
 
               best_edu)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Computer Ownership Setswana
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+gg2_5, cache=TRUE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+NIDS %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+	group_by(Setswana = a_lng == 'Setswana', wave) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+	summarise(a_owncom = mean(a_owncom, na.rm=TRUE)) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+	ggplot(aes(x=wave, y=a_owncom, fill=Setswana)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+	geom_bar(stat='identity') %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+	facet_grid(~Setswana)
 \end_layout
 
 \end_inset
