@@ -135,11 +135,28 @@ fepo <- phtest(plm4_1, pNIDS, model=c('within', 'pooling'))
 
 # basic plot of a_owncom
 NIDS %>%
+  filter(a_lng != 'Afrikaans') %>%
   group_by(Setswana = a_lng == 'Setswana', wave) %>%
   summarise(a_owncom = mean(a_owncom, na.rm=TRUE)) %>%
   ggplot(aes(x=wave, y=a_owncom, fill=Setswana)) %+%
   geom_bar(stat='identity') %+%
   facet_grid(~Setswana)
+
+# full plot of a_owncom
+NIDS %>%
+  group_by(a_lng, wave) %>%
+  summarise(a_owncom = mean(a_owncom, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=a_owncom, fill=a_lng)) %+%
+  geom_bar(stat='identity') %+%
+  facet_grid(~a_lng)
+
+# full plot of a_owncel
+NIDS %>%
+  group_by(a_lng, wave) %>%
+  summarise(a_owncel = mean(a_owncel, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=a_owncel, fill=a_lng)) %+%
+  geom_bar(stat='identity') %+%
+  facet_grid(~a_lng)
 
 # save results
 save(means,
