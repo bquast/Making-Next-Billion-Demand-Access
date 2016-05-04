@@ -9,7 +9,6 @@
 # load libraries
 library(plm)
 library(pglm)
-library(glm2)
 library(dplyr)
 library(ggplot2)
 
