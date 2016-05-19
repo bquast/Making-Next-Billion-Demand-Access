@@ -31,6 +31,7 @@ inder3 <- read_sas(b7dat = 'data/nids-w3-2012-v1.3-20150619-sas/indderivedW3Anon
 adult4 <- read_dta(path  = 'data/nids-w4-2014-2015-v1-stata12/Adult_W4_Anon_V1.0.dta')
 child4 <- read_dta(path  = 'data/nids-w4-2014-2015-v1-stata12/Child_W4_Anon_V1.0.dta')
 hhder4 <- read_dta(path  = 'data/nids-w4-2014-2015-v1-stata12/hhderived_W4_Anon_V1.0.dta')
+hhque4 <- read_dta(path  = 'data/nids-w4-2014-2015-v1-stata12/HHQuestionnaire_W4_Anon_V1.0.dta')
 inder4 <- read_dta(path  = 'data/nids-w4-2014-2015-v1-stata12/indderived_W4_Anon_V1.0.dta')
 
 
