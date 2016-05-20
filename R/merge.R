@@ -297,7 +297,7 @@ adulthh$a_edlitwrten <- ifelse(adulthh$a_edlitwrten < 0, NA, adulthh$a_edlitwrte
 
 
 # create event dummy
-adulthh$interface_intro <- ifelse(adulthh$wave == 3, TRUE, FALSE)
+adulthh$interface_intro <- ifelse(adulthh$wave <= 2, FALSE, TRUE)
 
 
 # create tsonga dummy
