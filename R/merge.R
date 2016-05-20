@@ -67,7 +67,7 @@ vars_hhder <- c('hhid',       # household ID
                 'hhincome',   # household income
                 'expf',       # expenditure food?
                 'expnf',      # expenditure non-food?
-                'expenditure',# expenditure
+                # 'expenditure',# expenditure
                 # 'hhgeo2011',  # geo location for 2011
                 'rentexpend', # rent expenditure
                 # 'hhimprent',  # imputed rent expenditure

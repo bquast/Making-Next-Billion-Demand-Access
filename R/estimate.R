@@ -59,6 +59,7 @@ lm4_4 <- lm(m4_4, data = adulthh)
 lm4_5 <- lm(m4_5, data = adulthh)
 
 
+
 ## view results
 summary(lm1_0)
 summary(lm3_0)

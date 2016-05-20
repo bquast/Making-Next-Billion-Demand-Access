@@ -1,9 +1,7 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
-\save_transient_properties true
-\origin unavailable
 \textclass article
 \begin_preamble
 \usepackage[style=philosophy-modern,natbib=true,backend=biber]{biblatex}
@@ -28,16 +26,16 @@ Provides natbib 1
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
-\font_sans "default" "default"
-\font_typewriter "default" "default"
-\font_math "auto" "auto"
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100 100
-\font_tt_scale 100 100
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -46,7 +44,6 @@ Provides natbib 1
 \paperfontsize default
 \spacing single
 \use_hyperref true
-\pdf_title "Making the Next Billion Demand Access"
 \pdf_author "Bastiaan Quast"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
@@ -645,14 +642,14 @@ reference "sec:methods"
  of the identification strategy can be found is 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:identification"
+reference "sub:identification"
 
 \end_inset
 
  and the use of the Difference-in-Differences estimator in 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "subsec:estimation"
+reference "sub:estimation"
 
 \end_inset
 
@@ -866,7 +863,7 @@ Identification Strategy
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:identification"
+name "sub:identification"
 
 \end_inset
 
@@ -945,7 +942,7 @@ Regression Specification
 \begin_layout Standard
 \begin_inset CommandInset label
 LatexCommand label
-name "subsec:estimation"
+name "sub:estimation"
 
 \end_inset
 
@@ -1085,7 +1082,7 @@ Where
 
  is the error term.
  Finally the term of interest is 
-\begin_inset Formula $D_{it}$
+\begin_inset Formula $D{}_{it}$
 \end_inset
 
  which represents the treatment effect.
@@ -1301,24 +1298,21 @@ key "R"
 \end_inset
 
 .
- This document is written and \SpecialChar LyX
- 
+ This document is written and LyX 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "lyx"
 
 \end_inset
 
- in the \SpecialChar LaTeX
-
+ in the LaTeX
 \begin_inset CommandInset citation
 LatexCommand citep
 key "lamport1985latex"
 
 \end_inset
 
- language and compiled using the Lua\SpecialChar TeX
- implementation
+ language and compiled using the LuaTeX implementation
 \begin_inset CommandInset citation
 LatexCommand citep
 key "luatex"
