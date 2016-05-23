@@ -336,7 +336,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-mobile_growth, echo=FALSE, cache=TRUE
+mobile_growth, echo=FALSE, cache=TRUE, warning=FALSE
 \end_layout
 
 \end_inset
@@ -346,7 +346,7 @@ mobile_growth, echo=FALSE, cache=TRUE
 
 \begin_layout Plain Layout
 
-load(file = '../data/mobilegrowth.RData')
+load(file = '../data/adoption.RData')
 \end_layout
 
 \begin_layout Plain Layout
