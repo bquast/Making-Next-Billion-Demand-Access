@@ -146,19 +146,6 @@ http://qua.st | bquast@gmail.com | bastiaan.quast@graduateinstitute.ch | Maison
 status open
 
 \begin_layout Plain Layout
-Dean & Yang: Filipino migrants
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 price of Internet acccess (ITU)
 \end_layout
 
@@ -172,13 +159,12 @@ Abstract
 \end_layout
 
 \begin_layout Standard
-This paper shows that an exogenous increase in accessibility of local language
- content leads to an increase in demand for Internet connectivity among
- native speakers.
+An exogenous increase in accessibility of local language content leads to
+ an increase in demand for Internet connectivity among native speakers.
  Internet connectivity provides enormous improvements in quality of life
- as well as opportunities for the newly connected, yet recent attempts to
- connect the current `next billion' in places such as sub-Saharan Africa
- have not met expectations.
+ such as reduced racism, as well as many opportunities for the newly connected,
+ yet recent attempts to connect the current `next billion' in places such
+ as sub-Saharan Africa have not met expectations.
  In places where infrastructure has come online and prices have gone down,
  the expected consequent increase in usage was not observed.
  The introduction of the Setswana language in the South-African Google Search
@@ -187,11 +173,7 @@ This paper shows that an exogenous increase in accessibility of local language
  This exogenous improvement in the accessibility of Setswana-language content
  has resulted in a substantial increase in the number of native Setswana
  speakers coming online and owning personal computers.
- It has also led to increased usage of the Setswana language online, creating
- a positive-feedback loop.
- This suggests that connecting the fourth billion will require a greater
- focus on the demand-side of connectivity, specifically by means of local
- content.
+ It has also led to increased usage of the Setswana language online.
 \end_layout
 
 \begin_layout Section
@@ -213,7 +195,8 @@ key "standage2006connecting"
 
 \end_inset
 
-, discussing the infrastructural requirements for doing so.
+, discussing the infrastructural requirements for connecting the second
+ billion individuals to the Internet.
  Since then, close to 2 billion people are
 \emph on
  
@@ -227,20 +210,20 @@ key "sanou2015world"
 \end_inset
 
 .
- However, it is unlikely that the current `Next Billion' will be connected
- as easily as the previous ones.
+ However, it seems increasingly unlikely that the current `Next Billion'
+ will be connected as easily as the previous ones.
  
 \end_layout
 
 \begin_layout Standard
 In the period 2010-2014 the average annual growth of Internet bandwidth
- in sub-Saharan was over 50%.
- This increased bandwidth also caused a corresponding drop in the price
- of Internet access, bringing the sub-Saharan average of a 500MB prepaid
- Internet bundle down to around $10, thereby putting it within range of
- the emerging middle classes.
+ in sub-Saharan Africa was over fifty percent.
+ This increased bandwidth also causes downward pressure on the cost of Internet
+ access, which brought the sub-Saharan average cost of a 500MB prepaid Internet
+ bundle down to around $10, increasingly putting it within range of the
+ emerging middle classes.
  Yet, despite increased range and improved affordability, sub-Saharan Africa
- is showing stagnation in the growth of Internet connections.
+ is showing stagnation in the growth of Internet connected individuals.
 \end_layout
 
 \begin_layout Standard
@@ -382,31 +365,27 @@ ggplot(df, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
 \end_layout
 
 \begin_layout Standard
-The dynamics of internet adoption and content creation take the form of
- a two-sided market.
- These two-sided markets exist for every language.
- Where
+A crucial determinant of Internet adoption is the interplay with content
+ creation, which takes the form of a two-sided market, wherein the two sides
+ benefit from cross-side network effects.
+ These sides are content creators, such as news websites, and content consumers,
+ the users.
+ Ideally, adoption should follow a virtuous circle, whereby the content
+ offering encourages more users to come online, which in turn incentivices
+ more content creation.
+ Unfortunately this virtuous circle sometimes fails to properly start for
+ certain languages.
+ Herein also lies the difficulty with finding empirical evidence of these
+ dynamics, since the process of adoption by users and content creation is
+ inherently endogenous.
+ This paper seeks to empirically address the question if increased accessabilty
+ of content does indeed lead to an increase in Internet adoption.
 \end_layout
 
 \begin_layout Standard
-In some cases a single platform can create same-side network effects, such
- as a email, or a social media platform.
-\end_layout
-
-\begin_layout Standard
-Thus adoption should follow a virtuous circle, whereby the content offering
- encourages more users to come online, which in turn incentivices more content
- creation.
- Herein also lies the difficulty with finding empirical evidence of this,
- since the process in inherently endogenous.
- The paper seeks to empirically address the question if increased access
- to content does indeed lead to an increase in Internet adoption.
-\end_layout
-
-\begin_layout Standard
-The increased range (coverage is 99.79%) and affordability, taken together
- with stagnant growth, suggest that connectivity is lagging because of lower-tha
-n-expected demand, as a result of insufficient perceived value.
+The increased range and affordability, taken together with stagnant growth,
+ suggest that connectivity is lagging because of lower-than-expected demand,
+ possibly as a result of perceived insufficient value.
  Part of this inadequate value proposition is that as Internet usage becomes
  more widespread, potential Internet users have lower than before affinity
  to the `global languages' that are currently dominant on the Internet.
@@ -415,18 +394,10 @@ n-expected demand, as a result of insufficient perceived value.
  The current offering of online content, primarily in a small number of
  languages, therefore provides insufficient incentive for many to seek access
  to the Internet.
- In 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:natspwebcont"
-
-\end_inset
-
- we can see that while on the one hand, English represents a relatively
- small percentage of the global population's native speakers (around 5%),
- it is already a much larger number of Internet-connected global population
- (around 25%), but at the same time represents more than 50% of all the
- online content.
+ On the one hand, English represents a relatively small percentage of the
+ global population's native speakers (around 5%), it is already a much larger
+ number of Internet-connected global population (around 25%), but at the
+ same time represents more than 50% of all the online content.
  On the other hand, Hindi is also the native language for about 5% of the
  global population.
  However, of the online global population, it is the native language for
@@ -439,59 +410,41 @@ reference "fig:natspwebcont"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-placement h
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Native Speakers and Web Content
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:natspwebcont"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/NativeSpeakersWebContent.png
-	scale 45
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Much of the research on Internet and language focusses on the preservation
- of smaller languages, in particular indigenous languages 
+Much research has been done on Internet and language with respect to the
+ preservation of smaller languages, in particular indigenous languages.
+ The focus here is often the preservation of the language, such as the below
+ comment by Wikipedia founder Jimmy Wales 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "gandal2006native"
+key "wales2010wikiworld"
 
 \end_inset
 
 .
- 
+\end_layout
+
+\begin_layout Quotation
+The Web is a powerful tool for preserving languages that would otherwise
+ be lost.
+ We see this in a lot of the smaller European languages that have very active
+ Wikipedia projects.
+ For example, the Welsh Wikipedia is quite an active community and they
+ have 27,000 articles and this is true even though virtually everyone who
+ speaks Welsh also speaks English.
+\end_layout
+
+\begin_layout Standard
+Unfortunately, this is less true for many languages outside of Europe.
+ Increasingly language availability is also being concideren as a method
+ for improving demand for connectivity 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pena1999challenges,gandal2006native"
+
+\end_inset
+
+.
+ More recently,
 \begin_inset CommandInset citation
 LatexCommand citet
 key "viard2014effect"
@@ -500,28 +453,11 @@ key "viard2014effect"
 
  use macro level connectivity data and a model whereby countries that share
  languages are used to isolate the effect of content on demand for connectivity,
- which is positive and significant.
- Previously the ITU also highlighted the importance of language availability
- to improving demand for connectivity 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "pena1999challenges"
-
-\end_inset
-
-.
- 
+ which they find to be positive and significant.
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset citation
-LatexCommand citet
-key "sinai2004geography"
-
-\end_inset
-
- show that expanded Internet usage in cities can lead to less racism, an
- issue that is particularly relevant to South Africa.
+There are good reasons for wanting increased connectivity of remote populations.
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -529,27 +465,33 @@ key "jensen2009power"
 
 \end_inset
 
- finds that the introduction of cable television in Indian states has a
- pronounced positive effect on attitudes towards the oppression of women,
- violence against women, son preference and as well as decreased fertility,
- as Internet provides an in some ways similar window on the outside world,
- we might expect some of these things to also follow widespread Internet
- adoption.
+ find that the introduction of cable television in Indian states has a pronounce
+d positive effect on attitudes towards the oppression of women, violence
+ against women, son preference and as well as decreased fertility.
+ Internet access can provide an in some ways similar window on the outside
+ world, we might expect some of these things to also follow more widespread
+ Internet adoption.
+ More on point, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "sinai2004geography"
+
+\end_inset
+
+ show that expanded Internet usage in cities can lead to less racism, an
+ issue that can be of particular relevance to South Africa.
 \end_layout
 
 \begin_layout Standard
-Internet connectivity is a two-sided market, user demand for connectivity
- is a function of relevant content availability, conversely, content creation
- and availability is dependent on the amount of interested users.
+As mentioned above, Internet connectivity is a two-sided market, user demand
+ for connectivity is a function of relevant content availability, conversely,
+ content creation and availability is dependent on the amount of interested
+ users.
  As such, the formation of both vicious and vituous circles between these
- two is possible.
- Furthermore, this feedback makes it difficult to empirically isolate a
- causal effect of content availability on demand for Internet connectivity.
- 
-\end_layout
-
-\begin_layout Standard
-This paper exploits an exogenous increase in the accessibility of local
+ two is likely.
+ This makes it difficult to empirically isolate a causal effect of content
+ availability on demand for Internet connectivity.
+ This paper exploits an exogenous increase in the accessibility of local
  content in the Setswana language in South Africa, in order to isolate the
  increase of Internet usage among native speakers.
  In 2010 Google collaborated with a Botswanan team of linguists 
@@ -588,7 +530,7 @@ google.co.za
  Botswanan website.
  This introduction led to a large increase in the number of native Setswana
  speakers reporting to have spent some amount of money in the past 30 days
- on Internet access.
+ on Internet access as well as increased computer ownership.
 \end_layout
 
 \begin_layout Standard
@@ -865,7 +807,7 @@ ggplot(data=NIDS, aes(x=a_lng, fill=a_woman)) + geom_bar()
 \end_layout
 
 \begin_layout Section
-Methods
+Empirical Methodology
 \end_layout
 
 \begin_layout Standard
@@ -875,9 +817,11 @@ name "sec:methods"
 
 \end_inset
 
-This section begins with a discussion of the identification strategy employed,
+With this paper I aim to provide empirical evidence that increased content
+ or accessibility of content leads to an increase in demand.
+ This section begins with a discussion of the identification strategy employed,
  followed by a explanation of the estimator used to operationalise this,
- and concludes with a description of the software used for this estimation.
+ and finally a description of the software used for the implementation.
 \end_layout
 
 \begin_layout Subsection
@@ -896,7 +840,7 @@ This paper exploits the introduction of the Setswana interface language
  interface for the Botswanan Google Search website.
  By comparing the number of native Setswana speakers in South Africa being
  Internet users, with the number of South Africans with a different native
- language around the same time, we isolate the effect of this introduction.
+ language around the same time, I isolate the effect of this introduction.
 \end_layout
 
 \begin_layout Standard
@@ -924,7 +868,7 @@ google.co.za
 \end_inset
 
 ) was a spillover effect of that development.
- This allows us to rule out any possible endogeneity issues that might otherwise
+ This allows me to rule out any possible endogeneity issues that might otherwise
  arise in contexts such as these.
  For instance, the Afrikaans language is almost solely spoken in South Africa.
  When we observe that the introduction of the Afrikaans Google Search interface
@@ -948,9 +892,9 @@ Substantial numbers of Setswana speakers exist in Botswana, South Africa,
 \end_layout
 
 \begin_layout Standard
-It is worth noting that it is very common not to personally own a computer
- and `paying for Internet access' therefore also includes a lot of people
- who use the Internet in other locations such as Internet cafe's.
+It is worth noting that it is very common to not personally own a computer,
+ therefore `paying for Internet access' also includes a lot of people who
+ use the Internet in other locations such as Internet cafe's.
 \end_layout
 
 \begin_layout Standard
@@ -1908,7 +1852,17 @@ status open
 ).
  However, unlike in the household Internet expenditure model, the sex of
  the individual here is highly significant, specifically, parameter estimate
- of a_womanTRUE is negative and highly significant (p-value: 
+ of 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+a_womanTRUE
+\end_layout
+
+\end_inset
+
+ is negative and highly significant (p-value: 
 \begin_inset Flex Code
 status open
 
@@ -2224,7 +2178,12 @@ name "sec:conclusions"
 In conclusion, despite recent advances in the reach, speed, and afordability
  of Internet connectivity in sub-Saharan Africa, actual connectivity has
  been stagnant.
- 
+ This paper aims to see if this can in part be attributed to the dynamics
+ of a two-sided market, such as Internet in a language, whereby the vicious
+ circle of few users and little content perpetuates a situation of low levels
+ of adoption.
+ Due to the endogenous nature of two-sided markets, there are few methods
+ of isolating a causal effect.
 \end_layout
 
 \begin_layout Standard
