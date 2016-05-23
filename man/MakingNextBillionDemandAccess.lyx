@@ -230,13 +230,12 @@ In the period 2010-2014 the average annual growth of Internet bandwidth
 As is shown in 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:mobgrow"
+reference "fig:adoption"
 
 \end_inset
 
-, mobile Internet growth, the oft mentioned key driver of Internet accessibility
- in sub-Saharan Africa, is showing stagnation to the point of being near
- level or even slightly negative.
+, mobile Internet adoption is showing rapidly decreasing growth rates to
+ the point of being near level.
  Unlike in other regions in the figure, this observed stagnation is not
  a consequence of market saturation, as adoption levels in 2015 are only
  just over 60 percent.
@@ -253,17 +252,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Mobile Internet Growth
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-fix data!!
+Internet Adoption
 \end_layout
 
 \end_inset
@@ -275,7 +264,7 @@ fix data!!
 \align center
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:mobgrow"
+name "fig:adoption"
 
 \end_inset
 
