@@ -93,7 +93,8 @@ vars_inder <- c('hhid',       # household ID
                 'ppen',       # month income private / foreign pension
                 'ppen_flg',   # data monthly income private / foreign pension
                 'uif',        # montly income UIF payments (unemployment)
-                'remt')       # monthly income remittances
+                'remt',       # monthly income remittances
+                'empl_stat')  # employment status
 
 vars_hhque <- c('hhid',           # household identification
                 'h_enrgelec',     # d22 - Household has electricity
@@ -297,11 +298,11 @@ adulthh$a_edlitwrten <- ifelse(adulthh$a_edlitwrten < 0, NA, adulthh$a_edlitwrte
 
 
 # create event dummy
-adulthh$interface_intro <- ifelse(adulthh$wave <= 2, FALSE, TRUE)
+adulthh$event <- ifelse(adulthh$wave <= 2, FALSE, TRUE)
 
 
 # create tsonga dummy
-adulthh$setswana_logical <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
+adulthh$setswana <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
 
 
 
