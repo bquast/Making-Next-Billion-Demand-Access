@@ -173,6 +173,15 @@ adulthh %>%
   geom_bar(stat='identity') %+%
   facet_grid(~setswana)
 
+adulthh[which(adulthh$wave==3 & adulthh$a_owncom==TRUE),]$pid -> pids
+adulthh$employed <- ifelse(adulthh$empl_stat==3, TRUE, FALSE)
+adulthh %>%
+  filter(pid %in% pids) %>%
+  group_by(setswana, wave) %>%
+  summarise(employed = mean(employed, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=employed, fill=setswana)) %+%
+  geom_line()
+
 # save results
 save(means,
      lm2_5,
