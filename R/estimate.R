@@ -16,6 +16,9 @@ library(ggplot2)
 # load data
 load(file = "data/merged.RData")
 
+# change dummy names
+adulthh$event <- adulthh$interface_intro
+adulthh$setswana <- adulthh$setswana_logical
 
 # convert to pdata.frame
 pNIDS <- pdata.frame(adulthh, index = c('pid','wave') )
@@ -26,21 +29,21 @@ pNIDS$h_nfnet  <- as.numeric(pNIDS$h_nfnet)
 # estimate models
 
 ## define models
-m1_0 <- formula(a_owncel ~ post_event*factor(a_lng))
-m1_1 <- formula(a_owncel ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
-m3_0 <- formula(h_nfcel  ~ post_event*factor(a_lng))
-m3_1 <- formula(h_nfcel  ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
+m1_0 <- formula(a_owncel ~ event*factor(a_lng))
+m1_1 <- formula(a_owncel ~ event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
+m3_0 <- formula(h_nfcel  ~ event*factor(a_lng))
+m3_1 <- formula(h_nfcel  ~ event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
 
-m2_0 <- formula(a_owncom ~ post_event*factor(a_lng))
-m2_1 <- formula(a_owncom ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
-m2_2 <- formula(a_owncom ~ post_event*setswana + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome)
-m2_5 <- formula(a_owncom ~ post_event*setswana + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome + best_edu)
-m4_0 <- formula(h_nfnet  ~ post_event*factor(a_lng))
-m4_1 <- formula(h_nfnet  ~ post_event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
-m4_2 <- formula(h_nfnet  ~ post_event*setswana + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
-m4_3 <- formula(h_nfnet  ~ post_event*setswana + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman + hhincome)
-m4_4 <- formula(h_nfnet  ~ post_event*setswana + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome)
-m4_5 <- formula(h_nfnet  ~ post_event*setswana + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome + best_edu)
+m2_0 <- formula(a_owncom ~ event*factor(a_lng))
+m2_1 <- formula(a_owncom ~ event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
+m2_2 <- formula(a_owncom ~ event*setswana + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome)
+m2_5 <- formula(a_owncom ~ event*setswana + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome + best_edu)
+m4_0 <- formula(h_nfnet  ~ event*factor(a_lng))
+m4_1 <- formula(h_nfnet  ~ event*factor(a_lng) + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
+m4_2 <- formula(h_nfnet  ~ event*setswana + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman)
+m4_3 <- formula(h_nfnet  ~ event*setswana + a_edlitrden + a_edlitwrten + a_edlitrdhm + a_edlitwrthm + a_woman + hhincome)
+m4_4 <- formula(h_nfnet  ~ event*setswana + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome)
+m4_5 <- formula(h_nfnet  ~ event*setswana + factor(a_edlitrden) + factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + a_woman + hhincome + best_edu)
 
 ## estimate models
 lm1_0 <- lm(m1_0, data = adulthh)
@@ -73,7 +76,7 @@ summary(lm4_3)
 summary(lm4_4)
 summary(lm4_5)
 
-m_test <- formula(h_nfnet  ~ post_event*factor(a_lng))
+m_test <- formula(h_nfnet  ~ event*factor(a_lng))
 summary(lm(m_test, adulthh))
 
 
@@ -98,14 +101,14 @@ summary(lm(m_test, adulthh))
 # 
 
 # NOTE 2_5 DOES NOT NEED CLUSTERING
-plm2_5 <- formula(as.numeric(a_owncom) ~ post_event*setswana + 
+plm2_5 <- formula(as.numeric(a_owncom) ~ event*setswana + 
                   factor(a_edlitrden) + 
                   factor(a_edlitwrten) + 
                   factor(a_edlitrdhm) + 
                   factor(a_edlitwrthm) + 
                   a_woman + 
                   hhincome)
-plm4_3 <- formula(as.numeric(h_nfnet)  ~ post_event*setswana + 
+plm4_3 <- formula(as.numeric(h_nfnet)  ~ event*setswana + 
                     factor(a_edlitrden) + 
                     factor(a_edlitwrten) + 
                     factor(a_edlitrdhm) + 
@@ -137,16 +140,16 @@ fepo <- phtest(plm4_1, pNIDS, model=c('within', 'pooling'))
 
 
 # basic plot of a_owncom
-NIDS %>%
+adulthh %>%
   filter(a_lng != 'Afrikaans') %>%
-  group_by(Setswana = a_lng == 'Setswana', wave) %>%
+  group_by(setswana, wave) %>%
   summarise(a_owncom = mean(a_owncom, na.rm=TRUE)) %>%
-  ggplot(aes(x=wave, y=a_owncom, fill=Setswana)) %+%
+  ggplot(aes(x=wave, y=a_owncom, fill=setswana)) %+%
   geom_bar(stat='identity') %+%
-  facet_grid(~Setswana)
+  facet_grid(~setswana)
 
 # full plot of a_owncom
-NIDS %>%
+adulthh %>%
   group_by(a_lng, wave) %>%
   summarise(a_owncom = mean(a_owncom, na.rm=TRUE)) %>%
   ggplot(aes(x=wave, y=a_owncom, fill=a_lng)) %+%
@@ -154,7 +157,7 @@ NIDS %>%
   facet_grid(~a_lng)
 
 # full plot of a_owncel
-NIDS %>%
+adulthh %>%
   group_by(a_lng, wave) %>%
   summarise(a_owncel = mean(a_owncel, na.rm=TRUE)) %>%
   ggplot(aes(x=wave, y=a_owncel, fill=a_lng)) %+%
@@ -162,13 +165,13 @@ NIDS %>%
   facet_grid(~a_lng)
 
 # basic plot of h_nfnet
-NIDS %>%
+adulthh %>%
   filter(a_lng != 'Tshivenda') %>%
-  group_by(a_lng, wave) %>%
+  group_by(setswana, wave) %>%
   summarise(h_nfnet = mean(h_nfnet, na.rm=TRUE)) %>%
-  ggplot(aes(x=wave, y=h_nfnet, fill=a_lng)) %+%
+  ggplot(aes(x=wave, y=h_nfnet, fill=setswana)) %+%
   geom_bar(stat='identity') %+%
-  facet_grid(~a_lng)
+  facet_grid(~setswana)
 
 # save results
 save(means,
