@@ -46,6 +46,7 @@ Provides natbib 1
 \paperfontsize default
 \spacing single
 \use_hyperref true
+\pdf_title "Making the Next Billion Demand Access"
 \pdf_author "Bastiaan Quast"
 \pdf_bookmarks true
 \pdf_bookmarksnumbered false
