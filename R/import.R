@@ -8,6 +8,7 @@
 
 # load libraries
 library(haven)
+library(foreign)
 
 
 # read SAS source files
@@ -40,6 +41,7 @@ hhder2 <- read_dta(path = 'data/nids-w2-2010-2011-v3-stata12/hhderived_W2_Anon_V
 hhque2 <- read_dta(path = 'data/nids-w2-2010-2011-v3-stata12/HHQuestionnaire_W2_Anon_V3.0.dta')
 inder2 <- read_dta(path = 'data/nids-w2-2010-2011-v3-stata12/indderived_W2_Anon_V3.0.dta')
 
+hhque2foreign <- read.dta(file = 'data/nids-w2-2010-2011-v3-stata12/HHQuestionnaire_W2_Anon_V3.0.dta')
 hhque2$h_owncom <- ifelse(hhque2foreign$w2_h_owncom == 'Yes', 1, ifelse(hhque2foreign$w2_h_owncom == 'No', 2, NA))
 
 adult3 <- read_dta(path = 'data/nids-w3-2012-v2-stata12/Adult_W3_Anon_V2.0.dta')
@@ -56,4 +58,4 @@ inder4 <- read_dta(path = 'data/nids-w4-2014-2015-v1-stata12/indderived_W4_Anon_
 
 
 # save to file
-save.image(file = 'data/imported.RData')
+save.image(file = 'data/imported-stata12.RData')

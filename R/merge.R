@@ -13,7 +13,7 @@ library(dplyr)
 
 
 # load data
-load('data/imported.RData')
+load('data/imported-stata12.RData')
 
 
 # now subset all to the important variables and merge
@@ -325,4 +325,4 @@ adulthh$a_lng <- factor(adulthh$a_lng, labels = c('IsiNdebele',
 
 
 # save to file
-save(adulthh, file = 'data/merged.RData')
+save(adulthh, file = 'data/merged-stata12.RData')
