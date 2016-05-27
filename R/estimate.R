@@ -8,7 +8,7 @@
 
 # load libraries
 library(plm)
-library(pglm)
+# library(pglm)
 library(dplyr)
 library(ggplot2)
 
@@ -16,9 +16,6 @@ library(ggplot2)
 # load data
 load(file = "data/merged.RData")
 
-# change dummy names
-adulthh$event <- adulthh$interface_intro
-adulthh$setswana <- adulthh$setswana_logical
 
 # convert to pdata.frame
 pNIDS <- pdata.frame(adulthh, index = c('pid','wave') )
@@ -174,7 +171,7 @@ adulthh %>%
   facet_grid(~setswana)
 
 # employment increase for compute owners in wave 3
-adulthh[which(adulthh$wave==3 & adulthh$a_owncom==TRUE),]$pid -> pids
+pids <- adulthh[which(adulthh$wave==3 & adulthh$a_owncom==TRUE),]$pid
 adulthh$employed <- ifelse(adulthh$empl_stat==3, TRUE, FALSE)
 adulthh %>%
   filter(pid %in% pids) %>%
