@@ -268,11 +268,11 @@ inder$ppen    <- ifelse(is.na(inder$ppen), 0, inder$ppen)
 
 
 # save data
-save(file = 'data/adult.RData', adult)
-save(file = 'data/child.RData', child)
-save(file = 'data/hhder.RData', hhder)
-save(file = 'data/inder.RData', inder)
-save(file = 'data/hhque.RData', hhque)
+save(file = 'data/adult-stata12.RData', adult)
+save(file = 'data/child-stata12.RData', child)
+save(file = 'data/hhder-stata12.RData', hhder)
+save(file = 'data/inder-stata12.RData', inder)
+save(file = 'data/hhque-stata12.RData', hhque)
 
 
 # merge across data.frame types
@@ -301,7 +301,7 @@ adulthh$a_edlitwrten <- ifelse(adulthh$a_edlitwrten < 0, NA, adulthh$a_edlitwrte
 adulthh$event <- ifelse(adulthh$wave <= 2, FALSE, TRUE)
 
 
-# create tsonga dummy
+# create setswana dummy
 adulthh$setswana <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
 
 
