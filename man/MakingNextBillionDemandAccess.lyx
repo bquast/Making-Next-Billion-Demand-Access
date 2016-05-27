@@ -2189,6 +2189,52 @@ ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
 
 \end_layout
 
+\begin_layout Standard
+In the below figure, I plot the employment status of individuals dat own
+ a computer in the first wave after the introduction of the Setswana-language
+ interface (wave 3).
+ We can see that there is a sharp uptick in the number of employed individuals.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Change in Employment Status
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/quast/Downloads/employment.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Conclusions and Limitations
 \end_layout
