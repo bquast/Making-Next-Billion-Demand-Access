@@ -182,6 +182,11 @@ hhque3$h_nfnetspn <- ifelse(hhque3$h_nfnet == 2, 0, hhque3$h_nfnetspn)
 hhque1$h_nfnet    <- ifelse(hhque1$h_nfnet == 1, TRUE, ifelse(hhque1$h_nfnet == 2, FALSE, NA))
 hhque3$h_nfnet    <- ifelse(hhque3$h_nfnet == 1, TRUE, ifelse(hhque3$h_nfnet == 2, FALSE, NA))
 
+child3$c_mthhh <- child3$c_mthhh_pid
+child3$c_fthhh <- child3$c_fthhh_pid
+
+hhder1$hhimprent <- hhder1$hhimprent_exp
+
 ## subset to relevant variables
 adult1 %<>% subset(select=vars_adult)
 adult2 %<>% subset(select=vars_adult)
@@ -244,9 +249,9 @@ save(file = 'data/hhque.RData', hhque)
 
 # merge across data.frame types
 adult   <- merge(adult,   inder, by = c('pid', 'hhid', 'wave'), all.x = TRUE)
-adult$hhid <- adult$hhid.x
-adult$hhid.x <- NULL
-adult$hhid.y <- NULL
+# adult$hhid <- adult$hhid.x
+# adult$hhid.x <- NULL
+# adult$hhid.y <- NULL
 adulthh <- merge(adult,   hhder, by = c('hhid', 'wave'), all.x = TRUE)
 adulthh <- merge(adulthh, hhque, by = c('hhid', 'wave'), all.x = TRUE)
 
@@ -266,10 +271,11 @@ adulthh$a_edlitwrten <- ifelse(adulthh$a_edlitwrten < 0, NA, adulthh$a_edlitwrte
 
 # create event dummy
 adulthh$interface_intro <- ifelse(adulthh$wave == 3, TRUE, FALSE)
+adulthh$event <- adulthh$interface_intro
 
-
-# create tsonga dummy
+# create setswana dummy
 adulthh$setswana_logical <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
+adulthh$setswana <- adulthh$setswana_logical
 
 
 
