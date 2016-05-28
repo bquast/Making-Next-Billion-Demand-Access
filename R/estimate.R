@@ -16,6 +16,12 @@ library(ggplot2)
 # load data
 load(file = "data/merged-stata12.RData")
 
+# human readable names
+adulthh$language <- adulthh$a_lng
+adulthh$own_computer <- adulthh$a_owncom
+adulthh$employed <- ifelse(adulthh$empl_stat==3, TRUE, FALSE)
+adulthh$Internet_expenditure <- adulthh$h_nfnet
+
 
 # convert to pdata.frame
 pNIDS <- pdata.frame(adulthh, index = c('pid','wave') )
@@ -140,18 +146,18 @@ fepo <- phtest(plm4_1, pNIDS, model=c('within', 'pooling'))
 adulthh %>%
   filter(a_lng != 'Afrikaans') %>%
   group_by(setswana, wave) %>%
-  summarise(a_owncom = mean(a_owncom, na.rm=TRUE)) %>%
-  ggplot(aes(x=wave, y=a_owncom, fill=setswana)) %+%
-  geom_bar(stat='identity') %+%
-  facet_grid(~setswana)
+  summarise(own_computer = mean(own_computer, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=own_computer, colour=setswana)) %+%
+  geom_line() %+%
+  scale_colour_brewer(palette='Set1')
 
 # full plot of a_owncom
 adulthh %>%
-  group_by(a_lng, wave) %>%
-  summarise(a_owncom = mean(a_owncom, na.rm=TRUE)) %>%
-  ggplot(aes(x=wave, y=a_owncom, fill=a_lng)) %+%
+  group_by(language, wave) %>%
+  summarise(own_computer = mean(own_computer, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=own_computer, fill=language)) %+%
   geom_bar(stat='identity') %+%
-  facet_grid(~a_lng)
+  facet_grid(~language)
 
 # full plot of a_owncel
 adulthh %>%
@@ -163,22 +169,31 @@ adulthh %>%
 
 # basic plot of h_nfnet
 adulthh %>%
-  filter(a_lng != 'Tshivenda') %>%
   group_by(setswana, wave) %>%
-  summarise(h_nfnet = mean(h_nfnet, na.rm=TRUE)) %>%
-  ggplot(aes(x=wave, y=h_nfnet, fill=setswana)) %+%
-  geom_bar(stat='identity') %+%
-  facet_grid(~setswana)
+  summarise(Internet_expenditure = mean(Internet_expenditure, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=Internet_expenditure, colour=setswana)) %+%
+  geom_line() %+%
+  scale_colour_brewer(palette='Set1')
 
 # employment increase for compute owners in wave 3
 pids <- adulthh[which(adulthh$wave==3 & adulthh$a_owncom==TRUE),]$pid
-adulthh$employed <- ifelse(adulthh$empl_stat==3, TRUE, FALSE)
 adulthh %>%
   filter(pid %in% pids) %>%
   group_by(setswana, wave) %>%
   summarise(employed = mean(employed, na.rm=TRUE)) %>%
   ggplot(aes(x=wave, y=employed, colour=setswana)) %+%
-  geom_line()
+  geom_line() %+%
+  scale_colour_brewer(palette='Set1')
+
+pids <- adulthh[which(adulthh$wave==3 & adulthh$h_nfnet==TRUE),]$pid
+adulthh %>%
+  filter(pid %in% pids) %>%
+  group_by(setswana, wave) %>%
+  summarise(employed = mean(employed, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=employed, colour=setswana)) %+%
+  geom_line() %+%
+  scale_colour_brewer(palette='Set1')
+
 
 # save results
 save(means,
