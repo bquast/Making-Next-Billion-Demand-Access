@@ -14,7 +14,7 @@ library(ggplot2)
 
 
 # load data
-load(file = "data/merged.RData")
+load(file = "data/merged-stata12.RData")
 
 
 # convert to pdata.frame
