@@ -155,13 +155,56 @@ price of Internet acccess (ITU)
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+> View( 
+\end_layout
+
+\begin_layout Plain Layout
+NIDS %>% 
+\end_layout
+
+\begin_layout Plain Layout
+group_by(setswana, wave) %>% 
+\end_layout
+
+\begin_layout Plain Layout
+summarise(a_owncom = sum(a_owncom, na.rm=TRUE)) ) 
+\end_layout
+
+\begin_layout Plain Layout
+(1069-627)/627 
+\end_layout
+
+\begin_layout Plain Layout
+[1] 0.7049442 
+\end_layout
+
+\begin_layout Plain Layout
+(127-59)/59 
+\end_layout
+
+\begin_layout Plain Layout
+[1] 1.152542
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 Abstract
 \end_layout
 
 \begin_layout Standard
-An exogenous increase in accessibility of local language content leads to
- an increase in demand for Internet connectivity among native speakers.
+the introduction of the Setwana language interface on the South African
+ Google Search website was a spillover of the development of that interface
+ in accessibility of local language content leads to an increase in demand
+ for Internet connectivity among native speakers.
  Internet connectivity provides enormous improvements in quality of life
  such as reduced racism, as well as many opportunities for the newly connected,
  yet recent attempts to connect the current `next billion' in places such
