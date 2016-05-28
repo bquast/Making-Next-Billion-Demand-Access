@@ -16,6 +16,12 @@ library(ggplot2)
 # load data
 load(file = "data/merged.RData")
 
+# human readable names
+adulthh$language <- adulthh$a_lng
+adulthh$own_computer <- adulthh$a_owncom
+adulthh$employed <- ifelse(adulthh$empl_stat==3, TRUE, FALSE)
+adulthh$Internet_expenditure <- adulthh$h_nfnet
+
 
 # convert to pdata.frame
 pNIDS <- pdata.frame(adulthh, index = c('pid','wave') )
