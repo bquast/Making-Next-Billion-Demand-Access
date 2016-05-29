@@ -16,12 +16,6 @@ library(ggplot2)
 # load data
 load(file = "data/merged.RData")
 
-# human readable names
-adulthh$language <- adulthh$a_lng
-adulthh$own_computer <- adulthh$a_owncom
-adulthh$employed <- ifelse(adulthh$empl_stat==3, TRUE, FALSE)
-adulthh$Internet_expenditure <- adulthh$h_nfnet
-
 
 # convert to pdata.frame
 pNIDS <- pdata.frame(adulthh, index = c('pid','wave') )
@@ -144,11 +138,11 @@ fepo <- phtest(plm4_1, pNIDS, model=c('within', 'pooling'))
 # basic plot of a_owncom
 NIDS %>%
   filter(a_lng != 'Afrikaans') %>%
-  group_by(Setswana = a_lng == 'Setswana', wave) %>%
-  summarise(a_owncom = mean(a_owncom, na.rm=TRUE)) %>%
-  ggplot(aes(x=wave, y=a_owncom, fill=Setswana)) %+%
-  geom_bar(stat='identity') %+%
-  facet_grid(~Setswana)
+  group_by(setswana, wave) %>%
+  summarise(own_computer = mean(own_computer, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=own_computer, colour=setswana)) %+%
+  geom_line() %+% 
+  scale_colour_brewer(palette='Set1')
 
 # full plot of a_owncom
 NIDS %>%
@@ -166,7 +160,15 @@ NIDS %>%
   geom_bar(stat='identity') %+%
   facet_grid(~a_lng)
 
-# basic plot of h_nfnet
+# basic plot of Internet_expenditure
+NIDS %>%
+  group_by(setswana, wave) %>%
+  summarise(Internet_expenditure = mean(Internet_expenditure, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=Internet_expenditure, colour=setswana)) %+%
+  geom_line() %+%
+  scale_colour_brewer(palette='Set1')
+
+# full plot of h_nfnet
 NIDS %>%
   filter(a_lng != 'Tshivenda') %>%
   group_by(a_lng, wave) %>%
