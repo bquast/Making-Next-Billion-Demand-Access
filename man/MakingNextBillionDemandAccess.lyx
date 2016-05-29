@@ -155,47 +155,6 @@ price of Internet acccess (ITU)
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-> View( 
-\end_layout
-
-\begin_layout Plain Layout
-NIDS %>% 
-\end_layout
-
-\begin_layout Plain Layout
-group_by(setswana, wave) %>% 
-\end_layout
-
-\begin_layout Plain Layout
-summarise(a_owncom = sum(a_owncom, na.rm=TRUE)) ) 
-\end_layout
-
-\begin_layout Plain Layout
-(1069-627)/627 
-\end_layout
-
-\begin_layout Plain Layout
-[1] 0.7049442 
-\end_layout
-
-\begin_layout Plain Layout
-(127-59)/59 
-\end_layout
-
-\begin_layout Plain Layout
-[1] 1.152542
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section*
 Abstract
 \end_layout
@@ -231,6 +190,28 @@ name "sec:intro"
 
 \end_inset
 
+Internet uptake is a two-sided market, with users on one side and content
+ on the other side.
+ This market exists separately for each language and for many indigenous
+ languages fails to take off properly.
+ With this study I show how that accessibility of local content increases
+ Internet usage among native speakers of a language.
+ Because of the cross-side network effects in a two-sided market, any changes
+ are inherently endogenous.
+ I remedy this by using an exogenous shock in accessibility of Setswana
+ language content in South Africa, with the introduction of the Google interface.
+ I find that this leads to a strong increase in both the proportion of household
+s reporting to have spent on Internet access in the last 30 days, as well
+ as individuals owning a computer.
+ This in turn has led to a large increase in the usage of the Setswana language
+ online (using Google search queries).
+ There is a strong increase in employment among individuals who spend on
+ Internet or own a computer after the introdution.
+ Suggesting that the expanded demographic of Setswana Internet users is
+ benefiting from increased Internet adoption in terms of employability.
+\end_layout
+
+\begin_layout Standard
 The term `Connecting the Next Billion' was introduced in The Economist's
  2006 `End of Year Report' 
 \begin_inset CommandInset citation
@@ -274,15 +255,13 @@ In the period 2010-2014 the average annual growth of Internet bandwidth
 As is shown in 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:adoption"
+reference "fig:adoption_growth"
 
 \end_inset
 
-, mobile Internet adoption is showing rapidly decreasing growth rates to
- the point of being near level.
+, growth of Internet usage in Sub-Saharan Africa is rapidly decreasing.
  Unlike in other regions in the figure, this observed stagnation is not
- a consequence of market saturation, as adoption levels in 2015 are only
- just over 60 percent.
+ a consequence of market saturation, as adoption levels are still very low.
 \end_layout
 
 \begin_layout Standard
@@ -308,7 +287,7 @@ Internet Adoption
 \align center
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:adoption"
+name "fig:adoption_growth"
 
 \end_inset
 
@@ -399,8 +378,8 @@ ggplot(df, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
 
 \begin_layout Standard
 A crucial determinant of Internet adoption is the interplay with content
- creation, which takes the form of a two-sided market, wherein the two sides
- benefit from cross-side network effects.
+ creation, the two-sided market, wherein the two sides benefit from cross-side
+ network effects.
  These sides are content creators, such as news websites, and content consumers,
  the users.
  Ideally, adoption should follow a virtuous circle, whereby the content
@@ -416,6 +395,10 @@ A crucial determinant of Internet adoption is the interplay with content
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 The increased range and affordability, taken together with stagnant growth,
  suggest that connectivity is lagging because of lower-than-expected demand,
  possibly as a result of perceived insufficient value.
@@ -440,6 +423,11 @@ The increased range and affordability, taken together with stagnant growth,
  as can be seen in the top bar and around 20% of the Internet-connected
  population, yet all of these languages combined only account for around
  10% of online content.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -467,8 +455,9 @@ The Web is a powerful tool for preserving languages that would otherwise
 \end_layout
 
 \begin_layout Standard
-Unfortunately, this is less true for many languages outside of Europe.
- Increasingly language availability is also being concideren as a method
+Unfortunately, this is less true for many indigenous languages outside of
+ Europe.
+ Increasingly language availability is also being concidered as a method
  for improving demand for connectivity 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -490,7 +479,8 @@ key "viard2014effect"
 \end_layout
 
 \begin_layout Standard
-There are good reasons for wanting increased connectivity of remote populations.
+There are good reasons for striving for increased connectivity of remote
+ populations.
  
 \begin_inset CommandInset citation
 LatexCommand citet
@@ -500,11 +490,11 @@ key "jensen2009power"
 
  find that the introduction of cable television in Indian states has a pronounce
 d positive effect on attitudes towards the oppression of women, violence
- against women, son preference and as well as decreased fertility.
+ against women, son preference, and as well as decreased fertility.
  Internet access can provide an in some ways similar window on the outside
  world, we might expect some of these things to also follow more widespread
  Internet adoption.
- More on point, 
+ 
 \begin_inset CommandInset citation
 LatexCommand citet
 key "sinai2004geography"
@@ -516,18 +506,13 @@ key "sinai2004geography"
 \end_layout
 
 \begin_layout Standard
-As mentioned above, Internet connectivity is a two-sided market, user demand
- for connectivity is a function of relevant content availability, conversely,
- content creation and availability is dependent on the amount of interested
- users.
- As such, the formation of both vicious and vituous circles between these
- two is likely.
- This makes it difficult to empirically isolate a causal effect of content
- availability on demand for Internet connectivity.
- This paper exploits an exogenous increase in the accessibility of local
- content in the Setswana language in South Africa, in order to isolate the
- increase of Internet usage among native speakers.
- In 2010 Google collaborated with a Botswanan team of linguists 
+As mentioned above, Internet connectivity is a two-sided market, which makes
+ it difficult to empirically isolate a causal effect of content availability
+ on demand for Internet connectivity.
+ This paper exploits an exogenous increase in the accessibility of content
+ in the Setswana language in South Africa, in order to isolate the increase
+ of Internet usage among native speakers.
+ In 2010 Google collaborated with a team of Botswanan linguists 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "otlogetswe2010setswana"
@@ -546,8 +531,8 @@ google.co.bw
 
 ) available in the local language: `Setswana'.
  In addition to being spoken in Botswana, there is also a sizable population
- of Setswana speakers directly across the border in South Africa, where
- it is also one of the official state languages.
+ of Setswana speakers across the border in South Africa, where it is also
+ one of the official state languages.
  This led to the Setswana-language interface also being introduced on the
  South-African Google website (
 \begin_inset Flex Code
@@ -592,6 +577,10 @@ In short, we can identify two main channels through which this promotes
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 The vast majority of Internet access in developing countries is through
  handheld devices such as smartphones.
  However, due to the limited `real estate' (surface area of the screen)
@@ -611,6 +600,11 @@ reference "fig:langmob"
  revert to its default (in South Africa: English).
  The fact that the introduction also led to increased desktop-computer ownership
  but not mobile-phone ownership further substantiates this hypothesis.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -683,9 +677,9 @@ name "sec:data"
 \end_inset
 
 South Africa's National Income Dynamics Survey collects data on a representative
- set of around ten thousand households over time.
- The first survey took place in 2008, the second one in late 2010 and early
- 2011, and the third one took place in 2012 
+ set of around ten thousand households across several time periods.
+ The first wave was gathered in 2008, the second wave in late 2010 and early
+ 2011, and the third wave was gathered in 2012 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "saldru2008nids,saldru2012nids,saldru2013nids"
@@ -693,8 +687,8 @@ key "saldru2008nids,saldru2012nids,saldru2013nids"
 \end_inset
 
 .
- It contains an extensive household questionnaire, which breaks household
- expenditure down into many forms of food and non-food expenditure.
+ The dataset contains an extensive household questionnaire, which breaks
+ household expenditure down into many forms of food and non-food expenditure.
  In addition to this, the household income is calculated and imputed with
  other income such as home ownership.
  The individual (adult) questionnaires also contain information on linguistic
@@ -1196,7 +1190,7 @@ In the base model, we use an interaction of the
 status open
 
 \begin_layout Plain Layout
-interface_intro
+event
 \end_layout
 
 \end_inset
@@ -1206,7 +1200,7 @@ interface_intro
 status open
 
 \begin_layout Plain Layout
-setswana_logical
+setswana
 \end_layout
 
 \end_inset
@@ -1218,7 +1212,7 @@ setswana_logical
 status open
 
 \begin_layout Plain Layout
-h_nfnet
+Internet_expenditure
 \end_layout
 
 \end_inset
@@ -1240,7 +1234,7 @@ We find that the interaction term of the event dummy (
 status open
 
 \begin_layout Plain Layout
-interface_intro
+event
 \end_layout
 
 \end_inset
@@ -1250,7 +1244,7 @@ interface_intro
 status open
 
 \begin_layout Plain Layout
-setswana_logical
+setswana
 \end_layout
 
 \end_inset
@@ -1271,12 +1265,22 @@ status open
 status open
 
 \begin_layout Plain Layout
-interface_introTRUE
+event
 \end_layout
 
 \end_inset
 
- and setswana_logicalTRUE) yield significant but negative parameter estimates.
+ and 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+setswana
+\end_layout
+
+\end_inset
+
+) yield significant negative parameter estimates.
 \end_layout
 
 \begin_layout Standard
@@ -1308,7 +1312,7 @@ hhincome
 status open
 
 \begin_layout Plain Layout
-a_womanTRUE
+woman
 \end_layout
 
 \end_inset
@@ -1371,7 +1375,7 @@ In an alternative formulation, we include the native language variable as
 status open
 
 \begin_layout Plain Layout
-a_lng
+language
 \end_layout
 
 \end_inset
@@ -1381,7 +1385,7 @@ a_lng
 status open
 
 \begin_layout Plain Layout
-interface_intro
+event
 \end_layout
 
 \end_inset
@@ -1522,7 +1526,7 @@ Furthermore, we also use a variant of the base model, in which the propensity
 status open
 
 \begin_layout Plain Layout
-a_owncom
+own_computer
 \end_layout
 
 \end_inset
@@ -1533,7 +1537,7 @@ a_owncom
 status open
 
 \begin_layout Plain Layout
-a_owncom
+own_computer
 \end_layout
 
 \end_inset
@@ -1547,7 +1551,7 @@ a_owncom
 status open
 
 \begin_layout Plain Layout
-h_nfnet
+Internet_expenditure
 \end_layout
 
 \end_inset
@@ -1557,7 +1561,7 @@ h_nfnet
 status open
 
 \begin_layout Plain Layout
-a_owncom
+own_computer
 \end_layout
 
 \end_inset
@@ -1579,7 +1583,7 @@ reference "tab:owncom"
 status open
 
 \begin_layout Plain Layout
-interface_introTRUE:setswana_logicalTRUE
+eventTRUE:setswanaTRUE
 \end_layout
 
 \end_inset
@@ -1600,7 +1604,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-interface_introTRUE
+event
 \end_layout
 
 \end_inset
@@ -1610,7 +1614,7 @@ interface_introTRUE
 status open
 
 \begin_layout Plain Layout
-setswana_logicalTRUE
+setswana
 \end_layout
 
 \end_inset
@@ -1678,7 +1682,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-a_womanTRUE
+woman
 \end_layout
 
 \end_inset
@@ -1838,32 +1842,32 @@ NIDS %>%
 
 \begin_layout Plain Layout
 
-	group_by(Setswana = a_lng == 'Setswana', wave)   %>%
+	group_by(setswana, wave)                                 %>%
 \end_layout
 
 \begin_layout Plain Layout
 
-	filter(a_lng != 'Afrikaans')                     %>%
+	filter(language != 'Afrikaans')                          %>%
 \end_layout
 
 \begin_layout Plain Layout
 
-	summarise(a_owncom = mean(a_owncom, na.rm=TRUE)) %>%
+	summarise(own_computer = mean(own_computer, na.rm=TRUE)) %>%
 \end_layout
 
 \begin_layout Plain Layout
 
-	ggplot(aes(x=wave, y=a_owncom, fill=Setswana))   %+%
+	ggplot(aes(x=wave, y=own_computer, colour=setswana))     %+%
 \end_layout
 
 \begin_layout Plain Layout
 
-	geom_bar(stat='identity')                        %+%
+	geom_line()                                              %+%
 \end_layout
 
 \begin_layout Plain Layout
 
-	facet_grid(~Setswana)
+	scale_colour_brewer(palette='Set1')
 \end_layout
 
 \end_inset
@@ -1877,189 +1881,27 @@ NIDS %>%
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Asides from the effect on the proportion of households with Internet expenditure
 , and the proportion of adults who own a computer, we also estimate any
  possible effects on the probability of the household to spend on a cellphone,
  and on adults likelihood to own a cellphone.
 \end_layout
 
-\begin_layout Standard
-We find no significant effects on the propensity of expenditure on cell
- phones or the propensity to own one.
- As discussed in the introduction, we suspect this to be a consequence of
- the fact that language switching on mobile cannot be automatic, since the
- Android operating system does not support the Setswana language, combined
- with the fact that the Setswana interface button is not visible directly
- on the 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-google.co.za
-\end_layout
-
-\end_inset
-
- homepage, but rather in a dropdown menu 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "fig:langmob"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-This last effect is also visible in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:GoogleTrendsZA"
-
-\end_inset
-
-, which illustrates how usage of the Setswana word `thuso', meaning `help'
- in search queries, was zero prior to the introduction of the Setswana search
- interface and became widespread thereafter.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Usage of Setswana Words on Google.co.za
-\end_layout
-
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:GoogleTrendsZA"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Flex Chunk
-status open
-
-\begin_layout Plain Layout
-
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-plot_data, cache=TRUE
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Conclusions and Limitations
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:conclusions"
-
-\end_inset
-
-In conclusion, despite recent advances in the reach, speed, and afordability
- of Internet connectivity in sub-Saharan Africa, actual connectivity has
- been stagnant.
- This paper aims to see if this can in part be attributed to the dynamics
- of a two-sided market, such as Internet in a language, whereby the vicious
- circle of few users and little content perpetuates a situation of low levels
- of adoption.
- Due to the endogenous nature of two-sided markets, there are few methods
- of isolating a causal effect.
-\end_layout
-
-\begin_layout Standard
-This paper exploits the introduction of the Setswana-language interface
- on 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-google.co.za
-\end_layout
-
-\end_inset
-
-, as a spillover of the development of this interface for 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-google.co.bw
-\end_layout
-
-\end_inset
-
- and finds that it leads to a substantial increase in Internet usage and
- computer ownership among native Setswana speakers.
-\end_layout
-
-\begin_layout Standard
-This increase of Internet usage among the Setswana speaking population as
- a result of the newly introduced interface language on 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-google.co.za
-\end_layout
-
-\end_inset
-
-, suggests that there is a serious lack in the availability of local content
- in many African languages, which serves as an impediment to further Internet
- adoption here.
- Additionally, there was also an observably positive effect on computer
- ownership amongst adults.
- This suggests that the effect is unlikely to be ephemeral in nature, since
- computer ownership constitutes a more long-term investment in Internet
- access.
 \end_layout
 
 \begin_layout Standard
 In the below figure, I plot the employment status of individuals dat own
  a computer in the first wave after the introduction of the Setswana-language
  interface (wave 3).
- We can see that there is a sharp uptick in the number of employed individuals.
+ We can see that there is a sharp uptick in the proportion of employed individua
+ls among Setswana speakers.
  
 \end_layout
 
@@ -2092,7 +1934,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 load_wave4, echo=FALSE
 \end_layout
 
@@ -2121,7 +1962,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 employment_own_computer
 \end_layout
 
@@ -2187,6 +2027,13 @@ adulthh %>%
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Similarly, the individuals that lived in a household that spent on Internet
+ access in the last 30 days also saw a strong increase in the proportion
+ of employed individuals, overtaking the proportion for the rest of the
+ population.
 \end_layout
 
 \begin_layout Standard
@@ -2290,7 +2137,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-
 reload_wave3, echo=FALSE
 \end_layout
 
@@ -2309,8 +2155,40 @@ load(file='../data/merged.RData')
 
 \end_layout
 
-\begin_layout Plain Layout
+\end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+I find no significant effects on the propensity of expenditure on cell phones
+ or the propensity to own one.
+ As discussed in the introduction, I suspect this to be a consequence of
+ the fact that language switching on mobile cannot be automatic, since the
+ Android operating system does not support the Setswana language, combined
+ with the fact that the Setswana interface button is not visible directly
+ on the 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+google.co.za
+\end_layout
+
+\end_inset
+
+ homepage, but rather in a dropdown menu 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "fig:langmob"
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -2319,11 +2197,192 @@ load(file='../data/merged.RData')
 \end_layout
 
 \begin_layout Standard
+This last effect is also visible in 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GoogleTrendsZA"
+
+\end_inset
+
+, which illustrates how usage of the Setswana word `thuso', meaning `help'
+ in search queries, was zero prior to the introduction of the Setswana search
+ interface and became widespread thereafter.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Usage of Setswana Words on Google.co.za
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GoogleTrendsZA"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+plot_data, cache=TRUE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusions and Limitations
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:conclusions"
+
+\end_inset
+
+In conclusion, despite recent advances in the reach, speed, and afordability
+ of Internet connectivity in sub-Saharan Africa, actual uptake has been
+ stagnant.
+ Internet adoption is a two-sided market, as a result, one aspect of this
+ is that users benefit from cross-side network effects from content.
+ Unfortuntely, in certain langauges, a sufficient amount of content is not
+ always created, as a result, Internet adoption among native speakers of
+ these languages can lag behind.
+\end_layout
+
+\begin_layout Standard
+This paper demonstrates that this failure can in part be attributed to the
+ dynamics of a two-sided market, whereby the vicious circle of few users
+ and little content perpetuates a situation of low levels of adoption.
+ Due to the endogenous nature of two-sided markets, there are few methods
+ of isolating a causal effect.
+\end_layout
+
+\begin_layout Standard
+I exploit the introduction of the Setswana-language interface on 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+google.co.za
+\end_layout
+
+\end_inset
+
+, as a spillover of the development of this interface for 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+google.co.bw
+\end_layout
+
+\end_inset
+
+, I find that it leads to a substantial increase in Internet usage and computer
+ ownership among native Setswana speakers.
+\end_layout
+
+\begin_layout Standard
+Furthermore, when comparing the Setswana speakers that own a computer or
+ spend on Internet access after the event, with non Setswana speakers, we
+ see a marked increase in the proporotion of employed individuals over that
+ among the rest of the population.
+ This increase is even stronger in wave 4 of the data, suggesting that it
+ takes some time for the effect to fully materialise and that it is persistent.
+\end_layout
+
+\begin_layout Standard
+This increase of Internet usage among the Setswana speaking population as
+ a result of the newly introduced interface language on 
+\begin_inset Flex Code
+status open
+
+\begin_layout Plain Layout
+google.co.za
+\end_layout
+
+\end_inset
+
+, suggests that there is a serious lack in the availability of local content
+ in many indigenous African languages, which serves as an impediment to
+ further Internet adoption.
+ Additionally, there was also an observably positive effect on computer
+ ownership amongst adults.
+ This suggests that the effect is unlikely to be ephemeral in nature, since
+ computer ownership constitutes a more long-term investment in Internet
+ access.
+\end_layout
+
+\begin_layout Standard
+As I discussed in the results section, the increase in computer ownership
+ for Setswana speakers between wave 2 and wave 3, was 115%, compared to
+ 70% for the rest of the population, or a 50% greater increase.
+ The effect on Internet expenditure in the household, which includes expenditure
+ in Internet cafes etc.
+ is even greater.
+ The proportion of Setswana households that spent on Internet in the last
+ 30 days increased by 217%, whereas for the rest of the population it fell
+ be 22%.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 Finally, the fact that this effect is not observed in cellphone ownership
  and expenditure, which is possibly a consequence of the fact that the interface
  cannot automatically switch and that the link `Setswana' is not directly
  visible from the landing page, suggests that it is important to make the
  link directly visible on the landing page in order to fully reach users.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2385,7 +2444,7 @@ Clustering
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -3190,8 +3249,7 @@ key "lamport1985latex"
 
 \end_inset
 
- language and compiled using the Lua\SpecialChar TeX
- implementation
+ language and compiled using the LuaTeX implementation
 \begin_inset CommandInset citation
 LatexCommand citep
 key "luatex"
