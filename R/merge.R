@@ -277,7 +277,10 @@ adulthh$event <- adulthh$interface_intro
 adulthh$setswana_logical <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
 adulthh$setswana <- adulthh$setswana_logical
 
-
+# human readable names
+adulthh$language <- adulthh$a_lng
+adulthh$own_computer <- adulthh$a_owncom
+adulthh$Internet_expenditure <- adulthh$h_nfnet
 
 # remove observations without languages
 adulthh <- subset(adulthh, adulthh$a_lng != 12)
@@ -296,7 +299,8 @@ adulthh$a_lng <- factor(adulthh$a_lng, labels = c('IsiNdebele',
                                                   'Afrikaans',
                                                   'English'))
 
-
+# rename to NIDS
+NIDS <- adulthh
 
 # save to file
 save(adulthh, file = 'data/merged.RData')
