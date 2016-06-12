@@ -387,14 +387,37 @@ ggplot(df, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
 \begin_layout Standard
 A crucial determinant of Internet adoption is the interplay with content
  creation, the two-sided market, wherein the two sides benefit from cross-side
- network effects.
+ network effects
+\begin_inset CommandInset citation
+LatexCommand citep
+key "parker2000information,parker2000internetwork,parker2005two"
+
+\end_inset
+
+.
  These sides are content creators, such as news websites, and content consumers,
  the users.
  Ideally, adoption should follow a virtuous circle, whereby the content
  offering encourages more users to come online, which in turn incentivices
- more content creation.
+ more content creation 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "rochet2003platform,rochet2006two"
+
+\end_inset
+
+.
  Unfortunately this virtuous circle sometimes fails to properly start for
- certain languages.
+ certain languages, this is especially important is it typically concerns
+ communities who's linguistic characterisation can already hamper economic
+ growth 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "arcand2013language"
+
+\end_inset
+
+.
  Herein also lies the difficulty with finding empirical evidence of these
  dynamics, since the process of adoption by users and content creation is
  inherently endogenous.
@@ -473,8 +496,15 @@ key "pena1999challenges,gandal2006native"
 
 \end_inset
 
+ as well as more generally in development economics as a whole 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "arcand1996development"
+
+\end_inset
+
 .
- More recently,
+ In a recent paper,
 \begin_inset CommandInset citation
 LatexCommand citet
 key "viard2014effect"
@@ -511,6 +541,15 @@ key "sinai2004geography"
 
  show that expanded Internet usage in cities can lead to less racism, an
  issue that can be of particular relevance to South Africa.
+ The overcoming of ethnic polarisation can in turn be conducive to economic
+ growth 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "arcand2000ethnicity"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -818,7 +857,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-lang_woman, cache=TRUE
+lang_woman, echo=FALSE, cache=TRUE
 \end_layout
 
 \end_inset
@@ -1431,100 +1470,6 @@ Afrikaans
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Living in Household that Spent on Internet (last 30 days)
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:nfnet"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Flex Chunk
-status open
-
-\begin_layout Plain Layout
-
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-lm4_5, cache=TRUE
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-lm(h_nfnet ~  interface_intro*setswana_logical + 
-\end_layout
-
-\begin_layout Plain Layout
-
-              factor(a_edlitrden)  			+
-\end_layout
-
-\begin_layout Plain Layout
-
-              factor(a_edlitwrten) 			+ 
-\end_layout
-
-\begin_layout Plain Layout
-
-              factor(a_edlitrdhm)  			+ 
-\end_layout
-
-\begin_layout Plain Layout
-
-              factor(a_edlitwrthm) 			+ 
-\end_layout
-
-\begin_layout Plain Layout
-
-              a_woman              			+ 
-\end_layout
-
-\begin_layout Plain Layout
-
-              hhincome             			+ 
-\end_layout
-
-\begin_layout Plain Layout
-
-              best_edu)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2409,100 +2354,6 @@ Intercept
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float table
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Computer Ownership
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "tab:owncom"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Flex Chunk
-status open
-
-\begin_layout Plain Layout
-
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-lm2_5, cache=TRUE
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-lm(a_owncom ~ interface_intro*setswana_logical + 
-\end_layout
-
-\begin_layout Plain Layout
-
-              factor(a_edlitrden)  			+
-\end_layout
-
-\begin_layout Plain Layout
-
-              factor(a_edlitwrten) 			+ 
-\end_layout
-
-\begin_layout Plain Layout
-
-              factor(a_edlitrdhm)  			+ 
-\end_layout
-
-\begin_layout Plain Layout
-
-              factor(a_edlitwrthm) 			+ 
-\end_layout
-
-\begin_layout Plain Layout
-
-              a_woman              			+ 
-\end_layout
-
-\begin_layout Plain Layout
-
-              hhincome             			+ 
-\end_layout
-
-\begin_layout Plain Layout
-
-              best_edu)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -2531,7 +2382,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-gg2_5, cache=TRUE
+gg2_5, echo=FALSE, cache=TRUE
 \end_layout
 
 \end_inset
@@ -2666,7 +2517,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-employment_own_computer
+employment_own_computer, echo=FALSE, cache=TRUE
 \end_layout
 
 \end_inset
@@ -2715,7 +2566,7 @@ adulthh %>%
 
 \begin_layout Plain Layout
 
-  geom_line() %+%
+  geom_line()                                      %+%
 \end_layout
 
 \begin_layout Plain Layout
@@ -2769,7 +2620,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-employment_Int_exp
+employment_Int_exp, echo=FALSE, cache=TRUE
 \end_layout
 
 \end_inset
@@ -2952,7 +2803,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-plot_data, cache=TRUE
+plot_data, cache=TRUE, echo=FALSE
 \end_layout
 
 \end_inset
@@ -3057,16 +2908,6 @@ google.co.za
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Additionally, there was also an observably positive effect on computer ownership
- amongst adults.
-\end_layout
-
-\end_inset
-
  This suggests that the effect is unlikely to be ephemeral in nature, since
  computer ownership constitutes a more long-term investment in Internet
  access.
@@ -3199,11 +3040,6 @@ clustering, messages=FALSE, cache=TRUE
 \begin_layout Plain Layout
 
 library(plm)    # panel linear model estimation
-\end_layout
-
-\begin_layout Plain Layout
-
-library(pglm)   # panel generalized linear model estimation
 \end_layout
 
 \begin_layout Plain Layout
@@ -3707,6 +3543,198 @@ ggplot(adulthh, aes(x = a_lng, fill = factor(a_edlitrdhm)) ) +
 \begin_layout Plain Layout
 
 	geom_bar(position = 'fill')
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Original Estimates
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Computer Ownership
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:owncom"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+lm2_5, cache=TRUE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+lm(a_owncom ~ interface_intro*setswana_logical + 
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitrden)  			+
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitwrten) 			+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitrdhm)  			+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitwrthm) 			+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_woman              			+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+              hhincome             			+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+              best_edu)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Living in Household that Spent on Internet (last 30 days)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:nfnet"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+lm4_5, cache=TRUE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+lm(h_nfnet ~  interface_intro*setswana_logical + 
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitrden)  			+
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitwrten) 			+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitrdhm)  			+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitwrthm) 			+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+              a_woman              			+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+              hhincome             			+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+              best_edu)
 \end_layout
 
 \end_inset
