@@ -24,7 +24,7 @@ logicalmkup
 \begin_local_layout
 Provides natbib 1
 \end_local_layout
-\language english
+\language british
 \language_package default
 \inputencoding auto
 \fontencoding global
@@ -142,41 +142,27 @@ http://qua.st | bquast@gmail.com | bastiaan.quast@graduateinstitute.ch | Maison
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-price of Internet acccess (ITU)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section*
 Abstract
 \end_layout
 
 \begin_layout Standard
-The introduction of the Setwana language interface on the South African
- Google Search website was a spillover of the development of that interface
- in accessibility of local language content leads to an increase in demand
- for Internet connectivity among native speakers.
- Internet connectivity provides enormous improvements in quality of life
- such as reduced racism, as well as many opportunities for the newly connected,
- yet recent attempts to connect the current `next billion' in places such
- as sub-Saharan Africa have not met expectations.
- In places where infrastructure has come online and prices have gone down,
- the expected consequent increase in usage was not observed.
- The introduction of the Setswana language in the South-African Google Search
- website was a spillover of the Botswana Google search website being translated
- from English to Setswana.
+Recent attempts to connect the current `next billion' to the Internet in
+ places such as sub-Saharan Africa have not met expectations.
+ In places where Internet infrastructure has come online and prices have
+ gone down, the expected consequent increase in uptake was not observed.
+ Internet adoption in a certain language is a two-sided market with positive
+ cross-side network effects.
+ As a result of this, it is difficult to isolate the causal effect of one
+ on the other.
+ The exogenous introduction of the Setswana language interface on the South
+ African Google Search website was a spillover of the development of that
+ interface for the Botswanan Google website.
  This exogenous improvement in the accessibility of Setswana-language content
  has resulted in a substantial increase in the number of native Setswana
  speakers coming online and owning personal computers.
- It has also led to increased usage of the Setswana language online.
+ This is turn has also led to increased usage of the Setswana language online.
+ This adoption appears to also lead to improvements in employment.
 \end_layout
 
 \begin_layout Section
@@ -191,30 +177,35 @@ name "sec:intro"
 \end_inset
 
 Internet uptake is a two-sided market, with users on one side and content
- on the other side.
- This market exists separately for each language and for many indigenous
- languages fails to take off properly.
+ creators on the other side.
+ Positive cross-side network effects mean that increases in content leads
+ to increases in user adoption and visa versa.
+ This market exists separately for each language but for many indigenous
+ languages this virtuous circle fails to start properly, keeping usage and
+ content levels low.
  
 \end_layout
 
 \begin_layout Standard
 With this study I seek to answer the question whether an increase in local
- language content, indeed leads to an increase in uptake of Internet usage
- among native speakers.
+ language content, does indeed lead to an increase in uptake of Internet
+ usage among native speakers of this language.
 \end_layout
 
 \begin_layout Standard
-Because of the cross-side network effects in a two-sided market, any changes
- are inherently endogenous.
- I remedy this by using an exogenous shock in accessibility of Setswana
- language content in South Africa, with the introduction of the Google interface.
+Because of the cross-side network effects in a two-sided market, any observed
+ changes are inherently endogenous.
+ I remedy this problem by using an exogenous shock in accessibility of Setswana
+ language content in South Africa, namely the introduction of the Google
+ Search interface in Setswana.
  I find that this leads to a strong increase in both the proportion of household
 s reporting to have spent on Internet access in the last 30 days, as well
  as individuals owning a computer.
  This in turn has led to a large increase in the usage of the Setswana language
- online (using Google search queries).
- There is a strong increase in employment among individuals who spend on
- Internet or own a computer after the introdution.
+ online (in Google search queries).
+ There also appears to be a strong improvement in employment status among
+ individuals who spend on Internet or own a computer after the introduction
+ of the interface.
  Suggesting that the expanded demographic of Setswana Internet users is
  benefiting from increased Internet adoption in terms of employability.
 \end_layout
@@ -269,7 +260,8 @@ reference "fig:adoption_growth"
 
 , growth of Internet usage in Sub-Saharan Africa is rapidly decreasing.
  Unlike in other regions in the figure, this observed stagnation is not
- a consequence of market saturation, as adoption levels are still very low.
+ a consequence of near market saturation, as adoption levels are still relativel
+y low.
 \end_layout
 
 \begin_layout Standard
@@ -385,9 +377,11 @@ ggplot(df, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
 \end_layout
 
 \begin_layout Standard
-A crucial determinant of Internet adoption is the interplay with content
- creation, the two-sided market, wherein the two sides benefit from cross-side
- network effects
+A crucial factor in Internet adoption by native speakers of a language is
+ the interplay with content creators using that language.
+ This dynamic is know as a two-sided market, which is characterised as having
+ two different sides, which exhibit positive cross-side network effects
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "parker2000information,parker2000internetwork,parker2005two"
@@ -395,11 +389,15 @@ key "parker2000information,parker2000internetwork,parker2005two"
 \end_inset
 
 .
- These sides are content creators, such as news websites, and content consumers,
- the users.
+\end_layout
+
+\begin_layout Standard
+In the case of Internet adoption in a certain language, these sides are
+ on the one hand the content creators, such as news websites and on the
+ other hand the content consumers, or Internet users.
  Ideally, adoption should follow a virtuous circle, whereby the content
- offering encourages more users to come online, which in turn incentivices
- more content creation 
+ offering encourages more users to come online, which in turn incentivises
+ more content creation and so on 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "rochet2003platform,rochet2006two"
@@ -408,21 +406,21 @@ key "rochet2003platform,rochet2006two"
 
 .
  Unfortunately this virtuous circle sometimes fails to properly start for
- certain languages, this is especially important is it typically concerns
+ certain languages, this is especially important as it typically concerns
  communities who's linguistic characterisation can already hamper economic
  growth 
 \begin_inset CommandInset citation
-LatexCommand citet
+LatexCommand citep
 key "arcand2013language"
 
 \end_inset
 
 .
- Herein also lies the difficulty with finding empirical evidence of these
- dynamics, since the process of adoption by users and content creation is
- inherently endogenous.
- This paper seeks to empirically address the question if increased accessabilty
- of content does indeed lead to an increase in Internet adoption.
+ Herein also lies the difficulty with finding empirical evidence supporting
+ these dynamics, since the process of adoption by users and content creators
+ is inherently endogenous.
+ With this paper I seek to empirically address the question if increased
+ accessibility of content does indeed lead to an increase in Internet adoption.
 \end_layout
 
 \begin_layout Standard
@@ -488,7 +486,7 @@ The Web is a powerful tool for preserving languages that would otherwise
 \begin_layout Standard
 Unfortunately, this is less true for many indigenous languages outside of
  Europe.
- Increasingly language availability is also being concidered as a method
+ Increasingly language availability is also being considered as a method
  for improving demand for connectivity 
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -577,7 +575,7 @@ google.co.bw
 \end_inset
 
 ) available in the local language: `Setswana'.
- In addition to being spoken in Botswana, there is also a sizable population
+ In addition to being spoken in Botswana, there is also a sizeable population
  of Setswana speakers across the border in South Africa, where it is also
  one of the official state languages.
  This led to the Setswana-language interface also being introduced on the
@@ -604,7 +602,7 @@ The Google Search interface represents a very small number of words on the
  order to search for content in this language.
  Yet, the search page is in many cases the first website viewed by users
  and thereby has a substantial impact on the decision to further engage
- or not.
+ or not and if they chose to do so, in which language this will be.
  Asides from being able to understand the interface of the website, having
  this interface be in a local language also encourages usage of this local
  language, which in turn reveals more local language content.
@@ -615,43 +613,12 @@ The Google Search interface represents a very small number of words on the
 In short, we can identify two main channels through which this promotes
  increased online engagement, which together constitute the theory of change.
  Firstly, the ability to read and understand the words of the interface
- increases the chance that a user continues using the website and the Internet
+ increases the chance that a user continues to use the website and the Internet
  at large.
  Secondly, the visibility of local language content increases the likelihood
  of the user entering search queries in the local language and thereby finding
  more content in the local language.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-The vast majority of Internet access in developing countries is through
- handheld devices such as smartphones.
- However, due to the limited `real estate' (surface area of the screen)
- on a mobile website, the link to changing the interface language is replaced
- with a dropdown menu that reveals the additional language options (see
- screenshots in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:langmob"
-
-\end_inset
-
-).
- Generally, the website will default to the operating system (Android /
- iOS) language, however, since many local African languages are not available
- as a system language, this is not possible there, leaving the website to
- revert to its default (in South Africa: English).
- The fact that the introduction also led to increased desktop-computer ownership
- but not mobile-phone ownership further substantiates this hypothesis.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -694,7 +661,7 @@ reference "subsec:estimation"
 \end_inset
 
 .
- Further, we present the results of the estimation in 
+ Further, I present the results of the estimation in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:results"
@@ -702,7 +669,7 @@ reference "sec:results"
 \end_inset
 
 .
- Finally, we conclude in 
+ Finally, I conclude in 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "sec:conclusions"
@@ -723,10 +690,11 @@ name "sec:data"
 
 \end_inset
 
-South Africa's National Income Dynamics Survey collects data on a representative
- set of around ten thousand households across several time periods.
- The first wave was gathered in 2008, the second wave in late 2010 and early
- 2011, and the third wave was gathered in 2012 
+The National Income Dynamics Study (NIDS) collects data on a representative
+ set of around ten thousand South African households across several time
+ periods.
+ The first wave was gathered in 2008, the second wave in 2010, and the third
+ wave was gathered in 2012 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "saldru2008nids,saldru2012nids,saldru2013nids"
@@ -734,50 +702,40 @@ key "saldru2008nids,saldru2012nids,saldru2013nids"
 \end_inset
 
 .
- The dataset contains an extensive household questionnaire, which breaks
- household expenditure down into many forms of food and non-food expenditure.
- In addition to this, the household income is calculated and imputed with
- other income such as home ownership.
- The individual (adult) questionnaires also contain information on linguistic
- skill in English and in the native language, as well as a series of variables
- relating to communication technology ownership and utilisation.
- In 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:langsex"
-
-\end_inset
-
- we can see the number of native speakers of each in the dataset, coloured
- by the sex of the individual.
- The dataset contains 51,612 observations (adult individuals), of which
- 2,806 are female native Setswana speakers and 2,140 are male native Setswana
- speakers.
 \end_layout
 
 \begin_layout Standard
-A detailed breakdown of the mean number of households that spend on Internet
- access and cellphone usage, as well as cellphone and computer ownership
- by language and time period (wave) is presented in 
+In addition to this, in may 2016 a fourth wave of data has also been partially
+ published, which I used to relate the expanded demographic of Setswana
+ speaking Internet users to improvements in employment levels.
+\end_layout
+
+\begin_layout Standard
+The dataset contains an extensive household questionnaire, which contains
+ detailed information on income and expenditure.
+ In particular, it breaks household expenditure down into many forms of
+ food and non-food expenditure, one of which is household expenditure on
+ Internet access in the last 30 days.
+ In addition to this, the household income is calculated and imputed with
+ other income such as home ownership.
+ The individual (adult) questionnaires also contain information on linguistic
+ skills in both English and in the interviewees native language, as well
+ as a series of variables relating to communication technology ownership
+ and utilisation, in particular computer ownership.
+ In 
 \begin_inset CommandInset ref
-LatexCommand ref
+LatexCommand formatted
 reference "tab:dep_vars"
 
 \end_inset
 
- of 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:descriptive"
-
-\end_inset
-
-.
+ an overview of the dependent variables, broken down by wave and native
+ language is presented.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Flex Chunk
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -819,6 +777,365 @@ attach(adulthh)
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dependent Variable Descriptive Statistics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="4">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wave
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Setswana
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Other
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Computer Ownership
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0351
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0567
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0359
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0417
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0711
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0632
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Household Internet Expenditure
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0068
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0162
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0037
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0224
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0106
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.0140
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+I use both household expenditure on Internet access and computer ownership
+ as dependent variables.
+ Household expenditure includes a variety of way in which this expense can
+ be made, including paying for a fixed-line subscription, a mobile Internet
+ subscription, as well using Internet in an Internet cafe.
+ More than 99% of South Africa is covered by mobile Internet networks, this
+ figure did not change during the time periods used in this study 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "international2015world"
+
+\end_inset
+
+.
+ Computer ownership is recorded in the individual adult questionnaire, which
+ provides me with more observations, unlike expenditure in the last 30 days,
+ this shows a more long-term investment.
+\end_layout
+
+\begin_layout Standard
+In addition to the variables of interest, I include a number of relevant
+ covariates, such as household income and education levels.
+ Furthermore, I include information on English and native language reading
+ and writing skills.
+ Around 45% of the individuals report being able to read and write English
+ fluently, whereas around 55% report being able to do so in their native
+ language.
+\end_layout
+
+\begin_layout Standard
+In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:langsex"
+
+\end_inset
+
+ we can see the number of native speakers for each language in the dataset,
+ coloured by gender.
+ The dataset contains a total of 51,612 observations (adult individuals),
+ of which 2,806 are female native Setswana speakers and 2,140 are male native
+ Setswana speakers.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -829,7 +1146,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Native Language and Sex
+Native Language and Gender
 \end_layout
 
 \end_inset
@@ -891,11 +1208,10 @@ name "sec:methods"
 
 \end_inset
 
-With this paper I aim to provide empirical evidence that increased content
- or accessibility of content leads to an increase in demand.
+With this paper I aim to answer the question whether increased content or
+ accessibility of content leads to an increase in demand.
  This section begins with a discussion of the identification strategy employed,
- followed by a explanation of the estimator used to operationalise this,
- and finally a description of the software used for the implementation.
+ followed by a explanation of the estimator used to operationalise this.
 \end_layout
 
 \begin_layout Subsection
@@ -918,8 +1234,8 @@ This paper exploits the introduction of the Setswana interface language
 \end_layout
 
 \begin_layout Standard
-The Setswana language was first developed for the Botswanan Google Search
- website (
+The Setswana language interface was first developed for the Botswanan Google
+ Search website (
 \begin_inset Flex Code
 status open
 
@@ -973,7 +1289,7 @@ It is worth noting that it is very common to not personally own a computer,
 
 \begin_layout Standard
 In addition to using the propensity to spend on Internet (in the last thirty
- days), we also use the propensity to own a computer as a dependent variable.
+ days), I also use the propensity to own a computer as a dependent variable.
  
 \end_layout
 
@@ -988,11 +1304,12 @@ name "subsec:estimation"
 
 \end_inset
 
-As mentioned in the above section, we compare the change in the level of
+As mentioned in the above section, I compare the change in the level of
  Internet users among native Setswana speakers in South Africa, with that
  of native speakers of other language in South Africa around the introduction
- of the Setswana interface to the South-African Google Search.
- For this we use a Difference-in-Differences estimator 
+ of the Setswana interface to the South-African Google Search, after the
+ second wave of the NIDS.
+ For this I use a Difference-in-Differences estimator 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "abadie2005semiparametric,imbens2009econometrics"
@@ -1004,7 +1321,7 @@ key "abadie2005semiparametric,imbens2009econometrics"
 status open
 
 \begin_layout Plain Layout
-setswana_logical
+setswana
 \end_layout
 
 \end_inset
@@ -1014,7 +1331,7 @@ setswana_logical
 status open
 
 \begin_layout Plain Layout
-interface_intro
+event
 \end_layout
 
 \end_inset
@@ -1131,46 +1448,6 @@ Where
 \end_layout
 
 \begin_layout Standard
-In addition to this estimation, we use an alternative specification whereby
- a factor variable of native language is interacted with the event dummy
- variable.
- In a linear regression context, factor variables are estimated as dummy
- variables for all levels (here: all languages) except for one `base' level,
- which is where all language dummies are 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-FALSE
-\end_layout
-
-\end_inset
-
- (i.e.
- 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-0
-\end_layout
-
-\end_inset
-
-) and the level (native language) thus has to be the first one (here 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-IsiNdebele
-\end_layout
-
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Standard
 The 
 \begin_inset Flex Code
 status open
@@ -1182,43 +1459,29 @@ h_nfnet
 \end_inset
 
  variable is recorded at a household level, as such a standard error correction
- needs to be applied, the model with standard error corrections is reported
- in the appendix.
+ needs to be applied 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "white1980heteroskedasticity"
+
+\end_inset
+
+, the model with standard error corrections is reported in the appendix.
 \end_layout
 
 \begin_layout Standard
 Lastly, the dependent variables are both logical or binary variables, as
  such, normally a model such as logit should be used.
  However, since I am using Difference-in-Differences, this model would be
- undefined.
+ undefined 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "wooldridge2010econometric"
+
+\end_inset
+
+, I therefore use a standard linear model.
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-CITE
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-The dependent variable here is also a dummy variable, which would normally
- allow for the usage of a estimator such as logit.
- However, since we are employing the Difference-in-Difference methodology:
- http://stats.stackexchange.com/questions/89513/difference-in-differences-estimato
-r-for-logistic-regressions
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section
@@ -1232,7 +1495,7 @@ name "sec:results"
 
 \end_inset
 
-In the base model, we use an interaction of the 
+In the base model, I use an interaction of the 
 \begin_inset Flex Code
 status open
 
@@ -1276,7 +1539,7 @@ reference "tab:nfnet"
 \end_layout
 
 \begin_layout Standard
-We find that the interaction term of the event dummy (
+I find that the interaction term of the event dummy (
 \begin_inset Flex Code
 status open
 
@@ -1364,11 +1627,11 @@ woman
 
 \end_inset
 
- here is negative but not at all significant, this is unsurprising as we
+ here is negative but not at all significant, this is unsurprising as I
  use Internet expenditure at a household level.
- Most women live in a household which includes men and vise versa, suggesting
+ Most women live in a household which includes men and visa versa, suggesting
  that this effect cannot be isolated in this estimation.
- We further investigate this issue in a separate estimation discussed below.
+ I further investigate this issue in a separate estimation discussed below.
  The variables describing linguistic skills in reading and writing in both
  English and the native language do yield many significant results, though
  lower levels of English writing skill seems to be correlated with a lower
@@ -1416,7 +1679,7 @@ status open
 \end_layout
 
 \begin_layout Standard
-In an alternative formulation, we include the native language variable as
+In an alternative formulation, I include the native language variable as
  a categorical variable (
 \begin_inset Flex Code
 status open
@@ -1438,7 +1701,7 @@ event
 \end_inset
 
  dummy.
- In this estimation we only find significantly positive results for 
+ In this estimation I only find significantly positive results for 
 \begin_inset Flex Code
 status open
 
@@ -1473,7 +1736,7 @@ Afrikaans
 \end_layout
 
 \begin_layout Standard
-Furthermore, we also use a variant of the base model, in which the propensity
+Furthermore, I also use a variant of the base model, in which the propensity
  of adults (
 \begin_inset Flex Code
 status open
@@ -1497,7 +1760,7 @@ own_computer
 
 ) differs from the base model's explanandum in two ways.
  Firstly, it does not include expenditure on Internet in ways such as Internet
- cafes, but focusses on actual ownership, signaling a more long-term investment
+ cafes, but focusses on actual ownership, signalling a more long-term investment
  and interest.
  Secondly, the 
 \begin_inset Flex Code
@@ -1530,7 +1793,7 @@ reference "tab:owncom"
 .
  This form of the estimation yields similar results to those estimated in
  the base model.
- Firstly we find that the variable of interest, the interaction term between
+ Firstly I find that the variable of interest, the interaction term between
  the event and the language dummy (
 \begin_inset Flex Code
 status open
@@ -1594,7 +1857,7 @@ status open
 \end_inset
 
 .
- In terms of the linguistic skill, we find that the lower levels of English
+ In terms of the linguistic skill, I find that the lower levels of English
  reading as well as English writing are correlated with lower propensities
  of computer ownership.
  Similar to Internet expenditure model, household income (
@@ -1693,7 +1956,7 @@ name "tab:esti-full"
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="13" columns="5">
+<lyxtabular version="3" rows="9" columns="5">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="right" valignment="top">
@@ -1723,8 +1986,6 @@ Internet
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang british
 (P > |t|)
 \end_layout
 
@@ -1743,8 +2004,6 @@ Computer
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang british
 (P > |t|)
 \end_layout
 
@@ -2103,199 +2362,20 @@ Intercept
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
+Observations
+\end_layout
 
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+47665
 \end_layout
 
 \end_inset
@@ -2313,16 +2393,7 @@ Intercept
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+46464
 \end_layout
 
 \end_inset
@@ -2436,27 +2507,11 @@ NIDS %>%
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Asides from the effect on the proportion of households with Internet expenditure
-, and the proportion of adults who own a computer, we also estimate any
- possible effects on the probability of the household to spend on a cellphone,
- and on adults likelihood to own a cellphone.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-In the below figure, I plot the employment status of individuals dat own
+In the below figure, I plot the employment status of individuals that own
  a computer in the first wave after the introduction of the Setswana-language
  interface (wave 3).
- We can see that there is a sharp uptick in the proportion of employed individua
-ls among Setswana speakers.
+ The figure shows that there is a sharp uptick in the proportion of employed
+ individuals among Setswana speakers.
  
 \end_layout
 
@@ -2837,14 +2892,14 @@ name "sec:conclusions"
 
 \end_inset
 
-In conclusion, despite recent advances in the reach, speed, and afordability
+In conclusion, despite recent advances in the reach, speed, and affordability
  of Internet connectivity in sub-Saharan Africa, actual uptake has been
  stagnant.
  Internet adoption is a two-sided market, as a result, one aspect of this
  is that users benefit from cross-side network effects from content.
- Unfortuntely, in certain langauges, a sufficient amount of content is not
- always created, as a result, Internet adoption among native speakers of
- these languages can lag behind.
+ Unfortunately, in certain languages, a sufficient amount of content is
+ not always created, as a result, Internet adoption among native speakers
+ of these languages can lag behind.
 \end_layout
 
 \begin_layout Standard
@@ -2883,7 +2938,7 @@ google.co.bw
 \begin_layout Standard
 Furthermore, when comparing the Setswana speakers that own a computer or
  spend on Internet access after the event, with non Setswana speakers, we
- see a marked increase in the proporotion of employed individuals over that
+ see a marked increase in the proportion of employed individuals over that
  among the rest of the population.
  This increase is even stronger in wave 4 of the data, suggesting that it
  takes some time for the effect to fully materialise and that it is persistent.
@@ -2923,23 +2978,6 @@ As I discussed in the results section, the increase in computer ownership
  The proportion of Setswana households that spent on Internet in the last
  30 days increased by 217%, whereas for the rest of the population it fell
  be 22%.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Finally, the fact that this effect is not observed in cellphone ownership
- and expenditure, which is possibly a consequence of the fact that the interface
- cannot automatically switch and that the link `Setswana' is not directly
- visible from the landing page, suggests that it is important to make the
- link directly visible on the landing page in order to fully reach users.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -3001,11 +3039,7 @@ Clustering
 placement H
 wide false
 sideways false
-status collapsed
-
-\begin_layout Plain Layout
-
-\end_layout
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3063,7 +3097,7 @@ library(broom)  # output formatting using tidy()
 
 \begin_layout Plain Layout
 
-plm4_3 <- formula(as.numeric(h_nfnet)  ~ post_event*setswana  +
+plm4_3 <- formula(as.numeric(h_nfnet)  ~ interface_intro*setswana  +
 \end_layout
 
 \begin_layout Plain Layout
@@ -3099,10 +3133,6 @@ plm4_3 <- formula(as.numeric(h_nfnet)  ~ post_event*setswana  +
 \begin_layout Plain Layout
 
                                          best_edu              )
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
@@ -3154,18 +3184,7 @@ tidy( coeftest(plm4_3e, vcov=vcovHC(plm4_3e,
 \end_layout
 
 \begin_layout Section
-Dependent Variables Descriptive Statistics
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:descriptive"
-
-\end_inset
-
-The below table breaks down computer and cellphone ownership as well as
- Internet and cellphone expenditure by linguistic group.
+Dependent Variable Breakdown
 \end_layout
 
 \begin_layout Standard
@@ -3195,6 +3214,7 @@ name "tab:dep_vars"
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Flex Chunk
 status open
 
@@ -3204,7 +3224,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-dep_vars, cache=TRUE
+dep_vars, echo=FALSE, cache=TRUE
 \end_layout
 
 \end_inset
@@ -3224,22 +3244,12 @@ adulthh %>%
 
 \begin_layout Plain Layout
 
-  summarise(a_owncel   = mean(a_owncel,   na.rm = TRUE),
+  summarise(a_owncom   = mean(a_owncom,   na.rm = TRUE),
 \end_layout
 
 \begin_layout Plain Layout
 
-            a_owncom   = mean(a_owncom,   na.rm = TRUE),
-\end_layout
-
-\begin_layout Plain Layout
-
-            h_nfcel    = mean(h_nfcel,    na.rm = TRUE),
-\end_layout
-
-\begin_layout Plain Layout
-
-            h_nfnet    = mean(h_nfnet,    na.rm = TRUE))
+            h_nfnet    = mean(h_nfnet,    na.rm = TRUE) )
 \end_layout
 
 \end_inset
@@ -3253,7 +3263,7 @@ adulthh %>%
 \end_layout
 
 \begin_layout Section
-General Descriptive Statistics
+Covariate Descriptive Statistics
 \end_layout
 
 \begin_layout Standard
@@ -3749,110 +3759,6 @@ lm(h_nfnet ~  interface_intro*setswana_logical +
 
 \begin_layout Standard
 \begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Language Switching on Mobile
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:langmob"
-
-\end_inset
-
-The graphics in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:langmob"
-
-\end_inset
-
- illustrate the process of switching the mobile 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-google.co.za
-\end_layout
-
-\end_inset
-
- interface language to Setswana, from the default English.
- The mobile interface language can automatically be changed based on the
- system language of the operation system (in most cases Android), however,
- as Setswana and many African languages are not available as system languages
- in Android, the website interface on 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-google.co.za
-\end_layout
-
-\end_inset
-
- will default to English.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Changing Interface Language on Mobile
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:langmob"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Google.co.za-default.png
-	scale 8
-
-\end_inset
-
- 
-\begin_inset Graphics
-	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Google.co.za-open.png
-	scale 8
-
-\end_inset
-
- 
-\begin_inset Graphics
-	filename /Users/quast/Making-Next-Billion-Demand-Access/misc/Google.co.za-scroll-down.png
-	scale 8
-
-\end_inset
-
-
-\end_layout
-
 \end_inset
 
 
