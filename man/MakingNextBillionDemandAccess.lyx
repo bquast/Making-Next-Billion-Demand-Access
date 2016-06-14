@@ -1530,8 +1530,8 @@ Internet_expenditure
 , household non-food Internet).
  The results of this estimation are presented in 
 \begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:nfnet"
+LatexCommand formatted
+reference "tab:esti-full"
 
 \end_inset
 
@@ -1736,8 +1736,7 @@ Afrikaans
 \end_layout
 
 \begin_layout Standard
-Furthermore, I also use a variant of the base model, in which the propensity
- of adults (
+When using the propensity of adults (
 \begin_inset Flex Code
 status open
 
@@ -1747,7 +1746,7 @@ own_computer
 
 \end_inset
 
-) to own a computer is used as an explanandum.
+) to own a computer is used as an explanandum, I find similar results.
  This is of particular relevance, as the explanandum here (
 \begin_inset Flex Code
 status open
@@ -1785,8 +1784,8 @@ own_computer
  variable is at the level of an individual adult.
  The results from this estimation are included in 
 \begin_inset CommandInset ref
-LatexCommand ref
-reference "tab:owncom"
+LatexCommand formatted
+reference "tab:esti-full"
 
 \end_inset
 
@@ -1799,12 +1798,13 @@ reference "tab:owncom"
 status open
 
 \begin_layout Plain Layout
-eventTRUE:setswanaTRUE
+event * setswana
 \end_layout
 
 \end_inset
 
-) is positive and highly significant, with a p-value smaller than 
+) is positive at 0.024 and highly significant, with a p-value smaller than
+ 
 \begin_inset Flex Code
 status open
 
@@ -1815,6 +1815,8 @@ status open
 \end_inset
 
 .
+ This means that the event increased the propensity to own a computer by
+ 2.4%.
  The individual dummy variables (
 \begin_inset Flex Code
 status open
@@ -1891,8 +1893,8 @@ status open
 \end_inset
 
 ).
- However, unlike in the household Internet expenditure model, the sex of
- the individual here is highly significant, specifically, parameter estimate
+ However, unlike in the household Internet expenditure model, the gender
+ of the individual here is highly significant, specifically, parameter estimate
  of 
 \begin_inset Flex Code
 status open
@@ -1917,7 +1919,7 @@ status open
  As mentioned above, this variable is difficult to interpret when using
  a household-level variable as an explanandum, however, here, the computer
  ownership variable is at an individual level, which makes the coefficient
- more interpretable.
+ more easily interpretable.
 \end_layout
 
 \begin_layout Standard
@@ -1956,7 +1958,7 @@ name "tab:esti-full"
 \begin_layout Plain Layout
 \align center
 \begin_inset Tabular
-<lyxtabular version="3" rows="9" columns="5">
+<lyxtabular version="3" rows="8" columns="5">
 <features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="right" valignment="top">
@@ -2313,55 +2315,6 @@ education
 </cell>
 </row>
 <row>
-<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Intercept
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
--0.000
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.64
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-0.008
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.02
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
@@ -2412,10 +2365,6 @@ Observations
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2504,6 +2453,107 @@ NIDS %>%
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GoogleTrendsZA"
+
+\end_inset
+
+, illustrates how usage of the Setswana word `thuso', meaning `help' in
+ search queries, was zero prior to the introduction of the Setswana search
+ interface and became widespread thereafter.
+ Therefore, in addition to the increased Internet usage by Setswana speakers,
+ we can also observe an increased usage of the Setswana language itself.
+ This can lead to greater amounts of Setswana language content being found
+ and engaged with, which in turn incentivised content creators to provide
+ more Setswana language content.
+ This could help break the vicious circle of low levels of content and few
+ users.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Usage of Setswana Words on Google.co.za
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GoogleTrendsZA"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+plot_data, cache=TRUE, echo=FALSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As mentioned in 
+\begin_inset CommandInset ref
+LatexCommand formatted
+reference "sec:data"
+
+\end_inset
+
+ I use the partially released 4th wave of the dataset, which covers the
+ year 2014 in order to relate the increased Internet usage with employment
+ levels.
+ I do this by subsetting data to include one the one hand, only the individuals
+ that owned a computer in after the event in wave 3 and on the other hand
+ the individuals in households that reported spending on internet access.
+ The idea is that the owners/users in wave 3 are an expanded demographic
+ for Setswana speakers but remain relatively unchanged.
+ With this, we can see the evolution of the employment level for this expanded
+ demographic.
 \end_layout
 
 \begin_layout Standard
@@ -2758,117 +2808,6 @@ reload_wave3, echo=FALSE
 \begin_layout Plain Layout
 
 load(file='../data/merged.RData')
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-I find no significant effects on the propensity of expenditure on cell phones
- or the propensity to own one.
- As discussed in the introduction, I suspect this to be a consequence of
- the fact that language switching on mobile cannot be automatic, since the
- Android operating system does not support the Setswana language, combined
- with the fact that the Setswana interface button is not visible directly
- on the 
-\begin_inset Flex Code
-status open
-
-\begin_layout Plain Layout
-google.co.za
-\end_layout
-
-\end_inset
-
- homepage, but rather in a dropdown menu 
-\begin_inset CommandInset ref
-LatexCommand eqref
-reference "fig:langmob"
-
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-This last effect is also visible in 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:GoogleTrendsZA"
-
-\end_inset
-
-, which illustrates how usage of the Setswana word `thuso', meaning `help'
- in search queries, was zero prior to the introduction of the Setswana search
- interface and became widespread thereafter.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\begin_inset Caption Standard
-
-\begin_layout Plain Layout
-Usage of Setswana Words on Google.co.za
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:GoogleTrendsZA"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Flex Chunk
-status open
-
-\begin_layout Plain Layout
-
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-plot_data, cache=TRUE, echo=FALSE
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
 \end_layout
 
 \end_inset
