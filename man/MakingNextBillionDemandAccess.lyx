@@ -130,10 +130,10 @@ google.co.za
 \begin_layout Date
 Bastiaan Quast
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-http://qua.st | bquast@gmail.com | bastiaan.quast@graduateinstitute.ch | Maison
+http://qua.st/ | bquast@gmail.com | bastiaan.quast@graduateinstitute.ch | Maison
  de la paix, Geneva, Switzerland
 \end_layout
 
@@ -151,10 +151,10 @@ Recent attempts to connect the current `next billion' to the Internet in
  places such as sub-Saharan Africa have not met expectations.
  In places where Internet infrastructure has come online and prices have
  gone down, the expected consequent increase in uptake was not observed.
- Internet adoption in a certain language is a two-sided market with positive
- cross-side network effects.
- As a result of this, it is difficult to isolate the causal effect of one
- on the other.
+ I develop a framework that incorporates language in the the two-sided markets
+ framework, viewing differences as transaction costs.
+ As a result of the cross-side network effects, it is difficult to isolate
+ the causal effect of one on the other.
  The exogenous introduction of the Setswana language interface on the South
  African Google Search website was a spillover of the development of that
  interface for the Botswanan Google website.
