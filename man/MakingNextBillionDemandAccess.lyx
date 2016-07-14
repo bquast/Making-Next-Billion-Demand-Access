@@ -130,7 +130,7 @@ google.co.za
 \begin_layout Date
 Bastiaan Quast
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 http://qua.st/ | bquast@gmail.com | bastiaan.quast@graduateinstitute.ch | Maison
@@ -163,6 +163,13 @@ Recent attempts to connect the current `next billion' to the Internet in
  speakers coming online and owning personal computers.
  This is turn has also led to increased usage of the Setswana language online.
  This adoption appears to also lead to improvements in employment.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -314,14 +321,13 @@ load_plot_data, echo=FALSE, warning=FALSE, message=FALSE
 
 \begin_layout Plain Layout
 
-opts_chunk$set(fig.path='../Making-Next-Billion-Demand-Access/misc/latex-',
- cache.path='../Making-Next-Billion-Demand-Access/data/cache/latex-', fig.width=9,
- fig.height=5)
+opts_chunk$set(fig.path='../misc/latex-', cache.path='../data/cache/latex-', fig.width=
+9, fig.height=5)
 \end_layout
 
 \begin_layout Plain Layout
 
-load(file = '../Making-Next-Billion-Demand-Access/data/googletrends.RData')
+load(file = '../data/googletrends.RData')
 \end_layout
 
 \begin_layout Plain Layout
@@ -359,7 +365,7 @@ mobile_growth, echo=FALSE, cache=TRUE, warning=FALSE
 
 \begin_layout Plain Layout
 
-load(file = '../Making-Next-Billion-Demand-Access/data/adoption.RData')
+load(file = '../data/adoption.RData')
 \end_layout
 
 \begin_layout Plain Layout
