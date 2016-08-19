@@ -2,7 +2,7 @@
 title: 'Making the Next Billion Demand Access:<br/> The Local-Content Effect of `google.co.za`
   in Setswana'
 author: "Bastiaan Quast"
-date: "24 February 2016"
+date: "22 August 2016"
 output:
   ioslides_presentation:
     smaller: true
@@ -36,7 +36,7 @@ ggplot(data=ITU2015, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FA
     * general population
     * online population
 
-<img src='../misc/NativeSpeakersWebContent.png' width='800px' />
+<img src='../misc/NativeSpeakersWebContent.png' width='500px' />
 
 **QUESTION**: lowest bars, chicken vs. egg?
 
@@ -46,10 +46,23 @@ ITU2015 %>%
   group_by(region) %>%
   layer_smooths(span = input_slider(0.75, 1, value = 1), se=TRUE, fill=~region) %>%
   bind_shiny("ggvis", "ggvis_ui")
-
 ```
 
-## Design
+
+## Simple Network Effects
+
+<img src='../misc/NetworkEffects-Telephones.png' width='800px' />
+
+## Cross-Side Network Effects (2SM)
+
+<img src='../misc/Cross-SideNetworkEffects-Websites.svg' width='600px' />
+
+
+## Stacked 2-Sided Markets
+
+<img src='../misc/ProtocolStack.gif' width='800px' />
+
+## Research Design
 
 **Identification Strategy**: Setswana introduced on `google.co.za` at end the of 2010
 
@@ -64,7 +77,7 @@ ITU2015 %>%
 ggplot(data=NIDS, aes(x=a_lng, fill=a_woman)) + geom_bar()
 ```
 
-## Internet Effect
+## Internet Usage
 
 ```{r lm4_5pres, cache=TRUE, echo=TRUE}
 lm(h_nfnet ~  interface_intro*setswana_logical + 
