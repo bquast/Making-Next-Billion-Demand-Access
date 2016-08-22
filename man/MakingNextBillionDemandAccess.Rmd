@@ -33,11 +33,7 @@ ggplot(data=ITU2015, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FA
 
 ## Language Disparities
 
-* gross overrepesentation of certain languages vs.
-    * general population
-    * online population
-
-<img src='../misc/NativeSpeakersWebContent.png' width='500px' />
+<img src='../misc/NativeSpeakersWebContent.png' width='800px' />
 
 **QUESTION**: lowest bars, chicken vs. egg?
 
@@ -50,13 +46,11 @@ ITU2015 %>%
 ```
 
 
-## Simple Network Effects
-
-<img src='../misc/NetworkEffects-Telephones.png' width='800px' />
-
 ## Cross-Side Network Effects (2SM)
 
-<img src='../misc/Cross-SideNetworkEffects-Websites.svg' width='600px' />
+<img src='../misc/NetworkEffects-Telephones.svg' width='600px' />
+
+<img src='../misc/Cross-SideNetworkEffects-Websites.svg' width='400px' />
 
 
 ## Stacked 2-Sided Markets
@@ -101,12 +95,12 @@ lm(a_owncom ~ interface_intro*setswana_logical +
 
 ## Internet Exp. - Employment
 
-```{r load_stata12, echo=FALSE}
+```{r load_stata12, echo=FALSE, cache=TRUE}
 rm(adulthh)
 load(file = '../data/merged-stata12.RData')
 ```
 
-```{r nf_net_empl}
+```{r nf_net_empl, cache=TRUE}
 pids <- adulthh[which(adulthh$wave==3 & adulthh$h_nfnet==TRUE),]$pid
 adulthh %>%
   filter(pid %in% pids) %>%
@@ -119,7 +113,7 @@ adulthh %>%
 
 ## Computer Ownsh. - Employment
 
-```{r own_comp_empl}
+```{r own_comp_empl, cache=TRUE}
 pids <- adulthh[which(adulthh$wave==3 & adulthh$a_owncom==TRUE),]$pid
 adulthh %>%
   filter(pid %in% pids) %>%
