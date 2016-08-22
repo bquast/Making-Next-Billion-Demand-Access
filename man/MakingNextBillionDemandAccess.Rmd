@@ -18,6 +18,7 @@ load(file = '../data/mobilegrowth.RData')
 library(ggplot2)
 # library(ggvis)
 library(printr) # load (customised) printr package for clean output of lm()
+library(dplyr)
 attach(adulthh)
 ```
 
@@ -96,6 +97,39 @@ lm(a_owncom ~ interface_intro*setswana_logical +
               hhincome             			   + 
               best_edu)
 ```
+
+
+## Internet Exp. - Employment
+
+```{r load_stata12, echo=FALSE}
+rm(adulthh)
+load(file = '../data/merged-stata12.RData')
+```
+
+```{r nf_net_empl}
+pids <- adulthh[which(adulthh$wave==3 & adulthh$h_nfnet==TRUE),]$pid
+adulthh %>%
+  filter(pid %in% pids) %>%
+  group_by(setswana, wave) %>%
+  summarise(employed = mean(employed, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=employed, colour=setswana)) %+%
+  geom_line() %+%
+  scale_colour_brewer(palette='Set1')
+```
+
+## Computer Ownsh. - Employment
+
+```{r own_comp_empl}
+pids <- adulthh[which(adulthh$wave==3 & adulthh$a_owncom==TRUE),]$pid
+adulthh %>%
+  filter(pid %in% pids) %>%
+  group_by(setswana, wave) %>%
+  summarise(employed = mean(employed, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=employed, colour=setswana)) %+%
+  geom_line() %+%
+  scale_colour_brewer(palette='Set1')
+```
+
 
 ## Closing Remarks
 
