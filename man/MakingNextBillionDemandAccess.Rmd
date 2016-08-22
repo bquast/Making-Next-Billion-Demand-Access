@@ -78,8 +78,8 @@ ggplot(data=NIDS, aes(x=language, fill=woman)) + geom_bar()
 
 ```{r lm4_5pres, cache=TRUE, echo=TRUE}
 lm(h_nfnet ~  interface_intro*setswana +
-              woman +
-              hhincome             			   + 
+              woman                    +
+              hhincome             	   + 
               best_edu)
 ```
 
@@ -91,8 +91,8 @@ lm(h_nfnet ~  interface_intro*setswana +
 
 ```{r lm2_5pres, cache=TRUE}
 lm(a_owncom ~ interface_intro*setswana + 
-              woman              			   + 
-              hhincome             			   + 
+              woman                    + 
+              hhincome             	   + 
               best_edu)
 ```
 
@@ -124,8 +124,8 @@ adulthh %>%
   group_by(setswana, wave) %>%
   summarise(employed = mean(employed, na.rm=TRUE)) %>%
   ggplot(aes(x=wave, y=employed, colour=setswana)) %+%
-  geom_line() %+%
-  scale_colour_brewer(palette='Set1')
+    geom_line() %+%
+    scale_colour_brewer(palette='Set1')
 ```
 
 
@@ -138,8 +138,8 @@ adulthh %>%
   group_by(setswana, wave) %>%
   summarise(employed = mean(employed, na.rm=TRUE)) %>%
   ggplot(aes(x=wave, y=employed, colour=setswana)) %+%
-  geom_line() %+%
-  scale_colour_brewer(palette='Set1')
+    geom_line() %+%
+    scale_colour_brewer(palette='Set1')
 ```
 
 
