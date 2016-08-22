@@ -81,7 +81,18 @@ lm(h_nfnet ~  interface_intro*setswana_logical +
 ```
 
 * Covariates: linguistic skills
-* Alternative formulation: Interact `interface_intro` with `a_lng`
+* Alternative formulation: Interact `interface_intro` with `a_lng`: similar results
+
+## Usage of Setswana online
+
+```{r gt_data, echo=FALSE, cache=TRUE}
+load(file = '../data/googletrends.RData')
+```
+
+```{r googletrends, cache=TRUE}
+ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
+```
+
 
 ## Computer Ownership
 
