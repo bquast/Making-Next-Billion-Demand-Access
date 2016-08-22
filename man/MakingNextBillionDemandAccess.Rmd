@@ -83,6 +83,16 @@ lm(h_nfnet ~  interface_intro*setswana_logical +
 * Covariates: linguistic skills
 * Alternative formulation: Interact `interface_intro` with `a_lng`: similar results
 
+## Computer Ownership
+
+```{r lm2_5pres, cache=TRUE}
+lm(a_owncom ~ interface_intro*setswana_logical + 
+              a_woman              			   + 
+              hhincome             			   + 
+              best_edu)
+```
+
+
 ## Usage of Setswana online
 
 ```{r gt_data, echo=FALSE, cache=TRUE}
@@ -94,17 +104,8 @@ ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
 ```
 
 
-## Computer Ownership
 
-```{r lm2_5pres, cache=TRUE}
-lm(a_owncom ~ interface_intro*setswana_logical + 
-              a_woman              			   + 
-              hhincome             			   + 
-              best_edu)
-```
-
-
-## Internet Exp. - Employment
+## Internet Expenditure -> Employment
 
 ```{r load_stata12, echo=FALSE, cache=TRUE}
 rm(adulthh)
@@ -122,7 +123,7 @@ adulthh %>%
   scale_colour_brewer(palette='Set1')
 ```
 
-## Computer Ownsh. - Employment
+## Computer Ownership -> Employment
 
 ```{r own_comp_empl, cache=TRUE}
 pids <- adulthh[which(adulthh$wave==3 & adulthh$a_owncom==TRUE),]$pid
