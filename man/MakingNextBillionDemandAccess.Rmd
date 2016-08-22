@@ -108,7 +108,7 @@ ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
 ```
 
 * thuso = help (common term on Google Trends)
-* 
+
 
 ## Internet Expenditure -> Employment
 
@@ -154,7 +154,7 @@ adulthh %>%
 * accessibility improves adoption
 * observed long term commitment: computer ownership
 * mobile needs directly visible link
-* available online: http://qua.st/internet-demand
+* available online: http://qua.st/internet-access
     * data
     * code
     * paper
