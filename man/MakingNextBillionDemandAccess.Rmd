@@ -28,8 +28,9 @@ attach(adulthh)
 * yet, stagnating growth
 
 ```{r adoption_plot, cache=TRUE}
-ggplot(data=ITUinternet, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE) 
+ggplot(data=ITUint, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE) 
 ```
+
 
 ## Language Disparities
 
@@ -68,26 +69,29 @@ ITU2015 %>%
   * around 10,000 households; 50,000 adults; 10,000 Setswana speakers
   * cellphones; computers; internet access and expenditure
 
-```{r data_plot}
-ggplot(data=NIDS, aes(x=a_lng, fill=a_woman)) + geom_bar()
+```{r data_plot, cache=TRUE}
+ggplot(data=NIDS, aes(x=language, fill=woman)) + geom_bar()
 ```
+
 
 ## Internet Usage
 
 ```{r lm4_5pres, cache=TRUE, echo=TRUE}
-lm(h_nfnet ~  interface_intro*setswana_logical + 
+lm(h_nfnet ~  interface_intro*setswana +
+              woman +
               hhincome             			   + 
               best_edu)
 ```
 
 * Covariates: linguistic skills
-* Alternative formulation: Interact `interface_intro` with `a_lng`: similar results
+* Alt. formulation, Interact `interface_intro` with `language`: similar results
+
 
 ## Computer Ownership
 
 ```{r lm2_5pres, cache=TRUE}
-lm(a_owncom ~ interface_intro*setswana_logical + 
-              a_woman              			   + 
+lm(a_owncom ~ interface_intro*setswana + 
+              woman              			   + 
               hhincome             			   + 
               best_edu)
 ```
@@ -103,7 +107,8 @@ load(file = '../data/googletrends.RData')
 ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
 ```
 
-
+* thuso = help (common term on Google Trends)
+* 
 
 ## Internet Expenditure -> Employment
 
@@ -122,6 +127,7 @@ adulthh %>%
   geom_line() %+%
   scale_colour_brewer(palette='Set1')
 ```
+
 
 ## Computer Ownership -> Employment
 
@@ -153,7 +159,3 @@ adulthh %>%
     * code
     * paper
     * presentation
-
-
-
-
