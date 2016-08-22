@@ -14,7 +14,7 @@ knitr::opts_chunk$set(fig.path='../misc/rmd-',
                       fig.height=3)
 load(file = '../data/results.RData') # load results data
 load(file = '../data/merged.RData')  # load source  data
-load(file = '../data/mobilegrowth.RData')
+load(file = '../data/ITU2015.RData')
 library(ggplot2)
 # library(ggvis)
 library(printr) # load (customised) printr package for clean output of lm()
@@ -28,7 +28,7 @@ attach(adulthh)
 * yet, stagnating growth
 
 ```{r adoption_plot, cache=TRUE}
-ggplot(data=ITU2015, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
+ggplot(data=ITUinternet, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE) 
 ```
 
 ## Language Disparities
