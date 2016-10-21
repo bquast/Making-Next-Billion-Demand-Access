@@ -57,18 +57,19 @@ vars_child <- c('hhid',       # household ID
                 'c_intrv_d',  # interview day
                 'c_gen',      # gender
                 'c_dob_m',    # date-of-birth month
-                'c_dob_y',    # date-of-birth year
-                'c_mthhh',    # mother in household
-                'c_fthhh',    # father in household
-                'c_mthtrt',   # mother secondary school
-                'c_fthtrt')   # father secondary school
+                'c_dob_y'    # date-of-birth year
+                # 'c_mthhh',    # mother in household
+                # 'c_fthhh',    # father in household
+                # 'c_mthtrt',   # mother secondary school
+                # 'c_fthtrt'   # father secondary school
+)
 
 vars_hhder <- c('hhid',       # household ID
                 'hhincome',   # household income
                 'expf',       # expenditure food?
                 'expnf',      # expenditure non-food?
                 'expenditure',# expenditure
-                'hhgeo2011',  # geo location for 2011
+                'geo2011',  # geo location for 2011
                 'rentexpend', # rent expenditure
                 'hhimprent',  # imputed rent expenditure
                 'hhagric')    # agricultural household
@@ -219,35 +220,45 @@ hhder1$hhimprent <- hhder1$hhimprent_exp
 adult1 %<>% subset(select=vars_adult)
 adult2 %<>% subset(select=vars_adult)
 adult3 %<>% subset(select=vars_adult)
+adult4 %<>% subset(select=vars_adult)
 child1 %<>% subset(select=vars_child)
 child2 %<>% subset(select=vars_child)
 child3 %<>% subset(select=vars_child)
+child4 %<>% subset(select=vars_child)
 hhder1 %<>% subset(select=vars_hhder)
 hhder2 %<>% subset(select=vars_hhder)
 hhder3 %<>% subset(select=vars_hhder)
+hhder4 %<>% subset(select=vars_hhder)
 inder1 %<>% subset(select=vars_inder)
 inder2 %<>% subset(select=vars_inder)
 inder3 %<>% subset(select=vars_inder)
+inder4 %<>% subset(select=vars_inder)
 hhque1 %<>% subset(select=vars_hhque)
 hhque2 %<>% subset(select=vars_hhque)
 hhque3 %<>% subset(select=vars_hhque)
+hhque4 %<>% subset(select=vars_hhque)
 
 ## add wave indicator
 adult1 %<>% cbind(wave = 1)
 adult2 %<>% cbind(wave = 2)
 adult3 %<>% cbind(wave = 3)
+adult4 %<>% cbind(wave = 3)
 child1 %<>% cbind(wave = 1)
 child2 %<>% cbind(wave = 2)
 child3 %<>% cbind(wave = 3)
+child4 %<>% cbind(wave = 3)
 hhder1 %<>% cbind(wave = 1)
 hhder2 %<>% cbind(wave = 2)
 hhder3 %<>% cbind(wave = 3)
+hhder4 %<>% cbind(wave = 3)
 inder1 %<>% cbind(wave = 1)
 inder2 %<>% cbind(wave = 2)
 inder3 %<>% cbind(wave = 3)
+inder4 %<>% cbind(wave = 3)
 hhque1 %<>% cbind(wave = 1)
 hhque2 %<>% cbind(wave = 2)
 hhque3 %<>% cbind(wave = 3)
+hhque4 %<>% cbind(wave = 3)
 
 ## merge inter-temporal
 adult <- rbind(adult1, adult2, adult3)
