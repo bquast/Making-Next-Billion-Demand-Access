@@ -13,7 +13,7 @@ library(dplyr)
 
 
 # load data
-load('data/imported.RData')
+load('data/imported-w1-4.RData')
 
 
 # now subset all to the important variables and merge
@@ -113,74 +113,102 @@ vars_hhque <- c('hhid',           # household identification
                 'h_owncel')       # f1_8 - The household owns a cellphone
 
 
-
 ## remove wave indicator from variable names
 names(adult1) %<>% 
   as.character() %>%
-  gsub(x = ., '^w[1-3].', "" )
+  gsub(x = ., '^w[1-4].', "" )
 names(adult2) %<>% 
   as.character() %>%
-  gsub(x = ., '^w[1-3].', "" )
+  gsub(x = ., '^w[1-4].', "" )
 names(adult3) %<>% 
   as.character() %>%
-  gsub(x = ., '^w[1-3].', "" )
+  gsub(x = ., '^w[1-4].', "" )
+names(adult4) %<>% 
+  as.character() %>%
+  gsub(x = ., '^w[1-4].', "" )
 names(child1) %<>% 
   as.character() %>%
-  gsub(x = ., '^w[1-3].', "" )
+  gsub(x = ., '^w[1-4].', "" )
 names(child2) %<>% 
   as.character() %>%
-  gsub(x = ., '^w[1-3].', "" )
+  gsub(x = ., '^w[1-4].', "" )
 names(child3) %<>% 
   as.character() %>%
-  gsub(x = ., '^w[1-3].', "" )
+  gsub(x = ., '^w[1-4].', "" )
+names(child4) %<>% 
+  as.character() %>%
+  gsub(x = ., '^w[1-4].', "" )
 names(hhder1) %<>% 
   as.character() %>%
-  gsub(x = ., '^w[1-3].', "" )
+  gsub(x = ., '^w[1-4].', "" )
 names(hhder2) %<>% 
   as.character() %>%
-  gsub(x = ., '^w[1-3].', "" )
+  gsub(x = ., '^w[1-4].', "" )
 names(hhder3) %<>% 
   as.character() %>%
-  gsub(x = ., '^w[1-3].', "" )
+  gsub(x = ., '^w[1-4].', "" )
+names(hhder4) %<>% 
+  as.character() %>%
+  gsub(x = ., '^w[1-4].', "" )
 names(inder1) %<>% 
   as.character() %>%
-  gsub(x = ., '^w[1-3].', "" )
+  gsub(x = ., '^w[1-4].', "" )
 names(inder2) %<>% 
   as.character() %>%
-  gsub(x = ., '^w[1-3].', "" )
+  gsub(x = ., '^w[1-4].', "" )
 names(inder3) %<>% 
   as.character() %>%
-  gsub(x = ., '^w[1-3].', "" )
+  gsub(x = ., '^w[1-4].', "" )
+names(inder4) %<>% 
+  as.character() %>%
+  gsub(x = ., '^w[1-4].', "" )
 names(hhque1) %<>% 
   as.character() %>%
-  gsub(x = ., '^w[1-3].', "" )
+  gsub(x = ., '^w[1-4].', "" )
 names(hhque2) %<>% 
   as.character() %>%
-  gsub(x = ., '^w[1-3].', "" )
+  gsub(x = ., '^w[1-4].', "" )
 names(hhque3) %<>% 
   as.character() %>%
-  gsub(x = ., '^w[1-3].', "" )
+  gsub(x = ., '^w[1-4].', "" )
+names(hhque4) %<>% 
+  as.character() %>%
+  gsub(x = ., '^w[1-4].', "" )
 
 ## homogenise some variables across waves
-hhque2$h_owncom   <- hhque2$h_wncom
-hhque2$h_nftelspn <- hhque2$h_nftel
-hhque2$h_nftel    <- ifelse(hhque2$h_nftel > 0, TRUE, ifelse(hhque2$h_nftel < 0, NA, FALSE))
+hhder4$hhgeo2011  <- hhder4$geo2011
+
 hhque1$h_nftelspn <- ifelse(hhque1$h_nftel == 2, 0, hhque1$h_nftelspn)
+# hhque2$h_nftelspn <- ifelse(hhque2$h_nftel == 2, 0, hhque2$h_nftelspn) # not needed, already contains zero expenditure
 hhque3$h_nftelspn <- ifelse(hhque3$h_nftel == 2, 0, hhque3$h_nftelspn)
+hhque4$h_nftelspn <- ifelse(hhque4$h_nftel == 2, 0, hhque4$h_nftelspn)
+
 hhque1$h_nftel    <- ifelse(hhque1$h_nftel == 1, TRUE, ifelse(hhque1$h_nftel == 2, FALSE, NA))
+hhque2$h_nftel    <- ifelse(hhque2$h_nftelspn < 0, NA, ifelse(hhque2$h_nftelspn == 0, FALSE, TRUE))
 hhque3$h_nftel    <- ifelse(hhque3$h_nftel == 1, TRUE, ifelse(hhque3$h_nftel == 2, FALSE, NA))
-hhque2$h_nfcelspn <- hhque2$h_nfcel
-hhque2$h_nfcel    <- ifelse(hhque2$h_nfcel > 0, TRUE, ifelse(hhque2$h_nfcel < 0, NA, FALSE))
+hhque4$h_nftel    <- ifelse(hhque4$h_nftel == 1, TRUE, ifelse(hhque4$h_nftel == 2, FALSE, NA))
+
+# hhque2$h_nfcelspn <- hhque2$h_nfcel
+# hhque2$h_nfcel    <- ifelse(hhque2$h_nfcel > 0, TRUE, ifelse(hhque2$h_nfcel < 0, NA, FALSE))
+
 hhque1$h_nfcelspn <- ifelse(hhque1$h_nfcel == 2, 0, hhque1$h_nfcelspn)
 hhque3$h_nfcelspn <- ifelse(hhque3$h_nfcel == 2, 0, hhque3$h_nfcelspn)
+hhque4$h_nfcelspn <- ifelse(hhque4$h_nfcel == 2, 0, hhque4$h_nfcelspn)
+
 hhque1$h_nfcel    <- ifelse(hhque1$h_nfcel == 1, TRUE, ifelse(hhque1$h_nfcel == 2, FALSE, NA))
+hhque2$h_nfcel    <- ifelse(hhque2$h_nfcelspn < 0, NA, ifelse(hhque2$h_nfcelspn == 0, FALSE, TRUE))
 hhque3$h_nfcel    <- ifelse(hhque3$h_nfcel == 1, TRUE, ifelse(hhque3$h_nfcel == 2, FALSE, NA))
-hhque2$h_nfnetspn <- hhque2$h_nfnet
-hhque2$h_nfnet    <- ifelse(hhque2$h_nfnet > 0, TRUE, ifelse(hhque2$h_nfnet < 0, NA, FALSE))
+hhque4$h_nfcel    <- ifelse(hhque4$h_nfcel == 1, TRUE, ifelse(hhque4$h_nfcel == 2, FALSE, NA))
+
+# hhque2$h_nfnetspn <- hhque2$h_nfnet
 hhque1$h_nfnetspn <- ifelse(hhque1$h_nfnet == 2, 0, hhque1$h_nfnetspn)
 hhque3$h_nfnetspn <- ifelse(hhque3$h_nfnet == 2, 0, hhque3$h_nfnetspn)
+hhque4$h_nfnetspn <- ifelse(hhque4$h_nfnet == 2, 0, hhque4$h_nfnetspn)
+
 hhque1$h_nfnet    <- ifelse(hhque1$h_nfnet == 1, TRUE, ifelse(hhque1$h_nfnet == 2, FALSE, NA))
+hhque2$h_nfnet    <- ifelse(hhque2$h_nfnetspn < 0, NA, ifelse(hhque2$h_nfnetspn == 0, FALSE, TRUE))
 hhque3$h_nfnet    <- ifelse(hhque3$h_nfnet == 1, TRUE, ifelse(hhque3$h_nfnet == 2, FALSE, NA))
+hhque4$h_nfnet    <- ifelse(hhque4$h_nfnet == 1, TRUE, ifelse(hhque4$h_nfnet == 2, FALSE, NA))
 
 child3$c_mthhh <- child3$c_mthhh_pid
 child3$c_fthhh <- child3$c_fthhh_pid
