@@ -347,6 +347,9 @@ adulthh$a_lng <- factor(adulthh$a_lng, labels = c('IsiNdebele',
 # rename to NIDS
 NIDS <- adulthh
 
+# convert to pdata.frame
+pNIDS <- pdata.frame(adulthh, index = c('pid','wave') )
+
 # save to file
-save(adulthh, file = 'data/merged.RData')
+save(adulthh, NIDS, pNIDS, file = 'data/merged.RData')
 
