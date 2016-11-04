@@ -25,9 +25,16 @@ load(file = 'data/mobilegrowth.RData')
 # df$year <- as.numeric(sub('X', '', df$year))
 # ITU2015 <- df
 
+library(readr)
+ITU2015 <- read_csv("~/Making-Next-Billion-Demand-Access/data/ITU2015.csv")
+
+# melt
+ITU2015 <- melt(ITU2015, id.vars='year')
+names(ITU2015) <- c('year', 'region', 'adoption')
+
 # plot
 ggplot(ITU2015, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
 
 
 # save data
-save(df, file = 'data/mobilegrowth.RData')
+save(ITU2015, file = 'data/internetgrowth.RData')

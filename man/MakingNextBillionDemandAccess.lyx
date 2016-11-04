@@ -320,10 +320,6 @@ y low.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 \begin_inset Float figure
 placement h
 wide false
@@ -363,7 +359,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-mobile_growth, echo=FALSE, cache=TRUE, warning=FALSE
+mobile_growth, echo=FALSE, warning=FALSE
 \end_layout
 
 \end_inset
@@ -373,17 +369,12 @@ mobile_growth, echo=FALSE, cache=TRUE, warning=FALSE
 
 \begin_layout Plain Layout
 
-load(file = '../data/adoption.RData')
+load(file = '../data/internetgrowth.RData')
 \end_layout
 
 \begin_layout Plain Layout
 
-ggplot(df, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
-\end_layout
-
-\end_inset
-
-
+ggplot(ITU2015, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
 \end_layout
 
 \end_inset
@@ -2893,7 +2884,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-employment_own_computer, echo=FALSE, cache=FALSE
+employment_own_computer, echo=FALSE, cache=TRUE
 \end_layout
 
 \end_inset
@@ -2996,7 +2987,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-employment_Int_exp, echo=FALSE, cache=FALSE
+employment_Int_exp, echo=FALSE, cache=TRUE
 \end_layout
 
 \end_inset
