@@ -94,7 +94,8 @@ vars_inder <- c('hhid',       # household ID
                 'ppen',       # month income private / foreign pension
                 'ppen_flg',   # data monthly income private / foreign pension
                 'uif',        # montly income UIF payments (unemployment)
-                'remt')       # monthly income remittances
+                'remt',       # monthly income remittances
+                'empl_stat')  # employment status
 
 vars_hhque <- c('hhid',           # household identification
                 'h_enrgelec',     # d22 - Household has electricity
@@ -316,10 +317,14 @@ adulthh$event <- adulthh$interface_intro
 adulthh$setswana_logical <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
 adulthh$setswana <- adulthh$setswana_logical
 
+# fix employment
+
+
 # human readable names
 adulthh$language <- adulthh$a_lng
 adulthh$own_computer <- adulthh$a_owncom
 adulthh$Internet_expenditure <- adulthh$h_nfnet
+adulthh$employed <- adulthh$empl_stat
 
 # remove observations without languages
 adulthh <- subset(adulthh, adulthh$a_lng != 12)
@@ -337,6 +342,7 @@ adulthh$a_lng <- factor(adulthh$a_lng, labels = c('IsiNdebele',
                                                   'IsiTsonga',
                                                   'Afrikaans',
                                                   'English'))
+
 
 # rename to NIDS
 NIDS <- adulthh
