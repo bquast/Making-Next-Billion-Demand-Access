@@ -318,7 +318,7 @@ adulthh$setswana_logical <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
 adulthh$setswana <- adulthh$setswana_logical
 
 # fix employment
-
+adulthh$empl_stat <- ifelse(adulthh$empl_stat == 3, TRUE, FALSE)
 
 # human readable names
 adulthh$language <- adulthh$a_lng
@@ -349,3 +349,4 @@ NIDS <- adulthh
 
 # save to file
 save(adulthh, file = 'data/merged.RData')
+
