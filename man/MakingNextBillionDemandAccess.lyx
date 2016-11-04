@@ -2677,7 +2677,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-gg2_5, echo=FALSE, cache=FALSE
+gg2_5, echo=FALSE, cache=TRUE
 \end_layout
 
 \end_inset
@@ -2750,10 +2750,6 @@ reference "fig:GoogleTrendsZA"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 \begin_inset Float figure
 placement H
 wide false
@@ -2783,8 +2779,12 @@ name "fig:GoogleTrendsZA"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Flex Chunk
+\begin_inset Note Note
 status open
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2792,7 +2792,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-plot_data, cache=TRUE, echo=FALSE
+plot_data, echo=FALSE
 \end_layout
 
 \end_inset
@@ -2818,6 +2818,16 @@ ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/bquast/Making-Next-Billion-Demand-Access/misc/thuso.pdf
+	scale 48
+
+\end_inset
+
+ 
 \end_layout
 
 \end_inset
@@ -3231,19 +3241,15 @@ printbibliography
 \end_layout
 
 \begin_layout Section
-\begin_inset Note Note
-status open
-
-\begin_layout Section
 Clustering
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Float table
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3267,7 +3273,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-clustering, messages=FALSE, cache=TRUE
+clustering, message=FALSE, cache=TRUE
 \end_layout
 
 \end_inset
@@ -3387,7 +3393,7 @@ tidy( coeftest(plm4_3e, vcov=vcovHC(plm4_3e,
 Dependent Variable Breakdown
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Float table
 placement H
 wide false
@@ -3466,12 +3472,12 @@ adulthh %>%
 Covariate Descriptive Statistics
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3533,7 +3539,7 @@ ggplot(adulthh, aes(x=hhincome, fill=a_lng )) +
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -3600,7 +3606,7 @@ ggplot(adulthh, aes(x=best_edu, fill=a_lng )) +
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 The 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3622,7 +3628,7 @@ NA
 .
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -3686,7 +3692,7 @@ ggplot(adulthh, aes(x = a_lng, fill = factor(a_edlitrden)) ) +
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 The 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3697,7 +3703,7 @@ reference "fig:rdhm"
  does the same but with regards to the native language.
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -3765,7 +3771,7 @@ ggplot(adulthh, aes(x = a_lng, fill = factor(a_edlitrdhm)) ) +
 Original Estimates
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Float table
 placement H
 wide false
@@ -3859,7 +3865,7 @@ lm(a_owncom ~ interface_intro*setswana_logical +
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Float table
 placement H
 wide false
@@ -3941,11 +3947,6 @@ lm(h_nfnet ~  interface_intro*setswana_logical +
 \begin_layout Plain Layout
 
               best_edu)
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
