@@ -35,7 +35,7 @@ thuso$date <- floor_date(thuso$start, unit = 'month')
 # group by month
 thuso %<>%
   group_by(date) %>%
-  summarise(thuso = sum(South.Africa))
+  summarise(thuso = sum(hits))
 
 
 # plot data
@@ -44,4 +44,3 @@ ggplot(thuso) + geom_line(aes(x = date, y = thuso))
 
 # save results
 save(thuso, file = 'data/googletrends.RData')
-
