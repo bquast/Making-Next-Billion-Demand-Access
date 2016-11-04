@@ -7,7 +7,7 @@
 \textclass article
 \begin_preamble
 \usepackage[style=philosophy-modern,natbib=true,backend=biber]{biblatex}
-\addbibresource{/Users/quast/Making-Next-Billion-Demand-Access/man/bibliography.bib}
+\addbibresource{~/Making-Next-Billion-Demand-Access/man/bibliography.bib}
 
 
 \AtBeginDocument{%
@@ -39,9 +39,9 @@ Provides natbib 1
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \graphics default
-\default_output_format pdf5
+\default_output_format pdf2
 \output_sync 0
-\bibtex_command biber
+\bibtex_command default
 \index_command default
 \paperfontsize default
 \spacing single
@@ -133,8 +133,63 @@ Bastiaan Quast
 status collapsed
 
 \begin_layout Plain Layout
-http://qua.st/ | bquast@gmail.com | bastiaan.quast@graduateinstitute.ch | Maison
- de la paix, Geneva, Switzerland
+http://qua.st/ | bquast@gmail.com | bastiaan.quast@graduateinstitute.ch
+\begin_inset Newline newline
+\end_inset
+
+Maison de la paix, Geneva, Switzerland
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+test on marginal effects
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+load_plot_data, echo=FALSE, warning=FALSE, message=FALSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+opts_chunk$set(fig.path='../misc/latex-', cache.path='../data/cache/latex-', fig.width=
+9, fig.height=5)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(ggplot2)
+\end_layout
+
+\begin_layout Plain Layout
+
+library(dplyr)
 \end_layout
 
 \end_inset
@@ -265,6 +320,10 @@ y low.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 placement h
 wide false
@@ -304,50 +363,6 @@ status open
 status open
 
 \begin_layout Plain Layout
-load_plot_data, echo=FALSE, warning=FALSE, message=FALSE
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-opts_chunk$set(fig.path='../misc/latex-', cache.path='../data/cache/latex-', fig.width=
-9, fig.height=5)
-\end_layout
-
-\begin_layout Plain Layout
-
-load(file = '../data/googletrends.RData')
-\end_layout
-
-\begin_layout Plain Layout
-
-library(ggplot2)
-\end_layout
-
-\begin_layout Plain Layout
-
-library(dplyr)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Flex Chunk
-status open
-
-\begin_layout Plain Layout
-
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
 mobile_growth, echo=FALSE, cache=TRUE, warning=FALSE
 \end_layout
 
@@ -364,6 +379,11 @@ load(file = '../data/adoption.RData')
 \begin_layout Plain Layout
 
 ggplot(df, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -979,7 +999,7 @@ reference "tab:dep_vars"
 
 \begin_layout Standard
 \begin_inset Flex Chunk
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1428,7 +1448,7 @@ lang_woman, echo=FALSE, cache=TRUE
 
 \begin_layout Plain Layout
 
-ggplot(data=NIDS, aes(x=a_lng, fill=a_woman)) + geom_bar()
+ggplot(data=NIDS, aes(x=language, fill=woman)) + geom_bar()
 \end_layout
 
 \end_inset
@@ -2657,7 +2677,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-gg2_5, echo=FALSE, cache=TRUE
+gg2_5, echo=FALSE, cache=FALSE
 \end_layout
 
 \end_inset
@@ -2667,7 +2687,7 @@ gg2_5, echo=FALSE, cache=TRUE
 
 \begin_layout Plain Layout
 
-NIDS %>%
+adulthh %>%
 \end_layout
 
 \begin_layout Plain Layout
@@ -2730,6 +2750,10 @@ reference "fig:GoogleTrendsZA"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset Float figure
 placement H
 wide false
@@ -2778,7 +2802,17 @@ plot_data, cache=TRUE, echo=FALSE
 
 \begin_layout Plain Layout
 
+load(file = '../data/googletrends.RData')
+\end_layout
+
+\begin_layout Plain Layout
+
 ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2849,35 +2883,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-load_wave4, echo=FALSE
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-load(file='../data/merged-stata12.RData')
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Flex Chunk
-status open
-
-\begin_layout Plain Layout
-
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-employment_own_computer, echo=FALSE, cache=TRUE
+employment_own_computer, echo=FALSE, cache=FALSE
 \end_layout
 
 \end_inset
@@ -2892,7 +2898,7 @@ pids <- adulthh[which(adulthh$wave==3 &
 
 \begin_layout Plain Layout
 
-                      adulthh$a_owncom==TRUE),]$pid
+                      adulthh$a_owncom==TRUE),]$pid 
 \end_layout
 
 \begin_layout Plain Layout
@@ -2980,7 +2986,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-employment_Int_exp, echo=FALSE, cache=TRUE
+employment_Int_exp, echo=FALSE, cache=FALSE
 \end_layout
 
 \end_inset
@@ -2995,7 +3001,7 @@ pids <- adulthh[which(adulthh$wave==3 &
 
 \begin_layout Plain Layout
 
-                      adulthh$h_nfnet==TRUE),]$pid
+                      adulthh$h_nfnet==TRUE),]$pid 
 \end_layout
 
 \begin_layout Plain Layout
@@ -3225,15 +3231,19 @@ printbibliography
 \end_layout
 
 \begin_layout Section
+\begin_inset Note Note
+status open
+
+\begin_layout Section
 Clustering
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float table
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3368,10 +3378,6 @@ tidy( coeftest(plm4_3e, vcov=vcovHC(plm4_3e,
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -3381,12 +3387,12 @@ tidy( coeftest(plm4_3e, vcov=vcovHC(plm4_3e,
 Dependent Variable Breakdown
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float table
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3460,12 +3466,12 @@ adulthh %>%
 Covariate Descriptive Statistics
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3527,16 +3533,12 @@ ggplot(adulthh, aes(x=hhincome, fill=a_lng )) +
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status open
-
-\begin_layout Plain Layout
-
-\end_layout
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3598,7 +3600,7 @@ ggplot(adulthh, aes(x=best_edu, fill=a_lng )) +
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3620,12 +3622,12 @@ NA
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3684,7 +3686,7 @@ ggplot(adulthh, aes(x = a_lng, fill = factor(a_edlitrden)) ) +
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -3695,12 +3697,12 @@ reference "fig:rdhm"
  does the same but with regards to the native language.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3763,12 +3765,12 @@ ggplot(adulthh, aes(x = a_lng, fill = factor(a_edlitrdhm)) ) +
 Original Estimates
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float table
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3857,12 +3859,12 @@ lm(a_owncom ~ interface_intro*setswana_logical +
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Float table
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3939,6 +3941,11 @@ lm(h_nfnet ~  interface_intro*setswana_logical +
 \begin_layout Plain Layout
 
               best_edu)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
