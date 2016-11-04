@@ -208,8 +208,7 @@ NIDS %>%
   facet_grid(~a_lng)
 
 # save results
-save(means,
-     lm2_5,
+save(lm2_5,
      lm4_0,
      lm4_1,
      lm4_2,
