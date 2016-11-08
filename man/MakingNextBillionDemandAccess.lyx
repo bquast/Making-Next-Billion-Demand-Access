@@ -3767,7 +3767,7 @@ Original Estimates
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3808,42 +3808,42 @@ lm2_5, cache=TRUE
 
 \begin_layout Plain Layout
 
-lm(a_owncom ~ interface_intro*setswana_logical + 
+lm(a_owncom ~ event*setswana       + 
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitrden)  			+
+              factor(a_edlitrden)  +
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitwrten) 			+ 
+              factor(a_edlitwrten) + 
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitrdhm)  			+ 
+              factor(a_edlitrdhm)  + 
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitwrthm) 			+ 
+              factor(a_edlitwrthm) + 
 \end_layout
 
 \begin_layout Plain Layout
 
-              a_woman              			+ 
+              a_woman              + 
 \end_layout
 
 \begin_layout Plain Layout
 
-              hhincome             			+ 
+              hhincome             + 
 \end_layout
 
 \begin_layout Plain Layout
 
-              best_edu)
+              best_edu              )
 \end_layout
 
 \end_inset
@@ -3861,7 +3861,7 @@ lm(a_owncom ~ interface_intro*setswana_logical +
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -3902,42 +3902,128 @@ lm4_5, cache=TRUE
 
 \begin_layout Plain Layout
 
-lm(h_nfnet ~  interface_intro*setswana_logical + 
+lm(h_nfnet ~  event*setswana_logical + 
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitrden)  			+
+              factor(a_edlitrden)    +
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitwrten) 			+ 
+              factor(a_edlitwrten)   + 
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitrdhm)  			+ 
+              factor(a_edlitrdhm)    + 
 \end_layout
 
 \begin_layout Plain Layout
 
-              factor(a_edlitwrthm) 			+ 
+              factor(a_edlitwrthm)   + 
 \end_layout
 
 \begin_layout Plain Layout
 
-              a_woman              			+ 
+              a_woman                +
 \end_layout
 
 \begin_layout Plain Layout
 
-              hhincome             			+ 
+              hhincome               + 
 \end_layout
 
 \begin_layout Plain Layout
 
-              best_edu)
+              best_edu                )
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Interaction with woman variable
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Women Owning a Computer
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+interact_woman, cache=TRUE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+lm(a_owncom ~ a_woman*event*setswana +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitrden)    +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitwrten)   +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitrdhm)    +
+\end_layout
+
+\begin_layout Plain Layout
+
+              factor(a_edlitwrthm)   +
+\end_layout
+
+\begin_layout Plain Layout
+
+              hhincome               +
+\end_layout
+
+\begin_layout Plain Layout
+
+              best_edu                )
 \end_layout
 
 \end_inset
