@@ -130,14 +130,14 @@ google.co.za
 \begin_layout Date
 Bastiaan Quast
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 http://qua.st/ | bquast@gmail.com | bastiaan.quast@graduateinstitute.ch
 \begin_inset Newline newline
 \end_inset
 
-Maison de la paix, Geneva, Switzerland
+The Graduate Institute | Maison de la paix, Geneva, Switzerland
 \end_layout
 
 \end_inset
@@ -2719,6 +2719,97 @@ adulthh %>%
 \end_layout
 
 \begin_layout Standard
+I also plot this variable separately for each gender.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Computer Ownership Setswana by Gender
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+gender_gg2_5, echo=FALSE, cache=TRUE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+adulthh %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+	group_by(woman, setswana, wave)                          %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+	filter(language != 'Afrikaans')                          %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+	summarise(own_computer = mean(own_computer, na.rm=TRUE)) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+	ggplot(aes(x=wave, y=own_computer, colour=setswana))     %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+	geom_line()                                              %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+    facet_grid(woman ~ .)                                    %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+	scale_colour_brewer(palette='Set1')
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 I estimate the effect of the introduction specifically on setswana speaking
  women, by interacting the woman binary variable with the above used interaction
  term between the event dummy and the Setswana language dummy.
@@ -3450,7 +3541,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Employment those owning a Computer in Wave 3 by gender
+Employment for those owning a Computer in Wave 3 by gender
 \end_layout
 
 \end_inset
@@ -3551,7 +3642,7 @@ status open
 \begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Employment for Individuals with Internet Expenditure in Wave 3
+Employment for those with Internet Expenditure in Wave 3 by gender
 \end_layout
 
 \end_inset
@@ -3623,7 +3714,7 @@ adulthh %>%
 
 \begin_layout Plain Layout
 
-  facet_grid(woman ~ .) %+%qs
+  facet_grid(woman ~ .) %+%
 \end_layout
 
 \begin_layout Plain Layout
