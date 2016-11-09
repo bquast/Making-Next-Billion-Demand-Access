@@ -317,14 +317,8 @@ adulthh$event <- adulthh$interface_intro
 adulthh$setswana_logical <- ifelse(adulthh$a_lng == 6, TRUE, FALSE)
 adulthh$setswana <- adulthh$setswana_logical
 
-# fix employment
-adulthh$empl_stat <- ifelse(adulthh$empl_stat == 3, TRUE, FALSE)
-
-# human readable names
-adulthh$language <- adulthh$a_lng
-adulthh$own_computer <- adulthh$a_owncom
-adulthh$Internet_expenditure <- adulthh$h_nfnet
-adulthh$employed <- adulthh$empl_stat
+# simplify employment
+adulthh$employed <- ifelse(adulthh$empl_stat == 3, TRUE, FALSE)
 
 # remove observations without languages
 adulthh <- subset(adulthh, adulthh$a_lng != 12)
@@ -343,6 +337,10 @@ adulthh$a_lng <- factor(adulthh$a_lng, labels = c('IsiNdebele',
                                                   'Afrikaans',
                                                   'English'))
 
+# human readable names
+adulthh$language <- adulthh$a_lng
+adulthh$own_computer <- adulthh$a_owncom
+adulthh$internet_expenditure <- adulthh$h_nfnet
 
 # rename to NIDS
 NIDS <- adulthh
