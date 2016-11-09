@@ -341,6 +341,7 @@ adulthh$a_lng <- factor(adulthh$a_lng, labels = c('IsiNdebele',
 adulthh$language <- adulthh$a_lng
 adulthh$own_computer <- adulthh$a_owncom
 adulthh$internet_expenditure <- adulthh$h_nfnet
+adulthh$woman <- adulthh$a_woman
 
 # rename to NIDS
 NIDS <- adulthh
@@ -350,4 +351,3 @@ pNIDS <- pdata.frame(adulthh, index = c('pid','wave') )
 
 # save to file
 save(adulthh, NIDS, pNIDS, file = 'data/merged.RData')
-
