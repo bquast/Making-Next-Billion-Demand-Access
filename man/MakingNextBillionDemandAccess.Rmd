@@ -2,7 +2,7 @@
 title: 'Making the Next Billion Demand Access:<br/> The Local-Content Effect of `google.co.za`
   in Setswana'
 author: "Bastiaan Quast"
-date: "22 August 2016"
+date: "10 November 2016"
 output:
   ioslides_presentation:
     smaller: true
@@ -14,7 +14,7 @@ knitr::opts_chunk$set(fig.path='../misc/rmd-',
                       fig.height=3)
 load(file = '../data/results.RData') # load results data
 load(file = '../data/merged.RData')  # load source  data
-load(file = '../data/ITU2015.RData')
+# load(file = '../data/ITU2015.RData')
 library(ggplot2)
 # library(ggvis)
 library(printr) # load (customised) printr package for clean output of lm()
@@ -28,7 +28,7 @@ attach(adulthh)
 * yet, stagnating growth
 
 ```{r adoption_plot, cache=TRUE}
-ggplot(data=ITUint, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE) 
+# ggplot(data=ITU2015, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE) 
 ```
 
 
@@ -99,23 +99,18 @@ lm(a_owncom ~ interface_intro*setswana +
 
 ## Usage of Setswana online
 
-```{r gt_data, echo=FALSE, cache=TRUE}
+```{r gt_data, echo=FALSE, cache=FALSE}
 load(file = '../data/googletrends.RData')
 ```
 
-```{r googletrends, cache=TRUE}
-ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
+```{r googletrends, cache=FALSE}
+ggplot(thuso) + geom_smooth(aes(x = date, y = hits))
 ```
 
 * thuso = help (common term on Google Trends)
 
 
 ## Internet Expenditure -> Employment
-
-```{r load_stata12, echo=FALSE, cache=TRUE}
-rm(adulthh)
-load(file = '../data/merged-stata12.RData')
-```
 
 ```{r nf_net_empl, cache=TRUE}
 pids <- adulthh[which(adulthh$wave==3 & adulthh$h_nfnet==TRUE),]$pid
@@ -144,12 +139,6 @@ adulthh %>%
 
 
 ## Closing Remarks
-
-    If you talk to a man in a language he understands that goes to his head.
-    
-    If you talk to a man in his language that goes to his heart.
-    
-                                                     - Nelson Rolihlahla Mandela
 
 * accessibility improves adoption
 * observed long term commitment: computer ownership
