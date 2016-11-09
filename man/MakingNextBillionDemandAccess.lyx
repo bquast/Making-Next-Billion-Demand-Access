@@ -3231,8 +3231,8 @@ reference "sec:data"
 In the below figure, I plot the employment status of individuals that own
  a computer in the first wave after the introduction of the Setswana-language
  interface (wave 3).
- The figure shows that there is a sharp uptick in the proportion of employed
- individuals among Setswana speakers.
+ The figure shows that there is a sharp uptick in thdisenfranchisemente
+ proportion of employed individuals among Setswana speakers.
  
 \end_layout
 
@@ -3368,7 +3368,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-employment_Int_exp, echo=FALSE, cache=TRUE
+employment_int_exp, echo=FALSE, cache=TRUE
 \end_layout
 
 \end_inset
@@ -3417,12 +3417,40 @@ adulthh %>%
 
 \begin_layout Plain Layout
 
-  geom_line() %+%     
+  geom_line() %+%
 \end_layout
 
 \begin_layout Plain Layout
 
   scale_colour_brewer(palette='Set1')
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally we can plot the above graphs for men and women separately.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Employment those owning a Computer in Wave 3 by gender
 \end_layout
 
 \end_inset
@@ -3440,7 +3468,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-reload_wave3, echo=FALSE
+gender_employment_own_computer, echo=FALSE, warning=FALSE, cache=TRUE
 \end_layout
 
 \end_inset
@@ -3450,7 +3478,157 @@ reload_wave3, echo=FALSE
 
 \begin_layout Plain Layout
 
-load(file='../data/merged.RData')
+pids <- adulthh[which(adulthh$wave==3 &
+\end_layout
+
+\begin_layout Plain Layout
+
+                      adulthh$a_owncom==TRUE),]$pid 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+adulthh %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  filter(pid %in% pids) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  group_by(woman, setswana, wave) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  summarise(employed = mean(employed, na.rm=TRUE)) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(aes(x=wave, y=employed, colour=setswana)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  geom_line()                                      %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  facet_grid(woman ~ .) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  scale_colour_brewer(palette='Set1')
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Employment for Individuals with Internet Expenditure in Wave 3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Chunk
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+gender_employment_int_exp, echo=FALSE, cache=TRUE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+pids <- adulthh[which(adulthh$wave==3 &
+\end_layout
+
+\begin_layout Plain Layout
+
+                      adulthh$h_nfnet==TRUE),]$pid 
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+adulthh %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  filter(pid %in% pids) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  group_by(woman, setswana, wave) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  summarise(employed = mean(employed, na.rm=TRUE)) %>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  ggplot(aes(x=wave, y=employed, colour=setswana)) %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  geom_line() %+%
+\end_layout
+
+\begin_layout Plain Layout
+
+  facet_grid(woman ~ .) %+%qs
+\end_layout
+
+\begin_layout Plain Layout
+
+  scale_colour_brewer(palette='Set1')
 \end_layout
 
 \end_inset
@@ -3563,13 +3741,6 @@ As I discussed in the results section, the increase in computer ownership
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -3600,6 +3771,13 @@ status open
 printbibliography
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
 \end_inset
 
 
