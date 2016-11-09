@@ -150,7 +150,16 @@ Maison de la paix, Geneva, Switzerland
 status open
 
 \begin_layout Plain Layout
+TODO:
+\end_layout
+
+\begin_layout Itemize
 test on marginal effects
+\end_layout
+
+\begin_layout Itemize
+use multicov for st.
+ error corrections
 \end_layout
 
 \end_inset
@@ -215,9 +224,13 @@ Recent attempts to connect the current `next billion' to the Internet in
  interface for the Botswanan Google website.
  This exogenous improvement in the accessibility of Setswana-language content
  has resulted in a substantial increase in the number of native Setswana
- speakers coming online and owning personal computers.
+ speakers coming online and owning personal computers, this effect is persistent
+, remaining visible 4 years later.
  This is turn has also led to increased usage of the Setswana language online.
- This adoption appears to also lead to improvements in employment.
+ This adoption appears to also lead to substantial and persistent improvements
+ in employment status.
+ The effect for women is substantially smaller then it is for men.
+ 
 \end_layout
 
 \begin_layout Section
@@ -2281,8 +2294,6 @@ event * setswana
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
 0.012
 \end_layout
 
@@ -2292,7 +2303,7 @@ event * setswana
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.00
+0.003
 \end_layout
 
 \end_inset
@@ -2301,8 +2312,6 @@ event * setswana
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
 0.024
 \end_layout
 
@@ -2312,7 +2321,7 @@ event * setswana
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.00
+0.005
 \end_layout
 
 \end_inset
@@ -2332,9 +2341,7 @@ event
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
--0.012
+-0.011
 \end_layout
 
 \end_inset
@@ -2343,7 +2350,7 @@ event
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.00
+0.001
 \end_layout
 
 \end_inset
@@ -2352,7 +2359,7 @@ event
 \begin_inset Text
 
 \begin_layout Plain Layout
--0.054
+-0.006
 \end_layout
 
 \end_inset
@@ -2361,7 +2368,7 @@ event
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.01
+0.001
 \end_layout
 
 \end_inset
@@ -2381,9 +2388,7 @@ setswana
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
--0.014
+-0.013
 \end_layout
 
 \end_inset
@@ -2392,7 +2397,7 @@ setswana
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.00
+0.002
 \end_layout
 
 \end_inset
@@ -2401,9 +2406,7 @@ setswana
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
--0.015
+-0.0155
 \end_layout
 
 \end_inset
@@ -2412,7 +2415,7 @@ setswana
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.00
+0.004
 \end_layout
 
 \end_inset
@@ -2423,7 +2426,7 @@ setswana
 \begin_inset Text
 
 \begin_layout Plain Layout
-income
+income (10,000 ZAR)
 \end_layout
 
 \end_inset
@@ -2432,8 +2435,15 @@ income
 \begin_inset Text
 
 \begin_layout Plain Layout
+0.270
+\end_layout
 
-\series bold
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 0.000
 \end_layout
 
@@ -2443,18 +2453,7 @@ income
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.00
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-0.000
+0.540
 \end_layout
 
 \end_inset
@@ -2463,7 +2462,7 @@ income
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.00
+0.000
 \end_layout
 
 \end_inset
@@ -2492,7 +2491,7 @@ woman
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.23
+0.001
 \end_layout
 
 \end_inset
@@ -2501,9 +2500,7 @@ woman
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
--0.023
+-0.027
 \end_layout
 
 \end_inset
@@ -2512,7 +2509,7 @@ woman
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.00
+0.014
 \end_layout
 
 \end_inset
@@ -2532,8 +2529,6 @@ education
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
 0.001
 \end_layout
 
@@ -2543,7 +2538,7 @@ education
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.00
+0.000
 \end_layout
 
 \end_inset
@@ -2552,8 +2547,6 @@ education
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
 0.006
 \end_layout
 
@@ -2563,7 +2556,7 @@ education
 \begin_inset Text
 
 \begin_layout Plain Layout
-0.00
+0.000
 \end_layout
 
 \end_inset
@@ -2583,7 +2576,7 @@ Observations
 \begin_inset Text
 
 \begin_layout Plain Layout
-47665
+87634
 \end_layout
 
 \end_inset
@@ -2601,7 +2594,7 @@ Observations
 \begin_inset Text
 
 \begin_layout Plain Layout
-46464
+87634
 \end_layout
 
 \end_inset
@@ -2629,7 +2622,7 @@ Observations
 \end_layout
 
 \begin_layout Standard
-The below figure present a graphical illustration of the above mentioned
+The below figure presents a graphical illustration of the above mentioned
  result.
  As we can see, initially, the propensity to own a computer for setswana
  speakers (blue line) was similar to the average of speakers of other languages
@@ -2722,6 +2715,386 @@ adulthh %>%
 \end_layout
 
 \begin_layout Standard
+I estimate the effect of the introduction specifically on setswana speaking
+ women, by interacting the woman binary variable with the above used interaction
+ term between the event dummy and the Setswana language dummy.
+ The effect is strongly negative with a value of -0.025.
+ The interaction term between the event and the language dummy (i.e.
+ for men, since woman==FALSE) is strongly positive at 0.038.
+ Combining these two effects gives us the estimated effect on the event
+ on woman, 0.038 - 0.025 = 0.013, which is roughly a third of men (0.038).
+ The interaction term between woman and setswana is slightly positive at
+ 0.009, which means that Setswana speaking women are on average slightly
+ more likely to own a computer than woman in general are.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Women and Computer Ownership
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Computer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+(P > |t|)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+woman * event * setswana
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.025
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.011
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+event * setswana
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.038
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.008
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+event
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.002
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.006
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+setswana
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.021
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.007
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+income (10,000 ZAR)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.054
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+woman
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.021
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.003
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+education
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.006
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+woman * setswana
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.009
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.009
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+woman * event
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-0.007
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.003
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Observations
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+87634
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:GoogleTrendsZA"
@@ -2760,6 +3133,7 @@ Usage of Setswana Words on Google.co.za
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:GoogleTrendsZA"
@@ -2770,10 +3144,12 @@ name "fig:GoogleTrendsZA"
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
+estimate using new Google Trends: 
 \begin_inset Flex Chunk
 status collapsed
 
@@ -2803,7 +3179,7 @@ ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
 
 \end_inset
 
-
+ 
 \end_layout
 
 \end_inset
@@ -2812,6 +3188,7 @@ ggplot(thuso) + geom_smooth(aes(x = date, y = thuso))
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename /home/bquast/Making-Next-Billion-Demand-Access/misc/thuso.pdf
 	scale 48
@@ -2884,7 +3261,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-employment_own_computer, echo=FALSE, cache=TRUE
+employment_own_computer, echo=FALSE, warning=FALSE, cache=TRUE
 \end_layout
 
 \end_inset
@@ -3224,14 +3601,8 @@ printbibliography
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
+\start_of_appendix
 Clustering
 \end_layout
 
@@ -3264,7 +3635,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-clustering, message=FALSE, cache=TRUE
+clustering, message=FALSE, warning=FALSE, cache=FALSE
 \end_layout
 
 \end_inset
@@ -3389,7 +3760,7 @@ Dependent Variable Breakdown
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard

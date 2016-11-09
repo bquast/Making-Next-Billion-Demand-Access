@@ -165,7 +165,7 @@ fere <- phtest(plm4_1, pNIDS, model=c('within', 'random'))
 fepo <- phtest(plm4_1, pNIDS, model=c('within', 'pooling'))
 
 
-# basic plot of a_owncom
+# basic plot of own_computer
 NIDS %>%
   filter(a_lng != 'Afrikaans') %>%
   group_by(setswana, wave) %>%
@@ -174,13 +174,21 @@ NIDS %>%
   geom_line() %+% 
   scale_colour_brewer(palette='Set1')
 
-# full plot of a_owncom
+# full plot of own_computer
 NIDS %>%
-  group_by(a_lng, wave) %>%
-  summarise(a_owncom = mean(a_owncom, na.rm=TRUE)) %>%
-  ggplot(aes(x=wave, y=a_owncom, fill=a_lng)) %+%
+  group_by(language, wave) %>%
+  summarise(own_computer = mean(own_computer, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=own_computer, fill=language)) %+%
   geom_bar(stat='identity') %+%
-  facet_grid(~a_lng)
+  facet_grid(~language)
+
+# basic plot of a_owncel
+NIDS %>%
+  group_by(setswana, wave) %>%
+  summarise(own_cel = mean(a_owncel, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=own_cel, colour=setswana)) %+%
+  geom_line() %+% 
+  scale_colour_brewer(palette='Set1')
 
 # full plot of a_owncel
 NIDS %>%
@@ -190,17 +198,20 @@ NIDS %>%
   geom_bar(stat='identity') %+%
   facet_grid(~a_lng)
 
-# basic plot of Internet_expenditure
+# basic plot of internet_expenditure
 NIDS %>%
+  filter(a_lng != 'Tshivenda') %>%
+  filter(a_lng != 'IsiTsonga') %>%
   group_by(setswana, wave) %>%
-  summarise(Internet_expenditure = mean(Internet_expenditure, na.rm=TRUE)) %>%
-  ggplot(aes(x=wave, y=Internet_expenditure, colour=setswana)) %+%
+  summarise(internet_expenditure = mean(internet_expenditure, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=internet_expenditure, colour=setswana)) %+%
   geom_line() %+%
   scale_colour_brewer(palette='Set1')
 
 # full plot of h_nfnet
 NIDS %>%
   filter(a_lng != 'Tshivenda') %>%
+  filter(a_lng != 'IsiTsonga') %>%
   group_by(a_lng, wave) %>%
   summarise(h_nfnet = mean(h_nfnet, na.rm=TRUE)) %>%
   ggplot(aes(x=wave, y=h_nfnet, fill=a_lng)) %+%
