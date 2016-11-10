@@ -24,7 +24,6 @@ ggplot(data=WB2016, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FAL
 **QUESTION**: lowest bars, chicken vs. egg?
 
 
-
 ## Cross-Side Network Effects (2SM)
 
 <img src='../misc/NetworkEffects-Telephones.png' width='600px' />
@@ -36,6 +35,7 @@ ggplot(data=WB2016, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FAL
 
 <img src='../misc/ProtocolStack.gif' width='800px' />
 
+
 ## Research Design
 
 **Identification Strategy**: Setswana introduced on `google.co.za` at end the of 2010
@@ -44,8 +44,8 @@ ggplot(data=WB2016, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FAL
   
 **Data**: South Africa's National Income Dynamics Survey (2008, 2010, 2011)
 
-  * around 10,000 households; 50,000 adults; 10,000 Setswana speakers
-  * cellphones; computers; internet access and expenditure
+  * around 5,000 households; 15,000 adults; 1,500 Setswana speakers
+  * cellphones, **computers**, and  **internet expenditure** (hh level)
 
 ![](../misc/rmd-data_plot-1.png)<!-- -->
 
@@ -166,7 +166,7 @@ NIDS %>%
 
 ![](../misc/rmd-int_exp_full-1.png)<!-- -->
 
-## B) Full breakdown compute ownership
+## B) Full breakdown computer ownership
 
 ![](../misc/rmd-own_comp_full-1.png)<!-- -->
 
