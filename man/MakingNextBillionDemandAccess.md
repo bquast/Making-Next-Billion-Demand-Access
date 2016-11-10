@@ -1,40 +1,20 @@
----
-title: 'Making the Next Billion Demand Access:<br/> `google.co.za`
-  in Setswana'
-author: "Bastiaan Quast"
-date: "10 November 2016"
-output:
-  ioslides_presentation:
-    keep_md: yes
-    logo: ~/BeamerGeneva/GI.png
-    smaller: yes
-    widescreen: yes
----
-
-```{r prep, include=FALSE}
-knitr::opts_chunk$set(fig.path='../misc/rmd-',
-                      cache.path='../data/cache/rmd-',
-                      fig.height=3)
-load(file = '../data/results.RData') # load results data
-load(file = '../data/merged.RData')  # load source  data
-load(file = '../data/googletrends.RData') # google trends data
-load(file = '../data/internetgrowth.RData') # internet growth data
+# Making the Next Billion Demand Access:<br/> `google.co.za` in Setswana
+Bastiaan Quast  
+10 November 2016  
 
 
-library(ggplot2)
-library(printr) # load (customised) printr package for clean output of lm()
-library(dplyr)
-attach(adulthh)
-```
 
 ## Introduction
 
 * improved reach and affordability
 * yet, stagnating growth
 
-```{r adoption_plot, cache=TRUE}
+
+```r
 ggplot(data=WB2016, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
 ```
+
+![](../misc/rmd-adoption_plot-1.png)<!-- -->
 
 
 ## Language Disparities
@@ -67,19 +47,28 @@ ggplot(data=WB2016, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FAL
   * around 10,000 households; 50,000 adults; 10,000 Setswana speakers
   * cellphones; computers; internet access and expenditure
 
-```{r data_plot, echo=FALSE, cache=TRUE}
-ggplot(data=NIDS, aes(x=language, fill=woman)) + geom_bar()
-```
+![](../misc/rmd-data_plot-1.png)<!-- -->
 
 
 ## Internet Usage
 
-```{r lm4_5pres, cache=TRUE, echo=TRUE}
+
+```r
 lm(h_nfnet ~  interface_intro*setswana +
               woman                    +
               hhincome             	   + 
               best_edu)
 ```
+
+                                      Estimate   Std. Error     t value    Pr(>|t|)
+---------------------------------  -----------  -----------  ----------  ----------
+(Intercept)                         -0.0053453    0.0012538   -4.263261   0.0000202
+interface_introTRUE                 -0.0087442    0.0009761   -8.958623   0.0000000
+setswanaTRUE                        -0.0126838    0.0022931   -5.531323   0.0000000
+womanTRUE                           -0.0020223    0.0009394   -2.152631   0.0313512
+hhincome                             0.0000031    0.0000000   65.212592   0.0000000
+best_edu                             0.0008878    0.0000749   11.856907   0.0000000
+interface_introTRUE:setswanaTRUE     0.0107539    0.0031159    3.451259   0.0005583
 
 * Covariates: linguistic skills
 * Alt. formulation, Interact `interface_intro` with `language`: similar results
@@ -87,21 +76,30 @@ lm(h_nfnet ~  interface_intro*setswana +
 
 ## Computer Ownership
 
-```{r lm2_5pres, cache=TRUE}
+
+```r
 lm(a_owncom ~ interface_intro*setswana + 
               woman                    + 
               hhincome             	   + 
               best_edu)
 ```
 
+                                      Estimate   Std. Error      t value    Pr(>|t|)
+---------------------------------  -----------  -----------  -----------  ----------
+(Intercept)                         -0.0143584    0.0021360    -6.721999   0.0000000
+interface_introTRUE                  0.0070789    0.0016500     4.290279   0.0000179
+setswanaTRUE                        -0.0132797    0.0042782    -3.104031   0.0019096
+womanTRUE                           -0.0315572    0.0015182   -20.785807   0.0000000
+hhincome                             0.0000059    0.0000001    85.869415   0.0000000
+best_edu                             0.0045057    0.0001232    36.560469   0.0000000
+interface_introTRUE:setswanaTRUE     0.0220040    0.0053089     4.144727   0.0000341
+
 
 ## Usage of Setswana online
 
 <img src='../misc/thuso.png' width='800px' />
 
-```{r googletrends, echo=FALSE, eval=FALSE, cache=FALSE}
-ggplot(thuso) + geom_smooth(aes(x = date, y = hits))
-```
+
 
 
 
@@ -110,7 +108,8 @@ ggplot(thuso) + geom_smooth(aes(x = date, y = hits))
 
 ## Internet Expenditure -> Employment
 
-```{r nf_net_empl, cache=TRUE}
+
+```r
 pids <- adulthh[which(adulthh$wave==3 & adulthh$h_nfnet==TRUE),]$pid
 adulthh %>%
   filter(pid %in% pids) %>%
@@ -121,10 +120,13 @@ adulthh %>%
     scale_colour_brewer(palette='Set1')
 ```
 
+![](../misc/rmd-nf_net_empl-1.png)<!-- -->
+
 
 ## Computer Ownership -> Employment
 
-```{r own_comp_empl, cache=TRUE}
+
+```r
 pids <- adulthh[which(adulthh$wave==3 & adulthh$a_owncom==TRUE),]$pid
 adulthh %>%
   filter(pid %in% pids) %>%
@@ -134,6 +136,8 @@ adulthh %>%
     geom_line() %+%
     scale_colour_brewer(palette='Set1')
 ```
+
+![](../misc/rmd-own_comp_empl-1.png)<!-- -->
 
 
 ## Closing Remarks
