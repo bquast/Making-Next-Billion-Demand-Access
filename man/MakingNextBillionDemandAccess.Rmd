@@ -192,14 +192,6 @@ NIDS %>%
 ```
 
 
-
-
-
-
-
-
-
-
 ## Usage of Setswana online
 
 <img src='../misc/thuso.png' width='800px' />
@@ -225,6 +217,21 @@ NIDS %>%
 ```
 
 
+## Internet Expenditure -> Employment, by Gender
+
+```{r nf_net_empl_gender, echo=FALSE, cache=TRUE}
+pids <- adulthh[which(adulthh$wave==3 & adulthh$h_nfnet==TRUE),]$pid
+NIDS %>%
+  filter(pid %in% pids) %>%
+  group_by(woman, setswana, wave) %>%
+  summarise(employed = mean(employed, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=employed, colour=setswana)) %+%
+    geom_line() %+%
+    facet_grid(woman ~ .) %+%
+    scale_colour_brewer(palette='Set1')
+```
+
+
 ## Computer Ownership -> Employment
 
 ```{r own_comp_empl, echo=FALSE, cache=TRUE}
@@ -238,6 +245,20 @@ NIDS %>%
     scale_colour_brewer(palette='Set1')
 ```
 
+
+## Computer Ownership -> Employment, by Gender
+
+```{r own_comp_empl_gender, echo=FALSE, cache=TRUE}
+pids <- adulthh[which(adulthh$wave==3 & adulthh$a_owncom==TRUE),]$pid
+NIDS %>%
+  filter(pid %in% pids) %>%
+  group_by(woman, setswana, wave) %>%
+  summarise(employed = mean(employed, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=employed, colour=setswana)) %+%
+    geom_line() %+%
+    facet_grid(woman ~ .) %+%
+    scale_colour_brewer(palette='Set1')
+```
 
 ## Closing Remarks
 

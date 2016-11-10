@@ -129,14 +129,6 @@ a_womanTRUE:eventTRUE:setswanaTRUE    -0.0256385    0.0106599   -2.4051410   0.0
 ![](../misc/rmd-own_comp_gender-1.png)<!-- -->
 
 
-
-
-
-
-
-
-
-
 ## Usage of Setswana online
 
 <img src='../misc/thuso.png' width='800px' />
@@ -163,10 +155,19 @@ NIDS %>%
 ![](../misc/rmd-nf_net_empl-1.png)<!-- -->
 
 
+## Internet Expenditure -> Employment, by Gender
+
+![](../misc/rmd-nf_net_empl_gender-1.png)<!-- -->
+
+
 ## Computer Ownership -> Employment
 
 ![](../misc/rmd-own_comp_empl-1.png)<!-- -->
 
+
+## Computer Ownership -> Employment, by Gender
+
+![](../misc/rmd-own_comp_empl_gender-1.png)<!-- -->
 
 ## Closing Remarks
 
