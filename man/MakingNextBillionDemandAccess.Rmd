@@ -13,8 +13,9 @@ output:
 
 ```{r prep, include=FALSE}
 knitr::opts_chunk$set(fig.path='../misc/rmd-',
-                      cache.path='../data/cache/rmd-',
-                      fig.height=3)
+                      # fig.height=3,
+                      fig.width = 11,
+                      cache.path='../data/cache/rmd-')
 load(file = '../data/results.RData') # load results data
 load(file = '../data/merged.RData')  # load source  data
 load(file = '../data/googletrends.RData') # google trends data
@@ -32,7 +33,7 @@ attach(adulthh)
 * improved reach and affordability
 * yet, stagnating growth
 
-```{r adoption_plot, cache=TRUE}
+```{r adoption_plot, cache=TRUE, fig.height=3}
 ggplot(data=WB2016, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
 ```
 
@@ -67,14 +68,43 @@ ggplot(data=WB2016, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FAL
   * around 10,000 households; 50,000 adults; 10,000 Setswana speakers
   * cellphones; computers; internet access and expenditure
 
-```{r data_plot, echo=FALSE, cache=TRUE}
+```{r data_plot, echo=FALSE, cache=TRUE, fig.height=3}
 ggplot(data=NIDS, aes(x=language, fill=woman)) + geom_bar()
+```
+
+
+## Common Trend Computer
+
+```{r own_comp_basic, echo=FALSE, cache=TRUE}
+# basic plot of own_computer
+NIDS %>%
+  filter(a_lng != 'Afrikaans') %>%
+  group_by(setswana, wave) %>%
+  summarise(own_computer = mean(own_computer, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=own_computer, colour=setswana)) %+%
+  geom_line() %+% 
+  scale_colour_brewer(palette='Set1')
+```
+
+
+## Common Trend Internet Expenditure
+
+```{r int_exp_basic, echo=FALSE, warning=FALSE, cache=TRUE}
+# basic plot of internet_expenditure
+NIDS %>%
+  filter(a_lng != 'Tshivenda') %>%
+  filter(a_lng != 'IsiTsonga') %>%
+  group_by(setswana, wave) %>%
+  summarise(internet_expenditure = mean(internet_expenditure, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=internet_expenditure, colour=setswana)) %+%
+    geom_line() %+%
+    scale_colour_brewer(palette='Set1')
 ```
 
 
 ## Internet Usage
 
-```{r lm4_5pres, cache=TRUE, echo=TRUE}
+```{r lm4_5pres, cache=TRUE}
 lm(h_nfnet ~  interface_intro*setswana +
               woman                    +
               hhincome             	   + 
@@ -103,16 +133,14 @@ lm(a_owncom ~ interface_intro*setswana +
 ggplot(thuso) + geom_smooth(aes(x = date, y = hits))
 ```
 
-
-
 * thuso = help (common term on Google Trends)
 
 
 ## Internet Expenditure -> Employment
 
-```{r nf_net_empl, cache=TRUE}
+```{r nf_net_empl, cache=TRUE, fig.height=3}
 pids <- adulthh[which(adulthh$wave==3 & adulthh$h_nfnet==TRUE),]$pid
-adulthh %>%
+NIDS %>%
   filter(pid %in% pids) %>%
   group_by(setswana, wave) %>%
   summarise(employed = mean(employed, na.rm=TRUE)) %>%
@@ -124,9 +152,9 @@ adulthh %>%
 
 ## Computer Ownership -> Employment
 
-```{r own_comp_empl, cache=TRUE}
+```{r own_comp_empl, echo=FALSE, cache=TRUE}
 pids <- adulthh[which(adulthh$wave==3 & adulthh$a_owncom==TRUE),]$pid
-adulthh %>%
+NIDS %>%
   filter(pid %in% pids) %>%
   group_by(setswana, wave) %>%
   summarise(employed = mean(employed, na.rm=TRUE)) %>%
@@ -140,9 +168,54 @@ adulthh %>%
 
 * accessibility improves adoption
 * observed long term commitment: computer ownership
-* mobile needs directly visible link
+* mobile needs directly visible link?
 * available online: http://qua.st/internet-access
     * data
     * code
     * paper
     * presentation
+    
+    
+# Thank you
+
+# Appendix
+
+## A) Full breakdown internet expenditure
+
+```{r int_exp_full, echo=FALSE, warning=FALSE, cache=TRUE}
+# full plot of h_nfnet
+NIDS %>%
+  filter(a_lng != 'Tshivenda') %>%
+  filter(a_lng != 'IsiTsonga') %>%
+  group_by(a_lng, wave) %>%
+  summarise(h_nfnet = mean(h_nfnet, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=h_nfnet, fill=a_lng)) %+%
+  geom_bar(stat='identity') %+%
+  facet_grid(~a_lng)
+```
+
+
+## Own Cellphone Basic
+
+```{r own_cel_basic, echo=FALSE, cache=TRUE}
+# basic plot of a_owncel
+NIDS %>%
+  group_by(setswana, wave) %>%
+  summarise(own_cel = mean(a_owncel, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=own_cel, colour=setswana)) %+%
+  geom_line() %+% 
+  scale_colour_brewer(palette='Set1')
+```
+
+
+## Own Cellphone Full
+
+```{r own_cel_full, echo=FALSE, cache=TRUE}
+# full plot of a_owncel
+NIDS %>%
+  group_by(a_lng, wave) %>%
+  summarise(a_owncel = mean(a_owncel, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=a_owncel, fill=a_lng)) %+%
+  geom_bar(stat='identity') %+%
+  facet_grid(~a_lng)
+```

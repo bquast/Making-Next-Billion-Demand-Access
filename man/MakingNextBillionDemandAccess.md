@@ -50,6 +50,16 @@ ggplot(data=WB2016, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FAL
 ![](../misc/rmd-data_plot-1.png)<!-- -->
 
 
+## Common Trend Computer
+
+![](../misc/rmd-own_comp_basic-1.png)<!-- -->
+
+
+## Common Trend Internet Expenditure
+
+![](../misc/rmd-int_exp_basic-1.png)<!-- -->
+
+
 ## Internet Usage
 
 
@@ -101,8 +111,6 @@ interface_introTRUE:setswanaTRUE     0.0220040    0.0053089     4.144727   0.000
 
 
 
-
-
 * thuso = help (common term on Google Trends)
 
 
@@ -111,7 +119,7 @@ interface_introTRUE:setswanaTRUE     0.0220040    0.0053089     4.144727   0.000
 
 ```r
 pids <- adulthh[which(adulthh$wave==3 & adulthh$h_nfnet==TRUE),]$pid
-adulthh %>%
+NIDS %>%
   filter(pid %in% pids) %>%
   group_by(setswana, wave) %>%
   summarise(employed = mean(employed, na.rm=TRUE)) %>%
@@ -125,18 +133,6 @@ adulthh %>%
 
 ## Computer Ownership -> Employment
 
-
-```r
-pids <- adulthh[which(adulthh$wave==3 & adulthh$a_owncom==TRUE),]$pid
-adulthh %>%
-  filter(pid %in% pids) %>%
-  group_by(setswana, wave) %>%
-  summarise(employed = mean(employed, na.rm=TRUE)) %>%
-  ggplot(aes(x=wave, y=employed, colour=setswana)) %+%
-    geom_line() %+%
-    scale_colour_brewer(palette='Set1')
-```
-
 ![](../misc/rmd-own_comp_empl-1.png)<!-- -->
 
 
@@ -144,9 +140,28 @@ adulthh %>%
 
 * accessibility improves adoption
 * observed long term commitment: computer ownership
-* mobile needs directly visible link
+* mobile needs directly visible link?
 * available online: http://qua.st/internet-access
     * data
     * code
     * paper
     * presentation
+    
+    
+# Thank you
+
+# Appendix
+
+## A) Full breakdown internet expenditure
+
+![](../misc/rmd-int_exp_full-1.png)<!-- -->
+
+
+## Own Cellphone Basic
+
+![](../misc/rmd-own_cel_basic-1.png)<!-- -->
+
+
+## Own Cellphone Full
+
+![](../misc/rmd-own_cel_full-1.png)<!-- -->
