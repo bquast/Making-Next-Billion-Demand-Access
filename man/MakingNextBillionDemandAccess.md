@@ -55,9 +55,19 @@ ggplot(data=WB2016, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FAL
 ![](../misc/rmd-own_comp_basic-1.png)<!-- -->
 
 
+## Common Trend Computer by Gender
+
+![](../misc/rmd-own_comp_gender-1.png)<!-- -->
+
+
 ## Common Trend Internet Expenditure
 
 ![](../misc/rmd-int_exp_basic-1.png)<!-- -->
+
+
+## Common Trend Internet Expenditure by Gender
+
+![](../misc/rmd-int_exp_gender-1.png)<!-- -->
 
 
 ## Internet Usage

@@ -7,7 +7,7 @@ output:
   ioslides_presentation:
     keep_md: yes
     logo: ~/BeamerGeneva/GI.png
-    smaller: yes
+    smaller: no
     widescreen: yes
 ---
 
@@ -87,6 +87,21 @@ NIDS %>%
 ```
 
 
+## Common Trend Computer by Gender
+
+```{r own_comp_gender, echo=FALSE, cache=TRUE}
+# basic plot of own_computer by gender
+NIDS %>%
+  filter(a_lng != 'Afrikaans') %>%
+  group_by(woman, setswana, wave) %>%
+  summarise(own_computer = mean(own_computer, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=own_computer, colour=setswana)) %+%
+  geom_line() %+%
+  facet_grid(woman ~ .) %+%
+  scale_colour_brewer(palette='Set1')
+```
+
+
 ## Common Trend Internet Expenditure
 
 ```{r int_exp_basic, echo=FALSE, warning=FALSE, cache=TRUE}
@@ -98,6 +113,22 @@ NIDS %>%
   summarise(internet_expenditure = mean(internet_expenditure, na.rm=TRUE)) %>%
   ggplot(aes(x=wave, y=internet_expenditure, colour=setswana)) %+%
     geom_line() %+%
+    scale_colour_brewer(palette='Set1')
+```
+
+
+## Common Trend Internet Expenditure by Gender
+
+```{r int_exp_gender, echo=FALSE, warning=FALSE, cache=TRUE}
+# basic plot of internet_expenditure by gender
+NIDS %>%
+  filter(a_lng != 'Tshivenda') %>%
+  filter(a_lng != 'IsiTsonga') %>%
+  group_by(woman, setswana, wave) %>%
+  summarise(internet_expenditure = mean(internet_expenditure, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=internet_expenditure, colour=setswana)) %+%
+    geom_line() %+%
+    facet_grid(woman ~ .) %+%
     scale_colour_brewer(palette='Set1')
 ```
 
