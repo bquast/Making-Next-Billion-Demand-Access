@@ -166,12 +166,16 @@ NIDS %>%
 
 ![](../misc/rmd-int_exp_full-1.png)<!-- -->
 
+## B) Full breakdown compute ownership
 
-## Own Cellphone Basic
+![](../misc/rmd-own_comp_full-1.png)<!-- -->
+
+
+## C) Cellphone Ownership Basic
 
 ![](../misc/rmd-own_cel_basic-1.png)<!-- -->
 
 
-## Own Cellphone Full
+## D) Cellphone Ownership Full
 
 ![](../misc/rmd-own_cel_full-1.png)<!-- -->

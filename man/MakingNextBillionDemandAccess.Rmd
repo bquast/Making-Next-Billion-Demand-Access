@@ -225,8 +225,20 @@ NIDS %>%
   facet_grid(~a_lng)
 ```
 
+## B) Full breakdown compute ownership
 
-## Own Cellphone Basic
+```{r own_comp_full, echo=FALSE, warning=FALSE, cache=TRUE}
+# full plot of own_computer
+NIDS %>%
+  group_by(language, wave) %>%
+  summarise(own_computer = mean(own_computer, na.rm=TRUE)) %>%
+  ggplot(aes(x=wave, y=own_computer, fill=language)) %+%
+  geom_bar(stat='identity') %+%
+  facet_grid(~language)
+```
+
+
+## C) Cellphone Ownership Basic
 
 ```{r own_cel_basic, echo=FALSE, cache=TRUE}
 # basic plot of a_owncel
@@ -239,7 +251,7 @@ NIDS %>%
 ```
 
 
-## Own Cellphone Full
+## D) Cellphone Ownership Full
 
 ```{r own_cel_full, echo=FALSE, cache=TRUE}
 # full plot of a_owncel
