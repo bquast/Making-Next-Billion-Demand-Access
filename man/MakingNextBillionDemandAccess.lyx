@@ -1,15 +1,11 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
 \textclass article
 \begin_preamble
-\usepackage[style=philosophy-modern,natbib=true,backend=biber]{biblatex}
-\addbibresource{~/Making-Next-Billion-Demand-Access/man/bibliography.bib}
-
-
 \AtBeginDocument{%
 \let\ref\autoref
 \renewcommand\equationautorefname{\@gobble}
@@ -38,10 +34,12 @@ Provides natbib 1
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
 \graphics default
 \default_output_format pdf2
 \output_sync 0
-\bibtex_command default
+\bibtex_command biber
 \index_command default
 \paperfontsize default
 \spacing single
@@ -69,15 +67,18 @@ Provides natbib 1
 \use_package stackrel 1
 \use_package stmaryrd 1
 \use_package undertilde 1
-\cite_engine natbib
+\cite_engine biblatex-natbib
 \cite_engine_type authoryear
-\biblio_style plain
+\biblio_style plainnat
+\biblatex_bibstyle authoryear
+\biblatex_citestyle authoryear
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -86,7 +87,10 @@ Provides natbib 1
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -181,6 +185,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 load_plot_data, echo=FALSE, warning=FALSE, message=FALSE
 \end_layout
 
@@ -288,6 +293,7 @@ The term `Connecting the Next Billion' was introduced in The Economist's
 \begin_inset CommandInset citation
 LatexCommand citep
 key "standage2006connecting"
+literal "true"
 
 \end_inset
 
@@ -302,6 +308,7 @@ estimated to have been connected to the Internet, up from the just over
 \begin_inset CommandInset citation
 LatexCommand citep
 key "sanou2015world"
+literal "true"
 
 \end_inset
 
@@ -376,6 +383,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 mobile_growth, echo=FALSE, warning=FALSE
 \end_layout
 
@@ -413,6 +421,7 @@ A crucial factor in Internet adoption by native speakers of a language is
 \begin_inset CommandInset citation
 LatexCommand citep
 key "parker2000information,parker2000internetwork,parker2005two"
+literal "true"
 
 \end_inset
 
@@ -433,6 +442,7 @@ In the case of Internet adoption in a certain language, these sides are
 \begin_inset CommandInset citation
 LatexCommand citep
 key "rochet2003platform,rochet2006two"
+literal "true"
 
 \end_inset
 
@@ -444,6 +454,7 @@ key "rochet2003platform,rochet2006two"
 \begin_inset CommandInset citation
 LatexCommand citep
 key "arcand2013language"
+literal "true"
 
 \end_inset
 
@@ -696,6 +707,7 @@ We can interpret these differences in protocol as a form of transaction
 \begin_inset CommandInset citation
 LatexCommand citep
 key "coase1937nature"
+literal "true"
 
 \end_inset
 
@@ -970,6 +982,7 @@ The National Income Dynamics Study (NIDS) collects data on a representative
 \begin_inset CommandInset citation
 LatexCommand citep
 key "saldru2008nids,saldru2012nids,saldru2013nids"
+literal "true"
 
 \end_inset
 
@@ -1015,6 +1028,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 prep, include=FALSE
 \end_layout
 
@@ -1373,6 +1387,7 @@ I use both household expenditure on Internet access and computer ownership
 \begin_inset CommandInset citation
 LatexCommand citep
 key "international2015world"
+literal "true"
 
 \end_inset
 
@@ -1446,6 +1461,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 lang_woman, echo=FALSE, cache=TRUE
 \end_layout
 
@@ -1585,6 +1601,7 @@ As mentioned in the above section, I compare the change in the level of
 \begin_inset CommandInset citation
 LatexCommand citep
 key "abadie2005semiparametric,imbens2009econometrics"
+literal "true"
 
 \end_inset
 
@@ -1735,6 +1752,7 @@ h_nfnet
 \begin_inset CommandInset citation
 LatexCommand citep
 key "white1980heteroskedasticity"
+literal "true"
 
 \end_inset
 
@@ -1749,6 +1767,7 @@ Lastly, the dependent variables are both logical or binary variables, as
 \begin_inset CommandInset citation
 LatexCommand citep
 key "wooldridge2010econometric"
+literal "true"
 
 \end_inset
 
@@ -2665,6 +2684,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 gg2_5, echo=FALSE, cache=TRUE
 \end_layout
 
@@ -2751,6 +2771,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 gender_gg2_5, echo=FALSE, cache=TRUE
 \end_layout
 
@@ -3254,6 +3275,7 @@ status collapsed
 status open
 
 \begin_layout Plain Layout
+
 plot_data, echo=FALSE
 \end_layout
 
@@ -3356,6 +3378,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 employment_own_computer, echo=FALSE, warning=FALSE, cache=TRUE
 \end_layout
 
@@ -3459,6 +3482,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 employment_int_exp, echo=FALSE, cache=TRUE
 \end_layout
 
@@ -3559,6 +3583,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 gender_employment_own_computer, echo=FALSE, warning=FALSE, cache=TRUE
 \end_layout
 
@@ -3660,6 +3685,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 gender_employment_int_exp, echo=FALSE, cache=TRUE
 \end_layout
 
@@ -3832,43 +3858,19 @@ As I discussed in the results section, the increase in computer ownership
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+\begin_inset Newpage newpage
+\end_inset
 
-\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
+btprint "btPrintCited"
 bibfiles "bibliography"
-options "bibtotoc,plain"
+options "plainnat"
 
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-printbibliography
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage newpage
 \end_inset
 
 
@@ -3908,6 +3910,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 clustering, message=FALSE, warning=FALSE, cache=FALSE
 \end_layout
 
@@ -4065,6 +4068,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 dep_vars, echo=FALSE, cache=TRUE
 \end_layout
 
@@ -4146,6 +4150,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 hhincome, cache=TRUE
 \end_layout
 
@@ -4213,6 +4218,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 best_edu, cache=TRUE
 \end_layout
 
@@ -4299,6 +4305,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 read_english, cache=TRUE
 \end_layout
 
@@ -4374,6 +4381,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 read_native, cache=TRUE
 \end_layout
 
@@ -4442,6 +4450,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 lm2_5, cache=TRUE
 \end_layout
 
@@ -4536,6 +4545,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 lm4_5, cache=TRUE
 \end_layout
 
@@ -4627,6 +4637,7 @@ status open
 status open
 
 \begin_layout Plain Layout
+
 interact_woman, cache=TRUE
 \end_layout
 
@@ -4696,6 +4707,7 @@ The estimation is primarily performed using R
 \begin_inset CommandInset citation
 LatexCommand citep*
 key "R"
+literal "true"
 
 \end_inset
 
@@ -4733,6 +4745,7 @@ stats
 \begin_inset CommandInset citation
 LatexCommand citep
 key "venables2013Splus"
+literal "true"
 
 \end_inset
 
@@ -4761,6 +4774,7 @@ pglm()
 \begin_inset CommandInset citation
 LatexCommand citep
 key "croissant2008plm,croissant2013pglm"
+literal "true"
 
 \end_inset
 
@@ -4789,6 +4803,7 @@ sandwich
 \begin_inset CommandInset citation
 LatexCommand citet
 key "zeileis2002lmtest,zeileis2004sandwichI,zeileis2006sandwichII"
+literal "true"
 
 \end_inset
 
@@ -4802,6 +4817,7 @@ In order to make the result as easily reproducible as possible, this research
 \begin_inset CommandInset citation
 LatexCommand citep*
 key "R"
+literal "true"
 
 \end_inset
 
@@ -4811,6 +4827,7 @@ key "R"
 \begin_inset CommandInset citation
 LatexCommand citep
 key "lyx"
+literal "true"
 
 \end_inset
 
@@ -4819,6 +4836,7 @@ key "lyx"
 \begin_inset CommandInset citation
 LatexCommand citep
 key "lamport1985latex"
+literal "true"
 
 \end_inset
 
@@ -4826,6 +4844,7 @@ key "lamport1985latex"
 \begin_inset CommandInset citation
 LatexCommand citep
 key "luatex"
+literal "true"
 
 \end_inset
 
@@ -4835,6 +4854,7 @@ key "luatex"
 \begin_inset CommandInset citation
 LatexCommand citet
 key "knuth1984literate"
+literal "true"
 
 \end_inset
 
@@ -4842,6 +4862,7 @@ key "knuth1984literate"
 \begin_inset CommandInset citation
 LatexCommand citet
 key "xie2015knitr"
+literal "true"
 
 \end_inset
 
@@ -4849,6 +4870,7 @@ key "xie2015knitr"
 \begin_inset CommandInset citation
 LatexCommand citep
 key "leisch2002sweave"
+literal "true"
 
 \end_inset
 
@@ -4860,6 +4882,7 @@ All changes are logged using the version control system Git
 \begin_inset CommandInset citation
 LatexCommand citep
 key "git"
+literal "true"
 
 \end_inset
 
@@ -4867,6 +4890,7 @@ key "git"
 \begin_inset CommandInset href
 LatexCommand href
 target "https://github.com/bquast/Making-Next-Billion-Demand-Access/"
+literal "false"
 
 \end_inset
 

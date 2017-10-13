@@ -1,5 +1,7 @@
-%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
-%% Do not edit unless you really know what you are doing.
+\batchmode
+\makeatletter
+\def\input@path{{/home/bquast/Making-Next-Billion-Demand-Access/man/}}
+\makeatother
 \documentclass[a4paper,british]{article}\usepackage[]{graphicx}\usepackage[]{color}
 %% maxwidth is the original width if it is less than linewidth
 %% otherwise use linewidth (to make sure the graphics do not exceed the margin)
@@ -53,16 +55,17 @@
 \usepackage{alltt}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
+\PassOptionsToPackage{natbib=true}{biblatex}
 \usepackage{babel}
 \usepackage{refstyle}
 \usepackage{float}
+\usepackage{graphicx}
 \usepackage[unicode=true,
  bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
  breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=false]
  {hyperref}
 \hypersetup{pdftitle={Making the Next Billion Demand Access},
  pdfauthor={Bastiaan Quast}}
-\usepackage{breakurl}
 
 \makeatletter
 
@@ -72,7 +75,8 @@
 \AtBeginDocument{\providecommand\tabref[1]{\ref{tab:#1}}}
 \AtBeginDocument{\providecommand\eqref[1]{\ref{eq:#1}}}
 \AtBeginDocument{\providecommand\secref[1]{\ref{sec:#1}}}
-\special{papersize=\the\paperwidth,\the\paperheight}
+\pdfpageheight\paperheight
+\pdfpagewidth\paperwidth
 
 \providecommand{\LyX}{\texorpdfstring%
   {L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
@@ -91,19 +95,18 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
-\newcommand{\code}[1]{\texttt{#1}}
+\providecommand*{\code}[1]{\texttt{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
-\usepackage[style=philosophy-modern,natbib=true,backend=biber]{biblatex}
-\addbibresource{~/Making-Next-Billion-Demand-Access/man/bibliography.bib}
-
-
 \AtBeginDocument{%
 \let\ref\autoref
 \renewcommand\equationautorefname{\@gobble}
 }
 
 \makeatother
+
+\usepackage[style=authoryear]{biblatex}
+\addbibresource{1_home_bquast_Making-Next-Billion-Demand-Access_man_bibliography.bib}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 
@@ -112,7 +115,7 @@
 \author{The Local-Content Effect of \code{google.co.za} in Setswana}
 
 \date{Bastiaan Quast\thanks{http://qua.st/ | bquast@gmail.com | bastiaan.quast@graduateinstitute.ch\protect \\
-Maison de la paix, Geneva, Switzerland}}
+The Graduate Institute | Maison de la paix, Geneva, Switzerland}}
 
 \maketitle
 
@@ -134,9 +137,11 @@ website was a spillover of the development of that interface for the
 Botswanan Google website. This exogenous improvement in the accessibility
 of Setswana-language content has resulted in a substantial increase
 in the number of native Setswana speakers coming online and owning
-personal computers. This is turn has also led to increased usage of
-the Setswana language online. This adoption appears to also lead to
-improvements in employment.
+personal computers, this effect is persistent, remaining visible 4
+years later. This is turn has also led to increased usage of the Setswana
+language online. This adoption appears to also lead to substantial
+and persistent improvements in employment status. The effect for women
+is substantially smaller then it is for men. 
 
 \section{Introduction}
 
@@ -187,6 +192,22 @@ As is shown in \figref{adoption_growth}, growth of Internet usage
 in Sub-Saharan Africa is rapidly decreasing. Unlike in other regions
 in the figure, this observed stagnation is not a consequence of near
 market saturation, as adoption levels are still relatively low.
+
+\begin{figure}[h]
+\caption{Internet Adoption}
+
+\begin{centering}
+\label{fig:adoption_growth}
+\par\end{centering}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+
+
+{\ttfamily\noindent\itshape\color{messagecolor}{\#\# `geom\_smooth()` using method = 'loess' and formula 'y \textasciitilde{} x'}}\end{kframe}
+\includegraphics[width=\maxwidth]{../misc/latex-mobile_growth-1} 
+
+\end{knitrout}
+\end{figure}
 
 A crucial factor in Internet adoption by native speakers of a language
 is the interplay with content creators using that language. This dynamic
@@ -262,9 +283,11 @@ on the Internet.
 \centering{}%
 \begin{tabular}{|c|c|}
 \hline 
-Social Media (simple network effects, proprietary) & Spam (one-way network effects)\tabularnewline
+Social Media (simple network effects, proprietary) &
+Spam (one-way network effects)\tabularnewline
 \hline 
-Websites (cross-side network effects) & Email (simple network effects)\tabularnewline
+Websites (cross-side network effects) &
+Email (simple network effects)\tabularnewline
 \hline 
 \multicolumn{2}{|c|}{TCP/IP (simple network effects)}\tabularnewline
 \hline 
@@ -274,7 +297,7 @@ Websites (cross-side network effects) & Email (simple network effects)\tabularne
 This platform is built upon by using additional protocols so that
 eventually communication is conducted using a combination of protocols
 called the protocol stack (in economic terms we might call this a
-\textquotedbl{}convention ensemble\textquotedbl{}). For instance,
+\textquotedbl convention ensemble\textquotedbl ). For instance,
 emails are sent through protocols such as the Simple Mail Transfer
 Protocol (SMTP), which builds upon the Internet Protocol. Of course,
 proprietary variants of such additional platforms with simple network
@@ -324,8 +347,8 @@ markets in different languages (or non-linguistic communication).
 
 We can interpret these differences in protocol as a form of transaction
 costs \citep{coase1937nature}. Transaction costs have been broadly
-defined by Steven N. S. Cheung as: \textquotedbl{}any costs that are
-not conceivable in a \textquotedbl{}Robinson Crusoe economy\textquotedbl{}.
+defined by Steven N. S. Cheung as: \textquotedbl any costs that are
+not conceivable in a \textquotedbl Robinson Crusoe economy\textquotedbl .
 We can interpret this as costs that stem from the presence of institutions
 or conventions.
 
@@ -338,7 +361,7 @@ less expected people to answer them the same way you answer a fixed-line
 phone, by stating your name, but people who did use mobile phones
 quickly realised that it could only logically be expected that they
 would be the one answering the phone, eliminating the need to state
-your name and use just \textquotedbl{}hello\textquotedbl{} instead.
+your name and use just \textquotedbl hello\textquotedbl{} instead.
 This was a partial breakdown of protocol. We can interpret this as
 transaction costs, if the person calling was sufficiently confused
 by not being told who they are speaking to, he/she might hang up the
@@ -474,20 +497,41 @@ language is presented.
 \begin{centering}
 \begin{tabular}{|l|r|r|r|}
 \hline 
- & Wave & Setswana & Other\tabularnewline
+ &
+Wave &
+Setswana &
+Other\tabularnewline
 \hline 
 \hline 
-Computer Ownership & 1 & 0.0351 & 0.0567\tabularnewline
+Computer Ownership &
+1 &
+0.0351 &
+0.0567\tabularnewline
 \hline 
- & 2 & 0.0359 & 0.0417\tabularnewline
+ &
+2 &
+0.0359 &
+0.0417\tabularnewline
 \hline 
- & 3 & 0.0711 & 0.0632\tabularnewline
+ &
+3 &
+0.0711 &
+0.0632\tabularnewline
 \hline 
-Household Internet Expenditure & 1 & 0.0068 & 0.0162\tabularnewline
+Household Internet Expenditure &
+1 &
+0.0068 &
+0.0162\tabularnewline
 \hline 
- & 2 & 0.0037 & 0.0224\tabularnewline
+ &
+2 &
+0.0037 &
+0.0224\tabularnewline
 \hline 
- & 3 & 0.0106 & 0.0140\tabularnewline
+ &
+3 &
+0.0106 &
+0.0140\tabularnewline
 \hline 
 \end{tabular}
 \par\end{centering}
@@ -523,10 +567,9 @@ speakers.
 \label{fig:langsex}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{../misc/latex-lang_woman-1} 
 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in ggplot(data = NIDS, aes(x = a\_lng, fill = a\_woman)): object 'NIDS' not found}}\end{kframe}
 \end{knitrout}
 \end{figure}
 
@@ -676,14 +719,14 @@ the lower levels of English reading as well as English writing are
 correlated with lower propensities of computer ownership. Similar
 to Internet expenditure model, household income (\code{hhincome})
 and highest level of education (\code{best\_edu}) are both positive
-and highly significant (p-value: \code{\textasciitilde{}0}). However,
+and highly significant (p-value: \code{\textasciitilde 0}). However,
 unlike in the household Internet expenditure model, the gender of
 the individual here is highly significant, specifically, parameter
 estimate of \code{woman} is negative and highly significant (p-value:
-\code{\textasciitilde{}0}). As mentioned above, this variable is
-difficult to interpret when using a household-level variable as an
-explanandum, however, here, the computer ownership variable is at
-an individual level, which makes the coefficient more easily interpretable.
+\code{\textasciitilde 0}). As mentioned above, this variable is difficult
+to interpret when using a household-level variable as an explanandum,
+however, here, the computer ownership variable is at an individual
+level, which makes the coefficient more easily interpretable.
 
 \begin{table}
 
@@ -695,27 +738,59 @@ an individual level, which makes the coefficient more easily interpretable.
 \centering{}%
 \begin{tabular}{|l|r|c|c|c|}
 \hline 
- & Internet & (P > |t|) & Computer & (P > |t|)\tabularnewline
+ &
+Internet &
+(P > |t|) &
+Computer &
+(P > |t|)\tabularnewline
 \hline 
 \hline 
-event {*} setswana & \textbf{0.012} & 0.00 & \textbf{0.024} & 0.00\tabularnewline
+event {*} setswana &
+0.012 &
+0.003 &
+0.024 &
+0.005\tabularnewline
 \hline 
-event & \textbf{-0.012} & 0.00 & -0.054 & 0.01\tabularnewline
+event &
+-0.011 &
+0.001 &
+-0.006 &
+0.001\tabularnewline
 \hline 
-setswana & \textbf{-0.014} & 0.00 & \textbf{-0.015} & 0.00\tabularnewline
+setswana &
+-0.013 &
+0.002 &
+-0.0155 &
+0.004\tabularnewline
 \hline 
-income & \textbf{0.000} & 0.00 & \textbf{0.000} & 0.00\tabularnewline
+income (10,000 ZAR) &
+0.270 &
+0.000 &
+0.540 &
+0.000\tabularnewline
 \hline 
-woman & -0.001 & 0.23 & \textbf{-0.023} & 0.00\tabularnewline
+woman &
+-0.001 &
+0.001 &
+-0.027 &
+0.014\tabularnewline
 \hline 
-education & \textbf{0.001} & 0.00 & \textbf{0.006} & 0.00\tabularnewline
+education &
+0.001 &
+0.000 &
+0.006 &
+0.000\tabularnewline
 \hline 
-Observations & 47665 &  & 46464 & \tabularnewline
+Observations &
+87634 &
+ &
+87634 &
+\tabularnewline
 \hline 
 \end{tabular}
 \end{table}
 
-The below figure present a graphical illustration of the above mentioned
+The below figure presents a graphical illustration of the above mentioned
 result. As we can see, initially, the propensity to own a computer
 for setswana speakers (blue line) was similar to the average of speakers
 of other languages (red line), however after the introduction of the
@@ -727,12 +802,92 @@ a sharp increase in this propensity for setswana speakers in wave
 \caption{Computer Ownership Setswana}
 
 \begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{../misc/latex-gg2_5-1} 
+
+\end{knitrout}
+\end{figure}
+
+I also plot this variable separately for each gender.
+
+\begin{figure}[H]
+\caption{Computer Ownership Setswana by Gender}
+
+\begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(expr, envir, enclos): object 'NIDS' not found}}\end{kframe}
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in grouped\_df\_impl(data, unname(vars), drop): Column `woman` is unknown}}\end{kframe}
 \end{knitrout}
 \end{figure}
+
+I estimate the effect of the introduction specifically on setswana
+speaking women, by interacting the woman binary variable with the
+above used interaction term between the event dummy and the Setswana
+language dummy. The effect is strongly negative with a value of -0.025.
+The interaction term between the event and the language dummy (i.e.
+for men, since woman==FALSE) is strongly positive at 0.038. Combining
+these two effects gives us the estimated effect on the event on woman,
+0.038 - 0.025 = 0.013, which is roughly a third of men (0.038). The
+interaction term between woman and setswana is slightly positive at
+0.009, which means that Setswana speaking women are on average slightly
+more likely to own a computer than woman in general are.
+
+\begin{table}[H]
+
+\caption{Women and Computer Ownership}
+
+\begin{centering}
+\begin{tabular}{|l|r|r|}
+\hline 
+ &
+Computer &
+(P > |t|)\tabularnewline
+\hline 
+\hline 
+woman {*} event {*} setswana &
+-0.025 &
+0.011\tabularnewline
+\hline 
+event {*} setswana &
+0.038 &
+0.008\tabularnewline
+\hline 
+event &
+-0.002 &
+0.006\tabularnewline
+\hline 
+setswana &
+-0.021 &
+0.007\tabularnewline
+\hline 
+income (10,000 ZAR) &
+0.054 &
+0.000\tabularnewline
+\hline 
+woman &
+-0.021 &
+0.003\tabularnewline
+\hline 
+education &
+0.006 &
+0.000\tabularnewline
+\hline 
+woman {*} setswana &
+0.009 &
+0.009\tabularnewline
+\hline 
+woman {*} event &
+-0.007 &
+0.003\tabularnewline
+\hline 
+Observations &
+87634 &
+\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\end{table}
 
 \ref{fig:GoogleTrendsZA}, illustrates how usage of the Setswana word
 `thuso', meaning `help' in search queries, was zero prior to the introduction
@@ -743,6 +898,17 @@ itself. This can lead to greater amounts of Setswana language content
 being found and engaged with, which in turn incentivised content creators
 to provide more Setswana language content. This could help break the
 vicious circle of low levels of content and few users.
+
+\begin{figure}[H]
+\caption{Usage of Setswana Words on Google.co.za}
+
+\begin{centering}
+\label{fig:GoogleTrendsZA}
+\par\end{centering}
+\begin{centering}
+\par\end{centering}
+\centering{}\includegraphics[scale=0.48]{0_home_bquast_Making-Next-Billion-Demand-Access_misc_thuso.pdf} 
+\end{figure}
 
 As mentioned in \secref{data} I use the partially released 4th wave
 of the dataset, which covers the year 2014 in order to relate the
@@ -758,16 +924,16 @@ demographic.
 In the below figure, I plot the employment status of individuals that
 own a computer in the first wave after the introduction of the Setswana-language
 interface (wave 3). The figure shows that there is a sharp uptick
-in the proportion of employed individuals among Setswana speakers. 
+in thdisenfranchisemente proportion of employed individuals among
+Setswana speakers. 
 
 \begin{figure}[H]
 \caption{Employment for Individuals who Own a Computer in Wave 3}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{../misc/latex-employment_own_computer-1} 
 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(substitute(expr), envir, enclos): object 'employed' not found}}\end{kframe}
 \end{knitrout}
 \end{figure}
 
@@ -780,13 +946,34 @@ for the rest of the population.
 \caption{Employment for Individuals with Internet Expenditure in Wave 3}
 
 \begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{../misc/latex-employment_int_exp-1} 
+
+\end{knitrout}
+\end{figure}
+
+Finally we can plot the above graphs for men and women separately.
+
+\begin{figure}[H]
+\caption{Employment for those owning a Computer in Wave 3 by gender}
+
+\begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in eval(substitute(expr), envir, enclos): object 'employed' not found}}\end{kframe}
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in grouped\_df\_impl(data, unname(vars), drop): Column `woman` is unknown}}\end{kframe}
 \end{knitrout}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Employment for those with Internet Expenditure in Wave 3 by gender}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 
 
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in grouped\_df\_impl(data, unname(vars), drop): Column `woman` is unknown}}\end{kframe}
+\end{knitrout}
 \end{figure}
 
 
@@ -842,9 +1029,375 @@ be 22\%.
 
 \printbibliography
 
-\newpage{}
 
-\section{}
+\appendix
+
+\section{Clustering}
+
+\begin{table}[H]
+\caption{Clustering}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{library}\hlstd{(plm)}    \hlcom{# panel linear model estimation}
+\hlkwd{library}\hlstd{(lmtest)} \hlcom{# Standard Error corrections}
+\hlkwd{library}\hlstd{(broom)}  \hlcom{# output formatting using tidy()}
+
+\hlcom{# specify panel model}
+\hlstd{plm4_3} \hlkwb{<-} \hlkwd{formula}\hlstd{(}\hlkwd{as.numeric}\hlstd{(h_nfnet)}  \hlopt{~} \hlstd{interface_intro}\hlopt{*}\hlstd{setswana}  \hlopt{+}
+                                         \hlkwd{factor}\hlstd{(a_edlitrden)}  \hlopt{+}
+                                         \hlkwd{factor}\hlstd{(a_edlitwrten)} \hlopt{+}
+                                         \hlkwd{factor}\hlstd{(a_edlitrdhm)}  \hlopt{+}
+                                         \hlkwd{factor}\hlstd{(a_edlitwrthm)} \hlopt{+}
+                                         \hlstd{a_woman}              \hlopt{+}
+                                         \hlstd{hhincome}             \hlopt{+}
+                                         \hlstd{best_edu              )}
+\hlcom{# estimate}
+\hlstd{plm4_3e} \hlkwb{<-} \hlkwd{plm}\hlstd{(plm4_3,} \hlkwc{data}\hlstd{=pNIDS,} \hlkwc{model}\hlstd{=}\hlstr{'within'}\hlstd{)}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in `row.names<-.data.frame`(`*tmp*`, value = c("{}301012-1"{}, "{}301012-2"{}, : duplicate 'row.names' are not allowed}}\begin{alltt}
+\hlcom{# correct errors}
+\hlkwd{tidy}\hlstd{(} \hlkwd{coeftest}\hlstd{(plm4_3e,} \hlkwc{vcov}\hlstd{=}\hlkwd{vcovHC}\hlstd{(plm4_3e,}
+                                    \hlkwc{type}\hlstd{=}\hlstr{"HC0"}\hlstd{,}
+                                    \hlkwc{cluster}\hlstd{=}\hlstr{"group"}\hlstd{)) )}
+\end{alltt}
+
+
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in coeftest(plm4\_3e, vcov = vcovHC(plm4\_3e, type = "{}HC0"{}, cluster = "{}group"{})): object 'plm4\_3e' not found}}\end{kframe}
+\end{knitrout}
+\end{table}
+
+
+\section{Dependent Variable Breakdown}
+
+\begin{table}[H]
+\caption{Descriptive statistics on Ownership and Expenditure}
+\label{tab:dep_vars}
+\centering{}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+
+\begin{tabular}{l|r|r|r}
+\hline
+a\_lng & wave & a\_owncom & h\_nfnet\\
+\hline
+IsiNdebele & 1 & 0.0331126 & 0.0000000\\
+\hline
+IsiNdebele & 2 & 0.0270270 & 0.0284091\\
+\hline
+IsiNdebele & 3 & 0.0333333 & 0.0000000\\
+\hline
+IsiNdebele & 4 & 0.0532319 & NaN\\
+\hline
+IsiXhosa & 1 & 0.0112269 & 0.0012043\\
+\hline
+IsiXhosa & 2 & 0.0186335 & 0.0054517\\
+\hline
+IsiXhosa & 3 & 0.0345622 & 0.0019763\\
+\hline
+IsiXhosa & 4 & 0.0372470 & NaN\\
+\hline
+IsiZulu & 1 & 0.0132693 & 0.0013730\\
+\hline
+IsiZulu & 2 & 0.0127882 & 0.0086473\\
+\hline
+IsiZulu & 3 & 0.0251126 & 0.0045006\\
+\hline
+IsiZulu & 4 & 0.0383356 & NaN\\
+\hline
+Sepedi & 1 & 0.0265273 & 0.0048309\\
+\hline
+Sepedi & 2 & 0.0226818 & 0.0021994\\
+\hline
+Sepedi & 3 & 0.0718697 & 0.0050477\\
+\hline
+Sepedi & 4 & 0.0805596 & NaN\\
+\hline
+Sesotho & 1 & 0.0366044 & 0.0062598\\
+\hline
+Sesotho & 2 & 0.0457010 & 0.0213640\\
+\hline
+Sesotho & 3 & 0.0949535 & 0.0113032\\
+\hline
+Sesotho & 4 & 0.1025924 & NaN\\
+\hline
+Setswana & 1 & 0.0351724 & 0.0068681\\
+\hline
+Setswana & 2 & 0.0359537 & 0.0037783\\
+\hline
+Setswana & 3 & 0.0711086 & 0.0106264\\
+\hline
+Setswana & 4 & 0.0814226 & NaN\\
+\hline
+SiSwati & 1 & 0.0441640 & 0.0000000\\
+\hline
+SiSwati & 2 & 0.0612813 & 0.0091185\\
+\hline
+SiSwati & 3 & 0.0458221 & 0.0134771\\
+\hline
+SiSwati & 4 & 0.0762332 & NaN\\
+\hline
+Tshivenda & 1 & 0.0334928 & 0.0000000\\
+\hline
+Tshivenda & 2 & 0.0000000 & 0.5441176\\
+\hline
+Tshivenda & 3 & 0.0225080 & 0.0000000\\
+\hline
+Tshivenda & 4 & 0.0808625 & NaN\\
+\hline
+IsiTsonga & 1 & 0.0235294 & 0.0000000\\
+\hline
+IsiTsonga & 2 & 0.0118483 & 0.0932836\\
+\hline
+IsiTsonga & 3 & 0.0397196 & 0.0023529\\
+\hline
+IsiTsonga & 4 & 0.0776892 & NaN\\
+\hline
+Afrikaans & 1 & 0.1345441 & 0.0465116\\
+\hline
+Afrikaans & 2 & 0.0904233 & 0.0424528\\
+\hline
+Afrikaans & 3 & 0.1107348 & 0.0399729\\
+\hline
+Afrikaans & 4 & 0.1096479 & NaN\\
+\hline
+English & 1 & 0.2969374 & 0.1016043\\
+\hline
+English & 2 & 0.3234127 & 0.1070707\\
+\hline
+English & 3 & 0.3156934 & 0.1023766\\
+\hline
+English & 4 & 0.3233333 & NaN\\
+\hline
+\end{tabular}
+\end{knitrout}
+\end{table}
+
+
+\section{Covariate Descriptive Statistics}
+
+\begin{figure}[H]
+\caption{Household Income}
+
+\label{fig:hhincome}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{ggplot}\hlstd{(adulthh,} \hlkwd{aes}\hlstd{(}\hlkwc{x}\hlstd{=hhincome,} \hlkwc{fill}\hlstd{=a_lng ))} \hlopt{+}
+    \hlkwd{stat_bin}\hlstd{(}\hlkwc{bins}\hlstd{=}\hlnum{50}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{../misc/latex-hhincome-1} 
+
+\end{knitrout}
+\end{figure}
+
+\begin{figure}[H]
+\caption{Years of Education}
+
+\label{fig:bestedu}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{ggplot}\hlstd{(adulthh,} \hlkwd{aes}\hlstd{(}\hlkwc{x}\hlstd{=best_edu,} \hlkwc{fill}\hlstd{=a_lng ))} \hlopt{+}
+    \hlkwd{geom_bar}\hlstd{(}\hlkwc{position} \hlstd{=} \hlstr{'fill'}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{../misc/latex-best_edu-1} 
+
+\end{knitrout}
+\end{figure}
+
+The \ref{fig:rden} describes the skill of individuals in reading
+the English language, where 1 the best and 4 is the worst, grey values
+are \code{NA}.
+
+\begin{figure}[H]
+\caption{English Language Reading Skills}
+\label{fig:rden}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{ggplot}\hlstd{(adulthh,} \hlkwd{aes}\hlstd{(}\hlkwc{x} \hlstd{= a_lng,} \hlkwc{fill} \hlstd{=} \hlkwd{factor}\hlstd{(a_edlitrden)) )} \hlopt{+}
+        \hlkwd{geom_bar}\hlstd{(}\hlkwc{position} \hlstd{=} \hlstr{'fill'}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{../misc/latex-read_english-1} 
+
+\end{knitrout}
+\end{figure}
+
+The \ref{fig:rdhm} does the same but with regards to the native language.
+
+\begin{figure}[H]
+\caption{Native Language Reading Skills}
+\label{fig:rdhm}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{ggplot}\hlstd{(adulthh,} \hlkwd{aes}\hlstd{(}\hlkwc{x} \hlstd{= a_lng,} \hlkwc{fill} \hlstd{=} \hlkwd{factor}\hlstd{(a_edlitrdhm)) )} \hlopt{+}
+        \hlkwd{geom_bar}\hlstd{(}\hlkwc{position} \hlstd{=} \hlstr{'fill'}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{../misc/latex-read_native-1} 
+
+\end{knitrout}
+\end{figure}
+
+
+\section{Original Estimates}
+
+\begin{table}[H]
+\caption{Computer Ownership}
+\label{tab:owncom}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{lm}\hlstd{(a_owncom} \hlopt{~} \hlstd{event}\hlopt{*}\hlstd{setswana}       \hlopt{+}
+              \hlkwd{factor}\hlstd{(a_edlitrden)}  \hlopt{+}
+              \hlkwd{factor}\hlstd{(a_edlitwrten)} \hlopt{+}
+              \hlkwd{factor}\hlstd{(a_edlitrdhm)}  \hlopt{+}
+              \hlkwd{factor}\hlstd{(a_edlitwrthm)} \hlopt{+}
+              \hlstd{a_woman}              \hlopt{+}
+              \hlstd{hhincome}             \hlopt{+}
+              \hlstd{best_edu              )}
+\end{alltt}
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = a_owncom ~ event * setswana + factor(a_edlitrden) + 
+##     factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + 
+##     a_woman + hhincome + best_edu)
+## 
+## Coefficients:
+##            (Intercept)               eventTRUE            setswanaTRUE  
+##              9.595e-03              -6.159e-03              -1.551e-02  
+##   factor(a_edlitrden)2    factor(a_edlitrden)3    factor(a_edlitrden)4  
+##             -3.234e-02              -3.416e-02              -3.928e-02  
+##  factor(a_edlitwrten)2   factor(a_edlitwrten)3   factor(a_edlitwrten)4  
+##             -1.857e-02              -2.028e-02              -2.048e-02  
+##   factor(a_edlitrdhm)2    factor(a_edlitrdhm)3    factor(a_edlitrdhm)4  
+##              3.507e-03               2.144e-04              -2.934e-02  
+##  factor(a_edlitwrthm)2   factor(a_edlitwrthm)3   factor(a_edlitwrthm)4  
+##             -1.133e-03              -5.473e-03              -3.988e-02  
+##            a_womanTRUE                hhincome                best_edu  
+##             -2.697e-02               5.444e-06               6.174e-03  
+## eventTRUE:setswanaTRUE  
+##              2.354e-02
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+\end{table}
+
+\begin{table}[H]
+\caption{Living in Household that Spent on Internet (last 30 days)}
+\label{tab:nfnet}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{lm}\hlstd{(h_nfnet} \hlopt{~}  \hlstd{event}\hlopt{*}\hlstd{setswana_logical} \hlopt{+}
+              \hlkwd{factor}\hlstd{(a_edlitrden)}    \hlopt{+}
+              \hlkwd{factor}\hlstd{(a_edlitwrten)}   \hlopt{+}
+              \hlkwd{factor}\hlstd{(a_edlitrdhm)}    \hlopt{+}
+              \hlkwd{factor}\hlstd{(a_edlitwrthm)}   \hlopt{+}
+              \hlstd{a_woman}                \hlopt{+}
+              \hlstd{hhincome}               \hlopt{+}
+              \hlstd{best_edu                )}
+\end{alltt}
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = h_nfnet ~ event * setswana_logical + factor(a_edlitrden) + 
+##     factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + 
+##     a_woman + hhincome + best_edu)
+## 
+## Coefficients:
+##                    (Intercept)                       eventTRUE  
+##                     -1.648e-03                      -1.182e-02  
+##           setswana_logicalTRUE            factor(a_edlitrden)2  
+##                     -1.343e-02                       2.765e-03  
+##           factor(a_edlitrden)3            factor(a_edlitrden)4  
+##                     -5.328e-05                      -2.713e-03  
+##          factor(a_edlitwrten)2           factor(a_edlitwrten)3  
+##                     -9.184e-03                      -8.723e-03  
+##          factor(a_edlitwrten)4            factor(a_edlitrdhm)2  
+##                     -5.862e-03                      -7.155e-04  
+##           factor(a_edlitrdhm)3            factor(a_edlitrdhm)4  
+##                     -8.317e-04                      -5.699e-03  
+##          factor(a_edlitwrthm)2           factor(a_edlitwrthm)3  
+##                     -1.117e-03                      -1.265e-03  
+##          factor(a_edlitwrthm)4                     a_womanTRUE  
+##                     -9.399e-03                      -6.753e-04  
+##                       hhincome                        best_edu  
+##                      2.743e-06                       1.295e-03  
+## eventTRUE:setswana_logicalTRUE  
+##                      1.201e-02
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+\end{table}
+
+
+\section{Interaction with woman variable}
+
+\begin{table}[H]
+\caption{Women Owning a Computer}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{lm}\hlstd{(a_owncom} \hlopt{~} \hlstd{a_woman}\hlopt{*}\hlstd{event}\hlopt{*}\hlstd{setswana} \hlopt{+}
+              \hlkwd{factor}\hlstd{(a_edlitrden)}    \hlopt{+}
+              \hlkwd{factor}\hlstd{(a_edlitwrten)}   \hlopt{+}
+              \hlkwd{factor}\hlstd{(a_edlitrdhm)}    \hlopt{+}
+              \hlkwd{factor}\hlstd{(a_edlitwrthm)}   \hlopt{+}
+              \hlstd{hhincome}               \hlopt{+}
+              \hlstd{best_edu                )}
+\end{alltt}
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = a_owncom ~ a_woman * event * setswana + factor(a_edlitrden) + 
+##     factor(a_edlitwrten) + factor(a_edlitrdhm) + factor(a_edlitwrthm) + 
+##     hhincome + best_edu)
+## 
+## Coefficients:
+##                        (Intercept)                         a_womanTRUE  
+##                          6.319e-03                          -2.144e-02  
+##                          eventTRUE                        setswanaTRUE  
+##                         -1.907e-03                          -2.058e-02  
+##               factor(a_edlitrden)2                factor(a_edlitrden)3  
+##                         -3.239e-02                          -3.425e-02  
+##               factor(a_edlitrden)4               factor(a_edlitwrten)2  
+##                         -3.946e-02                          -1.852e-02  
+##              factor(a_edlitwrten)3               factor(a_edlitwrten)4  
+##                         -2.026e-02                          -2.036e-02  
+##               factor(a_edlitrdhm)2                factor(a_edlitrdhm)3  
+##                          3.470e-03                           1.410e-04  
+##               factor(a_edlitrdhm)4               factor(a_edlitwrthm)2  
+##                         -2.944e-02                          -1.060e-03  
+##              factor(a_edlitwrthm)3               factor(a_edlitwrthm)4  
+##                         -5.362e-03                          -3.969e-02  
+##                           hhincome                            best_edu  
+##                          5.443e-06                           6.176e-03  
+##              a_womanTRUE:eventTRUE            a_womanTRUE:setswanaTRUE  
+##                         -7.199e-03                           9.321e-03  
+##             eventTRUE:setswanaTRUE  a_womanTRUE:eventTRUE:setswanaTRUE  
+##                          3.806e-02                          -2.564e-02
+\end{verbatim}
+\end{kframe}
+\end{knitrout}
+\end{table}
 
 \newpage{}
 
@@ -861,12 +1414,11 @@ Standard error corrections are computed using the \code{lmtest} and
 In order to make the result as easily reproducible as possible, this
 research and writing in the article has been done exclusively using
 open-source software such as R \citep*{R}. This document is written
-and \LyX{} \citep{lyx} in the \LaTeX{}\citep{lamport1985latex}
-language and compiled using the LuaTeX implementation\citep{luatex}.
-The integration of R code and output in the document is performed
-using a process call literate programming \citet{knuth1984literate}
-using the knitr implementation \citet{xie2015knitr} of the Sweave
-framework \citep{leisch2002sweave}.
+and \LyX{} \citep{lyx} in the \LaTeX\citep{lamport1985latex} language
+and compiled using the LuaTeX implementation\citep{luatex}. The integration
+of R code and output in the document is performed using a process
+call literate programming \citet{knuth1984literate} using the knitr
+implementation \citet{xie2015knitr} of the Sweave framework \citep{leisch2002sweave}.
 
 All changes are logged using the version control system Git \citep{git}
 and publicly available on GitHub at \href{https://github.com/bquast/Making-Next-Billion-Demand-Access/}{https://github.com/bquast/Making-Next-Billion-Demand-Access/}\footnote{The repository can by cloned to a local computer by entering in following
