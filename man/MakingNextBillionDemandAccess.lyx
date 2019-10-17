@@ -1,4 +1,4 @@
-#LyX 2.4 created this file. For more info see http://www.lyx.org/
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 544
 \begin_document
 \begin_header
@@ -17,9 +17,6 @@ knitr
 logicalmkup
 \end_modules
 \maintain_unincluded_children false
-\begin_local_layout
-Provides natbib 1
-\end_local_layout
 \language british
 \language_package default
 \inputencoding auto
@@ -151,7 +148,7 @@ The Graduate Institute | Maison de la paix, Geneva, Switzerland
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 TODO:
@@ -198,6 +195,11 @@ load_plot_data, echo=FALSE, warning=FALSE, message=FALSE
 
 opts_chunk$set(fig.path='../misc/latex-', cache.path='../data/cache/latex-', fig.width=
 9, fig.height=5)
+\end_layout
+
+\begin_layout Plain Layout
+
+opts_chunk$set(eval=F)
 \end_layout
 
 \begin_layout Plain Layout
