@@ -1,3 +1,5 @@
+# EDIT 2022-06-28: this project will be updated shortly
+
 # Local Content South Africa
 Can access to local content increase internet adoption in South Africa
 
