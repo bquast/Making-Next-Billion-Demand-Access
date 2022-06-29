@@ -21,7 +21,7 @@ Can access to local content increase internet adoption in South Africa
 
 [Google South Africa](http://www.google.co.za) is available in the following languages
 
-http://mybroadband.co.za/news/internet/9395-google-now-speaks-afrikaans.html
+http://mybroadband.co.za/news/internet/9395-google-now-speaks-afrikaans.html ([Web Archive](https://web.archive.org/web/20220629185131/https://mybroadband.co.za/news/internet/9395-google-now-speaks-afrikaans.html))
 
  - [x] [Afrikaans](http://w3techs.com/technologies/details/cl-af-/all/all) ([added 2009-09-03](http://google-africa.blogspot.com/2009/09/google-translate-now-available-for.html))
  - [x] [English](http://w3techs.com/technologies/details/cl-en-/all/all)
