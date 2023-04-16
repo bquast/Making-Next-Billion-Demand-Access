@@ -37,7 +37,8 @@ thuso %<>%
   summarise(thuso = sum(hits))
 
 # plot data
-ggplot(thuso) + geom_line(aes(x = date, y = thuso))
+ggplot(thuso, aes(x = date, y = thuso)) + geom_line()
+ggplot(thuso, aes(x = date, y = thuso)) + stat_smooth(span=1)
 
 # save results
 save(thuso, file = 'data/googletrends.RData')
