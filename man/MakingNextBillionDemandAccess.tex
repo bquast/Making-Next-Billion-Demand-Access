@@ -2,9 +2,9 @@
 \makeatletter
 \def\input@path{{/home/bquast/Making-Next-Billion-Demand-Access/man/}}
 \makeatother
-\documentclass[a4paper,british]{article}\usepackage[]{graphicx}\usepackage[]{color}
-%% maxwidth is the original width if it is less than linewidth
-%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\documentclass[a4paper,british]{article}\usepackage[]{graphicx}\usepackage[]{xcolor}
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
 \makeatletter
 \def\maxwidth{ %
   \ifdim\Gin@nat@width>\linewidth
@@ -53,15 +53,15 @@
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
 \usepackage{alltt}
+\PassOptionsToPackage{natbib=true}{biblatex}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
-\PassOptionsToPackage{natbib=true}{biblatex}
 \usepackage{babel}
+\usepackage{cprotect}
 \usepackage{refstyle}
 \usepackage{float}
 \usepackage{graphicx}
-\usepackage[unicode=true,
- bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+\usepackage[bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
  breaklinks=false,pdfborder={0 0 0},pdfborderstyle={},backref=false,colorlinks=false]
  {hyperref}
 \hypersetup{pdftitle={Making the Next Billion Demand Access},
@@ -78,9 +78,8 @@
 \pdfpageheight\paperheight
 \pdfpagewidth\paperwidth
 
-\providecommand{\LyX}{\texorpdfstring%
-  {L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}
-  {LyX}}
+\providecommand{\LyX}{\texorpdfstring{\ensureascii{%
+  L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}}{LyX}}
 %% Because html converters don't know tabularnewline
 \providecommand{\tabularnewline}{\\}
 \RS@ifundefined{subsecref}
@@ -106,14 +105,11 @@
 \makeatother
 
 \usepackage[style=authoryear]{biblatex}
-\addbibresource{1_home_bquast_Making-Next-Billion-Demand-Access_man_bibliography.bib}
+\addbibresource{0_home_bquast_Making-Next-Billion-Demand-Access_man_bibliography.bib}
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
-
 \title{Making the `Next Billion' Demand Access\thanks{http://qua.st/internet-access}}
-
 \author{The Local-Content Effect of \code{google.co.za} in Setswana}
-
 \date{Bastiaan Quast\thanks{http://qua.st/ | bquast@gmail.com | bastiaan.quast@graduateinstitute.ch\protect \\
 The Graduate Institute | Maison de la paix, Geneva, Switzerland}}
 
@@ -200,12 +196,8 @@ market saturation, as adoption levels are still relatively low.
 \label{fig:adoption_growth}
 \par\end{centering}
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-
-
-{\ttfamily\noindent\itshape\color{messagecolor}{\#\# `geom\_smooth()` using method = 'loess' and formula 'y \textasciitilde{} x'}}\end{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 \includegraphics[width=\maxwidth]{../misc/latex-mobile_growth-1} 
-
 \end{knitrout}
 \end{figure}
 
@@ -569,7 +561,6 @@ speakers.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 \includegraphics[width=\maxwidth]{../misc/latex-lang_woman-1} 
-
 \end{knitrout}
 \end{figure}
 
@@ -804,7 +795,6 @@ a sharp increase in this propensity for setswana speakers in wave
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 \includegraphics[width=\maxwidth]{../misc/latex-gg2_5-1} 
-
 \end{knitrout}
 \end{figure}
 
@@ -814,10 +804,8 @@ I also plot this variable separately for each gender.
 \caption{Computer Ownership Setswana by Gender}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in grouped\_df\_impl(data, unname(vars), drop): Column `woman` is unknown}}\end{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{../misc/latex-gender_gg2_5-1} 
 \end{knitrout}
 \end{figure}
 
@@ -907,7 +895,7 @@ vicious circle of low levels of content and few users.
 \par\end{centering}
 \begin{centering}
 \par\end{centering}
-\centering{}\includegraphics[scale=0.48]{0_home_bquast_Making-Next-Billion-Demand-Access_misc_thuso.pdf} 
+\centering{}\includegraphics[scale=0.48]{export_thuso_pdf_89ba96fc6a9907ba789ed38dfc506bb022fcda306f8f42734f7191134b52da75.pdf} 
 \end{figure}
 
 As mentioned in \secref{data} I use the partially released 4th wave
@@ -933,7 +921,6 @@ Setswana speakers.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 \includegraphics[width=\maxwidth]{../misc/latex-employment_own_computer-1} 
-
 \end{knitrout}
 \end{figure}
 
@@ -948,7 +935,6 @@ for the rest of the population.
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 \includegraphics[width=\maxwidth]{../misc/latex-employment_int_exp-1} 
-
 \end{knitrout}
 \end{figure}
 
@@ -958,10 +944,8 @@ Finally we can plot the above graphs for men and women separately.
 \caption{Employment for those owning a Computer in Wave 3 by gender}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in grouped\_df\_impl(data, unname(vars), drop): Column `woman` is unknown}}\end{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{../misc/latex-gender_employment_own_computer-1} 
 \end{knitrout}
 \end{figure}
 
@@ -969,10 +953,8 @@ Finally we can plot the above graphs for men and women separately.
 \caption{Employment for those with Internet Expenditure in Wave 3 by gender}
 
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in grouped\_df\_impl(data, unname(vars), drop): Column `woman` is unknown}}\end{kframe}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{../misc/latex-gender_employment_int_exp-1} 
 \end{knitrout}
 \end{figure}
 
@@ -1058,7 +1040,7 @@ be 22\%.
 \end{alltt}
 
 
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in `row.names<-.data.frame`(`*tmp*`, value = c("{}301012-1"{}, "{}301012-2"{}, : duplicate 'row.names' are not allowed}}\begin{alltt}
+{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in `.rowNamesDF<-`(x, value = value): duplicate 'row.names' are not allowed}}\begin{alltt}
 \hlcom{# correct errors}
 \hlkwd{tidy}\hlstd{(} \hlkwd{coeftest}\hlstd{(plm4_3e,} \hlkwc{vcov}\hlstd{=}\hlkwd{vcovHC}\hlstd{(plm4_3e,}
                                     \hlkwc{type}\hlstd{=}\hlstr{"HC0"}\hlstd{,}
@@ -1078,102 +1060,25 @@ be 22\%.
 \label{tab:dep_vars}
 \centering{}
 \begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-
-
-\begin{tabular}{l|r|r|r}
-\hline
-a\_lng & wave & a\_owncom & h\_nfnet\\
-\hline
-IsiNdebele & 1 & 0.0331126 & 0.0000000\\
-\hline
-IsiNdebele & 2 & 0.0270270 & 0.0284091\\
-\hline
-IsiNdebele & 3 & 0.0333333 & 0.0000000\\
-\hline
-IsiNdebele & 4 & 0.0532319 & NaN\\
-\hline
-IsiXhosa & 1 & 0.0112269 & 0.0012043\\
-\hline
-IsiXhosa & 2 & 0.0186335 & 0.0054517\\
-\hline
-IsiXhosa & 3 & 0.0345622 & 0.0019763\\
-\hline
-IsiXhosa & 4 & 0.0372470 & NaN\\
-\hline
-IsiZulu & 1 & 0.0132693 & 0.0013730\\
-\hline
-IsiZulu & 2 & 0.0127882 & 0.0086473\\
-\hline
-IsiZulu & 3 & 0.0251126 & 0.0045006\\
-\hline
-IsiZulu & 4 & 0.0383356 & NaN\\
-\hline
-Sepedi & 1 & 0.0265273 & 0.0048309\\
-\hline
-Sepedi & 2 & 0.0226818 & 0.0021994\\
-\hline
-Sepedi & 3 & 0.0718697 & 0.0050477\\
-\hline
-Sepedi & 4 & 0.0805596 & NaN\\
-\hline
-Sesotho & 1 & 0.0366044 & 0.0062598\\
-\hline
-Sesotho & 2 & 0.0457010 & 0.0213640\\
-\hline
-Sesotho & 3 & 0.0949535 & 0.0113032\\
-\hline
-Sesotho & 4 & 0.1025924 & NaN\\
-\hline
-Setswana & 1 & 0.0351724 & 0.0068681\\
-\hline
-Setswana & 2 & 0.0359537 & 0.0037783\\
-\hline
-Setswana & 3 & 0.0711086 & 0.0106264\\
-\hline
-Setswana & 4 & 0.0814226 & NaN\\
-\hline
-SiSwati & 1 & 0.0441640 & 0.0000000\\
-\hline
-SiSwati & 2 & 0.0612813 & 0.0091185\\
-\hline
-SiSwati & 3 & 0.0458221 & 0.0134771\\
-\hline
-SiSwati & 4 & 0.0762332 & NaN\\
-\hline
-Tshivenda & 1 & 0.0334928 & 0.0000000\\
-\hline
-Tshivenda & 2 & 0.0000000 & 0.5441176\\
-\hline
-Tshivenda & 3 & 0.0225080 & 0.0000000\\
-\hline
-Tshivenda & 4 & 0.0808625 & NaN\\
-\hline
-IsiTsonga & 1 & 0.0235294 & 0.0000000\\
-\hline
-IsiTsonga & 2 & 0.0118483 & 0.0932836\\
-\hline
-IsiTsonga & 3 & 0.0397196 & 0.0023529\\
-\hline
-IsiTsonga & 4 & 0.0776892 & NaN\\
-\hline
-Afrikaans & 1 & 0.1345441 & 0.0465116\\
-\hline
-Afrikaans & 2 & 0.0904233 & 0.0424528\\
-\hline
-Afrikaans & 3 & 0.1107348 & 0.0399729\\
-\hline
-Afrikaans & 4 & 0.1096479 & NaN\\
-\hline
-English & 1 & 0.2969374 & 0.1016043\\
-\hline
-English & 2 & 0.3234127 & 0.1070707\\
-\hline
-English & 3 & 0.3156934 & 0.1023766\\
-\hline
-English & 4 & 0.3233333 & NaN\\
-\hline
-\end{tabular}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{verbatim}
+## # A tibble: 44 x 4
+## # Groups:   a_lng [11]
+##    a_lng       wave a_owncom   h_nfnet
+##    <fct>      <dbl>    <dbl>     <dbl>
+##  1 IsiNdebele     1   0.0331   0      
+##  2 IsiNdebele     2   0.0270   0.0284 
+##  3 IsiNdebele     3   0.0333   0      
+##  4 IsiNdebele     4   0.0532 NaN      
+##  5 IsiXhosa       1   0.0112   0.00120
+##  6 IsiXhosa       2   0.0186   0.00545
+##  7 IsiXhosa       3   0.0346   0.00198
+##  8 IsiXhosa       4   0.0372 NaN      
+##  9 IsiZulu        1   0.0133   0.00137
+## 10 IsiZulu        2   0.0128   0.00865
+## # ... with 34 more rows
+\end{verbatim}
+\end{kframe}
 \end{knitrout}
 \end{table}
 
@@ -1193,7 +1098,6 @@ English & 4 & 0.3233333 & NaN\\
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\maxwidth]{../misc/latex-hhincome-1} 
-
 \end{knitrout}
 \end{figure}
 
@@ -1210,7 +1114,6 @@ English & 4 & 0.3233333 & NaN\\
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\maxwidth]{../misc/latex-best_edu-1} 
-
 \end{knitrout}
 \end{figure}
 
@@ -1230,7 +1133,6 @@ are \code{NA}.
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\maxwidth]{../misc/latex-read_english-1} 
-
 \end{knitrout}
 \end{figure}
 
@@ -1248,7 +1150,6 @@ The \ref{fig:rdhm} does the same but with regards to the native language.
 \end{alltt}
 \end{kframe}
 \includegraphics[width=\maxwidth]{../misc/latex-read_native-1} 
-
 \end{knitrout}
 \end{figure}
 

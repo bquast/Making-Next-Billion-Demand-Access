@@ -1,5 +1,5 @@
-#LyX 2.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 544
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 609
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -16,11 +16,11 @@
 knitr
 logicalmkup
 \end_modules
-\maintain_unincluded_children false
+\maintain_unincluded_children no
 \language british
 \language_package default
-\inputencoding auto
-\fontencoding global
+\inputencoding auto-legacy
+\fontencoding auto
 \font_roman "default" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
@@ -28,7 +28,9 @@ logicalmkup
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
-\font_osf false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
 \use_microtype false
@@ -52,7 +54,7 @@ logicalmkup
 \pdf_colorlinks false
 \pdf_backref false
 \pdf_pdfusetitle true
-\papersize a4paper
+\papersize a4
 \use_geometry false
 \use_package amsmath 1
 \use_package amssymb 1
@@ -76,6 +78,7 @@ logicalmkup
 \justification true
 \use_refstyle 1
 \use_minted 0
+\use_lineno 0
 \index Index
 \shortcut idx
 \color #008000
@@ -91,11 +94,16 @@ logicalmkup
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tablestyle default
 \tracking_changes false
 \output_changes false
+\change_bars false
+\postpone_fragile_content false
 \html_math_output 0
 \html_css_as_file 0
 \html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
 \end_header
 
 \begin_body
@@ -199,7 +207,7 @@ opts_chunk$set(fig.path='../misc/latex-', cache.path='../data/cache/latex-', fig
 
 \begin_layout Plain Layout
 
-opts_chunk$set(eval=F)
+opts_chunk$set(message=FALSE)
 \end_layout
 
 \begin_layout Plain Layout
@@ -348,6 +356,7 @@ y low.
 \begin_layout Standard
 \begin_inset Float figure
 placement h
+alignment document
 wide false
 sideways false
 status open
@@ -386,7 +395,7 @@ status open
 
 \begin_layout Plain Layout
 
-mobile_growth, echo=FALSE, warning=FALSE
+mobile_growth, eval=TRUE, echo=FALSE
 \end_layout
 
 \end_inset
@@ -401,7 +410,8 @@ load(file = '../data/internetgrowth.RData')
 
 \begin_layout Plain Layout
 
-ggplot(ITU2015, aes(x=year, y=adoption, colour=region)) + geom_smooth(se=FALSE)
+ggplot(ITU2015, aes(x=year, y=adoption, colour=region)) + geom_smooth(method='lo
+ess', se=FALSE, formula='y~x')
 \end_layout
 
 \end_inset
@@ -534,6 +544,7 @@ The Internet itself is a set of agents (computers) that are connected to
 \begin_layout Standard
 \begin_inset Float table
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -1031,7 +1042,7 @@ status open
 
 \begin_layout Plain Layout
 
-prep, include=FALSE
+prep, include=FALSE, eval=TRUE
 \end_layout
 
 \end_inset
@@ -1051,7 +1062,7 @@ load(file = '../data/merged.RData')  # load source  data
 
 \begin_layout Plain Layout
 
-library(printr) # load (customised) printr package for clean output of lm()
+adulthh$woman <- adulthh$a_woman
 \end_layout
 
 \begin_layout Plain Layout
@@ -1067,6 +1078,7 @@ attach(adulthh)
 \begin_layout Standard
 \begin_inset Float table
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -1427,6 +1439,7 @@ reference "fig:langsex"
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -1464,7 +1477,7 @@ status open
 
 \begin_layout Plain Layout
 
-lang_woman, echo=FALSE, cache=TRUE
+lang_woman, echo=FALSE, eval=TRUE
 \end_layout
 
 \end_inset
@@ -2217,6 +2230,8 @@ status open
 
 \begin_layout Standard
 \begin_inset Float table
+placement document
+alignment document
 wide false
 sideways false
 status open
@@ -2660,6 +2675,7 @@ y for setswana speakers in wave 3, whereas average of other languages remains
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -2687,7 +2703,7 @@ status open
 
 \begin_layout Plain Layout
 
-gg2_5, echo=FALSE, cache=TRUE
+gg2_5, echo=FALSE, cache=FALSE
 \end_layout
 
 \end_inset
@@ -2747,6 +2763,7 @@ I also plot this variable separately for each gender.
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -2849,6 +2866,7 @@ I estimate the effect of the introduction specifically on setswana speaking
 \begin_layout Standard
 \begin_inset Float table
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -3234,6 +3252,7 @@ reference "fig:GoogleTrendsZA"
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -3354,6 +3373,7 @@ In the below figure, I plot the employment status of individuals that own
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -3458,6 +3478,7 @@ Similarly, the individuals that lived in a household that spent on Internet
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -3559,6 +3580,7 @@ Finally we can plot the above graphs for men and women separately.
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -3661,6 +3683,7 @@ adulthh %>%
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -3886,6 +3909,7 @@ Clustering
 \begin_layout Standard
 \begin_inset Float table
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -4036,6 +4060,7 @@ Dependent Variable Breakdown
 \begin_layout Standard
 \begin_inset Float table
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -4116,6 +4141,7 @@ Covariate Descriptive Statistics
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -4184,6 +4210,7 @@ ggplot(adulthh, aes(x=hhincome, fill=a_lng )) +
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status collapsed
@@ -4274,6 +4301,7 @@ NA
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status collapsed
@@ -4350,6 +4378,7 @@ reference "fig:rdhm"
 \begin_layout Standard
 \begin_inset Float figure
 placement H
+alignment document
 wide false
 sideways false
 status collapsed
@@ -4419,6 +4448,7 @@ Original Estimates
 \begin_layout Standard
 \begin_inset Float table
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -4453,7 +4483,7 @@ status open
 
 \begin_layout Plain Layout
 
-lm2_5, cache=TRUE
+lm2_5, cache=TRUE, echo=TRUE
 \end_layout
 
 \end_inset
@@ -4514,6 +4544,7 @@ lm(a_owncom ~ event*setswana       +
 \begin_layout Standard
 \begin_inset Float table
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -4548,7 +4579,7 @@ status open
 
 \begin_layout Plain Layout
 
-lm4_5, cache=TRUE
+lm4_5, cache=TRUE, echo=TRUE
 \end_layout
 
 \end_inset
@@ -4613,6 +4644,7 @@ Interaction with woman variable
 \begin_layout Standard
 \begin_inset Float table
 placement H
+alignment document
 wide false
 sideways false
 status open
@@ -4640,7 +4672,7 @@ status open
 
 \begin_layout Plain Layout
 
-interact_woman, cache=TRUE
+interact_woman, cache=TRUE, echo=TRUE
 \end_layout
 
 \end_inset
